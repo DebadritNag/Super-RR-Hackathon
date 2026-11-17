@@ -2,67 +2,50 @@ import React from 'react';
 import { useApp } from '@/context/AppContext';
 import { Sidebar } from './Sidebar';
 import { Topbar } from './Topbar';
-import { DemoBanner } from '../shared/DemoBanner';
-import { ToastContainer } from '../shared/Toast';
-import { PlayerProfileModal } from '@/features/player-profile/PlayerProfileModal';
-
-// The 7 Competition-Submission Features
-import { OverviewDashboard } from '@/features/overview/OverviewDashboard';
-import { PressureBattersPage } from '@/features/pressure-batters/PressureBattersPage';
-import { PressureBowlersPage } from '@/features/pressure-bowlers/PressureBowlersPage';
-import { PlayerComparison } from '@/features/player-comparison/PlayerComparison';
-import { WhySelectedPage } from '@/features/selection-reasons/WhySelectedPage';
-import { DataMethodologyPage } from '@/features/methodology/DataMethodologyPage';
-import { RRAnalysisPage } from '@/features/rr-analysis/RRAnalysisPage';
+import { PlayerEvidenceModal } from '@/features/player-evidence/PlayerEvidenceModal';
+import { OverviewPage } from '@/features/overview/OverviewPage';
+import { Top10Page } from '@/features/top10/Top10Page';
+import { ProfilesPage } from '@/features/profiles/ProfilesPage';
+import { ComparisonPage } from '@/features/comparison/ComparisonPage';
+import { WhyPage } from '@/features/why/WhyPage';
+import { MethodologyPage } from '@/features/methodology/MethodologyPage';
+import { ValidationPage } from '@/features/validation/ValidationPage';
+import { AiPredictionsPage } from '@/features/experimental/AiPredictionsPage';
 
 export const Shell: React.FC = () => {
   const { activeSection } = useApp();
-
-  const renderActiveView = () => {
+  const view = (() => {
     switch (activeSection) {
-      case 'overview':
-        return <OverviewDashboard />;
-      case 'pressure-batters':
-        return <PressureBattersPage />;
-      case 'pressure-bowlers':
-        return <PressureBowlersPage />;
+      case 'top10-batters':
+        return <Top10Page role="batters" />;
+      case 'top10-bowlers':
+        return <Top10Page role="bowlers" />;
+      case 'batter-profiles':
+        return <ProfilesPage role="batters" />;
+      case 'bowler-profiles':
+        return <ProfilesPage role="bowlers" />;
       case 'player-comparison':
-        return <PlayerComparison />;
-      case 'selection-reasons':
-        return <WhySelectedPage />;
+        return <ComparisonPage />;
+      case 'selection-analysis':
+        return <WhyPage />;
       case 'methodology':
-        return <DataMethodologyPage />;
-      case 'rr-analysis':
-        return <RRAnalysisPage />;
+        return <MethodologyPage />;
+      case 'data-validation':
+        return <ValidationPage />;
+      case 'ai-predictions':
+        return <AiPredictionsPage />;
       default:
-        return <OverviewDashboard />;
+        return <OverviewPage />;
     }
-  };
-
+  })();
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F6F2] text-[#202522]">
-      {/* Global Demonstration / Gating Status Banner */}
-      <DemoBanner />
-
-      <div className="flex-1 flex">
-        {/* Persistent 7-Section Sidebar Navigation */}
-        <Sidebar />
-
-        {/* Main Content Area */}
-        <div className="flex-1 flex flex-col min-w-0">
-          <Topbar />
-
-          <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto">
-            {renderActiveView()}
-          </main>
-        </div>
+    <div className="min-h-screen flex bg-[#F7F6F2] text-[#202522]">
+      <Sidebar />
+      <div className="flex-1 flex flex-col min-w-0">
+        <Topbar />
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto min-w-0">{view}</main>
       </div>
-
-      {/* Global Player Profile Modal/Drawer */}
-      <PlayerProfileModal />
-
-      {/* Global Toast Notifications */}
-      <ToastContainer />
+      <PlayerEvidenceModal />
     </div>
   );
 };

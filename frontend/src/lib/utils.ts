@@ -5,46 +5,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatCrore(amount: number | null | undefined): string {
-  if (amount === null || amount === undefined || isNaN(amount)) {
-    return 'N/A';
-  }
-  return `₹${amount.toFixed(2)} Cr`;
+export function fmt(v: unknown, digits = 3): string {
+  if (v === null || v === undefined || v === '') return 'unavailable';
+  const n = Number(v);
+  if (typeof v === 'boolean' || Number.isNaN(n)) return String(v);
+  return Number.isInteger(n) && Math.abs(n) >= 100 ? n.toLocaleString() : n.toFixed(digits);
 }
 
-export function formatPercent(value: number | null | undefined): string {
-  if (value === null || value === undefined || isNaN(value)) {
-    return 'N/A';
-  }
-  const sign = value > 0 ? '+' : '';
-  return `${sign}${value.toFixed(1)}%`;
+export function pct(v: unknown, digits = 0): string {
+  if (v === null || v === undefined || v === '' || Number.isNaN(Number(v))) return 'unavailable';
+  return `${(Number(v) * 100).toFixed(digits)}%`;
 }
-
-export function formatScore(value: number | null | undefined): string {
-  if (value === null || value === undefined || isNaN(value)) {
-    return 'N/A';
-  }
-  return value.toFixed(1);
-}
-
-export function exportToCSV(filename: string, headers: string[], rows: (string | number | null | undefined)[][]) {
-  const csvContent = [
-    headers.map(h => `"${h.replace(/"/g, '""')}"`).join(','),
-    ...rows.map(row =>
-      row.map(cell => {
-        if (cell === null || cell === undefined) return '""';
-        return `"${String(cell).replace(/"/g, '""')}"`;
-      }).join(',')
-    )
-  ].join('\r\n');
-
-  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.setAttribute('href', url);
-  link.setAttribute('download', `${filename}.csv`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
