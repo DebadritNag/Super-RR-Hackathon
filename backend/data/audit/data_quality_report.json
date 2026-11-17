@@ -1,0 +1,1549 @@
+{
+  "files": {
+    "competitions.csv": {
+      "rows": 141,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "comp_id"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [
+        {
+          "column": "comp_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {
+        "match_format": [
+          [
+            "T20I",
+            134
+          ],
+          [
+            "T20",
+            7
+          ]
+        ],
+        "season": [
+          [
+            "2024",
+            33
+          ],
+          [
+            "2025",
+            33
+          ],
+          [
+            "2022",
+            25
+          ],
+          [
+            "2026",
+            25
+          ],
+          [
+            "2023",
+            20
+          ],
+          [
+            "2022/23",
+            3
+          ],
+          [
+            "2023/24",
+            1
+          ],
+          [
+            "2024/25",
+            1
+          ]
+        ]
+      },
+      "missing": {}
+    },
+    "teams.csv": {
+      "rows": 353,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "comp_id",
+          "team_id"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [
+        {
+          "column": "comp_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {},
+      "missing": {}
+    },
+    "matches.csv": {
+      "rows": 883,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "match_id"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [
+        {
+          "column": "match_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "comp_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "venue_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "home_team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "away_team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {
+        "stage": [
+          [
+            "League",
+            620
+          ],
+          [
+            "Others",
+            226
+          ],
+          [
+            "Final",
+            12
+          ],
+          [
+            "Qualifier",
+            10
+          ],
+          [
+            "Super 4",
+            6
+          ],
+          [
+            "Eliminator",
+            5
+          ],
+          [
+            "Semi Final",
+            4
+          ]
+        ],
+        "toss_opted": [
+          [
+            "Fielding",
+            639
+          ],
+          [
+            "Batting",
+            229
+          ],
+          [
+            null,
+            15
+          ]
+        ],
+        "knock_out": [
+          [
+            "0",
+            852
+          ],
+          [
+            "1",
+            31
+          ]
+        ],
+        "venue_country": [
+          [
+            "India",
+            425
+          ],
+          [
+            "United Arab Emirates",
+            69
+          ],
+          [
+            "New Zealand",
+            52
+          ],
+          [
+            "United Kingdom",
+            49
+          ],
+          [
+            "West Indies",
+            44
+          ],
+          [
+            "Zimbabwe",
+            38
+          ],
+          [
+            "Pakistan",
+            36
+          ],
+          [
+            "Bangladesh",
+            34
+          ],
+          [
+            "Sri Lanka",
+            26
+          ],
+          [
+            "Australia",
+            24
+          ],
+          [
+            "Oman",
+            21
+          ],
+          [
+            "South Africa",
+            18
+          ],
+          [
+            "Qatar",
+            15
+          ],
+          [
+            "Netherlands",
+            14
+          ],
+          [
+            "Ireland",
+            10
+          ],
+          [
+            "United States",
+            7
+          ],
+          [
+            "Japan",
+            1
+          ]
+        ],
+        "man_of_the_match": [
+          [
+            "0",
+            119
+          ],
+          [
+            "1699",
+            15
+          ],
+          [
+            "6281",
+            15
+          ],
+          [
+            "6288",
+            12
+          ],
+          [
+            "2258",
+            10
+          ],
+          [
+            "47",
+            10
+          ],
+          [
+            "4722",
+            10
+          ],
+          [
+            "5553",
+            10
+          ],
+          [
+            "813",
+            10
+          ],
+          [
+            "3644",
+            9
+          ],
+          [
+            "4117",
+            9
+          ],
+          [
+            "6819",
+            9
+          ],
+          [
+            "818",
+            9
+          ],
+          [
+            "6256",
+            8
+          ],
+          [
+            "953",
+            8
+          ],
+          [
+            "1318",
+            7
+          ],
+          [
+            "2490",
+            7
+          ],
+          [
+            "3125",
+            7
+          ],
+          [
+            "3647",
+            7
+          ],
+          [
+            "7897",
+            7
+          ],
+          [
+            "152",
+            6
+          ],
+          [
+            "2101",
+            6
+          ],
+          [
+            "2367",
+            6
+          ],
+          [
+            "2639",
+            6
+          ],
+          [
+            "2876",
+            6
+          ],
+          [
+            "50284",
+            6
+          ],
+          [
+            "6726",
+            6
+          ],
+          [
+            "781",
+            6
+          ],
+          [
+            "830",
+            6
+          ],
+          [
+            "838",
+            6
+          ],
+          [
+            "126",
+            5
+          ],
+          [
+            "1941",
+            5
+          ],
+          [
+            "2633",
+            5
+          ],
+          [
+            "2933",
+            5
+          ],
+          [
+            "2984",
+            5
+          ],
+          [
+            "3330",
+            5
+          ],
+          [
+            "3672",
+            5
+          ],
+          [
+            "4219",
+            5
+          ],
+          [
+            "4708",
+            5
+          ],
+          [
+            "4755",
+            5
+          ]
+        ]
+      },
+      "missing": {
+        "home_team_captain_id": {
+          "null": 44,
+          "empty": 0
+        },
+        "away_team_captain_id": {
+          "null": 45,
+          "empty": 0
+        },
+        "toss_win_team_id": {
+          "null": 15,
+          "empty": 0
+        },
+        "toss_opted": {
+          "null": 15,
+          "empty": 0
+        },
+        "first_inn_revised_overs": {
+          "null": 858,
+          "empty": 0
+        },
+        "second_inn_revised_overs": {
+          "null": 858,
+          "empty": 0
+        },
+        "revised_target": {
+          "null": 860,
+          "empty": 0
+        },
+        "win_team_id": {
+          "null": 41,
+          "empty": 0
+        }
+      }
+    },
+    "playing_eleven.csv": {
+      "rows": 28381,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "match_id",
+          "team_id",
+          "player_id"
+        ],
+        "duplicate_key_groups": 35,
+        "rows_in_duplicate_groups": 75,
+        "samples": [
+          [
+            "28962",
+            "18",
+            "4708",
+            3
+          ],
+          [
+            "28962",
+            "18",
+            "6819",
+            3
+          ],
+          [
+            "28962",
+            "78",
+            "1107",
+            3
+          ],
+          [
+            "28962",
+            "78",
+            "2214",
+            3
+          ],
+          [
+            "28962",
+            "78",
+            "5808",
+            3
+          ],
+          [
+            "13613",
+            "20",
+            "223",
+            2
+          ],
+          [
+            "13613",
+            "20",
+            "250",
+            2
+          ],
+          [
+            "13613",
+            "20",
+            "2639",
+            2
+          ],
+          [
+            "13613",
+            "20",
+            "3539",
+            2
+          ],
+          [
+            "13613",
+            "20",
+            "4736",
+            2
+          ],
+          [
+            "13613",
+            "20",
+            "838",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "1100",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "2351",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "2436",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "4895",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "4902",
+            2
+          ],
+          [
+            "13613",
+            "27",
+            "6931",
+            2
+          ],
+          [
+            "21176",
+            "17",
+            "2246",
+            2
+          ],
+          [
+            "21176",
+            "17",
+            "25534",
+            2
+          ],
+          [
+            "21176",
+            "17",
+            "3323",
+            2
+          ]
+        ]
+      },
+      "invalid_ids": [
+        {
+          "column": "match_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "player_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {
+        "is_played": [
+          [
+            "true",
+            19714
+          ],
+          [
+            "false",
+            8667
+          ]
+        ],
+        "is_captain": [
+          [
+            "false",
+            18031
+          ],
+          [
+            null,
+            8667
+          ],
+          [
+            "true",
+            1683
+          ]
+        ],
+        "is_wk": [
+          [
+            "false",
+            18039
+          ],
+          [
+            null,
+            8667
+          ],
+          [
+            "true",
+            1675
+          ]
+        ],
+        "is_impact": [
+          [
+            "0",
+            27823
+          ],
+          [
+            "1",
+            558
+          ]
+        ],
+        "is_impact_off": [
+          [
+            "0",
+            27823
+          ],
+          [
+            "1",
+            558
+          ]
+        ],
+        "batting_order": [
+          [
+            null,
+            8678
+          ],
+          [
+            "3",
+            1744
+          ],
+          [
+            "1",
+            1743
+          ],
+          [
+            "2",
+            1743
+          ],
+          [
+            "4",
+            1742
+          ],
+          [
+            "5",
+            1741
+          ],
+          [
+            "6",
+            1741
+          ],
+          [
+            "11",
+            1736
+          ],
+          [
+            "8",
+            1736
+          ],
+          [
+            "9",
+            1736
+          ],
+          [
+            "10",
+            1735
+          ],
+          [
+            "7",
+            1735
+          ],
+          [
+            "12",
+            564
+          ],
+          [
+            "13",
+            7
+          ]
+        ]
+      },
+      "missing": {
+        "batting_order": {
+          "null": 8678,
+          "empty": 0
+        },
+        "is_captain": {
+          "null": 8667,
+          "empty": 0
+        },
+        "is_wk": {
+          "null": 8667,
+          "empty": 0
+        }
+      }
+    },
+    "competition_team_player_mapping.csv": {
+      "rows": 6413,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "comp_id",
+          "team_id",
+          "player_id"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [
+        {
+          "column": "comp_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "player_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {},
+      "missing": {}
+    },
+    "ball_by_ball.csv": {
+      "rows": 200999,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "match_id",
+          "innings",
+          "innings_ball_num",
+          "overid",
+          "over_ball_num"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [
+        {
+          "column": "match_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "batting_team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "bowling_team_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "striker_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "non_striker_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        },
+        {
+          "column": "bowler_id",
+          "null_or_empty": 0,
+          "non_numeric": 0,
+          "non_positive": 0
+        }
+      ],
+      "categories": {
+        "innings": [
+          [
+            "1",
+            105727
+          ],
+          [
+            "2",
+            95234
+          ],
+          [
+            "3",
+            25
+          ],
+          [
+            "4",
+            13
+          ]
+        ],
+        "extras_type": [
+          [
+            "None",
+            189167
+          ],
+          [
+            "wide",
+            7714
+          ],
+          [
+            "legbyes",
+            2748
+          ],
+          [
+            "Overstep",
+            576
+          ],
+          [
+            "byes",
+            529
+          ],
+          [
+            "other",
+            264
+          ],
+          [
+            "Penalty",
+            1
+          ]
+        ],
+        "is_wicket": [
+          [
+            "false",
+            190118
+          ],
+          [
+            "true",
+            10881
+          ]
+        ],
+        "dismissal_type": [
+          [
+            null,
+            190118
+          ],
+          [
+            "Caught",
+            7557
+          ],
+          [
+            "Bowled",
+            1775
+          ],
+          [
+            "LBW",
+            709
+          ],
+          [
+            "RunOut",
+            600
+          ],
+          [
+            "Stump",
+            214
+          ],
+          [
+            "Hit Wicket",
+            17
+          ],
+          [
+            "Retire Out",
+            6
+          ],
+          [
+            "Obstracting the field",
+            2
+          ],
+          [
+            "Obstructing the field",
+            1
+          ]
+        ],
+        "pace_or_spin": [
+          [
+            "Pace",
+            123886
+          ],
+          [
+            "Spin",
+            77113
+          ]
+        ],
+        "batting_type": [
+          [
+            "RHB",
+            131006
+          ],
+          [
+            "LHB",
+            69993
+          ]
+        ],
+        "over_or_around": [
+          [
+            "Over",
+            154670
+          ],
+          [
+            "Around",
+            45922
+          ],
+          [
+            null,
+            407
+          ]
+        ],
+        "on_or_off": [
+          [
+            "Off-side",
+            104875
+          ],
+          [
+            "On-side",
+            96124
+          ]
+        ]
+      },
+      "missing": {
+        "dismissal_type_id": {
+          "null": 190118,
+          "empty": 0
+        },
+        "dismissal_type": {
+          "null": 190118,
+          "empty": 0
+        },
+        "dismissed_player_id": {
+          "null": 190107,
+          "empty": 0
+        },
+        "stroke": {
+          "null": 12,
+          "empty": 0
+        },
+        "delivery_style": {
+          "null": 7,
+          "empty": 0
+        },
+        "over_or_around": {
+          "null": 407,
+          "empty": 0
+        }
+      }
+    },
+    "ipl squad.csv": {
+      "rows": 257,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "team_name",
+          "player"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {
+        "designation": {
+          "null": 247,
+          "empty": 0
+        }
+      }
+    },
+    "updated_ball_by_ball.csv": {
+      "rows": 200999,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": {
+        "key": [
+          "match_id",
+          "innings",
+          "innings_ball_num",
+          "overid",
+          "over_ball_num"
+        ],
+        "duplicate_key_groups": 0,
+        "rows_in_duplicate_groups": 0,
+        "samples": []
+      },
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {
+        "dismissal_type_id": {
+          "null": 190118,
+          "empty": 0
+        },
+        "dismissal_type": {
+          "null": 190118,
+          "empty": 0
+        },
+        "dismissed_player_id": {
+          "null": 190107,
+          "empty": 0
+        },
+        "stroke": {
+          "null": 12,
+          "empty": 0
+        },
+        "delivery_style": {
+          "null": 7,
+          "empty": 0
+        },
+        "over_or_around": {
+          "null": 407,
+          "empty": 0
+        }
+      }
+    },
+    "matches 2026.csv": {
+      "rows": 39,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": null,
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {
+        "first_ings_score": {
+          "null": 1,
+          "empty": 0
+        },
+        "first_ings_wkts": {
+          "null": 1,
+          "empty": 0
+        },
+        "second_ings_score": {
+          "null": 1,
+          "empty": 0
+        },
+        "second_ings_wkts": {
+          "null": 1,
+          "empty": 0
+        },
+        "match_winner": {
+          "null": 1,
+          "empty": 0
+        },
+        "wb_runs": {
+          "null": 24,
+          "empty": 0
+        },
+        "wb_wickets": {
+          "null": 17,
+          "empty": 0
+        },
+        "balls_left": {
+          "null": 1,
+          "empty": 0
+        },
+        "player_of_the_match": {
+          "null": 1,
+          "empty": 0
+        },
+        "top_scorer": {
+          "null": 1,
+          "empty": 0
+        },
+        "highscore": {
+          "null": 1,
+          "empty": 0
+        },
+        "best_bowling": {
+          "null": 1,
+          "empty": 0
+        },
+        "best_bowling_figure": {
+          "null": 1,
+          "empty": 0
+        }
+      }
+    },
+    "batting_stats2026.csv": {
+      "rows": 15,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": null,
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {}
+    },
+    "bowling_stats2026.csv": {
+      "rows": 15,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": null,
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {}
+    },
+    "fielding_stats2026.csv": {
+      "rows": 15,
+      "exact_duplicate_rows": 0,
+      "duplicate_primary_key": null,
+      "invalid_ids": [],
+      "categories": {},
+      "missing": {}
+    }
+  },
+  "relationships": {
+    "foreign_keys": [
+      {
+        "child": "teams(comp_id)",
+        "parent": "competitions(comp_id)",
+        "child_rows_checked": 353,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(comp_id)",
+        "parent": "competitions(comp_id)",
+        "child_rows_checked": 883,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(comp_id, home_team_id)",
+        "parent": "teams(comp_id, team_id)",
+        "child_rows_checked": 883,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(comp_id, away_team_id)",
+        "parent": "teams(comp_id, team_id)",
+        "child_rows_checked": 883,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(home_team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 883,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(win_team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 842,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(toss_win_team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 868,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(home_team_captain_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 839,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "matches(away_team_captain_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 838,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "playing_eleven(match_id)",
+        "parent": "matches(match_id)",
+        "child_rows_checked": 28381,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "playing_eleven(team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 28381,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "playing_eleven(player_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 28381,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "mapping(comp_id)",
+        "parent": "competitions(comp_id)",
+        "child_rows_checked": 6413,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "mapping(comp_id, team_id)",
+        "parent": "teams(comp_id, team_id)",
+        "child_rows_checked": 6413,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(match_id)",
+        "parent": "matches(match_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(batting_team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(bowling_team_id)",
+        "parent": "teams(team_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(striker_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(non_striker_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(bowler_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(dismissed_player_id)",
+        "parent": "mapping(player_id)",
+        "child_rows_checked": 10892,
+        "orphan_rows": 0,
+        "distinct_orphan_keys": 0,
+        "samples": []
+      },
+      {
+        "child": "bbb(match_id, striker_id)",
+        "parent": "playing_eleven(match_id, player_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 83,
+        "distinct_orphan_keys": 6,
+        "samples": [
+          [
+            "37087",
+            "36153"
+          ],
+          [
+            "37087",
+            "39444"
+          ],
+          [
+            "37092",
+            "36153"
+          ],
+          [
+            "37092",
+            "39444"
+          ],
+          [
+            "37095",
+            "36153"
+          ],
+          [
+            "37095",
+            "39444"
+          ]
+        ]
+      },
+      {
+        "child": "bbb(match_id, bowler_id)",
+        "parent": "playing_eleven(match_id, player_id)",
+        "child_rows_checked": 200999,
+        "orphan_rows": 30,
+        "distinct_orphan_keys": 3,
+        "samples": [
+          [
+            "37087",
+            "39444"
+          ],
+          [
+            "37092",
+            "39444"
+          ],
+          [
+            "37095",
+            "39444"
+          ]
+        ]
+      }
+    ],
+    "extra_checks": {
+      "playing_eleven_rows_without_mapping_for_match_comp_team_player": 5,
+      "matches_home_team_name_differs_from_teams_table": 0,
+      "matches_away_team_name_differs_from_teams_table": 0,
+      "matches_without_playing_eleven_rows": 3,
+      "bbb_batting_team_not_home_or_away": 0,
+      "matches_where_home_team_batted_first": 409,
+      "matches_where_away_team_batted_first": 458
+    },
+    "player_identity": {
+      "mapping_player_ids_with_multiple_names": [],
+      "mapping_player_names_with_multiple_player_ids": [
+        [
+          "Abdul Samad",
+          "6922,7446"
+        ],
+        [
+          "Bashir Ahmad",
+          "29833,39479"
+        ],
+        [
+          "Basil Hameed",
+          "39444,8638"
+        ],
+        [
+          "Haider Ali",
+          "28756,7338"
+        ],
+        [
+          "Mohammad Ali",
+          "20229,3083"
+        ],
+        [
+          "Muhammad Farooq",
+          "27373,28978"
+        ],
+        [
+          "Rashid Khan",
+          "20172,4722"
+        ]
+      ],
+      "count_names_with_multiple_ids": 7,
+      "count_ids_with_multiple_names": 0,
+      "count_normalised_names_with_multiple_ids": 7,
+      "bbb_names_differ_from_mapping_name_for_same_id": 0
+    },
+    "team_id_uniqueness": {
+      "teams": {
+        "distinct_team_ids": 38,
+        "team_ids_with_multiple_names": 0,
+        "samples": []
+      },
+      "mapping": {
+        "distinct_team_ids": 38,
+        "team_ids_with_multiple_names": 0,
+        "samples": []
+      },
+      "team_names_with_multiple_ids_in_teams": 0,
+      "team_id_is_globally_unique_key": true
+    }
+  },
+  "playing_eleven_checks": {
+    "players_marked_played_per_team_match_distribution": [
+      [
+        0,
+        23
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        11,
+        1168
+      ],
+      [
+        12,
+        556
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        17,
+        3
+      ],
+      [
+        19,
+        1
+      ],
+      [
+        20,
+        1
+      ]
+    ],
+    "impact_rows_by_flags": [
+      [
+        "true",
+        "0",
+        "0",
+        18598
+      ],
+      [
+        "false",
+        "0",
+        "0",
+        8667
+      ],
+      [
+        "true",
+        "0",
+        "1",
+        558
+      ],
+      [
+        "true",
+        "1",
+        "0",
+        558
+      ]
+    ],
+    "duplicate_pk_matches": 3,
+    "duplicate_pk_matches_that_have_super_over_innings_in_bbb": 0,
+    "bbb_matches_with_no_played_rows": 0
+  },
+  "match_reconciliation": {
+    "matches_csv_distinct_match_ids": 883,
+    "matches_with_ball_by_ball": 867,
+    "matches_without_ball_by_ball": 16,
+    "identity_holds": true,
+    "status_counts": {
+      "ABANDONED": 16
+    },
+    "ball_by_ball_match_ids_not_in_matches_csv": [],
+    "output_file": "D:/Data/backend/data/audit/match_reconciliation.csv"
+  },
+  "entity_counts": {
+    "competitions": 141,
+    "teams_rows": 353,
+    "distinct_team_ids_in_teams": 38,
+    "distinct_team_names_in_teams": 38,
+    "matches": 883,
+    "venues": 98,
+    "venue_countries": 17,
+    "players_in_mapping": 1217,
+    "players_in_playing_eleven": 1082,
+    "players_in_ball_by_ball": 959,
+    "matches_in_playing_eleven": 880,
+    "matches_with_ball_by_ball": 867
+  },
+  "originals_unmodified": {
+    "snapshot_identical": true,
+    "sha256_identical": true
+  }
+}

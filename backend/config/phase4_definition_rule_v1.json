@@ -1,0 +1,43 @@
+{
+  "config_version": "phase4_definition_rule_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "fixed_before_evaluation": true,
+  "data_used": ["TRAIN", "VALIDATION"],
+  "test_outcomes_used": false,
+  "candidates": {
+    "contexts": ["chase", "inn1", "any"],
+    "q": [0.75, 0.9, 0.95],
+    "leading_provisional": "chase|q0.9"
+  },
+  "cells": "format (IPL, T20I) x role (batter, bowler); primary stream runs (batter) / charged runs (bowler)",
+  "seed": 20260512,
+  "n_boot": 1000,
+  "metrics": {
+    "reliability_R": "TRAIN split-half over each player's matches (odd/even by date rank), Spearman-Brown corrected; players with at least min_balls_R pressure balls",
+    "stability_S": "Pearson correlation of player mean residual TRAIN versus VALIDATION; players with at least min_balls_S_train TRAIN and min_balls_S_validation VALIDATION pressure balls",
+    "discrimination_D": "report only: standardised mean residual difference, pressure versus non-pressure rows of the same population, VALIDATION",
+    "population_P": "players with at least min_balls_P TRAIN pressure balls; used by Gate 1 only",
+    "snr": "report only: between-player variance over mean noise variance, TRAIN"
+  },
+  "parameters": {
+    "min_balls_R": 12,
+    "min_balls_S_train": 12,
+    "min_balls_S_validation": 6,
+    "min_balls_P": 18,
+    "gate1_min_players_P": 15,
+    "min_players_for_RS": 15,
+    "corr_clip": 0.99,
+    "tie_margin": 0.02,
+    "report_pool_min_balls": 18
+  },
+  "gates_and_choice": [
+    "Gate 1 (floor, not an objective): P >= gate1_min_players_P in each of the four cells; failing candidates are excluded and listed.",
+    "A candidate is rankable only if R and S are estimable (>= min_players_for_RS players) in all four cells; otherwise NOT_RANKABLE.",
+    "Sc = 0.5 * (pooled z_R + pooled z_S); z = arctanh(clipped r); pooling weights n - 3 across cells; Sc is reported on the correlation scale tanh(Sc).",
+    "Top group: candidates within max(tie_margin, bootstrap SE of the best Sc) of the best Sc; ties inside the top group go to the lexicographically smallest definition id.",
+    "Eligible population is never a selector or tie-breaker. D is report-only."
+  ],
+  "winner_label": "PROVISIONAL, one of 9 examined (multiplicity not corrected)",
+  "if_no_candidate_rankable": "no rule winner; chase|q0.9 stays the labelled leading provisional default",
+  "bootstrap_note": "Match-cluster bootstrap with TRAIN-only thresholds and the baseline held fixed (thresholds are not refitted per resample; the selection-stability share therefore understates threshold uncertainty)."
+}

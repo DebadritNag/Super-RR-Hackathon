@@ -1,0 +1,268 @@
+{
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "not_for_publication": true,
+  "artifact": "exp_pre_delivery_state",
+  "state_version": "pre_delivery_state_v1",
+  "config_version": "pressure_rules_v1",
+  "built_utc": "2026-11-15T09:19:14+00:00",
+  "code_version": {
+    "engine_sha256": "bfbe885f33acb31554e18ad55472a9397f870d42603423b104a3831040a5ae2f",
+    "analytics_validation_sha256": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd"
+  },
+  "inputs": {
+    "official_db": "D:/Data/backend/data/database/superr.duckdb",
+    "official_db_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "official_tables_content_hash": {
+      "deliveries": {
+        "rows": 200999,
+        "content_hash": "2472089235370398535"
+      },
+      "matches": {
+        "rows": 883,
+        "content_hash": "13176953439193494225"
+      },
+      "competitions": {
+        "rows": 141,
+        "content_hash": "4698846567658472722"
+      }
+    },
+    "pressure_rules_sha256": "9f764c6918ec45b0428a35711980f792e154d7c8e83c901af07f0fdfc374d5e7",
+    "restrictions_sha256": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
+    "phase25_masks_read_from": [
+      "cricsheet_super_over_validation.json",
+      "data_quality_impact_report.json"
+    ],
+    "phase25_masks_sha256": {
+      "cricsheet_super_over_validation.json": "c1a30d08be45900f0ba8f6685e7fcdc315e579ce59db03c6dfd5f1304c6edfcb",
+      "data_quality_impact_report.json": "fe9f3301415fbcea3dfab0d6c75595fe17f5c507fd2366ee431d349153a75c9b"
+    },
+    "cricsheet_files_opened": 0
+  },
+  "store": {
+    "path": "D:/Data/backend/data/database/exploratory.duckdb",
+    "table": "exp_pre_delivery_state",
+    "columns": [
+      "match_id",
+      "innings_number",
+      "innings_ball_num",
+      "match_date",
+      "competition_type",
+      "season_label",
+      "season_source",
+      "venue_id",
+      "stage",
+      "knock_out",
+      "batting_team_id",
+      "bowling_team_id",
+      "striker_id",
+      "non_striker_id",
+      "bowler_id",
+      "striker_batting_order",
+      "chase_flag",
+      "team_runs_before",
+      "team_wickets_before",
+      "team_wickets_alt_before",
+      "wickets_remaining",
+      "wickets_remaining_alt",
+      "legal_balls_bowled_before",
+      "innings_limit_balls",
+      "limit_source",
+      "legal_balls_remaining",
+      "over_k",
+      "ball_in_over_k",
+      "crr",
+      "innings_phase",
+      "phase_rule",
+      "target",
+      "target_source",
+      "target_basis_unverified",
+      "runs_required",
+      "req_nonpositive_flag",
+      "rrr",
+      "gap",
+      "projected_surplus",
+      "resource_ratio",
+      "resource_status",
+      "dls_flag",
+      "dls_match_flag",
+      "innings_limit_unstated",
+      "dls_fields_complete",
+      "limit_applied_from_start_assumed",
+      "dls_exclude_primary",
+      "state_wicket_flag_disagreement",
+      "batter_balls_faced_before",
+      "batter_runs_before",
+      "bowler_deliveries_before",
+      "bowler_legal_balls_before",
+      "bowler_overs_completed_before",
+      "bowler_runs_charged_before",
+      "bowler_wickets_credited_before",
+      "regulation_flag",
+      "restricted_innings_flag",
+      "exclusion_reason_code",
+      "exclusion_rule_id",
+      "format_out_of_scope",
+      "regulation_pressure_eligible",
+      "dq_cricsheet_total_disagreement_innings",
+      "post_innings_legal_balls",
+      "post_innings_wickets",
+      "post_innings_ended_short_of_stated_limit",
+      "post_dls_state_reliable",
+      "out_batter_runs",
+      "out_is_four",
+      "out_is_six",
+      "out_is_wicket",
+      "out_dismissal_type",
+      "out_dismissed_player_id",
+      "out_extras_type",
+      "out_extras_primary_runs",
+      "out_extras_secondary_runs",
+      "out_is_legal_ball",
+      "out_runs_row",
+      "den_legal_inc",
+      "den_counts_as_ball_faced",
+      "den_bowler_counts_row",
+      "den_bowler_charged_runs",
+      "den_bowler_credited_wicket",
+      "den_extras_label_unverified",
+      "den_extras_category_known",
+      "den_extras_runs_with_none_type",
+      "den_wicket_flag_anomaly",
+      "den_wicket_without_dismissed",
+      "state_version",
+      "config_version"
+    ]
+  },
+  "restriction_rules_applied_as_masks": [
+    "RULE_INNINGS_3_4"
+  ],
+  "restriction_masks_carried_as_flags": [
+    "RULE_CRICSHEET_TOTALS",
+    "RULE_DISMISSED_NO_FLAG",
+    "RULE_WICKET_NO_DISMISSED",
+    "RULE_EXTRAS_OTHER",
+    "RULE_EXTRAS_PENALTY",
+    "RULE_DLS_TARGETS"
+  ],
+  "checks": {
+    "rows": 200999,
+    "matches": 867,
+    "rows_by_innings": {
+      "1": 105727,
+      "2": 95234,
+      "3": 25,
+      "4": 13
+    },
+    "regulation_rows": 200961,
+    "regulation_innings": 1712,
+    "regulation_pressure_eligible_rows": 193988,
+    "format_out_of_scope_rows": 6985,
+    "format_out_of_scope_matches": 30,
+    "restricted_rows": 38,
+    "restricted_by_reason": {
+      "CONFIRMED_SUPER_OVER_BY_CRICSHEET": {
+        "matches": [
+          34429,
+          45512,
+          50359
+        ],
+        "rows": 16
+      },
+      "UNVERIFIED_INNINGS_ROLE": {
+        "matches": [
+          40725,
+          48027,
+          48029
+        ],
+        "rows": 22
+      }
+    },
+    "rows_innings_limit_exceeded": 0,
+    "req_nonpositive_rows": 12,
+    "req_nonpositive_matches": [
+      48610
+    ],
+    "chase_rows_without_target": 0,
+    "target_basis_unverified_innings": 6,
+    "target_source_counts_innings": {
+      "INNINGS1_TOTAL_PLUS_1": 822,
+      "REVISED_TARGET": 23
+    },
+    "crr_null_rows": 1830,
+    "crr_null_rows_with_zero_legal_balls": 1830,
+    "rows_with_zero_legal_balls_before": 1830,
+    "dls": {
+      "matches_with_any_revised_field": 34,
+      "first_inn_revised_overs_not_null": 25,
+      "second_inn_revised_overs_not_null": 25,
+      "revised_target_not_null": 23,
+      "dls_flag_innings_1": 25,
+      "dls_flag_innings_2": 23,
+      "innings_limit_unstated": 2,
+      "dls_exclude_primary_innings": 50,
+      "post_innings_ended_short_innings_1": 8,
+      "post_innings_ended_short_innings_2": 1,
+      "post_innings_ended_short_matches_innings_1": [
+        15410,
+        15546,
+        31707,
+        36208,
+        41975,
+        46311,
+        46749,
+        50408
+      ],
+      "dls_state_reliable_true_innings": 39,
+      "dls_state_reliable_false_innings": 11,
+      "resource_status_not_reconstructed_rows": 3404,
+      "distinct_limits_innings": {
+        "30": 4,
+        "42": 3,
+        "48": 4,
+        "54": 4,
+        "60": 3,
+        "66": 6,
+        "72": 2,
+        "78": 2,
+        "84": 4,
+        "90": 7,
+        "102": 4,
+        "108": 2,
+        "114": 5,
+        "120": 1662
+      }
+    },
+    "wicket_flag_disagreement": {
+      "dismissed_without_flag_rows": 12,
+      "wicket_without_dismissed_rows": 1,
+      "later_rows_in_affected_innings": 739
+    },
+    "extras": {
+      "type_counts": {
+        "None": 189167,
+        "wide": 7714,
+        "legbyes": 2748,
+        "Overstep": 576,
+        "byes": 529,
+        "other": 264,
+        "Penalty": 1
+      },
+      "unverified_label_rows": 265,
+      "unknown_category_rows": 0,
+      "none_type_with_runs_rows": 2,
+      "legal_rows": 192444
+    },
+    "phase_rows_regulation": {
+      "middle": 92596,
+      "powerplay": 63366,
+      "death": 44999
+    },
+    "dq_cricsheet_total_disagreement_innings_rows": 1221
+  },
+  "scope_note": "State columns only. Par, expectation and rank columns (spec sections 4 and 6) are built in a later chunk.",
+  "preservation": {
+    "official_data_unchanged": true,
+    "differences": {}
+  }
+}

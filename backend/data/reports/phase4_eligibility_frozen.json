@@ -1,0 +1,66 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "records": [
+    {
+      "format": "IPL",
+      "role": "batter",
+      "gate_marginal_data_weight": 0.5,
+      "working_pool_threshold_balls": 20,
+      "window_ratio_W": 1.3108108108,
+      "status": "THRESHOLD_NOT_VALIDATED",
+      "threshold_balls": null,
+      "fallback_threshold_balls": null,
+      "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "alt_gate_smallest_threshold": "{\"0.3\": null, \"0.1\": 72}",
+      "analysis_threshold_balls": 20,
+      "analysis_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "analysis_window_ratio_W": 1.3108108108
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "gate_marginal_data_weight": 0.5,
+      "working_pool_threshold_balls": 16,
+      "window_ratio_W": 1.4742458736,
+      "status": "THRESHOLD_NOT_VALIDATED",
+      "threshold_balls": null,
+      "fallback_threshold_balls": null,
+      "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "alt_gate_smallest_threshold": "{\"0.3\": null, \"0.1\": 90}",
+      "analysis_threshold_balls": 16,
+      "analysis_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "analysis_window_ratio_W": 1.4742458736
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "gate_marginal_data_weight": 0.5,
+      "working_pool_threshold_balls": 49,
+      "window_ratio_W": 1.3079763663,
+      "status": "THRESHOLD_NOT_VALIDATED",
+      "threshold_balls": null,
+      "fallback_threshold_balls": null,
+      "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "alt_gate_smallest_threshold": "{\"0.3\": 144, \"0.1\": 48}",
+      "analysis_threshold_balls": 49,
+      "analysis_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "analysis_window_ratio_W": 1.3079763663
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "gate_marginal_data_weight": 0.5,
+      "working_pool_threshold_balls": 29,
+      "window_ratio_W": 1.4733962522,
+      "status": "THRESHOLD_NOT_VALIDATED",
+      "threshold_balls": null,
+      "fallback_threshold_balls": null,
+      "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "alt_gate_smallest_threshold": "{\"0.3\": 144, \"0.1\": 48}",
+      "analysis_threshold_balls": 29,
+      "analysis_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "analysis_window_ratio_W": 1.4733962522
+    }
+  ]
+}

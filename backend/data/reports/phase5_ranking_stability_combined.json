@@ -1,0 +1,30 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "records": [
+    {
+      "definition": "any|q0.75",
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "pool_size": 48,
+      "status": "ESTIMATED",
+      "expected_overlap_with_point_top10": 5.776,
+      "mean_jaccard": 0.4162879604,
+      "mean_spearman_vs_point": 0.7294547951,
+      "trivial_full_pool": false,
+      "label": "EXPERIMENTAL_NOT_VALIDATED_DESCRIPTIVE"
+    },
+    {
+      "definition": "any|q0.75",
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "pool_size": 39,
+      "status": "ESTIMATED",
+      "expected_overlap_with_point_top10": 7.091,
+      "mean_jaccard": 0.5602550783,
+      "mean_spearman_vs_point": 0.80837699,
+      "trivial_full_pool": false,
+      "label": "EXPERIMENTAL_NOT_VALIDATED_DESCRIPTIVE"
+    }
+  ]
+}

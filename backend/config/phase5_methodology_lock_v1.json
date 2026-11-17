@@ -1,0 +1,48 @@
+{
+  "config_version": "phase5_methodology_lock_v1",
+  "label": "EXPERIMENTAL_LOCK",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "statement": "Locks the choices used by the experimental TRAIN+VALIDATION refit. It does not validate the methodology, the pressure definition or the working pools.",
+  "refit_id": "p5_refit_trainval_v1",
+  "refit_n_boot": 200,
+  "refit_seed": 20260512,
+  "locked_config_files": [
+    "phase4_split_v1.json",
+    "pressure_rules_v1.json",
+    "data_quality_restrictions_v1.json",
+    "eligibility_rules_v1.json",
+    "pressure_eligibility_rules_v1.json",
+    "format_weights_v1.json",
+    "phase4_definition_rule_v1.json",
+    "phase4_classification_v1.json",
+    "phase5_classification_v2.json",
+    "classification_source_manifest_v1.json",
+    "phase5_context_rules_v1.json",
+    "phase5_gates_v1.json",
+    "phase5_methodology_status_v1.json",
+    "phase5_investigation_v1.json"
+  ],
+  "locked_report_files": ["phase4_frozen_choices.json", "phase5_test_set_manifest.json"],
+  "locked_code_files": [
+    "app/phase4/baseline.py",
+    "app/phase4/scoring.py",
+    "app/phase4/shrink.py",
+    "app/phase4/engine.py",
+    "app/phase4/eligibility.py",
+    "app/phase4/split.py",
+    "app/phase4/data.py",
+    "app/phase4/lockguard.py",
+    "app/phase5/pipeline.py",
+    "app/phase5/refit.py",
+    "app/phase5/constants.py"
+  ],
+  "required_reports": [
+    "phase5_investigation_report.md",
+    "phase5_sensitivity_report.md",
+    "phase5_ranking_stability.md",
+    "phase5_dynamic_ranking_architecture.md",
+    "phase5_publication_gates.md",
+    "phase5_classification_migration.md",
+    "phase5_t20i_date_verification.md"
+  ]
+}

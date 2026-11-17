@@ -1,0 +1,3044 @@
+{
+  "meta": {
+    "data_version": "1.3.0",
+    "created": "2026-11-03",
+    "revision": 1
+  },
+  "info": {
+    "balls_per_over": 6,
+    "city": "Kirtipur",
+    "dates": [
+      "2026-10-28"
+    ],
+    "event": {
+      "name": "Nepal Premier League",
+      "match_number": 4
+    },
+    "gender": "male",
+    "match_type": "T20",
+    "officials": {
+      "match_referees": [
+        "WC Labrooy"
+      ],
+      "reserve_umpires": [
+        "Kamalesh Thakur"
+      ],
+      "tv_umpires": [
+        "RMPJ Rambukwella"
+      ],
+      "umpires": [
+        "Masudur Rahman",
+        "SK Sigdel"
+      ]
+    },
+    "outcome": {
+      "winner": "Sudur Paschim Royals",
+      "by": {
+        "wickets": 6
+      }
+    },
+    "overs": 20,
+    "player_of_match": [
+      "DS Airee"
+    ],
+    "players": {
+      "Pokhara Avengers": [
+        "D Kharel",
+        "Mahedi Hasan",
+        "K Bhurtel",
+        "Shakib Al Hasan",
+        "S Samarawickrama",
+        "D Lakshan",
+        "A Gharti",
+        "K Thagunna",
+        "Bipin Khatri",
+        "P Pokhrel",
+        "Aakash Chand"
+      ],
+      "Sudur Paschim Royals": [
+        "SA Zaib",
+        "B Bhandari",
+        "BJ McMullen",
+        "DS Airee",
+        "I Pandey",
+        "SE Rutherford",
+        "Aarif Sheikh",
+        "SC Kuggeleijn",
+        "A Kharel",
+        "H Dhami",
+        "A Bohara"
+      ]
+    },
+    "registry": {
+      "people": {
+        "A Bohara": "64fb6b15",
+        "A Gharti": "0b62d391",
+        "A Kharel": "08b15b9e",
+        "Aakash Chand": "279c51f0",
+        "Aarif Sheikh": "cd4d7695",
+        "B Bhandari": "82342b13",
+        "BJ McMullen": "436c763a",
+        "Bipin Khatri": "6e21867e",
+        "D Kharel": "0e3bfa00",
+        "D Lakshan": "0a2184d9",
+        "DS Airee": "1747ea18",
+        "H Dhami": "bb20441f",
+        "I Pandey": "ed547c49",
+        "K Bhurtel": "e3386c8a",
+        "K Thagunna": "97d86e77",
+        "Kamalesh Thakur": "6926399e",
+        "Mahedi Hasan": "9dad0f2e",
+        "Masudur Rahman": "9581ac6b",
+        "P Pokhrel": "6dbb28c9",
+        "RMPJ Rambukwella": "13fa6ffc",
+        "S Samarawickrama": "9ab2914d",
+        "SA Zaib": "ab01e323",
+        "SC Kuggeleijn": "fef92afc",
+        "SE Rutherford": "d014d5ac",
+        "SK Sigdel": "e34ab986",
+        "Shakib Al Hasan": "7dc35884",
+        "WC Labrooy": "29d4e29b"
+      },
+      "venues": {
+        "Tribhuvan University International Cricket Ground, Kirtipur": "6056f871"
+      }
+    },
+    "season": "2026/27",
+    "team_type": "club",
+    "teams": [
+      "Pokhara Avengers",
+      "Sudur Paschim Royals"
+    ],
+    "toss": {
+      "decision": "field",
+      "winner": "Sudur Paschim Royals"
+    },
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur"
+  },
+  "innings": [
+    {
+      "team": "Pokhara Avengers",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "D Kharel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "D Kharel",
+              "review": {
+                "by": "Pokhara Avengers",
+                "umpire": "Masudur Rahman",
+                "batter": "Mahedi Hasan",
+                "decision": "upheld"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "D Kharel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "D Kharel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "D Kharel",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "D Kharel",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "D Kharel",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "D Kharel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "D Kharel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "review": {
+                "by": "Sudur Paschim Royals",
+                "umpire": "Masudur Rahman",
+                "batter": "D Kharel",
+                "decision": "upheld",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "D Kharel",
+                  "fielders": [
+                    {
+                      "name": "B Bhandari"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "review": {
+                "by": "Pokhara Avengers",
+                "umpire": "Masudur Rahman",
+                "batter": "K Bhurtel",
+                "decision": "upheld",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "K Bhurtel",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "K Bhurtel",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "Mahedi Hasan",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 1,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "Mahedi Hasan",
+              "bowler": "H Dhami",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "K Bhurtel",
+              "bowler": "H Dhami",
+              "non_striker": "Mahedi Hasan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "Mahedi Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "Mahedi Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "Mahedi Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "Mahedi Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "Mahedi Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Mahedi Hasan",
+                  "fielders": [
+                    {
+                      "name": "DS Airee"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "Shakib Al Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "K Bhurtel",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "K Bhurtel",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "Shakib Al Hasan",
+              "bowler": "SA Zaib",
+              "non_striker": "K Bhurtel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "K Bhurtel",
+              "bowler": "SA Zaib",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "K Bhurtel",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "K Bhurtel",
+                  "fielders": [
+                    {
+                      "name": "A Kharel"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "S Samarawickrama",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "S Samarawickrama",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "Shakib Al Hasan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "S Samarawickrama",
+              "bowler": "DS Airee",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "S Samarawickrama",
+              "bowler": "A Kharel",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "Shakib Al Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "S Samarawickrama",
+              "bowler": "A Kharel",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "Shakib Al Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "S Samarawickrama",
+              "bowler": "A Kharel",
+              "non_striker": "Shakib Al Hasan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "Shakib Al Hasan",
+              "bowler": "A Kharel",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Shakib Al Hasan",
+                  "fielders": [
+                    {
+                      "name": "SC Kuggeleijn"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "S Samarawickrama",
+              "bowler": "DS Airee",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "S Samarawickrama",
+              "bowler": "DS Airee",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "D Lakshan",
+              "bowler": "A Kharel",
+              "non_striker": "S Samarawickrama",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "S Samarawickrama",
+              "bowler": "A Kharel",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "S Samarawickrama",
+                  "fielders": [
+                    {
+                      "name": "B Bhandari"
+                    }
+                  ],
+                  "kind": "stumped"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "A Gharti",
+              "bowler": "A Kharel",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "A Gharti",
+              "bowler": "A Kharel",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "A Gharti",
+              "bowler": "A Kharel",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "A Gharti",
+              "bowler": "A Kharel",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 3,
+                "extras": 0,
+                "total": 3
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "A Gharti",
+              "bowler": "DS Airee",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "A Gharti",
+              "bowler": "DS Airee",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "extras": {
+                "wides": 5
+              },
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 5,
+                "total": 5
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "D Lakshan",
+              "bowler": "DS Airee",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "A Gharti",
+              "bowler": "DS Airee",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "D Lakshan",
+              "bowler": "A Bohara",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "A Gharti",
+              "review": {
+                "by": "Sudur Paschim Royals",
+                "umpire": "Masudur Rahman",
+                "batter": "D Lakshan",
+                "decision": "struck down",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "D Lakshan",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "D Lakshan",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "A Gharti",
+              "bowler": "I Pandey",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "A Gharti",
+              "bowler": "I Pandey",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "A Gharti",
+              "bowler": "I Pandey",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "D Lakshan",
+              "bowler": "I Pandey",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "D Lakshan",
+              "bowler": "I Pandey",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "D Lakshan",
+              "bowler": "I Pandey",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "D Lakshan",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "D Lakshan",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "D Lakshan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              },
+              "wickets": [
+                {
+                  "player_out": "D Lakshan",
+                  "fielders": [
+                    {
+                      "name": "B Bhandari"
+                    },
+                    {
+                      "name": "SE Rutherford"
+                    }
+                  ],
+                  "kind": "run out"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "K Thagunna",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.6",
+              "batter": "K Thagunna",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 17,
+          "deliveries": [
+            {
+              "actual_delivery": "17.1",
+              "batter": "K Thagunna",
+              "bowler": "SC Kuggeleijn",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.1",
+              "batter": "K Thagunna",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "K Thagunna",
+                  "fielders": [
+                    {
+                      "name": "B Bhandari"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "17.2",
+              "batter": "Bipin Khatri",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.3",
+              "batter": "Bipin Khatri",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "17.4",
+              "batter": "Bipin Khatri",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.5",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "17.6",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 18,
+          "deliveries": [
+            {
+              "actual_delivery": "18.1",
+              "batter": "Bipin Khatri",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.2",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.3",
+              "batter": "Bipin Khatri",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.4",
+              "batter": "A Gharti",
+              "bowler": "A Bohara",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.5",
+              "batter": "Bipin Khatri",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.6",
+              "batter": "Bipin Khatri",
+              "bowler": "A Bohara",
+              "non_striker": "A Gharti",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 19,
+          "deliveries": [
+            {
+              "actual_delivery": "19.1",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "19.2",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.3",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "19.4",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "19.5",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.6",
+              "batter": "A Gharti",
+              "bowler": "SC Kuggeleijn",
+              "extras": {
+                "byes": 1
+              },
+              "non_striker": "Bipin Khatri",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 5.6,
+          "type": "mandatory"
+        }
+      ]
+    },
+    {
+      "team": "Sudur Paschim Royals",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "SA Zaib",
+              "bowler": "D Lakshan",
+              "non_striker": "B Bhandari",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "SA Zaib",
+              "bowler": "D Lakshan",
+              "non_striker": "B Bhandari",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "SA Zaib",
+              "bowler": "D Lakshan",
+              "non_striker": "B Bhandari",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "B Bhandari",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "B Bhandari",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "B Bhandari",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "BJ McMullen",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "extras": {
+                "byes": 4
+              },
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 4,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "SA Zaib",
+              "bowler": "Bipin Khatri",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "BJ McMullen",
+              "bowler": "Bipin Khatri",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 3,
+                "extras": 0,
+                "total": 3
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "SA Zaib",
+              "bowler": "Bipin Khatri",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "SA Zaib",
+              "bowler": "Bipin Khatri",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "BJ McMullen",
+              "bowler": "Bipin Khatri",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "SA Zaib",
+              "bowler": "Bipin Khatri",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "SA Zaib",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "BJ McMullen",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "BJ McMullen",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "BJ McMullen",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "SA Zaib",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "BJ McMullen",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "BJ McMullen",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "review": {
+                "by": "Pokhara Avengers",
+                "umpire": "Masudur Rahman",
+                "batter": "BJ McMullen",
+                "decision": "upheld",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "BJ McMullen",
+                  "kind": "lbw"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "SA Zaib",
+              "bowler": "D Lakshan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "DS Airee",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "DS Airee",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "DS Airee",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "SA Zaib",
+              "bowler": "D Lakshan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "DS Airee",
+              "bowler": "D Lakshan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              },
+              "wickets": [
+                {
+                  "player_out": "SA Zaib",
+                  "fielders": [
+                    {
+                      "name": "A Gharti"
+                    },
+                    {
+                      "name": "K Thagunna"
+                    }
+                  ],
+                  "kind": "run out"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "I Pandey",
+              "bowler": "P Pokhrel",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "DS Airee",
+              "bowler": "P Pokhrel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.1",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "DS Airee",
+              "bowler": "Aakash Chand",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "I Pandey",
+              "bowler": "Aakash Chand",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "DS Airee",
+              "bowler": "Aakash Chand",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "I Pandey",
+              "bowler": "Aakash Chand",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "I Pandey",
+              "bowler": "Aakash Chand",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "DS Airee",
+              "bowler": "Aakash Chand",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "DS Airee",
+              "bowler": "Aakash Chand",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "I Pandey",
+              "bowler": "K Bhurtel",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "DS Airee",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "I Pandey",
+              "bowler": "Bipin Khatri",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "I Pandey",
+              "bowler": "Bipin Khatri",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "I Pandey",
+              "bowler": "Bipin Khatri",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "DS Airee",
+              "bowler": "Bipin Khatri",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "I Pandey",
+              "bowler": "Bipin Khatri",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "I Pandey",
+              "bowler": "Bipin Khatri",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "I Pandey",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "DS Airee",
+              "bowler": "Shakib Al Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "DS Airee",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "I Pandey",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "I Pandey",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "review": {
+                "by": "Pokhara Avengers",
+                "umpire": "Masudur Rahman",
+                "batter": "I Pandey",
+                "decision": "upheld",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "I Pandey",
+                  "kind": "lbw"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "SE Rutherford",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "SE Rutherford",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "SE Rutherford",
+              "bowler": "Mahedi Hasan",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "SE Rutherford",
+              "bowler": "K Bhurtel",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "SE Rutherford",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "SE Rutherford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "SE Rutherford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "DS Airee",
+              "bowler": "K Bhurtel",
+              "non_striker": "SE Rutherford",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 5.6,
+          "type": "mandatory"
+        }
+      ],
+      "target": {
+        "overs": 20,
+        "runs": 146
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "event": "FREEZE",
+    "seq": 1,
+    "sha256": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42"
+  },
+  {
+    "event": "OPEN",
+    "seq": 2,
+    "sha256": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42"
+  },
+  {
+    "event": "CLOSE",
+    "seq": 3
+  }
+]

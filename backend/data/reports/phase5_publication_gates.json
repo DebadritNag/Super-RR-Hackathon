@@ -1,0 +1,141 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "inputs": {
+    "cell_statuses": {
+      "IPL|batter": "THRESHOLD_NOT_VALIDATED",
+      "IPL|bowler": "THRESHOLD_NOT_VALIDATED",
+      "T20I|batter": "THRESHOLD_NOT_VALIDATED",
+      "T20I|bowler": "THRESHOLD_NOT_VALIDATED"
+    },
+    "methodology_validated": false,
+    "date_gate": {
+      "passed": false,
+      "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+    },
+    "strict_enabled": false,
+    "min_public_pool": 10
+  },
+  "scenarios": {
+    "descriptive (no rows, no strict filter)": {
+      "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+      "failing_gates": [
+        "data_weight_gate_passed",
+        "methodology_validated",
+        "date_verification"
+      ],
+      "gate_results": [
+        {
+          "gate_id": "data_weight_gate_passed",
+          "passed": false,
+          "applicable": true,
+          "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+        },
+        {
+          "gate_id": "methodology_validated",
+          "passed": false,
+          "applicable": true,
+          "detail": "methodology not validated"
+        },
+        {
+          "gate_id": "strict_classification_available",
+          "passed": true,
+          "applicable": false,
+          "detail": "not applicable: request uses no strict status filter"
+        },
+        {
+          "gate_id": "min_eligible_pool",
+          "passed": true,
+          "applicable": false,
+          "detail": "not applicable: evaluated per request with rows"
+        },
+        {
+          "gate_id": "date_verification",
+          "passed": false,
+          "applicable": true,
+          "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+        }
+      ]
+    },
+    "ranking with rows (pool of 10 assumed)": {
+      "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+      "failing_gates": [
+        "data_weight_gate_passed",
+        "methodology_validated",
+        "date_verification"
+      ],
+      "gate_results": [
+        {
+          "gate_id": "data_weight_gate_passed",
+          "passed": false,
+          "applicable": true,
+          "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+        },
+        {
+          "gate_id": "methodology_validated",
+          "passed": false,
+          "applicable": true,
+          "detail": "methodology not validated"
+        },
+        {
+          "gate_id": "strict_classification_available",
+          "passed": true,
+          "applicable": false,
+          "detail": "not applicable: request uses no strict status filter"
+        },
+        {
+          "gate_id": "min_eligible_pool",
+          "passed": true,
+          "applicable": true,
+          "detail": "10 eligible rows, minimum 10"
+        },
+        {
+          "gate_id": "date_verification",
+          "passed": false,
+          "applicable": true,
+          "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+        }
+      ]
+    },
+    "strict-uncapped request": {
+      "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+      "failing_gates": [
+        "data_weight_gate_passed",
+        "methodology_validated",
+        "strict_classification_available",
+        "date_verification"
+      ],
+      "gate_results": [
+        {
+          "gate_id": "data_weight_gate_passed",
+          "passed": false,
+          "applicable": true,
+          "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+        },
+        {
+          "gate_id": "methodology_validated",
+          "passed": false,
+          "applicable": true,
+          "detail": "methodology not validated"
+        },
+        {
+          "gate_id": "strict_classification_available",
+          "passed": false,
+          "applicable": true,
+          "detail": "STRICT_UNCAPPED_DISABLED"
+        },
+        {
+          "gate_id": "min_eligible_pool",
+          "passed": true,
+          "applicable": true,
+          "detail": "10 eligible rows, minimum 10"
+        },
+        {
+          "gate_id": "date_verification",
+          "passed": false,
+          "applicable": true,
+          "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1396 @@
+{
+  "proxy_run": true,
+  "pressure_status": "PENDING_PHASE3",
+  "score_label": "PROXY_NOT_PRESSURE",
+  "not_for_publication": true,
+  "validation_only": true,
+  "cricsheet_loaded_into_database": false,
+  "official_data_modified": false,
+  "official_matches_with_innings_3_4": 6,
+  "classification_counts": {
+    "CONFIRMED_SUPER_OVER": 3,
+    "UNCONFIRMED": 3,
+    "CONFLICTING": 0
+  },
+  "matches": [
+    {
+      "match_id": 34429,
+      "match_date": "2024-07-30",
+      "competition_type": "T20I",
+      "comp_name": "India in Sri Lanka T20I Series 2024",
+      "teams": [
+        "Sri Lanka",
+        "India"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "India Tied with Srilanka (India Won the Super Over by 2 wickets)",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "India",
+          "deliveries": 125,
+          "legal_balls": 120,
+          "total": 137,
+          "wickets": 9,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "Sri Lanka",
+          "deliveries": 127,
+          "legal_balls": 120,
+          "total": 137,
+          "wickets": 8,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "Sri Lanka",
+          "deliveries": 4,
+          "legal_balls": 3,
+          "total": 2,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "India",
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 4,
+          "wickets": 0,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "MAPPED_UNIQUE",
+        "cricsheet_match_id": "1442989",
+        "candidates": [
+          "1442989"
+        ],
+        "directories": [
+          "t20s_male_json",
+          "india_male_json"
+        ],
+        "copies_agree": true,
+        "sanity": {
+          "passed": true,
+          "failures": [],
+          "notes": [],
+          "competition_check": {
+            "rule": "T20I requires Cricsheet team_type international",
+            "passed": true
+          }
+        }
+      },
+      "cricsheet_innings": [
+        {
+          "team": "India",
+          "super_over": false,
+          "deliveries": 125,
+          "legal_balls": 120,
+          "total": 137,
+          "batter": 130,
+          "extras": 7,
+          "wides": 5,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 2,
+          "penalty": 0,
+          "wickets": 9,
+          "has_target": false,
+          "has_powerplays": true
+        },
+        {
+          "team": "Sri Lanka",
+          "super_over": false,
+          "deliveries": 127,
+          "legal_balls": 120,
+          "total": 137,
+          "batter": 127,
+          "extras": 10,
+          "wides": 8,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 2,
+          "penalty": 0,
+          "wickets": 8,
+          "has_target": true,
+          "has_powerplays": true
+        },
+        {
+          "team": "Sri Lanka",
+          "super_over": true,
+          "deliveries": 4,
+          "legal_balls": 3,
+          "total": 2,
+          "batter": 1,
+          "extras": 1,
+          "wides": 1,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 2,
+          "has_target": false,
+          "has_powerplays": false
+        },
+        {
+          "team": "India",
+          "super_over": true,
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 4,
+          "batter": 4,
+          "extras": 0,
+          "wides": 0,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 0,
+          "has_target": false,
+          "has_powerplays": false
+        }
+      ],
+      "cricsheet_raw": {
+        "available": true,
+        "file": "t20s_male_json/1442989.json",
+        "event": {
+          "name": "India tour of Sri Lanka",
+          "match_number": 3
+        },
+        "venue": "Pallekele International Cricket Stadium",
+        "city": "Kandy",
+        "dates": [
+          "2024-07-30"
+        ],
+        "outcome": {
+          "result": "tie",
+          "eliminator": "India"
+        },
+        "outcome_has_eliminator": true,
+        "outcome_has_bowl_out": false,
+        "super_over_innings_flags": [
+          {
+            "team": "Sri Lanka",
+            "super_over": true
+          },
+          {
+            "team": "India",
+            "super_over": true
+          }
+        ],
+        "super_over_overs": [
+          [
+            {
+              "over": 0,
+              "deliveries": 4
+            }
+          ],
+          [
+            {
+              "over": 0,
+              "deliveries": 1
+            }
+          ]
+        ]
+      },
+      "classification": "CONFIRMED_SUPER_OVER",
+      "reason_codes": [],
+      "positions": [
+        {
+          "position": 1,
+          "official_innings_number": 3,
+          "official": {
+            "batting_team": "Sri Lanka",
+            "deliveries": 4,
+            "legal_balls": 3,
+            "total": 2,
+            "wickets": 2
+          },
+          "cricsheet": {
+            "team": "Sri Lanka",
+            "deliveries": 4,
+            "legal_balls": 3,
+            "total": 2,
+            "wickets": 2
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        },
+        {
+          "position": 2,
+          "official_innings_number": 4,
+          "official": {
+            "batting_team": "India",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 4,
+            "wickets": 0
+          },
+          "cricsheet": {
+            "team": "India",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 4,
+            "wickets": 0
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        }
+      ],
+      "proposed_innings_role_status": "CONFIRMED_SUPER_OVER_BY_CRICSHEET"
+    },
+    {
+      "match_id": 40725,
+      "match_date": "2025-04-16",
+      "competition_type": "IPL",
+      "comp_name": "IPL 2025",
+      "teams": [
+        "Delhi Capitals",
+        "Rajasthan Royals"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "Delhi Capitals Tied with Rajasthan Royals (DC won the Super Over)",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "Delhi Capitals",
+          "deliveries": 128,
+          "legal_balls": 120,
+          "total": 188,
+          "wickets": 5,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "Rajasthan Royals",
+          "deliveries": 124,
+          "legal_balls": 120,
+          "total": 188,
+          "wickets": 4,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 1
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "Rajasthan Royals",
+          "deliveries": 6,
+          "legal_balls": 5,
+          "total": 11,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "Delhi Capitals",
+          "deliveries": 4,
+          "legal_balls": 4,
+          "total": 13,
+          "wickets": 0,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "MAPPED_UNIQUE",
+        "cricsheet_match_id": "1473469",
+        "candidates": [
+          "1473469"
+        ],
+        "directories": [
+          "ipl_male_json"
+        ],
+        "copies_agree": true,
+        "sanity": {
+          "passed": false,
+          "failures": [
+            "REG2_WICKETS"
+          ],
+          "notes": [
+            "REG2_WICKETS gap of 1 equals the official rows with a dismissed player but is_wicket false (open_dismissed_player_without_wicket_flag); the failure is kept, not waived"
+          ],
+          "competition_check": {
+            "rule": "IPL requires Cricsheet event name Indian Premier League",
+            "passed": true
+          }
+        }
+      },
+      "cricsheet_innings": [
+        {
+          "team": "Delhi Capitals",
+          "super_over": false,
+          "deliveries": 128,
+          "legal_balls": 120,
+          "total": 188,
+          "batter": 179,
+          "extras": 9,
+          "wides": 7,
+          "noballs": 1,
+          "byes": 0,
+          "legbyes": 1,
+          "penalty": 0,
+          "wickets": 5,
+          "has_target": false,
+          "has_powerplays": true
+        },
+        {
+          "team": "Rajasthan Royals",
+          "super_over": false,
+          "deliveries": 124,
+          "legal_balls": 120,
+          "total": 188,
+          "batter": 182,
+          "extras": 6,
+          "wides": 3,
+          "noballs": 1,
+          "byes": 1,
+          "legbyes": 1,
+          "penalty": 0,
+          "wickets": 5,
+          "has_target": true,
+          "has_powerplays": true
+        },
+        {
+          "team": "Rajasthan Royals",
+          "super_over": true,
+          "deliveries": 6,
+          "legal_balls": 5,
+          "total": 11,
+          "batter": 10,
+          "extras": 1,
+          "wides": 0,
+          "noballs": 1,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 2,
+          "has_target": false,
+          "has_powerplays": false
+        },
+        {
+          "team": "Delhi Capitals",
+          "super_over": true,
+          "deliveries": 4,
+          "legal_balls": 4,
+          "total": 13,
+          "batter": 13,
+          "extras": 0,
+          "wides": 0,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 0,
+          "has_target": false,
+          "has_powerplays": false
+        }
+      ],
+      "cricsheet_raw": {
+        "available": true,
+        "file": "ipl_male_json/1473469.json",
+        "event": {
+          "name": "Indian Premier League",
+          "match_number": 32
+        },
+        "venue": "Arun Jaitley Stadium",
+        "city": "Delhi",
+        "dates": [
+          "2025-04-16"
+        ],
+        "outcome": {
+          "result": "tie",
+          "eliminator": "Delhi Capitals"
+        },
+        "outcome_has_eliminator": true,
+        "outcome_has_bowl_out": false,
+        "super_over_innings_flags": [
+          {
+            "team": "Rajasthan Royals",
+            "super_over": true
+          },
+          {
+            "team": "Delhi Capitals",
+            "super_over": true
+          }
+        ],
+        "super_over_overs": [
+          [
+            {
+              "over": 0,
+              "deliveries": 6
+            }
+          ],
+          [
+            {
+              "over": 0,
+              "deliveries": 4
+            }
+          ]
+        ]
+      },
+      "classification": "UNCONFIRMED",
+      "reason_codes": [
+        "MAPPING_SANITY_FAILED"
+      ],
+      "positions": [],
+      "proposed_innings_role_status": "UNCONFIRMED_INNINGS_3_4",
+      "supplementary_positions_not_used_for_verdict": [
+        {
+          "position": 1,
+          "official_innings_number": 3,
+          "official": {
+            "batting_team": "Rajasthan Royals",
+            "deliveries": 6,
+            "legal_balls": 5,
+            "total": 11,
+            "wickets": 2
+          },
+          "cricsheet": {
+            "team": "Rajasthan Royals",
+            "deliveries": 6,
+            "legal_balls": 5,
+            "total": 11,
+            "wickets": 2
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        },
+        {
+          "position": 2,
+          "official_innings_number": 4,
+          "official": {
+            "batting_team": "Delhi Capitals",
+            "deliveries": 4,
+            "legal_balls": 4,
+            "total": 13,
+            "wickets": 0
+          },
+          "cricsheet": {
+            "team": "Delhi Capitals",
+            "deliveries": 4,
+            "legal_balls": 4,
+            "total": 13,
+            "wickets": 0
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        }
+      ],
+      "super_over_fields_agree_ignoring_sanity": true
+    },
+    {
+      "match_id": 45512,
+      "match_date": "2025-09-26",
+      "competition_type": "T20I",
+      "comp_name": "Asia Cup 2025",
+      "teams": [
+        "India",
+        "Sri Lanka"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "India won the Super Over(Match Tied)",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "India",
+          "deliveries": 129,
+          "legal_balls": 120,
+          "total": 202,
+          "wickets": 5,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "Sri Lanka",
+          "deliveries": 124,
+          "legal_balls": 120,
+          "total": 202,
+          "wickets": 5,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "Sri Lanka",
+          "deliveries": 6,
+          "legal_balls": 5,
+          "total": 2,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "India",
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 3,
+          "wickets": 0,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "MAPPED_UNIQUE",
+        "cricsheet_match_id": "1496937",
+        "candidates": [
+          "1496937"
+        ],
+        "directories": [
+          "t20s_male_json",
+          "india_male_json"
+        ],
+        "copies_agree": true,
+        "sanity": {
+          "passed": true,
+          "failures": [],
+          "notes": [],
+          "competition_check": {
+            "rule": "T20I requires Cricsheet team_type international",
+            "passed": true
+          }
+        }
+      },
+      "cricsheet_innings": [
+        {
+          "team": "India",
+          "super_over": false,
+          "deliveries": 129,
+          "legal_balls": 120,
+          "total": 202,
+          "batter": 188,
+          "extras": 14,
+          "wides": 7,
+          "noballs": 2,
+          "byes": 0,
+          "legbyes": 5,
+          "penalty": 0,
+          "wickets": 5,
+          "has_target": false,
+          "has_powerplays": true
+        },
+        {
+          "team": "Sri Lanka",
+          "super_over": false,
+          "deliveries": 124,
+          "legal_balls": 120,
+          "total": 202,
+          "batter": 197,
+          "extras": 5,
+          "wides": 4,
+          "noballs": 0,
+          "byes": 1,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 5,
+          "has_target": true,
+          "has_powerplays": true
+        },
+        {
+          "team": "Sri Lanka",
+          "super_over": true,
+          "deliveries": 6,
+          "legal_balls": 5,
+          "total": 2,
+          "batter": 1,
+          "extras": 1,
+          "wides": 1,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 2,
+          "has_target": false,
+          "has_powerplays": false
+        },
+        {
+          "team": "India",
+          "super_over": true,
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 3,
+          "batter": 3,
+          "extras": 0,
+          "wides": 0,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 0,
+          "has_target": false,
+          "has_powerplays": false
+        }
+      ],
+      "cricsheet_raw": {
+        "available": true,
+        "file": "t20s_male_json/1496937.json",
+        "event": {
+          "name": "Men's T20 Asia Cup",
+          "match_number": 18
+        },
+        "venue": "Dubai International Cricket Stadium",
+        "city": "Dubai",
+        "dates": [
+          "2025-09-26"
+        ],
+        "outcome": {
+          "result": "tie",
+          "eliminator": "India"
+        },
+        "outcome_has_eliminator": true,
+        "outcome_has_bowl_out": false,
+        "super_over_innings_flags": [
+          {
+            "team": "Sri Lanka",
+            "super_over": true
+          },
+          {
+            "team": "India",
+            "super_over": true
+          }
+        ],
+        "super_over_overs": [
+          [
+            {
+              "over": 0,
+              "deliveries": 6
+            }
+          ],
+          [
+            {
+              "over": 0,
+              "deliveries": 1
+            }
+          ]
+        ]
+      },
+      "classification": "CONFIRMED_SUPER_OVER",
+      "reason_codes": [],
+      "positions": [
+        {
+          "position": 1,
+          "official_innings_number": 3,
+          "official": {
+            "batting_team": "Sri Lanka",
+            "deliveries": 6,
+            "legal_balls": 5,
+            "total": 2,
+            "wickets": 2
+          },
+          "cricsheet": {
+            "team": "Sri Lanka",
+            "deliveries": 6,
+            "legal_balls": 5,
+            "total": 2,
+            "wickets": 2
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        },
+        {
+          "position": 2,
+          "official_innings_number": 4,
+          "official": {
+            "batting_team": "India",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 3,
+            "wickets": 0
+          },
+          "cricsheet": {
+            "team": "India",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 3,
+            "wickets": 0
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        }
+      ],
+      "proposed_innings_role_status": "CONFIRMED_SUPER_OVER_BY_CRICSHEET"
+    },
+    {
+      "match_id": 48027,
+      "match_date": "2025-11-21",
+      "competition_type": "OTHER_T20",
+      "comp_name": "Asia Cup Rising Stars 2025",
+      "teams": [
+        "Bangladesh A",
+        "India A"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "Bangladesh A Won The Super Over",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "Bangladesh A",
+          "deliveries": 132,
+          "legal_balls": 120,
+          "total": 194,
+          "wickets": 6,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "India A",
+          "deliveries": 126,
+          "legal_balls": 120,
+          "total": 194,
+          "wickets": 6,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "India A",
+          "deliveries": 2,
+          "legal_balls": 2,
+          "total": 0,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "Bangladesh A",
+          "deliveries": 2,
+          "legal_balls": 1,
+          "total": 1,
+          "wickets": 1,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "NOT_FOUND",
+        "cricsheet_match_id": null,
+        "candidates": []
+      },
+      "cricsheet_innings": null,
+      "cricsheet_raw": null,
+      "classification": "UNCONFIRMED",
+      "reason_codes": [
+        "MAPPING_NOT_FOUND"
+      ],
+      "positions": [],
+      "proposed_innings_role_status": "UNCONFIRMED_INNINGS_3_4"
+    },
+    {
+      "match_id": 48029,
+      "match_date": "2025-11-23",
+      "competition_type": "OTHER_T20",
+      "comp_name": "Asia Cup Rising Stars 2025",
+      "teams": [
+        "Bangladesh A",
+        "Pakistan A"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "Pakistan A Won the super over",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "Pakistan A",
+          "deliveries": 123,
+          "legal_balls": 120,
+          "total": 125,
+          "wickets": 10,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "Bangladesh A",
+          "deliveries": 126,
+          "legal_balls": 120,
+          "total": 125,
+          "wickets": 9,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "Bangladesh A",
+          "deliveries": 4,
+          "legal_balls": 3,
+          "total": 6,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "Pakistan A",
+          "deliveries": 4,
+          "legal_balls": 4,
+          "total": 7,
+          "wickets": 0,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "NOT_FOUND",
+        "cricsheet_match_id": null,
+        "candidates": []
+      },
+      "cricsheet_innings": null,
+      "cricsheet_raw": null,
+      "classification": "UNCONFIRMED",
+      "reason_codes": [
+        "MAPPING_NOT_FOUND"
+      ],
+      "positions": [],
+      "proposed_innings_role_status": "UNCONFIRMED_INNINGS_3_4"
+    },
+    {
+      "match_id": 50359,
+      "match_date": "2026-04-26",
+      "competition_type": "IPL",
+      "comp_name": "IPL 2026",
+      "teams": [
+        "Lucknow Super Giants",
+        "Kolkata Knight Riders"
+      ],
+      "official_result_status": "TIED_DECIDED_BY_TIEBREAK",
+      "official_result": "Kolkata Knight Riders Won by Super over (Match Tied)",
+      "official_result_text_mentions_super_over": true,
+      "official_innings": [
+        {
+          "innings_number": 1,
+          "batting_team": "Kolkata Knight Riders",
+          "deliveries": 127,
+          "legal_balls": 120,
+          "total": 155,
+          "wickets": 7,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 2,
+          "batting_team": "Lucknow Super Giants",
+          "deliveries": 125,
+          "legal_balls": 120,
+          "total": 155,
+          "wickets": 8,
+          "innings_role_status": "STANDARD",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 3,
+          "batting_team": "Lucknow Super Giants",
+          "deliveries": 3,
+          "legal_balls": 3,
+          "total": 1,
+          "wickets": 2,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        },
+        {
+          "innings_number": 4,
+          "batting_team": "Kolkata Knight Riders",
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 4,
+          "wickets": 0,
+          "innings_role_status": "UNVERIFIED",
+          "dismissed_without_flag": 0
+        }
+      ],
+      "mapping": {
+        "status": "MAPPED_UNIQUE",
+        "cricsheet_match_id": "1529281",
+        "candidates": [
+          "1529281"
+        ],
+        "directories": [
+          "ipl_male_json",
+          "2026_male_json"
+        ],
+        "copies_agree": true,
+        "sanity": {
+          "passed": true,
+          "failures": [],
+          "notes": [],
+          "competition_check": {
+            "rule": "IPL requires Cricsheet event name Indian Premier League",
+            "passed": true
+          }
+        }
+      },
+      "cricsheet_innings": [
+        {
+          "team": "Kolkata Knight Riders",
+          "super_over": false,
+          "deliveries": 127,
+          "legal_balls": 120,
+          "total": 155,
+          "batter": 147,
+          "extras": 8,
+          "wides": 7,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 1,
+          "penalty": 0,
+          "wickets": 7,
+          "has_target": false,
+          "has_powerplays": true
+        },
+        {
+          "team": "Lucknow Super Giants",
+          "super_over": false,
+          "deliveries": 125,
+          "legal_balls": 120,
+          "total": 155,
+          "batter": 147,
+          "extras": 8,
+          "wides": 3,
+          "noballs": 2,
+          "byes": 2,
+          "legbyes": 1,
+          "penalty": 0,
+          "wickets": 8,
+          "has_target": true,
+          "has_powerplays": true
+        },
+        {
+          "team": "Lucknow Super Giants",
+          "super_over": true,
+          "deliveries": 3,
+          "legal_balls": 3,
+          "total": 1,
+          "batter": 1,
+          "extras": 0,
+          "wides": 0,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 2,
+          "has_target": false,
+          "has_powerplays": false
+        },
+        {
+          "team": "Kolkata Knight Riders",
+          "super_over": true,
+          "deliveries": 1,
+          "legal_balls": 1,
+          "total": 4,
+          "batter": 4,
+          "extras": 0,
+          "wides": 0,
+          "noballs": 0,
+          "byes": 0,
+          "legbyes": 0,
+          "penalty": 0,
+          "wickets": 0,
+          "has_target": false,
+          "has_powerplays": false
+        }
+      ],
+      "cricsheet_raw": {
+        "available": true,
+        "file": "ipl_male_json/1529281.json",
+        "event": {
+          "name": "Indian Premier League",
+          "match_number": 38
+        },
+        "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+        "city": "Lucknow",
+        "dates": [
+          "2026-04-26"
+        ],
+        "outcome": {
+          "result": "tie",
+          "eliminator": "Kolkata Knight Riders"
+        },
+        "outcome_has_eliminator": true,
+        "outcome_has_bowl_out": false,
+        "super_over_innings_flags": [
+          {
+            "team": "Lucknow Super Giants",
+            "super_over": true
+          },
+          {
+            "team": "Kolkata Knight Riders",
+            "super_over": true
+          }
+        ],
+        "super_over_overs": [
+          [
+            {
+              "over": 0,
+              "deliveries": 3
+            }
+          ],
+          [
+            {
+              "over": 0,
+              "deliveries": 1
+            }
+          ]
+        ]
+      },
+      "classification": "CONFIRMED_SUPER_OVER",
+      "reason_codes": [],
+      "positions": [
+        {
+          "position": 1,
+          "official_innings_number": 3,
+          "official": {
+            "batting_team": "Lucknow Super Giants",
+            "deliveries": 3,
+            "legal_balls": 3,
+            "total": 1,
+            "wickets": 2
+          },
+          "cricsheet": {
+            "team": "Lucknow Super Giants",
+            "deliveries": 3,
+            "legal_balls": 3,
+            "total": 1,
+            "wickets": 2
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        },
+        {
+          "position": 2,
+          "official_innings_number": 4,
+          "official": {
+            "batting_team": "Kolkata Knight Riders",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 4,
+            "wickets": 0
+          },
+          "cricsheet": {
+            "team": "Kolkata Knight Riders",
+            "deliveries": 1,
+            "legal_balls": 1,
+            "total": 4,
+            "wickets": 0
+          },
+          "checks": {
+            "batting_team": true,
+            "deliveries": true,
+            "legal_balls": true,
+            "total_runs": true,
+            "wickets": true
+          }
+        }
+      ],
+      "proposed_innings_role_status": "CONFIRMED_SUPER_OVER_BY_CRICSHEET"
+    }
+  ],
+  "converse_check": {
+    "description": "Official matches that map reliably, where Cricsheet shows a Super Over and the official data has no innings 3/4",
+    "official_matches_checked": 867,
+    "mapping_status_counts": {
+      "MAPPED_UNIQUE": 759,
+      "NOT_FOUND": 108
+    },
+    "official_missing_super_over": [
+      {
+        "match_id": 13613,
+        "match_date": "2022-02-13",
+        "cricsheet_match_id": "1263472",
+        "mapping_sanity_passed": true,
+        "cricsheet_super_over_innings": [
+          {
+            "team": "Sri Lanka",
+            "super_over": true,
+            "deliveries": 6,
+            "legal_balls": 6,
+            "total": 5,
+            "batter": 4,
+            "extras": 1,
+            "wides": 0,
+            "noballs": 0,
+            "byes": 1,
+            "legbyes": 0,
+            "penalty": 0,
+            "wickets": 1,
+            "has_target": false,
+            "has_powerplays": false
+          },
+          {
+            "team": "Australia",
+            "super_over": true,
+            "deliveries": 3,
+            "legal_balls": 3,
+            "total": 9,
+            "batter": 9,
+            "extras": 0,
+            "wides": 0,
+            "noballs": 0,
+            "byes": 0,
+            "legbyes": 0,
+            "penalty": 0,
+            "wickets": 0,
+            "has_target": false,
+            "has_powerplays": false
+          }
+        ],
+        "note": "Cricsheet has a Super Over but the official data has no innings 3/4"
+      },
+      {
+        "match_id": 21176,
+        "match_date": "2023-04-02",
+        "cricsheet_match_id": "1322362",
+        "mapping_sanity_passed": true,
+        "cricsheet_super_over_innings": [
+          {
+            "team": "New Zealand",
+            "super_over": true,
+            "deliveries": 7,
+            "legal_balls": 6,
+            "total": 8,
+            "batter": 7,
+            "extras": 1,
+            "wides": 1,
+            "noballs": 0,
+            "byes": 0,
+            "legbyes": 0,
+            "penalty": 0,
+            "wickets": 2,
+            "has_target": false,
+            "has_powerplays": false
+          },
+          {
+            "team": "Sri Lanka",
+            "super_over": true,
+            "deliveries": 3,
+            "legal_balls": 2,
+            "total": 12,
+            "batter": 11,
+            "extras": 1,
+            "wides": 0,
+            "noballs": 1,
+            "byes": 0,
+            "legbyes": 0,
+            "penalty": 0,
+            "wickets": 0,
+            "has_target": false,
+            "has_powerplays": false
+          }
+        ],
+        "note": "Cricsheet has a Super Over but the official data has no innings 3/4"
+      }
+    ],
+    "count": 2
+  },
+  "cricsheet_context": {
+    "index_rows": 9004,
+    "distinct_match_ids": 7993,
+    "ids_in_multiple_directories": 974,
+    "ids_with_disagreeing_copies": [],
+    "matches_with_super_over_innings": 58,
+    "directory_priority": [
+      "ipl_male_json",
+      "it20s_male_json",
+      "t20s_male_json",
+      "bbl_male_json",
+      "cpl_male_json",
+      "mlc_male_json",
+      "india_male_json",
+      "2026_male_json"
+    ]
+  },
+  "representation_in_cricsheet": "Cricsheet marks a Super Over as extra entries in the top-level `innings` list, appended after the regulation innings, each carrying `\"super_over\": true`, a `team`, and `overs` numbered from 0. A tied match also carries `info.outcome.eliminator` (the winning team) next to `result: tie`; a bowl-out would appear as `info.outcome.bowl_out`.",
+  "unverifiable": [
+    "Official matches not found in Cricsheet cannot be checked and stay UNCONFIRMED.",
+    "Cricsheet match/venue naming is not compared: the official venue table only has venue_id and venue_country, so venues are not used for mapping.",
+    "Official `innings_role_status` stays UNVERIFIED for every innings 3/4; the proposed values exist only in this report and are not written anywhere."
+  ],
+  "phase3_rule": "Phase 3 excludes innings 3 and 4 from regulation-pressure metrics by a per-metric restriction (open_innings_3_4_role_unverified), whatever the Cricsheet verdict. Cricsheet evidence is context for a later human decision on relabelling, not an automatic relabel.",
+  "provenance": {
+    "generated_at_utc": "2026-11-14T20:53:27Z",
+    "code_version": "bbcb52669ee61f080700813c1d64811481d41cb2dc859d29afbc76621b29f08a",
+    "seed": null,
+    "data_version": "data-8c617454671e",
+    "source_sha256": {
+      "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+    }
+  },
+  "preservation": {
+    "unchanged": true,
+    "diff": {},
+    "snapshot": {
+      "csv_sha256": {
+        "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+        "batting_stats2026.csv": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+        "bowling_stats2026.csv": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+        "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+        "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+        "fielding_stats2026.csv": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+        "ipl squad.csv": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+        "matches 2026.csv": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+        "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+        "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+        "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+        "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+      },
+      "tables": {
+        "ball_by_ball_comparison_detail": {
+          "rows": 57,
+          "content_hash": "6424049670836342807"
+        },
+        "ball_by_ball_comparison": {
+          "rows": 33,
+          "content_hash": "6556012316708249722"
+        },
+        "match_reconciliation": {
+          "rows": 883,
+          "content_hash": "8191618280319093247"
+        },
+        "deliveries": {
+          "rows": 200999,
+          "content_hash": "2472089235370398535"
+        },
+        "innings": {
+          "rows": 1724,
+          "content_hash": "2486840171759231281"
+        },
+        "match_squads": {
+          "rows": 28381,
+          "content_hash": "11232610400671811020"
+        },
+        "matches": {
+          "rows": 883,
+          "content_hash": "13176953439193494225"
+        },
+        "player_competition_mapping": {
+          "rows": 6413,
+          "content_hash": "595047445318026641"
+        },
+        "players": {
+          "rows": 1217,
+          "content_hash": "5617674674654928061"
+        },
+        "venues": {
+          "rows": 98,
+          "content_hash": "14876321384663441804"
+        },
+        "competition_teams": {
+          "rows": 353,
+          "content_hash": "15187849804718752551"
+        },
+        "teams": {
+          "rows": 38,
+          "content_hash": "13847215763956492045"
+        },
+        "competitions": {
+          "rows": 141,
+          "content_hash": "4698846567658472722"
+        },
+        "raw_ball_by_ball_updated": {
+          "rows": 200999,
+          "content_hash": "16279601034874580097"
+        },
+        "raw_ball_by_ball": {
+          "rows": 200999,
+          "content_hash": "14284978838386518736"
+        }
+      },
+      "db_file_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+      "cricsheet": {
+        "2026_male_json": {
+          "files": 1621,
+          "bytes": 267865691,
+          "sha256": "9605d27a0fcc0619476e58a3d9a9565b11f197c2007dedc6b3929232e39dd530"
+        },
+        "bbl_male_json": {
+          "files": 664,
+          "bytes": 54772655,
+          "sha256": "695bdd9b272d2a480791c5b4307283c42e63489c0a3d836b100456af95405f32"
+        },
+        "cpl_male_json": {
+          "files": 447,
+          "bytes": 37167606,
+          "sha256": "214c3a41faebce9ec69ae5451649437f5dd0ef4bb533fae608e090897eb21631"
+        },
+        "india_male_json": {
+          "files": 1039,
+          "bytes": 264034861,
+          "sha256": "718484e89142833a2c029119f599482bc953b718488330bd01c6d1ee0b0b7a6f"
+        },
+        "ipl_male_json": {
+          "files": 1245,
+          "bytes": 105718906,
+          "sha256": "03631a85a3463332f2b49167a23ac5c56b6e79048a32beb05043e0b5568df845"
+        },
+        "it20s_male_json": {
+          "files": 242,
+          "bytes": 19023902,
+          "sha256": "e2a02352a49dfc45e4ea6025af786d74849bbd5d7f41847b8a0326a3ba12dbce"
+        },
+        "mlc_male_json": {
+          "files": 111,
+          "bytes": 9253438,
+          "sha256": "aa046883ac8536fbce2190c77f6a16fb530ea5d401f81a2c50cc3725d61dbf3e"
+        },
+        "t20s_male_json": {
+          "files": 3651,
+          "bytes": 296564757,
+          "sha256": "8f92a901816c0276e62a7f0cdeb2060e6de1dfc83c6b8d34a2c465806154822d"
+        }
+      }
+    }
+  }
+}

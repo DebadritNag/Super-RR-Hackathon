@@ -1,0 +1,146 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "records": [
+    {
+      "config": "shrink_none",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 0.0,
+      "k_hand": 0.0,
+      "floor_hit": false,
+      "agrees": true
+    },
+    {
+      "config": "shrink_none",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 0.0,
+      "k_hand": 0.0,
+      "floor_hit": false,
+      "agrees": true
+    },
+    {
+      "config": "shrink_eb",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_eb",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau0.5",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 0.5,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau0.5",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 0.5,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau2",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 2.0,
+      "k_for": 50.0,
+      "k_hand": 50.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau2",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 2.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau4",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 4.0,
+      "k_for": 25.0,
+      "k_hand": 25.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_tau4",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 4.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_floor0.001",
+      "branch": "floor_hit",
+      "floor": 0.001,
+      "mult": 1.0,
+      "k_for": 1000.0,
+      "k_hand": 1000.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_floor0.001",
+      "branch": "non_finite",
+      "floor": 0.001,
+      "mult": 1.0,
+      "k_for": 1000.0,
+      "k_hand": 1000.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_target0",
+      "branch": "floor_hit",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    },
+    {
+      "config": "shrink_target0",
+      "branch": "non_finite",
+      "floor": 0.01,
+      "mult": 1.0,
+      "k_for": 100.0,
+      "k_hand": 100.0,
+      "floor_hit": true,
+      "agrees": true
+    }
+  ]
+}

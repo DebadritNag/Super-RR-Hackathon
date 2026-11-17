@@ -1,0 +1,74 @@
+{
+  "version": "phase5_investigation_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "declared_before_any_run": true,
+  "data_used": ["TRAIN", "VALIDATION"],
+  "test_outcomes_used": false,
+  "seed": 20260512,
+  "n_boot": 1000,
+  "definitions": {
+    "primary": "any|q0.75",
+    "primary_label": "PROVISIONAL (rule winner of one of nine; not validated, not shown superior)",
+    "alternatives": ["chase|q0.9", "any|q0.9", "chase|q0.75"]
+  },
+  "shrinkage_config": "shrink_tau4",
+  "windows": ["TRAIN", "PRE_TEST"],
+  "min_balls_variants": [1, 12],
+  "noise_bases": {
+    "phase4_kish": "sigma2_within / n_eff_kish (the Phase 4 estimator as implemented)",
+    "ball_independent": "sigma2_within / n_balls (assumes independent balls)",
+    "match_cluster": "cluster-robust variance of the player mean with matches as clusters"
+  },
+  "split_half": {
+    "modes": ["odd_even", "early_late", "random"],
+    "min_balls_per_half": 6,
+    "random_splits": 200,
+    "min_players_estimable": 10
+  },
+  "reliability_targets": [0.5, 0.7, 0.8],
+  "opportunity_ladders": {
+    "batter": [12, 18, 24, 30, 45, 60, 90, 120],
+    "bowler": [12, 18, 24, 36, 48, 72, 96, 144]
+  },
+  "detectability": {
+    "tau2_over_sigma2_grid": [0.0005, 0.001, 0.0025, 0.005, 0.01, 0.025],
+    "replications": 400,
+    "label": "PARAMETRIC_SIMULATION_DESCRIPTIVE"
+  },
+  "bowler_signal_candidates": {
+    "label": "SENSITIVITY_ONLY: does not replace the primary definition and never feeds the API",
+    "quantile": 0.75,
+    "thresholds_fitted_on": "TRAIN",
+    "candidates": [
+      {
+        "id": "bowler_defence_margin",
+        "description": "Batting side ahead of the bowling side's defence: chase rows with projected_surplus at or above the TRAIN q0.75 of chase rows; innings-1 rows with the batting side's runs above the STRICTLY PRIOR par at or above the TRAIN q0.75 of that deviation. Per format.",
+        "columns": ["projected_surplus", "team_runs_before", "par_runs_prior"]
+      },
+      {
+        "id": "bowler_death_close_gap",
+        "description": "Chase rows in the death phase where the absolute rate gap |rrr - crr| is at or below the TRAIN q0.25 of that quantity among chase death rows. Per format.",
+        "columns": ["gap", "innings_phase"]
+      },
+      {
+        "id": "bowler_death_wickets_in_hand",
+        "description": "Death-phase rows (both innings) where the batting side's wickets remaining are at or above the TRAIN q0.75 of wickets remaining among death rows. Per format. Wording note: the design text said 'wickets-in-hand at or below'; the bowler is under pressure when the batting side has MANY wickets in hand, so the upper quantile is used.",
+        "columns": ["wickets_remaining", "innings_phase"]
+      }
+    ]
+  },
+  "sensitivity": {
+    "definition_grid": {"contexts": ["chase", "inn1", "any"], "q": [0.75, 0.9, 0.95]},
+    "named_definitions_for_shrinkage_cross": ["any|q0.75", "chase|q0.9", "any|q0.9", "chase|q0.75"],
+    "eligibility_ball_thresholds_frozen": {"IPL|batter": 20, "T20I|batter": 16, "IPL|bowler": 49, "T20I|bowler": 29},
+    "top_k": 10
+  },
+  "stability": {
+    "top_k": 10,
+    "min_pool_for_stability": 5,
+    "min_common_for_cross_context_spearman": 8,
+    "phases": ["powerplay", "middle", "death"],
+    "situations": ["chase", "first_innings"],
+    "context_eligibility": "context-specific working pool: the P50 candidate threshold of the context's own TRAIN ball counts (same derivation as the Phase 4 working pool). NOT validated."
+  }
+}

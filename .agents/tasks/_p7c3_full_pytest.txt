@@ -1,0 +1,64 @@
+........................................................................ [  6%]
+........................................................................ [ 12%]
+........................................................................ [ 18%]
+........................................................................ [ 24%]
+........................................................................ [ 31%]
+........................................................................ [ 37%]
+........................................................................ [ 43%]
+................................F....................................... [ 49%]
+........................................................................ [ 55%]
+........................................................................ [ 62%]
+........................................................................ [ 68%]
+........................................................................ [ 74%]
+........................................................................ [ 80%]
+........................................................................ [ 87%]
+........................................................................ [ 93%]
+........................................................................ [ 99%]
+......                                                                   [100%]
+================================== FAILURES ===================================
+_______ test_every_rows_returning_route_carries_the_publication_fields ________
+
+    def test_every_rows_returning_route_carries_the_publication_fields():
+        """A new route cannot forget the gate fields: enumerate every registered route."""
+        from app.main import create_app as make
+    
+        app = make()
+        exempt = {
+            "/api/v1/health",
+            "/api/v1/admin/classification/reload",
+            "/api/v1/admin/classification/overrides",
+        }
+        checked = 0
+        for route in app.routes:
+            if (
+                not isinstance(route, APIRoute)
+                or not route.path.startswith("/api/v1")
+                or route.path in exempt
+            ):
+                continue
+            model = route.response_model
+            assert model is not None, route.path
+            members = getattr(model, "__args__", None) or (model,)
+            for m in members:
+>               fields = set(m.model_fields)
+                             ^^^^^^^^^^^^^^
+E               AttributeError: type object 'str' has no attribute 'model_fields'
+
+tests\test_phase5_gating.py:359: AttributeError
+============================== warnings summary ===============================
+C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:41
+  C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_phase4_par.py::test_lomo_is_labelled_descriptive_and_guard_rejects_it
+  D:\Data\backend\app\analytics\pressure_features.py:293: RuntimeWarning: invalid value encountered in divide
+    par.loc[rmask, "par_runs_lomo"] = (sums[np.clip(b, 0, 120)] - own_val) / (cnt - has)
+
+tests/test_phase4_par.py::test_lomo_is_labelled_descriptive_and_guard_rejects_it
+  D:\Data\backend\app\analytics\pressure_features.py:295: RuntimeWarning: invalid value encountered in divide
+    par.loc[rmask, "par_total_lomo"] = (tot.sum() - own_t) / (cnt - has)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_phase5_gating.py::test_every_rows_returning_route_carries_the_publication_fields
+1 failed, 1157 passed, 3 warnings in 481.46s (0:08:01)

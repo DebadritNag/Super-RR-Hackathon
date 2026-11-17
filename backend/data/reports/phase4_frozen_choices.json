@@ -1,0 +1,122 @@
+{
+  "baseline": {
+    "params": {
+      "min_cell_innings": 30,
+      "tau2_floor": 0.01
+    },
+    "version": "p4_baseline_b0_train_frozen_v1"
+  },
+  "definition": {
+    "id": "any|q0.75",
+    "label": "PROVISIONAL rule winner",
+    "rule_sha256": "c8ae7e837f30978dd6e252007a3a42440080ccd53c6be3606745fd28f2bb497f",
+    "train_only_thresholds": {
+      "chase|IPL": 12.28125,
+      "chase|T20I": 11.625,
+      "inn1|IPL": 5.9512195122,
+      "inn1|T20I": 8.4745762712
+    },
+    "winner": "any|q0.75"
+  },
+  "eligibility": {
+    "IPL|batter": {
+      "analysis": {
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "threshold_balls": 20,
+        "wr": 1.3108108108
+      },
+      "decision": {
+        "alt_gate_smallest_threshold": {
+          "0.1": 72,
+          "0.3": null
+        },
+        "fallback_threshold_balls": null,
+        "gate_marginal_data_weight": 0.5,
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "status": "THRESHOLD_NOT_VALIDATED",
+        "threshold_balls": null,
+        "window_ratio_W": 1.3108108108,
+        "working_pool_threshold_balls": 20
+      }
+    },
+    "IPL|bowler": {
+      "analysis": {
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "threshold_balls": 49,
+        "wr": 1.3079763663
+      },
+      "decision": {
+        "alt_gate_smallest_threshold": {
+          "0.1": 48,
+          "0.3": 144
+        },
+        "fallback_threshold_balls": null,
+        "gate_marginal_data_weight": 0.5,
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "status": "THRESHOLD_NOT_VALIDATED",
+        "threshold_balls": null,
+        "window_ratio_W": 1.3079763663,
+        "working_pool_threshold_balls": 49
+      }
+    },
+    "T20I|batter": {
+      "analysis": {
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "threshold_balls": 16,
+        "wr": 1.4742458736
+      },
+      "decision": {
+        "alt_gate_smallest_threshold": {
+          "0.1": 90,
+          "0.3": null
+        },
+        "fallback_threshold_balls": null,
+        "gate_marginal_data_weight": 0.5,
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "status": "THRESHOLD_NOT_VALIDATED",
+        "threshold_balls": null,
+        "window_ratio_W": 1.4742458736,
+        "working_pool_threshold_balls": 16
+      }
+    },
+    "T20I|bowler": {
+      "analysis": {
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "threshold_balls": 29,
+        "wr": 1.4733962522
+      },
+      "decision": {
+        "alt_gate_smallest_threshold": {
+          "0.1": 48,
+          "0.3": 144
+        },
+        "fallback_threshold_balls": null,
+        "gate_marginal_data_weight": 0.5,
+        "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+        "status": "THRESHOLD_NOT_VALIDATED",
+        "threshold_balls": null,
+        "window_ratio_W": 1.4733962522,
+        "working_pool_threshold_balls": 29
+      }
+    }
+  },
+  "n_boot": 1000,
+  "official_ranking": false,
+  "order_of_choices": [
+    "definition",
+    "shrinkage",
+    "eligibility"
+  ],
+  "seed": 20260512,
+  "shrinkage": {
+    "config": "shrink_tau4",
+    "rule": "non-default only if paired loss difference < -1 bootstrap SE; none/target0 never chosen",
+    "selection_data": [
+      "TRAIN",
+      "VALIDATION"
+    ]
+  },
+  "split_config_sha256": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "test_evaluation": "NOT_RUN_IN_CHUNK3_LOCK_REMAINS_CLOSED"
+}

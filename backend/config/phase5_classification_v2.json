@@ -1,0 +1,15 @@
+{
+  "version": "p5_classification_v2",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "migration_map": [
+    {"phase4_status": "Capped", "phase4_verification": "DERIVED_FROM_OFFICIAL_T20I_APPEARANCES", "phase5_status": "DERIVED_CAPPED"},
+    {"phase4_status": "Capped", "phase4_verification": "VERIFIED_FROM_SOURCE", "phase5_status": "VERIFIED_CAPPED"},
+    {"phase4_status": "Uncapped", "phase4_verification": "VERIFIED_FROM_SOURCE", "phase5_status": "VERIFIED_UNCAPPED"},
+    {"phase4_status": "Unknown", "phase4_verification": "UNVERIFIED", "phase5_status": "UNKNOWN"}
+  ],
+  "min_verified_coverage": 0.95,
+  "min_verified_coverage_note": "PROVISIONAL. Share of the scored pool that must carry a VERIFIED_CAPPED or VERIFIED_UNCAPPED status before strict-uncapped output can be enabled.",
+  "unknown_status_label": "UNKNOWN_STATUS",
+  "unknown_status_banner": "NOT_PROVEN_CAPPED_IS_NOT_UNCAPPED",
+  "source_needed": "An authoritative source of international status keyed by player_id (for example an official board or ICC record), declared in config/classification_source_manifest_v1.json with authoritative=true and id_keyed=true, plus validated override rows (source, verified_by, verified_date) in config/classification_overrides_v1.csv covering at least the minimum share of the scored pool."
+}

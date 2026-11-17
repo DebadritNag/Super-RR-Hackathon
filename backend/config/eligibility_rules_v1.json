@@ -1,0 +1,50 @@
+{
+  "version": "eligibility_rules_v1",
+  "status": "PROVISIONAL",
+  "seed": 20260512,
+  "n_boot": 1000,
+  "list_size": 10,
+  "pool_min_absolute": 30,
+  "pool_min_multiplier": 3,
+  "percentiles": [10, 25, 50, 75],
+  "practical_tolerance": 0.05,
+  "max_conjunction_pairs": 12,
+  "formats": ["IPL", "T20I"],
+  "distribution_formats": ["IPL", "T20I", "OTHER_T20"],
+  "measures": ["balls", "matches", "innings", "n_eff_shrink", "n_eff_kish"],
+  "ladders": {
+    "batter": {
+      "balls": [30, 60, 120, 180, 240, 300],
+      "matches": [3, 5, 8, 10, 15, 20],
+      "innings": [3, 5, 8, 10, 15, 20],
+      "n_eff_shrink": [20, 40, 80, 120]
+    },
+    "bowler": {
+      "balls": [24, 48, 96, 144, 192, 240],
+      "matches": [3, 5, 8, 10, 15, 20],
+      "innings": [3, 5, 8, 10, 15, 20],
+      "n_eff_shrink": [20, 40, 80, 120]
+    }
+  },
+  "histogram_edges": {
+    "balls": [0, 6, 12, 30, 60, 120, 240, 480, 960, 1000000000],
+    "matches": [0, 2, 3, 5, 8, 12, 20, 40, 1000000000],
+    "innings": [0, 2, 3, 5, 8, 12, 20, 40, 1000000000],
+    "n_eff_shrink": [0, 5, 10, 20, 40, 80, 160, 320, 1000000000],
+    "n_eff_kish": [0, 1.5, 2, 3, 5, 8, 12, 20, 1000000000]
+  },
+  "recommendation": {
+    "primary_family": "balls",
+    "spearman_min": 0.95,
+    "overlap_min": 8,
+    "ci_width_drop_max": 0.10,
+    "min_data_weight": 0.5
+  },
+  "proxy": {
+    "innings": [1, 2],
+    "batter_unit": "balls_faced (excludes wide and Penalty)",
+    "bowler_threshold_measure": "legal_balls",
+    "bowler_unit": "deliveries_bowled (excludes Penalty)",
+    "bowler_score": "-z(econ_shrunk) + z(wicket_rate_shrunk), equal weights, arbitrary"
+  }
+}

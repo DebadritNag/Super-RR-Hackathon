@@ -1,0 +1,112 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "create_lock_flag": false,
+  "lock_manifest_present": true,
+  "steps": [
+    {
+      "step": "phase5_classification",
+      "script": "phase5_classification.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_date_verification",
+      "script": "phase5_date_verification.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_gates",
+      "script": "phase5_gates.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_investigation",
+      "script": "phase5_investigation.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_sensitivity",
+      "script": "phase5_sensitivity.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_ranking_stability",
+      "script": "phase5_ranking_stability.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_context_engine",
+      "script": "phase5_context_engine.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_context_coverage",
+      "script": "phase5_context_coverage.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_dynamic_demo",
+      "script": "phase5_dynamic_demo.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_gates_dynamic_section",
+      "script": "phase5_gates.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_context_spotcheck",
+      "script": "phase5_context_spotcheck.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_reports_pre",
+      "script": "phase5_reports.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_pre_lock_checklist",
+      "script": "phase5_methodology_lock.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_refit",
+      "script": "phase5_refit.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase5_reports_final",
+      "script": "phase5_reports.py",
+      "args": [],
+      "exit_code": 0
+    }
+  ],
+  "missing_deliverables": [],
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true,
+    "phase4_tables_hashed": 24,
+    "phase4_tables_byte_identical": true,
+    "runs_phase4_runner": false,
+    "writes_phase4_lock_log": false
+  }
+}

@@ -1,0 +1,1725 @@
+{
+  "proxy_run": true,
+  "pressure_status": "PENDING_PHASE3",
+  "score_label": "PROXY_NOT_PRESSURE",
+  "not_for_publication": true,
+  "global_exclusion": false,
+  "records_deleted": 0,
+  "matches_excluded_globally": 0,
+  "issue_register": {
+    "denominators": {
+      "deliveries": 200999,
+      "matches": 883,
+      "matches_with_deliveries": 867,
+      "players": 1217
+    },
+    "entries": [
+      {
+        "issue_id": "DQ-001",
+        "check_name": "open_playing_eleven_repeated_keys",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 75,
+        "unit": "rows",
+        "recomputed_count": 75,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 3,
+        "recomputed_players": 33,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.0033975085,
+        "share_of_players": 0.0271158587,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "75 repeated squad rows in 3 matches. They are kept, flagged with duplicate_key_flag. Ball-level metrics do not read the squad table.",
+        "what_it_could_block": "Team-composition or batting-order features for the affected matches.",
+        "affects": {
+          "calculations": [
+            "squad size and composition counts"
+          ],
+          "features": [
+            "team composition, batting order, squad membership"
+          ],
+          "labels": [],
+          "models": [
+            "models using team-composition features"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_XI_DUPLICATES",
+          "applies_to_metrics": [
+            "team_composition_features",
+            "squad_membership_features",
+            "batting_order_features"
+          ],
+          "row_filter": "match_squads.duplicate_key_flag",
+          "effect": "DO_NOT_INFER_FROM_SQUAD",
+          "global_exclusion": false
+        },
+        "handling": "Do not de-duplicate silently. Features from match_squads must carry the flag or skip flagged matches for that feature only.",
+        "implementing_phase": "Phase 3 / 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider correction of the duplicated playing-XI rows."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-002",
+        "check_name": "open_matches_without_playing_eleven_rows",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 3,
+        "unit": "matches",
+        "recomputed_count": 3,
+        "recomputed_delivery_rows": 0,
+        "recomputed_matches": 3,
+        "recomputed_players": null,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0,
+        "share_of_matches": 0.0033975085,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "3 matches have deliveries but no playing XI rows. Ball-level metrics are unaffected.",
+        "what_it_could_block": "Team-composition features for the affected matches.",
+        "affects": {
+          "calculations": [
+            "team composition counts"
+          ],
+          "features": [
+            "team composition, squad membership"
+          ],
+          "labels": [],
+          "models": [
+            "models using squad features"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_NO_XI_MATCHES",
+          "applies_to_metrics": [
+            "team_composition_features",
+            "squad_membership_features"
+          ],
+          "row_filter": "match_id has no match_squads rows",
+          "effect": "EXCLUDE_ROWS_FROM_METRIC",
+          "global_exclusion": false
+        },
+        "handling": "Keep the matches; leave squad features missing (never imputed) for them.",
+        "implementing_phase": "Phase 3 / 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Playing XI rows for the affected matches from the provider."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-003",
+        "check_name": "open_playing_eleven_rows_without_mapping_row",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 5,
+        "unit": "rows",
+        "recomputed_count": 5,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 5,
+        "recomputed_players": 1,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.0056625142,
+        "share_of_players": 0.0008216927,
+        "classification": "INFORMATIONAL",
+        "justification": "5 squad rows have no competition-team mapping row. The rows are kept and only affect mapping-based lookups, which no current metric uses.",
+        "what_it_could_block": "Nothing planned.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "squad membership via the competition mapping"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_NO_MAPPING_ROW",
+          "applies_to_metrics": [
+            "squad_membership_features"
+          ],
+          "row_filter": "match_squads.mapping_row_exists = false",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Keep the rows; use match_squads directly instead of the mapping table.",
+        "implementing_phase": "Phase 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Mapping rows for the affected players."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-004",
+        "check_name": "open_delivery_striker_not_in_match_squad",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 83,
+        "unit": "rows",
+        "recomputed_count": 83,
+        "recomputed_delivery_rows": 83,
+        "recomputed_matches": 3,
+        "recomputed_players": 17,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0004129374,
+        "share_of_matches": 0.0033975085,
+        "share_of_players": 0.0139687757,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "83 delivery rows in 3 matches have a striker who is absent from the match squad. The deliveries are real, only the squad list is incomplete.",
+        "what_it_could_block": "Inferring who played from the squad table.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "squad membership and role inferred from squads"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_STRIKER_NOT_IN_SQUAD",
+          "applies_to_metrics": [
+            "squad_membership_features"
+          ],
+          "row_filter": "delivery striker has no match_squads row in that match",
+          "effect": "DO_NOT_INFER_FROM_SQUAD",
+          "global_exclusion": false
+        },
+        "handling": "Keep the deliveries in ball-level metrics; never infer participation from the squad table.",
+        "implementing_phase": "Phase 3 / 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Corrected playing-XI rows."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-005",
+        "check_name": "open_delivery_bowler_not_in_match_squad",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 30,
+        "unit": "rows",
+        "recomputed_count": 30,
+        "recomputed_delivery_rows": 30,
+        "recomputed_matches": 3,
+        "recomputed_players": 8,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0001492545,
+        "share_of_matches": 0.0033975085,
+        "share_of_players": 0.0065735415,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "30 delivery rows in 3 matches have a bowler absent from the match squad. Same handling as the striker case.",
+        "what_it_could_block": "Inferring who played from the squad table.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "squad membership and role inferred from squads"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_BOWLER_NOT_IN_SQUAD",
+          "applies_to_metrics": [
+            "squad_membership_features"
+          ],
+          "row_filter": "delivery bowler has no match_squads row in that match",
+          "effect": "DO_NOT_INFER_FROM_SQUAD",
+          "global_exclusion": false
+        },
+        "handling": "Keep the deliveries in ball-level metrics; never infer participation from the squad table.",
+        "implementing_phase": "Phase 3 / 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Corrected playing-XI rows."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-006",
+        "check_name": "open_dismissed_player_without_wicket_flag",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 12,
+        "unit": "rows",
+        "recomputed_count": 12,
+        "recomputed_delivery_rows": 12,
+        "recomputed_matches": 12,
+        "recomputed_players": 24,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 5.97018e-05,
+        "share_of_matches": 0.013590034,
+        "share_of_players": 0.0197206245,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "12 rows name a dismissed player but is_wicket is false. The flag and the player field disagree and the truth is unknown.",
+        "what_it_could_block": "Exact wicket counts for the affected innings.",
+        "affects": {
+          "calculations": [
+            "wickets taken, dismissals, wickets in hand"
+          ],
+          "features": [
+            "wickets-in-hand, wicket-event features"
+          ],
+          "labels": [
+            "wicket event labels"
+          ],
+          "models": [
+            "models using wicket counts or wicket events"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_DISMISSED_NO_FLAG",
+          "applies_to_metrics": [
+            "wicket_event_label",
+            "batter_dismissal_rate",
+            "bowler_wicket_rate"
+          ],
+          "row_filter": "dismissed_player_id IS NOT NULL AND NOT is_wicket",
+          "effect": "SENSITIVITY_EXCLUDE",
+          "global_exclusion": false
+        },
+        "handling": "Proxy metrics count only rows with is_wicket true. Report a sensitivity run that counts these rows; do not edit the flag.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider correction or a rule that decides the flag from dismissal text."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-007",
+        "check_name": "open_wicket_without_dismissed_player",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 1,
+        "unit": "rows",
+        "recomputed_count": 1,
+        "recomputed_delivery_rows": 1,
+        "recomputed_matches": 1,
+        "recomputed_players": 2,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 4.9751e-06,
+        "share_of_matches": 0.0011325028,
+        "share_of_players": 0.0016433854,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "1 Retire Out row(s) have is_wicket true and no dismissed player. It cannot be attributed to a batter and Retire Out is not bowler-credited.",
+        "what_it_could_block": "Dismissal attribution for one row.",
+        "affects": {
+          "calculations": [
+            "batter dismissal counts"
+          ],
+          "features": [
+            "wicket-event features"
+          ],
+          "labels": [
+            "wicket event labels"
+          ],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_WICKET_NO_DISMISSED",
+          "applies_to_metrics": [
+            "wicket_event_label",
+            "batter_dismissal_rate"
+          ],
+          "row_filter": "is_wicket AND dismissed_player_id IS NULL",
+          "effect": "EXCLUDE_ROWS_FROM_METRIC",
+          "global_exclusion": false
+        },
+        "handling": "Keep the row; exclude it from batter dismissal metrics; not credited to a bowler.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Dismissed player id from the provider."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-008",
+        "check_name": "open_extras_type_other_label_unverified",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 264,
+        "unit": "rows",
+        "recomputed_count": 264,
+        "recomputed_delivery_rows": 264,
+        "recomputed_matches": 215,
+        "recomputed_players": 278,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0013134394,
+        "share_of_matches": 0.2434881087,
+        "share_of_players": 0.228430567,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "The meaning of extras_type 'other' is not documented. It behaves like a no-ball in the Cricsheet comparison but this is not assumed. Proxy metrics can be run both ways.",
+        "what_it_could_block": "Any metric that needs a wide/no-ball/bye split for these rows.",
+        "affects": {
+          "calculations": [
+            "balls faced, legal balls bowled, runs charged to the bowler"
+          ],
+          "features": [
+            "extras-type features, no-ball/wide rates"
+          ],
+          "labels": [],
+          "models": [
+            "models using extras-type features"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_EXTRAS_OTHER",
+          "applies_to_metrics": [
+            "extras_type_features",
+            "bowler_economy",
+            "bowler_legal_balls",
+            "batter_balls_faced"
+          ],
+          "row_filter": "extras_type = 'other'",
+          "effect": "REPORT_WITH_SENSITIVITY",
+          "global_exclusion": false
+        },
+        "handling": "Keep the rows and the legal_ball_status already stored. Report affected metrics with and without these rows (sensitivity). Do not map 'other' to a named extras type.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Source documentation of the 'other' label from the data provider."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-009",
+        "check_name": "open_extras_type_Penalty_label_unverified",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 1,
+        "unit": "rows",
+        "recomputed_count": 1,
+        "recomputed_delivery_rows": 1,
+        "recomputed_matches": 1,
+        "recomputed_players": 2,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 4.9751e-06,
+        "share_of_matches": 0.0011325028,
+        "share_of_players": 0.0016433854,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "1 row(s); excluded from ball and charged-run counts by rule. Impact is negligible.",
+        "what_it_could_block": "Nothing at this size.",
+        "affects": {
+          "calculations": [
+            "balls faced, legal balls, bowler runs charged"
+          ],
+          "features": [
+            "extras-type features"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_EXTRAS_PENALTY",
+          "applies_to_metrics": [
+            "batter_balls_faced",
+            "bowler_legal_balls",
+            "bowler_economy",
+            "extras_type_features"
+          ],
+          "row_filter": "extras_type = 'Penalty'",
+          "effect": "EXCLUDE_ROWS_FROM_METRIC",
+          "global_exclusion": false
+        },
+        "handling": "Keep the row. Exclude it from the listed metrics; never assume it is a penalty-run type or a delivery.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Source documentation of the 'Penalty' label."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-010",
+        "check_name": "open_extras_secondary_split_unverified",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 36,
+        "unit": "rows",
+        "recomputed_count": 36,
+        "recomputed_delivery_rows": 36,
+        "recomputed_matches": 36,
+        "recomputed_players": 64,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0001791054,
+        "share_of_matches": 0.0407701019,
+        "share_of_players": 0.052588332,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "36 rows carry extras_secondary_runs; how these runs split with the primary extras is unverified. Secondary runs are not charged to the bowler in any proxy.",
+        "what_it_could_block": "Reconstructing innings totals or bowler runs conceded exactly.",
+        "affects": {
+          "calculations": [
+            "bowler runs conceded, innings totals rebuilt from components"
+          ],
+          "features": [
+            "extras-type features"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_EXTRAS_SECONDARY",
+          "applies_to_metrics": [
+            "bowler_economy",
+            "extras_type_features",
+            "innings_total_runs"
+          ],
+          "row_filter": "extras_secondary_runs > 0",
+          "effect": "DO_NOT_INTERPRET_FIELD",
+          "global_exclusion": false
+        },
+        "handling": "Do not interpret extras_secondary_runs; use source_total_runs for innings totals.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider description of the extras_1/extras_2 split."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-011",
+        "check_name": "open_innings_3_4_role_unverified",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 12,
+        "unit": "innings",
+        "recomputed_count": 12,
+        "recomputed_delivery_rows": 38,
+        "recomputed_matches": 6,
+        "recomputed_players": 34,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0001890557,
+        "share_of_matches": 0.006795017,
+        "share_of_players": 0.0279375514,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "Innings 3 and 4 are probably Super Overs but the official file does not say so. Regulation metrics are well defined without them, so nothing blocks.",
+        "what_it_could_block": "Treating them as Super Overs (or as regulation innings) without evidence.",
+        "affects": {
+          "calculations": [
+            "any regulation-innings aggregate (runs, balls, wickets, required rate)"
+          ],
+          "features": [
+            "phase and over-number features, chase state features"
+          ],
+          "labels": [
+            "pressure state labels, win/loss and chase outcomes"
+          ],
+          "models": [
+            "any model trained on regulation-innings pressure"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_INNINGS_3_4",
+          "applies_to_metrics": [
+            "batter_balls_faced",
+            "batter_runs_per_ball",
+            "batter_strike_rate",
+            "batter_dismissal_rate",
+            "bowler_legal_balls",
+            "bowler_economy",
+            "bowler_wicket_rate",
+            "innings_total_runs",
+            "chase_target_features",
+            "win_probability_features",
+            "pressure_state_label",
+            "batter_pressure_sample",
+            "bowler_pressure_sample"
+          ],
+          "row_filter": "innings_number IN (3, 4)",
+          "effect": "EXCLUDE_ROWS_FROM_METRIC",
+          "global_exclusion": false
+        },
+        "handling": "Keep the rows; exclude innings 3/4 from the listed metrics by rule. Cricsheet evidence (cricsheet_super_over_validation) is context only and does not relabel the data.",
+        "implementing_phase": "Phase 3 (metric extraction)",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Official statement of the innings role, or a human decision accepting the Cricsheet match."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-012",
+        "check_name": "open_man_of_the_match_zero_sentinel",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 119,
+        "unit": "matches",
+        "recomputed_count": 119,
+        "recomputed_delivery_rows": 20484,
+        "recomputed_matches": 119,
+        "recomputed_players": null,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.1019109548,
+        "share_of_matches": 0.1347678369,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "119 matches use 0 as man_of_the_match, which is not a player id. Phase 3 does not need Man of the Match.",
+        "what_it_could_block": "Using Man of the Match as a label or target.",
+        "affects": {
+          "calculations": [],
+          "features": [],
+          "labels": [
+            "player-of-the-match label"
+          ],
+          "models": [
+            "any model trained on that label"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_MOM_SENTINEL",
+          "applies_to_metrics": [
+            "player_match_of_match_label"
+          ],
+          "row_filter": "matches.man_of_the_match = 0",
+          "effect": "DO_NOT_USE_AS_LABEL",
+          "global_exclusion": false
+        },
+        "handling": "Do not use man_of_the_match as a label until the sentinel is decoded; do not join it to players.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider documentation of the 0 value."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-013",
+        "check_name": "open_delivery_time_utc_suffix_vs_ist_column_name",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 200999,
+        "unit": "rows",
+        "recomputed_count": 200999,
+        "recomputed_delivery_rows": 200999,
+        "recomputed_matches": 867,
+        "recomputed_players": 958,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 1.0,
+        "share_of_matches": 0.9818799547,
+        "share_of_players": 0.7871815941,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "All delivery timestamps carry a UTC suffix although the column is named IST. The time zone is unverified; ordering within a match uses innings_ball_num instead.",
+        "what_it_could_block": "Any feature that depends on the clock time of a delivery.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "time-of-day, day/night, elapsed-time features"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_UTC_SUFFIX",
+          "applies_to_metrics": [
+            "delivery_timestamp_features"
+          ],
+          "row_filter": "delivery_time_raw LIKE '%UTC%' (all deliveries)",
+          "effect": "DO_NOT_INTERPRET_FIELD",
+          "global_exclusion": false
+        },
+        "handling": "Do not convert time zones; do not derive time features. Order deliveries by innings_ball_num.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider statement of the time zone."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-014",
+        "check_name": "open_delivery_time_midnight_rows",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 42,
+        "unit": "rows",
+        "recomputed_count": 42,
+        "recomputed_delivery_rows": 42,
+        "recomputed_matches": 4,
+        "recomputed_players": 17,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0002089563,
+        "share_of_matches": 0.0045300113,
+        "share_of_players": 0.0139687757,
+        "classification": "INFORMATIONAL",
+        "justification": "42 rows have a 00:00:00 time part, probably a date only. No metric uses timestamps.",
+        "what_it_could_block": "Nothing planned.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "time-of-day features"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_MIDNIGHT_TIMES",
+          "applies_to_metrics": [
+            "delivery_timestamp_features"
+          ],
+          "row_filter": "delivery_time_is_midnight",
+          "effect": "DO_NOT_INTERPRET_FIELD",
+          "global_exclusion": false
+        },
+        "handling": "Keep the rows; ignore the time part.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider statement on date-only timestamps."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-015",
+        "check_name": "open_duplicate_player_names_with_different_ids",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": 7,
+        "unit": "player names",
+        "recomputed_count": 7,
+        "recomputed_delivery_rows": 4856,
+        "recomputed_matches": 200,
+        "recomputed_players": 14,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0241593242,
+        "share_of_matches": 0.2265005663,
+        "share_of_players": 0.0115036976,
+        "classification": "INFORMATIONAL",
+        "justification": "7 names map to 14 player ids. Everything joins on player_id, so no metric is affected as long as nobody joins on a name.",
+        "what_it_could_block": "Name-based joins (reports, Cricsheet linking by name).",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "player identity joins"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_DUPLICATE_NAMES",
+          "applies_to_metrics": [
+            "player_identity_join"
+          ],
+          "row_filter": "players.shares_name_with_other_id",
+          "effect": "NO_JOIN_ON_NAME",
+          "global_exclusion": false
+        },
+        "handling": "Join on player_id only; do not merge or de-duplicate players.",
+        "implementing_phase": "All phases",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not resolvable from the data; ids are authoritative."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-016",
+        "check_name": "open_cricsheet_innings_total_disagreements",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": null,
+        "unit": "innings",
+        "recomputed_count": 10,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 6,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.006795017,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "10 innings in 6 matches disagree with Cricsheet totals. The official data stays authoritative; the affected innings can perturb run-based metrics a little.",
+        "what_it_could_block": "Exact innings totals and chase targets for those innings.",
+        "affects": {
+          "calculations": [
+            "innings totals, runs per ball, runs conceded"
+          ],
+          "features": [
+            "chase target and required-rate features for the same matches"
+          ],
+          "labels": [
+            "chase outcome labels in those matches"
+          ],
+          "models": [
+            "models using run-based features from those innings"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_CRICSHEET_TOTALS",
+          "applies_to_metrics": [
+            "innings_total_runs",
+            "batter_runs_per_ball",
+            "bowler_economy",
+            "chase_target_features"
+          ],
+          "row_filter": "(match_id, innings_number) in the ten innings listed in the register",
+          "effect": "SENSITIVITY_EXCLUDE",
+          "global_exclusion": false
+        },
+        "handling": "Keep the rows (official file is authoritative). Run a sensitivity analysis that drops these innings for the listed metrics only.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider confirmation of which source total is right."
+        },
+        "blocking_detail": null,
+        "note": "recounted from the Phase 1 audit artifact (Cricsheet is not loaded)"
+      },
+      {
+        "issue_id": "DQ-017",
+        "check_name": "open_matches_not_linkable_to_cricsheet",
+        "source": "phase2_data_quality_table",
+        "category": "OPEN_ISSUE",
+        "db_severity": "WARNING",
+        "db_status": "OPEN",
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": null,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": null,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": null,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "Some official matches have no Cricsheet counterpart. Cricsheet is validation-only, so rankings never depend on the link.",
+        "what_it_could_block": "Nothing; it limits validation coverage only.",
+        "affects": {
+          "calculations": [],
+          "features": [],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_UNLINKABLE_MATCHES",
+          "applies_to_metrics": [
+            "cricsheet_validation_coverage"
+          ],
+          "row_filter": "matches without a Cricsheet counterpart",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Report validation coverage from the mapping counts; do not add Cricsheet-only matches.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not resolvable; Cricsheet simply lacks these matches."
+        },
+        "blocking_detail": null,
+        "note": "Cricsheet-derived; see super-over validation mapping counts"
+      },
+      {
+        "issue_id": "DQ-018",
+        "check_name": "reconcile_matches_without_deliveries",
+        "source": "phase2_data_quality_table",
+        "category": "RECONCILIATION",
+        "db_severity": "INFO",
+        "db_status": "INFO",
+        "db_affected_rows": 16,
+        "unit": "matches",
+        "recomputed_count": 16,
+        "recomputed_delivery_rows": 0,
+        "recomputed_matches": 16,
+        "recomputed_players": 0,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": 0.0,
+        "share_of_matches": 0.0181200453,
+        "share_of_players": 0.0,
+        "classification": "INFORMATIONAL",
+        "justification": "16 matches have no deliveries and all are explained (abandoned without a ball).",
+        "what_it_could_block": "Nothing.",
+        "affects": {
+          "calculations": [
+            "match coverage denominators"
+          ],
+          "features": [],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_INFO_NO_DELIVERY_MATCHES",
+          "applies_to_metrics": [
+            "match_coverage_denominators"
+          ],
+          "row_filter": "NOT has_deliveries",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Use matches with deliveries as the denominator for coverage statements.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-019",
+        "check_name": "result_status_distribution",
+        "source": "phase2_data_quality_table",
+        "category": "CONSISTENCY",
+        "db_severity": "INFO",
+        "db_status": "INFO",
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": 883,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": null,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": null,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "Distribution of result statuses; informational.",
+        "what_it_could_block": "Nothing.",
+        "affects": {
+          "calculations": [],
+          "features": [],
+          "labels": [
+            "match outcome labels"
+          ],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_INFO_RESULT_STATUS",
+          "applies_to_metrics": [
+            "match_outcome_label"
+          ],
+          "row_filter": "result_status NOT IN ('COMPLETED')",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Outcome labels must handle TIED, TIED_DECIDED_BY_TIEBREAK, NO_RESULT, ABANDONED explicitly.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-020",
+        "check_name": "competition_type_distribution",
+        "source": "phase2_data_quality_table",
+        "category": "CONSISTENCY",
+        "db_severity": "INFO",
+        "db_status": "INFO",
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": 883,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": null,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": null,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "Distribution of IPL, T20I and OTHER_T20 competitions; informational.",
+        "what_it_could_block": "Nothing.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "format assignment"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_INFO_COMP_TYPE",
+          "applies_to_metrics": [
+            "format_assignment"
+          ],
+          "row_filter": "competition_type = 'OTHER_T20'",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "OTHER_T20 matches stay in the database and never enter IPL or T20I scores.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-021",
+        "check_name": "ipl_competitions_not_format_T20",
+        "source": "phase2_data_quality_table",
+        "category": "CONSISTENCY",
+        "db_severity": "INFO",
+        "db_status": "INFO",
+        "db_affected_rows": 0,
+        "unit": "competitions",
+        "recomputed_count": 0,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": null,
+        "recomputed_players": null,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": null,
+        "share_of_matches": null,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "No IPL competition has a non-T20 format; check passes with zero rows.",
+        "what_it_could_block": "Nothing.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "format assignment"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_INFO_IPL_FORMAT",
+          "applies_to_metrics": [
+            "format_assignment"
+          ],
+          "row_filter": "IPL competitions whose match_format is not T20",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "No action.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-022",
+        "check_name": "comparison_columns_that_differ",
+        "source": "phase2_data_quality_table",
+        "category": "RECONCILIATION",
+        "db_severity": "INFO",
+        "db_status": "INFO",
+        "db_affected_rows": 200037,
+        "unit": "cell differences",
+        "recomputed_count": 200037,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 3,
+        "recomputed_players": null,
+        "count_agrees_with_db": true,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.0033975085,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "The original and updated ball-by-ball files differ in extras1_runs and two name columns. The updated file is the approved authority; the original is kept for provenance.",
+        "what_it_could_block": "Nothing; the approved source decision covers it.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "extras-type features"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_INFO_EXTRAS1_COMPARISON",
+          "applies_to_metrics": [
+            "extras_type_features"
+          ],
+          "row_filter": "ball_by_ball.csv vs updated_ball_by_ball.csv differences",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Use updated_ball_by_ball.csv only; keep the comparison tables as provenance.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": null
+      },
+      {
+        "issue_id": "DQ-023",
+        "check_name": "carried_no_result_or_abandoned_with_deliveries",
+        "source": "carried_over_phase1",
+        "category": "RECONCILIATION",
+        "db_severity": null,
+        "db_status": null,
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": 24,
+        "recomputed_delivery_rows": 1753,
+        "recomputed_matches": 24,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": 0.0087214364,
+        "share_of_matches": 0.027180068,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "NO_RESULT and ABANDONED matches that still have deliveries have no valid outcome, but their balls are real. Only outcome-based labels are affected.",
+        "what_it_could_block": "Outcome-based labels for these matches.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "win-probability and chase-completion features"
+          ],
+          "labels": [
+            "match outcome labels"
+          ],
+          "models": [
+            "models trained on match outcomes"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_NO_RESULT_MATCHES",
+          "applies_to_metrics": [
+            "match_outcome_label",
+            "win_probability_features"
+          ],
+          "row_filter": "result_status IN ('NO_RESULT', 'ABANDONED') AND has_deliveries",
+          "effect": "EXCLUDE_ROWS_FROM_METRIC",
+          "global_exclusion": false
+        },
+        "handling": "Keep the deliveries in ball-level metrics; exclude the matches from outcome labels only.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not resolvable; there is no result."
+        },
+        "blocking_detail": null,
+        "note": "Matches with result_status NO_RESULT or ABANDONED that still have delivery rows."
+      },
+      {
+        "issue_id": "DQ-024",
+        "check_name": "carried_dls_revised_targets",
+        "source": "carried_over_phase1",
+        "category": "CONSISTENCY",
+        "db_severity": null,
+        "db_status": null,
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": 34,
+        "recomputed_delivery_rows": 4433,
+        "recomputed_matches": 34,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": 0.0220548361,
+        "share_of_matches": 0.0385050963,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "34 matches with revised overs or targets (DLS-style) change the chase target and balls available. Features must use the revised fields.",
+        "what_it_could_block": "Chase target and required-rate features that use the original 20 overs.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "required run rate, balls remaining, target"
+          ],
+          "labels": [
+            "chase outcome labels"
+          ],
+          "models": [
+            "models using chase features"
+          ]
+        },
+        "restriction": {
+          "rule_id": "RULE_DLS_TARGETS",
+          "applies_to_metrics": [
+            "chase_target_features",
+            "win_probability_features"
+          ],
+          "row_filter": "revised_target IS NOT NULL OR revised overs IS NOT NULL",
+          "effect": "REQUIRE_REVISED_FIELDS",
+          "global_exclusion": false
+        },
+        "handling": "Use revised_target and revised overs where present; never assume 20 overs for these matches.",
+        "implementing_phase": "Phase 3",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "None; the revised fields exist in the official matches table."
+        },
+        "blocking_detail": null,
+        "note": "Matches with a revised target or revised overs (rain-affected)."
+      },
+      {
+        "issue_id": "DQ-025",
+        "check_name": "carried_playing_xi_count_not_11",
+        "source": "carried_over_phase1",
+        "category": "CONSISTENCY",
+        "db_severity": null,
+        "db_status": null,
+        "db_affected_rows": null,
+        "unit": "match-team pairs",
+        "recomputed_count": 569,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 299,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.3386183465,
+        "share_of_players": null,
+        "classification": "NON_BLOCKING_WITH_RESTRICTIONS",
+        "justification": "569 (match, team) pairs have a played-row count different from 11. A count of 12 is explained by impact substitutes in the IPL; other counts are anomalies. Ball-level metrics do not depend on it.",
+        "what_it_could_block": "Team-composition features.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "team composition counts"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_XI_COUNT",
+          "applies_to_metrics": [
+            "team_composition_features"
+          ],
+          "row_filter": "(match_id, team_id) with a played-row count different from 11",
+          "effect": "DO_NOT_INFER_FROM_SQUAD",
+          "global_exclusion": false
+        },
+        "handling": "Do not infer the XI from is_played counts; derive participation from deliveries.",
+        "implementing_phase": "Phase 3 / 4",
+        "resolvable_with_evidence": {
+          "possible": true,
+          "evidence_needed": "Provider-verified playing XI."
+        },
+        "blocking_detail": null,
+        "note": "(match, team) pairs whose played-row count in the squad table is not 11."
+      },
+      {
+        "issue_id": "DQ-026",
+        "check_name": "carried_first_innings_batting_team_not_fk",
+        "source": "carried_over_phase1",
+        "category": "CONSISTENCY",
+        "db_severity": null,
+        "db_status": null,
+        "db_affected_rows": null,
+        "unit": "matches",
+        "recomputed_count": 0,
+        "recomputed_delivery_rows": null,
+        "recomputed_matches": 867,
+        "recomputed_players": null,
+        "count_agrees_with_db": null,
+        "share_of_deliveries": null,
+        "share_of_matches": 0.9818799547,
+        "share_of_players": null,
+        "classification": "INFORMATIONAL",
+        "justification": "matches.first_innings_batting_team_id has no foreign key in the schema. The recount finds no orphan and no disagreement with innings 1.",
+        "what_it_could_block": "Nothing; a missing constraint, not bad data.",
+        "affects": {
+          "calculations": [],
+          "features": [
+            "innings order"
+          ],
+          "labels": [],
+          "models": []
+        },
+        "restriction": {
+          "rule_id": "RULE_FIRST_INNINGS_TEAM",
+          "applies_to_metrics": [
+            "innings_order_features"
+          ],
+          "row_filter": "matches.first_innings_batting_team_id",
+          "effect": "DOCUMENT_ONLY",
+          "global_exclusion": false
+        },
+        "handling": "Use innings.batting_team_id for innings order.",
+        "implementing_phase": "Not planned",
+        "resolvable_with_evidence": {
+          "possible": false,
+          "evidence_needed": "Not applicable."
+        },
+        "blocking_detail": null,
+        "note": "matches.first_innings_batting_team_id has no declared foreign key."
+      }
+    ],
+    "classification_counts": {
+      "BLOCKING": 0,
+      "NON_BLOCKING_WITH_RESTRICTIONS": 16,
+      "INFORMATIONAL": 10
+    },
+    "open_rows": 17,
+    "info_rows": 5,
+    "carried_over_rows": 4,
+    "perturbation_cricsheet_total_innings": {
+      "innings": [
+        {
+          "match_id": 14130,
+          "innings_number": 1,
+          "competition_type": "IPL",
+          "official_delivery_rows": 124
+        },
+        {
+          "match_id": 14130,
+          "innings_number": 2,
+          "competition_type": "IPL",
+          "official_delivery_rows": 127
+        },
+        {
+          "match_id": 14164,
+          "innings_number": 1,
+          "competition_type": "IPL",
+          "official_delivery_rows": 124
+        },
+        {
+          "match_id": 32618,
+          "innings_number": 1,
+          "competition_type": "T20I",
+          "official_delivery_rows": 123
+        },
+        {
+          "match_id": 32618,
+          "innings_number": 2,
+          "competition_type": "T20I",
+          "official_delivery_rows": 132
+        },
+        {
+          "match_id": 37349,
+          "innings_number": 1,
+          "competition_type": "T20I",
+          "official_delivery_rows": 124
+        },
+        {
+          "match_id": 37349,
+          "innings_number": 2,
+          "competition_type": "T20I",
+          "official_delivery_rows": 105
+        },
+        {
+          "match_id": 37352,
+          "innings_number": 1,
+          "competition_type": "T20I",
+          "official_delivery_rows": 123
+        },
+        {
+          "match_id": 50504,
+          "innings_number": 1,
+          "competition_type": "T20I",
+          "official_delivery_rows": 126
+        },
+        {
+          "match_id": 50504,
+          "innings_number": 2,
+          "competition_type": "T20I",
+          "official_delivery_rows": 113
+        }
+      ],
+      "batters": {
+        "players_touched": 65,
+        "max_share_of_player_deliveries": 0.475,
+        "median_share_of_player_deliveries": 0.0257731959,
+        "players_with_share_at_least_0_25": 3
+      },
+      "bowlers": {
+        "players_touched": 47,
+        "max_share_of_player_deliveries": 0.1470588235,
+        "median_share_of_player_deliveries": 0.040066778,
+        "players_with_share_at_least_0_25": 0
+      },
+      "metrics_that_could_be_perturbed": [
+        "batter_runs_per_ball",
+        "bowler_economy",
+        "innings_total_runs",
+        "chase_target_features"
+      ]
+    },
+    "cricsheet_total_disagreements": [
+      {
+        "match_id": 14130,
+        "innings": 1,
+        "official_rows": 124.0,
+        "cricsheet_deliveries": 125.0,
+        "official_total_formula": 167.0,
+        "cricsheet_total": 168.0
+      },
+      {
+        "match_id": 14130,
+        "innings": 2,
+        "official_rows": 127.0,
+        "cricsheet_deliveries": 128.0,
+        "official_total_formula": 130.0,
+        "cricsheet_total": 132.0
+      },
+      {
+        "match_id": 14164,
+        "innings": 1,
+        "official_rows": 124.0,
+        "cricsheet_deliveries": 125.0,
+        "official_total_formula": 156.0,
+        "cricsheet_total": 157.0
+      },
+      {
+        "match_id": 32618,
+        "innings": 1,
+        "official_rows": 123.0,
+        "cricsheet_deliveries": 123.0,
+        "official_total_formula": 207.0,
+        "cricsheet_total": 163.0
+      },
+      {
+        "match_id": 32618,
+        "innings": 2,
+        "official_rows": 132.0,
+        "cricsheet_deliveries": 88.0,
+        "official_total_formula": 191.0,
+        "cricsheet_total": 165.0
+      },
+      {
+        "match_id": 37349,
+        "innings": 1,
+        "official_rows": 124.0,
+        "cricsheet_deliveries": 131.0,
+        "official_total_formula": 182.0,
+        "cricsheet_total": 158.0
+      },
+      {
+        "match_id": 37349,
+        "innings": 2,
+        "official_rows": 105.0,
+        "cricsheet_deliveries": 95.0,
+        "official_total_formula": 183.0,
+        "cricsheet_total": 161.0
+      },
+      {
+        "match_id": 37352,
+        "innings": 1,
+        "official_rows": 123.0,
+        "cricsheet_deliveries": 30.0,
+        "official_total_formula": 218.0,
+        "cricsheet_total": 44.0
+      },
+      {
+        "match_id": 50504,
+        "innings": 1,
+        "official_rows": 126.0,
+        "cricsheet_deliveries": 124.0,
+        "official_total_formula": 194.0,
+        "cricsheet_total": 169.0
+      },
+      {
+        "match_id": 50504,
+        "innings": 2,
+        "official_rows": 113.0,
+        "cricsheet_deliveries": 127.0,
+        "official_total_formula": 157.0,
+        "cricsheet_total": 170.0
+      }
+    ]
+  },
+  "restriction_matrix": {
+    "batter_balls_faced": [
+      "RULE_INNINGS_3_4",
+      "RULE_EXTRAS_OTHER",
+      "RULE_EXTRAS_PENALTY"
+    ],
+    "batter_runs_per_ball": [
+      "RULE_INNINGS_3_4",
+      "RULE_CRICSHEET_TOTALS"
+    ],
+    "batter_strike_rate": [
+      "RULE_INNINGS_3_4"
+    ],
+    "batter_dismissal_rate": [
+      "RULE_INNINGS_3_4",
+      "RULE_DISMISSED_NO_FLAG",
+      "RULE_WICKET_NO_DISMISSED"
+    ],
+    "bowler_legal_balls": [
+      "RULE_INNINGS_3_4",
+      "RULE_EXTRAS_OTHER",
+      "RULE_EXTRAS_PENALTY"
+    ],
+    "bowler_economy": [
+      "RULE_INNINGS_3_4",
+      "RULE_EXTRAS_OTHER",
+      "RULE_EXTRAS_PENALTY",
+      "RULE_EXTRAS_SECONDARY",
+      "RULE_CRICSHEET_TOTALS"
+    ],
+    "bowler_wicket_rate": [
+      "RULE_INNINGS_3_4",
+      "RULE_DISMISSED_NO_FLAG"
+    ],
+    "innings_total_runs": [
+      "RULE_INNINGS_3_4",
+      "RULE_EXTRAS_SECONDARY",
+      "RULE_CRICSHEET_TOTALS"
+    ],
+    "chase_target_features": [
+      "RULE_INNINGS_3_4",
+      "RULE_CRICSHEET_TOTALS",
+      "RULE_DLS_TARGETS"
+    ],
+    "win_probability_features": [
+      "RULE_INNINGS_3_4",
+      "RULE_NO_RESULT_MATCHES",
+      "RULE_DLS_TARGETS"
+    ],
+    "match_outcome_label": [
+      "RULE_NO_RESULT_MATCHES",
+      "RULE_INFO_RESULT_STATUS"
+    ],
+    "pressure_state_label": [
+      "RULE_INNINGS_3_4"
+    ],
+    "batter_pressure_sample": [
+      "RULE_INNINGS_3_4"
+    ],
+    "bowler_pressure_sample": [
+      "RULE_INNINGS_3_4"
+    ],
+    "extras_type_features": [
+      "RULE_EXTRAS_OTHER",
+      "RULE_EXTRAS_PENALTY",
+      "RULE_EXTRAS_SECONDARY",
+      "RULE_INFO_EXTRAS1_COMPARISON"
+    ],
+    "wicket_event_label": [
+      "RULE_DISMISSED_NO_FLAG",
+      "RULE_WICKET_NO_DISMISSED"
+    ],
+    "team_composition_features": [
+      "RULE_XI_DUPLICATES",
+      "RULE_NO_XI_MATCHES",
+      "RULE_XI_COUNT"
+    ],
+    "squad_membership_features": [
+      "RULE_XI_DUPLICATES",
+      "RULE_NO_XI_MATCHES",
+      "RULE_NO_MAPPING_ROW",
+      "RULE_STRIKER_NOT_IN_SQUAD",
+      "RULE_BOWLER_NOT_IN_SQUAD"
+    ],
+    "batting_order_features": [
+      "RULE_XI_DUPLICATES"
+    ],
+    "innings_order_features": [
+      "RULE_FIRST_INNINGS_TEAM"
+    ],
+    "player_identity_join": [
+      "RULE_DUPLICATE_NAMES"
+    ],
+    "delivery_timestamp_features": [
+      "RULE_UTC_SUFFIX",
+      "RULE_MIDNIGHT_TIMES"
+    ],
+    "player_match_of_match_label": [
+      "RULE_MOM_SENTINEL"
+    ],
+    "match_coverage_denominators": [
+      "RULE_INFO_NO_DELIVERY_MATCHES"
+    ],
+    "format_assignment": [
+      "RULE_INFO_COMP_TYPE",
+      "RULE_INFO_IPL_FORMAT"
+    ],
+    "cricsheet_validation_coverage": [
+      "RULE_UNLINKABLE_MATCHES"
+    ]
+  },
+  "restrictions_config": {
+    "version": "data_quality_restrictions_v1",
+    "rules": 26
+  },
+  "definitions": {
+    "BLOCKING": "Prevents a planned calculation, label or model from being trusted until resolved.",
+    "NON_BLOCKING_WITH_RESTRICTIONS": "Work can proceed; named metrics, features or labels carry a documented, scoped restriction.",
+    "INFORMATIONAL": "Context only; no metric needs a restriction beyond a note."
+  },
+  "provenance": {
+    "generated_at_utc": "2026-11-14T20:53:33Z",
+    "code_version": "bbcb52669ee61f080700813c1d64811481d41cb2dc859d29afbc76621b29f08a",
+    "seed": null,
+    "config_file": "data_quality_restrictions_v1.json",
+    "config_sha256": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
+    "data_version": "data-8c617454671e",
+    "source_sha256": {
+      "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+    }
+  },
+  "preservation": {
+    "unchanged": true,
+    "diff": {},
+    "snapshot": {
+      "csv_sha256": {
+        "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+        "batting_stats2026.csv": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+        "bowling_stats2026.csv": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+        "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+        "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+        "fielding_stats2026.csv": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+        "ipl squad.csv": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+        "matches 2026.csv": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+        "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+        "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+        "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+        "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+      },
+      "tables": {
+        "ball_by_ball_comparison_detail": {
+          "rows": 57,
+          "content_hash": "6424049670836342807"
+        },
+        "ball_by_ball_comparison": {
+          "rows": 33,
+          "content_hash": "6556012316708249722"
+        },
+        "match_reconciliation": {
+          "rows": 883,
+          "content_hash": "8191618280319093247"
+        },
+        "deliveries": {
+          "rows": 200999,
+          "content_hash": "2472089235370398535"
+        },
+        "innings": {
+          "rows": 1724,
+          "content_hash": "2486840171759231281"
+        },
+        "match_squads": {
+          "rows": 28381,
+          "content_hash": "11232610400671811020"
+        },
+        "matches": {
+          "rows": 883,
+          "content_hash": "13176953439193494225"
+        },
+        "player_competition_mapping": {
+          "rows": 6413,
+          "content_hash": "595047445318026641"
+        },
+        "players": {
+          "rows": 1217,
+          "content_hash": "5617674674654928061"
+        },
+        "venues": {
+          "rows": 98,
+          "content_hash": "14876321384663441804"
+        },
+        "competition_teams": {
+          "rows": 353,
+          "content_hash": "15187849804718752551"
+        },
+        "teams": {
+          "rows": 38,
+          "content_hash": "13847215763956492045"
+        },
+        "competitions": {
+          "rows": 141,
+          "content_hash": "4698846567658472722"
+        },
+        "raw_ball_by_ball_updated": {
+          "rows": 200999,
+          "content_hash": "16279601034874580097"
+        },
+        "raw_ball_by_ball": {
+          "rows": 200999,
+          "content_hash": "14284978838386518736"
+        }
+      },
+      "db_file_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+      "cricsheet": {
+        "2026_male_json": {
+          "files": 1621,
+          "bytes": 267865691,
+          "sha256": "9605d27a0fcc0619476e58a3d9a9565b11f197c2007dedc6b3929232e39dd530"
+        },
+        "bbl_male_json": {
+          "files": 664,
+          "bytes": 54772655,
+          "sha256": "695bdd9b272d2a480791c5b4307283c42e63489c0a3d836b100456af95405f32"
+        },
+        "cpl_male_json": {
+          "files": 447,
+          "bytes": 37167606,
+          "sha256": "214c3a41faebce9ec69ae5451649437f5dd0ef4bb533fae608e090897eb21631"
+        },
+        "india_male_json": {
+          "files": 1039,
+          "bytes": 264034861,
+          "sha256": "718484e89142833a2c029119f599482bc953b718488330bd01c6d1ee0b0b7a6f"
+        },
+        "ipl_male_json": {
+          "files": 1245,
+          "bytes": 105718906,
+          "sha256": "03631a85a3463332f2b49167a23ac5c56b6e79048a32beb05043e0b5568df845"
+        },
+        "it20s_male_json": {
+          "files": 242,
+          "bytes": 19023902,
+          "sha256": "e2a02352a49dfc45e4ea6025af786d74849bbd5d7f41847b8a0326a3ba12dbce"
+        },
+        "mlc_male_json": {
+          "files": 111,
+          "bytes": 9253438,
+          "sha256": "aa046883ac8536fbce2190c77f6a16fb530ea5d401f81a2c50cc3725d61dbf3e"
+        },
+        "t20s_male_json": {
+          "files": 3651,
+          "bytes": 296564757,
+          "sha256": "8f92a901816c0276e62a7f0cdeb2060e6de1dfc83c6b8d34a2c465806154822d"
+        }
+      }
+    }
+  }
+}

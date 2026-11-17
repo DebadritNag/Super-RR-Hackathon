@@ -1,0 +1,1735 @@
+{
+  "baseline_version": "p4_baseline_b0_train_frozen_v1",
+  "streams": {
+    "batter:runs": {
+      "calibration_identity_train_pooled": {
+        "IPL": {
+          "sum_actual": 71967.0,
+          "sum_expected": 71967.0,
+          "rel_diff": 0.0
+        },
+        "T20I": {
+          "sum_actual": 79413.0,
+          "sum_expected": 79413.0,
+          "rel_diff": 0.0
+        }
+      },
+      "periods": {
+        "TRAIN": {
+          "rows": 110851,
+          "mean_residual": 0.0006623689,
+          "residual_sd": 1.7080268036,
+          "residual_quantiles": {
+            "0.01": -1.6676308296,
+            "0.25": -1.2725082,
+            "0.5": -0.3766509752,
+            "0.75": -0.1721926615,
+            "0.99": 4.7406597938
+          },
+          "level_usage": {
+            "0": 110851
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 50728.0,
+              "actual": 1.4186839615,
+              "expected": 1.4179182521,
+              "residual": 0.0007657095
+            },
+            {
+              "group": "T20I",
+              "rows": 60123.0,
+              "actual": 1.3208422733,
+              "expected": 1.3202670967,
+              "residual": 0.0005751767
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 11572.0,
+              "actual": 1.6610784653,
+              "expected": 1.6201310074,
+              "residual": 0.0409474579
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 23387.0,
+              "actual": 1.3422414162,
+              "expected": 1.3531617171,
+              "residual": -0.0109203009
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 15769.0,
+              "actual": 1.3541759148,
+              "expected": 1.3655658568,
+              "residual": -0.011389942
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 13250.0,
+              "actual": 1.5355471698,
+              "expected": 1.5060894419,
+              "residual": 0.029457728
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 27870.0,
+              "actual": 1.2686401148,
+              "expected": 1.2726215752,
+              "residual": -0.0039814604
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 19003.0,
+              "actual": 1.2476977319,
+              "expected": 1.2605783427,
+              "residual": -0.0128806108
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 28096.0,
+              "actual": 1.4106990319,
+              "expected": 1.3926212396,
+              "residual": 0.0180777923
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 22632.0,
+              "actual": 1.4285966773,
+              "expected": 1.4493226733,
+              "residual": -0.020725996
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 30620.0,
+              "actual": 1.3238079686,
+              "expected": 1.302758048,
+              "residual": 0.0210499206
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 29503.0,
+              "actual": 1.3177642952,
+              "expected": 1.3384390476,
+              "residual": -0.0206747525
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2022)",
+              "rows": 17207.0,
+              "actual": 1.339454873,
+              "expected": 1.4190160171,
+              "residual": -0.0795611441
+            },
+            {
+              "group": "('IPL', 2023)",
+              "rows": 17147.0,
+              "actual": 1.4149413892,
+              "expected": 1.419692077,
+              "residual": -0.0047506878
+            },
+            {
+              "group": "('IPL', 2024)",
+              "rows": 16374.0,
+              "actual": 1.5058629535,
+              "expected": 1.4149070746,
+              "residual": 0.0909558788
+            },
+            {
+              "group": "('T20I', 2022)",
+              "rows": 23069.0,
+              "actual": 1.307338853,
+              "expected": 1.3243805287,
+              "residual": -0.0170416757
+            },
+            {
+              "group": "('T20I', 2023)",
+              "rows": 14109.0,
+              "actual": 1.3358848962,
+              "expected": 1.3169473783,
+              "residual": 0.0189375178
+            },
+            {
+              "group": "('T20I', 2024)",
+              "rows": 22945.0,
+              "actual": 1.3251688821,
+              "expected": 1.3181727468,
+              "residual": 0.0069961353
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 11086.0,
+              "actual": 1.2177521198,
+              "expected": 1.2108260047,
+              "residual": 0.0069261151
+            },
+            {
+              "group": "1",
+              "rows": 11085.0,
+              "actual": 1.2562922869,
+              "expected": 1.2459963144,
+              "residual": 0.0102959725
+            },
+            {
+              "group": "2",
+              "rows": 11085.0,
+              "actual": 1.2645015787,
+              "expected": 1.2661586418,
+              "residual": -0.0016570631
+            },
+            {
+              "group": "3",
+              "rows": 11085.0,
+              "actual": 1.2099233198,
+              "expected": 1.2847108889,
+              "residual": -0.0747875691
+            },
+            {
+              "group": "4",
+              "rows": 11085.0,
+              "actual": 1.351285521,
+              "expected": 1.3358736837,
+              "residual": 0.0154118373
+            },
+            {
+              "group": "5",
+              "rows": 11085.0,
+              "actual": 1.4406856112,
+              "expected": 1.3665049641,
+              "residual": 0.0741806471
+            },
+            {
+              "group": "6",
+              "rows": 11085.0,
+              "actual": 1.2967974741,
+              "expected": 1.3735045629,
+              "residual": -0.0767070888
+            },
+            {
+              "group": "7",
+              "rows": 11085.0,
+              "actual": 1.4874154263,
+              "expected": 1.4162341771,
+              "residual": 0.0711812492
+            },
+            {
+              "group": "8",
+              "rows": 11085.0,
+              "actual": 1.6154262517,
+              "expected": 1.5242543265,
+              "residual": 0.0911719252
+            },
+            {
+              "group": "9",
+              "rows": 11085.0,
+              "actual": 1.5161028417,
+              "expected": 1.6254957429,
+              "residual": -0.1093929012
+            }
+          ]
+        },
+        "VALIDATION": {
+          "rows": 41740,
+          "mean_residual": 0.0470415886,
+          "residual_sd": 1.7520907577,
+          "residual_quantiles": {
+            "0.01": -1.6683174697,
+            "0.25": -1.2706267662,
+            "0.5": -0.3718066552,
+            "0.75": 0.4432794838,
+            "0.99": 4.7410361131
+          },
+          "level_usage": {
+            "0": 41740
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 16301.0,
+              "actual": 1.531378443,
+              "expected": 1.4174031135,
+              "residual": 0.1139753295
+            },
+            {
+              "group": "T20I",
+              "rows": 25439.0,
+              "actual": 1.3239514132,
+              "expected": 1.319800147,
+              "residual": 0.0041512662
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 3579.0,
+              "actual": 1.7189158983,
+              "expected": 1.6260537327,
+              "residual": 0.0928621656
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 7579.0,
+              "actual": 1.4461010687,
+              "expected": 1.3541361977,
+              "residual": 0.0919648711
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 5143.0,
+              "actual": 1.5265409294,
+              "expected": 1.365437216,
+              "residual": 0.1611037134
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 5402.0,
+              "actual": 1.4850055535,
+              "expected": 1.5096700673,
+              "residual": -0.0246645138
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 11885.0,
+              "actual": 1.2615902398,
+              "expected": 1.2738138788,
+              "residual": -0.012223639
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 8152.0,
+              "actual": 1.3081452404,
+              "expected": 1.2610255502,
+              "residual": 0.0471196903
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 9416.0,
+              "actual": 1.5652081563,
+              "expected": 1.3963808106,
+              "residual": 0.1688273457
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 6885.0,
+              "actual": 1.4851125635,
+              "expected": 1.446153441,
+              "residual": 0.0389591226
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 13217.0,
+              "actual": 1.3482635999,
+              "expected": 1.3017267409,
+              "residual": 0.046536859
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 12222.0,
+              "actual": 1.2976599575,
+              "expected": 1.3393449193,
+              "residual": -0.0416849618
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2025)",
+              "rows": 16301.0,
+              "actual": 1.531378443,
+              "expected": 1.4174031135,
+              "residual": 0.1139753295
+            },
+            {
+              "group": "('T20I', 2025)",
+              "rows": 25439.0,
+              "actual": 1.3239514132,
+              "expected": 1.319800147,
+              "residual": 0.0041512662
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 4174.0,
+              "actual": 1.1662673694,
+              "expected": 1.2072992271,
+              "residual": -0.0410318577
+            },
+            {
+              "group": "1",
+              "rows": 4174.0,
+              "actual": 1.2618591279,
+              "expected": 1.2431904219,
+              "residual": 0.018668706
+            },
+            {
+              "group": "2",
+              "rows": 4174.0,
+              "actual": 1.235265932,
+              "expected": 1.2631663235,
+              "residual": -0.0279003916
+            },
+            {
+              "group": "3",
+              "rows": 4174.0,
+              "actual": 1.3447532343,
+              "expected": 1.2740428476,
+              "residual": 0.0707103867
+            },
+            {
+              "group": "4",
+              "rows": 4174.0,
+              "actual": 1.3663152851,
+              "expected": 1.3153997425,
+              "residual": 0.0509155426
+            },
+            {
+              "group": "5",
+              "rows": 4174.0,
+              "actual": 1.4964063249,
+              "expected": 1.3645506315,
+              "residual": 0.1318556933
+            },
+            {
+              "group": "6",
+              "rows": 4174.0,
+              "actual": 1.4760421658,
+              "expected": 1.3719959647,
+              "residual": 0.1040462011
+            },
+            {
+              "group": "7",
+              "rows": 4174.0,
+              "actual": 1.5237182559,
+              "expected": 1.4084984669,
+              "residual": 0.115219789
+            },
+            {
+              "group": "8",
+              "rows": 4174.0,
+              "actual": 1.4985625299,
+              "expected": 1.5133098054,
+              "residual": -0.0147472754
+            },
+            {
+              "group": "9",
+              "rows": 4174.0,
+              "actual": 1.6804024916,
+              "expected": 1.6177233997,
+              "residual": 0.0626790919
+            }
+          ]
+        }
+      }
+    },
+    "batter:dismissal": {
+      "calibration_identity_train_pooled": {
+        "IPL": {
+          "sum_actual": 2609.0,
+          "sum_expected": 2609.0,
+          "rel_diff": 0.0
+        },
+        "T20I": {
+          "sum_actual": 3356.0,
+          "sum_expected": 3356.0,
+          "rel_diff": 0.0
+        }
+      },
+      "periods": {
+        "TRAIN": {
+          "rows": 110851,
+          "mean_residual": -0.0001120643,
+          "residual_sd": 0.225172907,
+          "residual_quantiles": {
+            "0.01": -0.0857554105,
+            "0.25": -0.0525992447,
+            "0.5": -0.0477722985,
+            "0.75": -0.0452301642,
+            "0.99": 0.9547518838
+          },
+          "level_usage": {
+            "0": 110851
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 50728.0,
+              "actual": 0.0514311623,
+              "expected": 0.051574075,
+              "residual": -0.0001429127
+            },
+            {
+              "group": "T20I",
+              "rows": 60123.0,
+              "actual": 0.0558189046,
+              "expected": 0.0559049409,
+              "residual": -8.60363e-05
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 11572.0,
+              "actual": 0.0786380919,
+              "expected": 0.0753093698,
+              "residual": 0.0033287221
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 23387.0,
+              "actual": 0.0450677727,
+              "expected": 0.0459959716,
+              "residual": -0.0009281989
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 15769.0,
+              "actual": 0.0409030376,
+              "expected": 0.042428934,
+              "residual": -0.0015258964
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 13250.0,
+              "actual": 0.0828679245,
+              "expected": 0.0804919932,
+              "residual": 0.0023759313
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 27870.0,
+              "actual": 0.048403301,
+              "expected": 0.0490332699,
+              "residual": -0.0006299689
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 19003.0,
+              "actual": 0.0478345524,
+              "expected": 0.048839479,
+              "residual": -0.0010049266
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 28096.0,
+              "actual": 0.0440276196,
+              "expected": 0.0448802849,
+              "residual": -0.0008526653
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 22632.0,
+              "actual": 0.060622128,
+              "expected": 0.0598839339,
+              "residual": 0.0007381941
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 30620.0,
+              "actual": 0.0491835402,
+              "expected": 0.0498333412,
+              "residual": -0.0006498011
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 29503.0,
+              "actual": 0.0627054876,
+              "expected": 0.0622064148,
+              "residual": 0.0004990728
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2022)",
+              "rows": 17207.0,
+              "actual": 0.0509095136,
+              "expected": 0.0515812615,
+              "residual": -0.0006717479
+            },
+            {
+              "group": "('IPL', 2023)",
+              "rows": 17147.0,
+              "actual": 0.0514375693,
+              "expected": 0.0516997121,
+              "residual": -0.0002621429
+            },
+            {
+              "group": "('IPL', 2024)",
+              "rows": 16374.0,
+              "actual": 0.0519726396,
+              "expected": 0.0514349546,
+              "residual": 0.000537685
+            },
+            {
+              "group": "('T20I', 2022)",
+              "rows": 23069.0,
+              "actual": 0.0532749577,
+              "expected": 0.0561654027,
+              "residual": -0.002890445
+            },
+            {
+              "group": "('T20I', 2023)",
+              "rows": 14109.0,
+              "actual": 0.0550712311,
+              "expected": 0.0557021536,
+              "residual": -0.0006309225
+            },
+            {
+              "group": "('T20I', 2024)",
+              "rows": 22945.0,
+              "actual": 0.0588363478,
+              "expected": 0.0557677665,
+              "residual": 0.0030685813
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 11086.0,
+              "actual": 0.0445607072,
+              "expected": 0.0406583326,
+              "residual": 0.0039023746
+            },
+            {
+              "group": "1",
+              "rows": 11085.0,
+              "actual": 0.048263419,
+              "expected": 0.0445336521,
+              "residual": 0.0037297669
+            },
+            {
+              "group": "2",
+              "rows": 11085.0,
+              "actual": 0.0403247632,
+              "expected": 0.0453915756,
+              "residual": -0.0050668124
+            },
+            {
+              "group": "3",
+              "rows": 11085.0,
+              "actual": 0.0440234551,
+              "expected": 0.0462905634,
+              "residual": -0.0022671082
+            },
+            {
+              "group": "4",
+              "rows": 11085.0,
+              "actual": 0.0468200271,
+              "expected": 0.0477043151,
+              "residual": -0.0008842881
+            },
+            {
+              "group": "5",
+              "rows": 11085.0,
+              "actual": 0.050157871,
+              "expected": 0.0491410561,
+              "residual": 0.0010168149
+            },
+            {
+              "group": "6",
+              "rows": 11085.0,
+              "actual": 0.0433017591,
+              "expected": 0.0506458056,
+              "residual": -0.0073440464
+            },
+            {
+              "group": "7",
+              "rows": 11085.0,
+              "actual": 0.0625169147,
+              "expected": 0.0572235192,
+              "residual": 0.0052933955
+            },
+            {
+              "group": "8",
+              "rows": 11085.0,
+              "actual": 0.0914749662,
+              "expected": 0.0759667407,
+              "residual": 0.0155082255
+            },
+            {
+              "group": "9",
+              "rows": 11085.0,
+              "actual": 0.0666666667,
+              "expected": 0.0816759939,
+              "residual": -0.0150093273
+            }
+          ]
+        },
+        "VALIDATION": {
+          "rows": 41740,
+          "mean_residual": 0.0015221918,
+          "residual_sd": 0.227924949,
+          "residual_quantiles": {
+            "0.01": -0.0855200736,
+            "0.25": -0.0525893145,
+            "0.5": -0.0476656197,
+            "0.75": -0.045307288,
+            "0.99": 0.9546567009
+          },
+          "level_usage": {
+            "0": 41740
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 16301.0,
+              "actual": 0.0505490461,
+              "expected": 0.0510097179,
+              "residual": -0.0004606718
+            },
+            {
+              "group": "T20I",
+              "rows": 25439.0,
+              "actual": 0.0583356264,
+              "expected": 0.0555428399,
+              "residual": 0.0027927865
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 3579.0,
+              "actual": 0.0821458508,
+              "expected": 0.0748413627,
+              "residual": 0.0073044881
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 7579.0,
+              "actual": 0.0436733078,
+              "expected": 0.0457380161,
+              "residual": -0.0020647082
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 5143.0,
+              "actual": 0.0386933696,
+              "expected": 0.0421940017,
+              "residual": -0.0035006321
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 5402.0,
+              "actual": 0.0907071455,
+              "expected": 0.0804753514,
+              "residual": 0.0102317941
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 11885.0,
+              "actual": 0.0519983172,
+              "expected": 0.0488759477,
+              "residual": 0.0031223695
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 8152.0,
+              "actual": 0.0461236506,
+              "expected": 0.0487409001,
+              "residual": -0.0026172495
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 9416.0,
+              "actual": 0.0423746814,
+              "expected": 0.0451284852,
+              "residual": -0.0027538038
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 6885.0,
+              "actual": 0.0617283951,
+              "expected": 0.0590529549,
+              "residual": 0.0026754402
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 13217.0,
+              "actual": 0.0482711659,
+              "expected": 0.0495796338,
+              "residual": -0.0013084679
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 12222.0,
+              "actual": 0.0692194404,
+              "expected": 0.061991514,
+              "residual": 0.0072279263
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2025)",
+              "rows": 16301.0,
+              "actual": 0.0505490461,
+              "expected": 0.0510097179,
+              "residual": -0.0004606718
+            },
+            {
+              "group": "('T20I', 2025)",
+              "rows": 25439.0,
+              "actual": 0.0583356264,
+              "expected": 0.0555428399,
+              "residual": 0.0027927865
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 4174.0,
+              "actual": 0.0392908481,
+              "expected": 0.0408742831,
+              "residual": -0.001583435
+            },
+            {
+              "group": "1",
+              "rows": 4174.0,
+              "actual": 0.0445615716,
+              "expected": 0.0446644632,
+              "residual": -0.0001028916
+            },
+            {
+              "group": "2",
+              "rows": 4174.0,
+              "actual": 0.0459990417,
+              "expected": 0.0453324458,
+              "residual": 0.0006665959
+            },
+            {
+              "group": "3",
+              "rows": 4174.0,
+              "actual": 0.04623862,
+              "expected": 0.0466180003,
+              "residual": -0.0003793803
+            },
+            {
+              "group": "4",
+              "rows": 4174.0,
+              "actual": 0.0476760901,
+              "expected": 0.0476616959,
+              "residual": 1.43942e-05
+            },
+            {
+              "group": "5",
+              "rows": 4174.0,
+              "actual": 0.0436032583,
+              "expected": 0.0492869072,
+              "residual": -0.0056836489
+            },
+            {
+              "group": "6",
+              "rows": 4174.0,
+              "actual": 0.0469573551,
+              "expected": 0.0505187288,
+              "residual": -0.0035613737
+            },
+            {
+              "group": "7",
+              "rows": 4174.0,
+              "actual": 0.0603737422,
+              "expected": 0.0552266372,
+              "residual": 0.005147105
+            },
+            {
+              "group": "8",
+              "rows": 4174.0,
+              "actual": 0.0852898898,
+              "expected": 0.0758638519,
+              "residual": 0.0094260379
+            },
+            {
+              "group": "9",
+              "rows": 4174.0,
+              "actual": 0.0929563967,
+              "expected": 0.0816778826,
+              "residual": 0.0112785142
+            }
+          ]
+        }
+      }
+    },
+    "bowler:charged": {
+      "calibration_identity_train_pooled": {
+        "IPL": {
+          "sum_actual": 74662.0,
+          "sum_expected": 74662.0,
+          "rel_diff": 0.0
+        },
+        "T20I": {
+          "sum_actual": 82398.0,
+          "sum_expected": 82398.0,
+          "rel_diff": 0.0
+        }
+      },
+      "periods": {
+        "TRAIN": {
+          "rows": 115212,
+          "mean_residual": -0.0005638907,
+          "residual_sd": 1.6844926764,
+          "residual_quantiles": {
+            "0.01": -1.642241085,
+            "0.25": -1.275166322,
+            "0.5": -0.3762269025,
+            "0.75": -0.2059097185,
+            "0.99": 4.736869498
+          },
+          "level_usage": {
+            "0": 115212
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 52781.0,
+              "actual": 1.4145620583,
+              "expected": 1.4154753323,
+              "residual": -0.000913274
+            },
+            {
+              "group": "T20I",
+              "rows": 62431.0,
+              "actual": 1.3198250869,
+              "expected": 1.3200935988,
+              "residual": -0.0002685119
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 12329.0,
+              "actual": 1.6345202368,
+              "expected": 1.5987462641,
+              "residual": 0.0357739727
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 24136.0,
+              "actual": 1.340114352,
+              "expected": 1.3524712259,
+              "residual": -0.0123568739
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 16316.0,
+              "actual": 1.3584824712,
+              "expected": 1.3701897106,
+              "residual": -0.0117072394
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 13981.0,
+              "actual": 1.521779558,
+              "expected": 1.4942124568,
+              "residual": 0.0275671011
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 28722.0,
+              "actual": 1.2679479145,
+              "expected": 1.2727314756,
+              "residual": -0.0047835611
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 19728.0,
+              "actual": 1.2522303325,
+              "expected": 1.2656521525,
+              "residual": -0.0134218199
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 29058.0,
+              "actual": 1.4099387432,
+              "expected": 1.3937291208,
+              "residual": 0.0162096224
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 23723.0,
+              "actual": 1.420225098,
+              "expected": 1.4421119893,
+              "residual": -0.0218868913
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 31719.0,
+              "actual": 1.3253255147,
+              "expected": 1.3053002479,
+              "residual": 0.0200252667
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 30712.0,
+              "actual": 1.3141443084,
+              "expected": 1.3353720012,
+              "residual": -0.0212276928
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2022)",
+              "rows": 17909.0,
+              "actual": 1.3390474063,
+              "expected": 1.4163408389,
+              "residual": -0.0772934326
+            },
+            {
+              "group": "('IPL', 2023)",
+              "rows": 17769.0,
+              "actual": 1.4124599021,
+              "expected": 1.4169016708,
+              "residual": -0.0044417687
+            },
+            {
+              "group": "('IPL', 2024)",
+              "rows": 17103.0,
+              "actual": 1.4958194469,
+              "expected": 1.4130871568,
+              "residual": 0.08273229
+            },
+            {
+              "group": "('T20I', 2022)",
+              "rows": 23959.0,
+              "actual": 1.3061062649,
+              "expected": 1.3241131509,
+              "residual": -0.0180068861
+            },
+            {
+              "group": "('T20I', 2023)",
+              "rows": 14635.0,
+              "actual": 1.3336522036,
+              "expected": 1.3171037395,
+              "residual": 0.0165484641
+            },
+            {
+              "group": "('T20I', 2024)",
+              "rows": 23837.0,
+              "actual": 1.325124806,
+              "expected": 1.3178891326,
+              "residual": 0.0072356734
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 11522.0,
+              "actual": 1.2071688943,
+              "expected": 1.2118360855,
+              "residual": -0.0046671912
+            },
+            {
+              "group": "1",
+              "rows": 11521.0,
+              "actual": 1.2757573127,
+              "expected": 1.2486057839,
+              "residual": 0.0271515288
+            },
+            {
+              "group": "2",
+              "rows": 11521.0,
+              "actual": 1.2374793855,
+              "expected": 1.2698883302,
+              "residual": -0.0324089448
+            },
+            {
+              "group": "3",
+              "rows": 11521.0,
+              "actual": 1.2281919972,
+              "expected": 1.2886531088,
+              "residual": -0.0604611116
+            },
+            {
+              "group": "4",
+              "rows": 11521.0,
+              "actual": 1.375835431,
+              "expected": 1.3387554638,
+              "residual": 0.0370799672
+            },
+            {
+              "group": "5",
+              "rows": 11521.0,
+              "actual": 1.3581286347,
+              "expected": 1.3689332682,
+              "residual": -0.0108046336
+            },
+            {
+              "group": "6",
+              "rows": 11521.0,
+              "actual": 1.3575210485,
+              "expected": 1.3758466194,
+              "residual": -0.0183255709
+            },
+            {
+              "group": "7",
+              "rows": 11521.0,
+              "actual": 1.4604635014,
+              "expected": 1.4136571125,
+              "residual": 0.0468063889
+            },
+            {
+              "group": "8",
+              "rows": 11521.0,
+              "actual": 1.5762520615,
+              "expected": 1.5147413849,
+              "residual": 0.0615106766
+            },
+            {
+              "group": "9",
+              "rows": 11522.0,
+              "actual": 1.5554591217,
+              "expected": 1.6069743599,
+              "residual": -0.0515152383
+            }
+          ]
+        },
+        "VALIDATION": {
+          "rows": 43376,
+          "mean_residual": 0.0453546232,
+          "residual_sd": 1.7272125686,
+          "residual_quantiles": {
+            "0.01": -1.6427945782,
+            "0.25": -1.262247092,
+            "0.5": -0.3749720751,
+            "0.75": 0.3572054218,
+            "0.99": 4.737752908
+          },
+          "level_usage": {
+            "0": 43376
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 16992.0,
+              "actual": 1.5205979284,
+              "expected": 1.4133312566,
+              "residual": 0.1072666719
+            },
+            {
+              "group": "T20I",
+              "rows": 26384.0,
+              "actual": 1.324439054,
+              "expected": 1.3189574421,
+              "residual": 0.0054816118
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 3800.0,
+              "actual": 1.6910526316,
+              "expected": 1.6030952781,
+              "residual": 0.0879573535
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 7850.0,
+              "actual": 1.4385987261,
+              "expected": 1.3518208128,
+              "residual": 0.0867779133
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 5342.0,
+              "actual": 1.5198427555,
+              "expected": 1.3687325485,
+              "residual": 0.151110207
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 5691.0,
+              "actual": 1.4732033035,
+              "expected": 1.4969604293,
+              "residual": -0.0237571259
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 12261.0,
+              "actual": 1.2636000326,
+              "expected": 1.2733560289,
+              "residual": -0.0097559962
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 8432.0,
+              "actual": 1.3125,
+              "expected": 1.2651272628,
+              "residual": 0.0473727372
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 9784.0,
+              "actual": 1.5539656582,
+              "expected": 1.3955725953,
+              "residual": 0.1583930629
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 7208.0,
+              "actual": 1.4753052164,
+              "expected": 1.4374365204,
+              "residual": 0.037868696
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 13687.0,
+              "actual": 1.3496018119,
+              "expected": 1.3034813177,
+              "residual": 0.0461204942
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 12697.0,
+              "actual": 1.2973143262,
+              "expected": 1.3356402581,
+              "residual": -0.0383259319
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2025)",
+              "rows": 16992.0,
+              "actual": 1.5205979284,
+              "expected": 1.4133312566,
+              "residual": 0.1072666719
+            },
+            {
+              "group": "('T20I', 2025)",
+              "rows": 26384.0,
+              "actual": 1.324439054,
+              "expected": 1.3189574421,
+              "residual": 0.0054816118
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 4338.0,
+              "actual": 1.1692023974,
+              "expected": 1.2075067683,
+              "residual": -0.0383043709
+            },
+            {
+              "group": "1",
+              "rows": 4338.0,
+              "actual": 1.2717842324,
+              "expected": 1.2448235705,
+              "residual": 0.0269606618
+            },
+            {
+              "group": "2",
+              "rows": 4337.0,
+              "actual": 1.2388747982,
+              "expected": 1.2654398742,
+              "residual": -0.0265650759
+            },
+            {
+              "group": "3",
+              "rows": 4338.0,
+              "actual": 1.357538036,
+              "expected": 1.2795148026,
+              "residual": 0.0780232333
+            },
+            {
+              "group": "4",
+              "rows": 4337.0,
+              "actual": 1.3633848282,
+              "expected": 1.3151999969,
+              "residual": 0.0481848314
+            },
+            {
+              "group": "5",
+              "rows": 4338.0,
+              "actual": 1.479253112,
+              "expected": 1.366966759,
+              "residual": 0.112286353
+            },
+            {
+              "group": "6",
+              "rows": 4337.0,
+              "actual": 1.4759050035,
+              "expected": 1.3733376879,
+              "residual": 0.1025673156
+            },
+            {
+              "group": "7",
+              "rows": 4338.0,
+              "actual": 1.5112955279,
+              "expected": 1.4052768954,
+              "residual": 0.1060186325
+            },
+            {
+              "group": "8",
+              "rows": 4337.0,
+              "actual": 1.5174083468,
+              "expected": 1.5023234436,
+              "residual": 0.0150849032
+            },
+            {
+              "group": "9",
+              "rows": 4338.0,
+              "actual": 1.6281696634,
+              "expected": 1.5988896312,
+              "residual": 0.0292800322
+            }
+          ]
+        }
+      }
+    },
+    "bowler:wkt": {
+      "calibration_identity_train_pooled": {
+        "IPL": {
+          "sum_actual": 2531.0,
+          "sum_expected": 2531.0,
+          "rel_diff": 0.0
+        },
+        "T20I": {
+          "sum_actual": 3261.0,
+          "sum_expected": 3261.0,
+          "rel_diff": 0.0
+        }
+      },
+      "periods": {
+        "TRAIN": {
+          "rows": 115212,
+          "mean_residual": 4.9504e-06,
+          "residual_sd": 0.21817711,
+          "residual_quantiles": {
+            "0.01": -0.0790741397,
+            "0.25": -0.0498077034,
+            "0.5": -0.0453928448,
+            "0.75": -0.0430669898,
+            "0.99": 0.9568975997
+          },
+          "level_usage": {
+            "0": 115212
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 52781.0,
+              "actual": 0.0479528618,
+              "expected": 0.0479409276,
+              "residual": 1.19343e-05
+            },
+            {
+              "group": "T20I",
+              "rows": 62431.0,
+              "actual": 0.052233666,
+              "expected": 0.0522346199,
+              "residual": -9.539e-07
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 12329.0,
+              "actual": 0.0689431422,
+              "expected": 0.0660380661,
+              "residual": 0.0029050761
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 24136.0,
+              "actual": 0.043254889,
+              "expected": 0.0438928784,
+              "residual": -0.0006379894
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 16316.0,
+              "actual": 0.0390414317,
+              "expected": 0.0402542454,
+              "residual": -0.0012128136
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 13981.0,
+              "actual": 0.0748158215,
+              "expected": 0.0727925158,
+              "residual": 0.0020233056
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 28722.0,
+              "actual": 0.0459926189,
+              "expected": 0.0464400682,
+              "residual": -0.0004474493
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 19728.0,
+              "actual": 0.0453163017,
+              "expected": 0.0461017717,
+              "residual": -0.00078547
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 29058.0,
+              "actual": 0.042260307,
+              "expected": 0.0426810591,
+              "residual": -0.0004207522
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 23723.0,
+              "actual": 0.0549255996,
+              "expected": 0.0543836733,
+              "residual": 0.0005419264
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 31719.0,
+              "actual": 0.0465651502,
+              "expected": 0.0470473698,
+              "residual": -0.0004822196
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 30712.0,
+              "actual": 0.0580880438,
+              "expected": 0.057591952,
+              "residual": 0.0004960917
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2022)",
+              "rows": 17909.0,
+              "actual": 0.047406332,
+              "expected": 0.0479575187,
+              "residual": -0.0005511867
+            },
+            {
+              "group": "('IPL', 2023)",
+              "rows": 17769.0,
+              "actual": 0.0479486747,
+              "expected": 0.048027146,
+              "residual": -7.84713e-05
+            },
+            {
+              "group": "('IPL', 2024)",
+              "rows": 17103.0,
+              "actual": 0.0485294977,
+              "expected": 0.0478339787,
+              "residual": 0.0006955191
+            },
+            {
+              "group": "('T20I', 2022)",
+              "rows": 23959.0,
+              "actual": 0.0495012313,
+              "expected": 0.0524948188,
+              "residual": -0.0029935875
+            },
+            {
+              "group": "('T20I', 2023)",
+              "rows": 14635.0,
+              "actual": 0.0517936454,
+              "expected": 0.052035725,
+              "residual": -0.0002420796
+            },
+            {
+              "group": "('T20I', 2024)",
+              "rows": 23837.0,
+              "actual": 0.0552502412,
+              "expected": 0.0520952031,
+              "residual": 0.0031550382
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 11522.0,
+              "actual": 0.0424405485,
+              "expected": 0.0385209882,
+              "residual": 0.0039195603
+            },
+            {
+              "group": "1",
+              "rows": 11521.0,
+              "actual": 0.0452217689,
+              "expected": 0.0425450325,
+              "residual": 0.0026767364
+            },
+            {
+              "group": "2",
+              "rows": 11521.0,
+              "actual": 0.0389723114,
+              "expected": 0.0432047254,
+              "residual": -0.004232414
+            },
+            {
+              "group": "3",
+              "rows": 11521.0,
+              "actual": 0.0437462026,
+              "expected": 0.0442639789,
+              "residual": -0.0005177763
+            },
+            {
+              "group": "4",
+              "rows": 11521.0,
+              "actual": 0.0437462026,
+              "expected": 0.0453356629,
+              "residual": -0.0015894604
+            },
+            {
+              "group": "5",
+              "rows": 11521.0,
+              "actual": 0.0519052166,
+              "expected": 0.0463841673,
+              "residual": 0.0055210493
+            },
+            {
+              "group": "6",
+              "rows": 11521.0,
+              "actual": 0.0374099471,
+              "expected": 0.0477338986,
+              "residual": -0.0103239516
+            },
+            {
+              "group": "7",
+              "rows": 11521.0,
+              "actual": 0.0603246246,
+              "expected": 0.0536728256,
+              "residual": 0.006651799
+            },
+            {
+              "group": "8",
+              "rows": 11521.0,
+              "actual": 0.0734311258,
+              "expected": 0.0671106554,
+              "residual": 0.0063204704
+            },
+            {
+              "group": "9",
+              "rows": 11522.0,
+              "actual": 0.0655268183,
+              "expected": 0.0739029395,
+              "residual": -0.0083761212
+            }
+          ]
+        },
+        "VALIDATION": {
+          "rows": 43376,
+          "mean_residual": 0.0015881162,
+          "residual_sd": 0.2212770502,
+          "residual_quantiles": {
+            "0.01": -0.0788512328,
+            "0.25": -0.049787796,
+            "0.5": -0.0454254494,
+            "0.75": -0.0431874042,
+            "0.99": 0.9568125958
+          },
+          "level_usage": {
+            "0": 43376
+          },
+          "fallback_rows_finest_cell_unseen": 0,
+          "by_format": [
+            {
+              "group": "IPL",
+              "rows": 16992.0,
+              "actual": 0.0476106403,
+              "expected": 0.0475904123,
+              "residual": 2.0228e-05
+            },
+            {
+              "group": "T20I",
+              "rows": 26384.0,
+              "actual": 0.0545785324,
+              "expected": 0.0519806544,
+              "residual": 0.0025978781
+            }
+          ],
+          "by_phase": [
+            {
+              "group": "('IPL', 'death')",
+              "rows": 3800.0,
+              "actual": 0.0734210526,
+              "expected": 0.0658682671,
+              "residual": 0.0075527855
+            },
+            {
+              "group": "('IPL', 'middle')",
+              "rows": 7850.0,
+              "actual": 0.0422929936,
+              "expected": 0.0437840602,
+              "residual": -0.0014910666
+            },
+            {
+              "group": "('IPL', 'powerplay')",
+              "rows": 5342.0,
+              "actual": 0.0370647697,
+              "expected": 0.0401819538,
+              "residual": -0.0031171841
+            },
+            {
+              "group": "('T20I', 'death')",
+              "rows": 5691.0,
+              "actual": 0.0804779476,
+              "expected": 0.0727927391,
+              "residual": 0.0076852086
+            },
+            {
+              "group": "('T20I', 'middle')",
+              "rows": 12261.0,
+              "actual": 0.0502406003,
+              "expected": 0.0463562968,
+              "residual": 0.0038843034
+            },
+            {
+              "group": "('T20I', 'powerplay')",
+              "rows": 8432.0,
+              "actual": 0.0434060721,
+              "expected": 0.0461123756,
+              "residual": -0.0027063035
+            }
+          ],
+          "by_wickets_remaining_bin": [
+            {
+              "group": "('IPL', '10-8')",
+              "rows": 9784.0,
+              "actual": 0.040678659,
+              "expected": 0.0430073307,
+              "residual": -0.0023286716
+            },
+            {
+              "group": "('IPL', '7-1')",
+              "rows": 7208.0,
+              "actual": 0.0570199778,
+              "expected": 0.0538113987,
+              "residual": 0.0032085791
+            },
+            {
+              "group": "('T20I', '10-8')",
+              "rows": 13687.0,
+              "actual": 0.0457368306,
+              "expected": 0.0469145323,
+              "residual": -0.0011777017
+            },
+            {
+              "group": "('T20I', '7-1')",
+              "rows": 12697.0,
+              "actual": 0.0641096322,
+              "expected": 0.0574417879,
+              "residual": 0.0066678443
+            }
+          ],
+          "by_year": [
+            {
+              "group": "('IPL', 2025)",
+              "rows": 16992.0,
+              "actual": 0.0476106403,
+              "expected": 0.0475904123,
+              "residual": 2.0228e-05
+            },
+            {
+              "group": "('T20I', 2025)",
+              "rows": 26384.0,
+              "actual": 0.0545785324,
+              "expected": 0.0519806544,
+              "residual": 0.0025978781
+            }
+          ],
+          "by_expected_decile": [
+            {
+              "group": "0",
+              "rows": 4338.0,
+              "actual": 0.0378054403,
+              "expected": 0.0389161261,
+              "residual": -0.0011106858
+            },
+            {
+              "group": "1",
+              "rows": 4338.0,
+              "actual": 0.0449515906,
+              "expected": 0.0426807624,
+              "residual": 0.0022708282
+            },
+            {
+              "group": "2",
+              "rows": 4337.0,
+              "actual": 0.0428867881,
+              "expected": 0.0432267934,
+              "residual": -0.0003400053
+            },
+            {
+              "group": "3",
+              "rows": 4338.0,
+              "actual": 0.0414937759,
+              "expected": 0.0445906732,
+              "residual": -0.0030968973
+            },
+            {
+              "group": "4",
+              "rows": 4337.0,
+              "actual": 0.0451925294,
+              "expected": 0.0453479038,
+              "residual": -0.0001553744
+            },
+            {
+              "group": "5",
+              "rows": 4338.0,
+              "actual": 0.0454126325,
+              "expected": 0.0466976866,
+              "residual": -0.0012850541
+            },
+            {
+              "group": "6",
+              "rows": 4337.0,
+              "actual": 0.0433479364,
+              "expected": 0.0476343657,
+              "residual": -0.0042864294
+            },
+            {
+              "group": "7",
+              "rows": 4338.0,
+              "actual": 0.0633932688,
+              "expected": 0.0522642086,
+              "residual": 0.0111290602
+            },
+            {
+              "group": "8",
+              "rows": 4337.0,
+              "actual": 0.0735531473,
+              "expected": 0.0671470527,
+              "residual": 0.0064060946
+            },
+            {
+              "group": "9",
+              "rows": 4338.0,
+              "actual": 0.0804518211,
+              "expected": 0.0741032856,
+              "residual": 0.0063485355
+            }
+          ]
+        }
+      }
+    }
+  },
+  "identity_ok": true,
+  "status": "EXPERIMENTAL_NOT_VALIDATED"
+}

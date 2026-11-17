@@ -1,0 +1,117 @@
+{
+  "classification_version": "p4_classification_v1",
+  "players_total": 1217,
+  "combinations_all_players": [
+    {
+      "nationality": "Indian",
+      "international_status": "Capped",
+      "players": 52
+    },
+    {
+      "nationality": "Indian",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Indian",
+      "international_status": "Unknown",
+      "players": 112
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Capped",
+      "players": 603
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Unknown",
+      "players": 3
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Capped",
+      "players": 0
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Unknown",
+      "players": 447
+    }
+  ],
+  "nationality_verification": {
+    "DERIVED": 770,
+    "UNVERIFIED": 447
+  },
+  "status_verification": {
+    "DERIVED_FROM_OFFICIAL_T20I_APPEARANCES": 655,
+    "UNVERIFIED": 562
+  },
+  "nationality_unknown_reasons": {
+    "NO_SOURCE_RECORD": 445,
+    "SQUAD_NAME_AMBIGUOUS": 2
+  },
+  "status_unknown_reasons": {
+    "NOT_PROVEN_CAPPED_IN_DATA": 498,
+    "FIRST_T20I_AFTER_AS_OF_DATE": 64
+  },
+  "uncapped_verified_count": 0,
+  "conflicts": 0,
+  "scored_players_total": 403,
+  "combinations_scored_players": [
+    {
+      "nationality": "Indian",
+      "international_status": "Capped",
+      "players": 51
+    },
+    {
+      "nationality": "Indian",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Indian",
+      "international_status": "Unknown",
+      "players": 35
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Capped",
+      "players": 288
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Overseas",
+      "international_status": "Unknown",
+      "players": 1
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Capped",
+      "players": 0
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Uncapped",
+      "players": 0
+    },
+    {
+      "nationality": "Unknown",
+      "international_status": "Unknown",
+      "players": 28
+    }
+  ]
+}

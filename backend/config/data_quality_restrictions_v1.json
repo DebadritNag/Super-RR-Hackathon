@@ -1,0 +1,256 @@
+{
+  "version": "data_quality_restrictions_v1",
+  "created_date": "2026-11-15",
+  "status": "PROVISIONAL",
+  "global_exclusion": false,
+  "rationale": "Restrictions are scoped to the metrics, features or labels an issue can affect. No record is deleted and no match is excluded globally. Rows stay in the official tables; a rule only says which metric must not use them, or how a field must (not) be interpreted.",
+  "effects": [
+    "EXCLUDE_ROWS_FROM_METRIC",
+    "SENSITIVITY_EXCLUDE",
+    "REPORT_WITH_SENSITIVITY",
+    "DO_NOT_INTERPRET_FIELD",
+    "DO_NOT_USE_AS_LABEL",
+    "DO_NOT_INFER_FROM_SQUAD",
+    "REQUIRE_REVISED_FIELDS",
+    "NO_JOIN_ON_NAME",
+    "DOCUMENT_ONLY"
+  ],
+  "metric_vocabulary": [
+    "batter_balls_faced",
+    "batter_runs_per_ball",
+    "batter_strike_rate",
+    "batter_dismissal_rate",
+    "bowler_legal_balls",
+    "bowler_economy",
+    "bowler_wicket_rate",
+    "innings_total_runs",
+    "chase_target_features",
+    "win_probability_features",
+    "match_outcome_label",
+    "pressure_state_label",
+    "batter_pressure_sample",
+    "bowler_pressure_sample",
+    "extras_type_features",
+    "wicket_event_label",
+    "team_composition_features",
+    "squad_membership_features",
+    "batting_order_features",
+    "innings_order_features",
+    "player_identity_join",
+    "delivery_timestamp_features",
+    "player_match_of_match_label",
+    "match_coverage_denominators",
+    "format_assignment",
+    "cricsheet_validation_coverage"
+  ],
+  "restrictions": [
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "issue_check_names": ["open_innings_3_4_role_unverified"],
+      "applies_to_metrics": ["batter_balls_faced", "batter_runs_per_ball", "batter_strike_rate", "batter_dismissal_rate", "bowler_legal_balls", "bowler_economy", "bowler_wicket_rate", "innings_total_runs", "chase_target_features", "win_probability_features", "pressure_state_label", "batter_pressure_sample", "bowler_pressure_sample"],
+      "row_filter": "innings_number IN (3, 4)",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_EXTRAS_OTHER",
+      "issue_check_names": ["open_extras_type_other_label_unverified"],
+      "applies_to_metrics": ["extras_type_features", "bowler_economy", "bowler_legal_balls", "batter_balls_faced"],
+      "row_filter": "extras_type = 'other'",
+      "effect": "REPORT_WITH_SENSITIVITY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_EXTRAS_PENALTY",
+      "issue_check_names": ["open_extras_type_Penalty_label_unverified"],
+      "applies_to_metrics": ["batter_balls_faced", "bowler_legal_balls", "bowler_economy", "extras_type_features"],
+      "row_filter": "extras_type = 'Penalty'",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_EXTRAS_SECONDARY",
+      "issue_check_names": ["open_extras_secondary_split_unverified"],
+      "applies_to_metrics": ["bowler_economy", "extras_type_features", "innings_total_runs"],
+      "row_filter": "extras_secondary_runs > 0",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_XI_DUPLICATES",
+      "issue_check_names": ["open_playing_eleven_repeated_keys"],
+      "applies_to_metrics": ["team_composition_features", "squad_membership_features", "batting_order_features"],
+      "row_filter": "match_squads.duplicate_key_flag",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_NO_XI_MATCHES",
+      "issue_check_names": ["open_matches_without_playing_eleven_rows"],
+      "applies_to_metrics": ["team_composition_features", "squad_membership_features"],
+      "row_filter": "match_id has no match_squads rows",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_NO_MAPPING_ROW",
+      "issue_check_names": ["open_playing_eleven_rows_without_mapping_row"],
+      "applies_to_metrics": ["squad_membership_features"],
+      "row_filter": "match_squads.mapping_row_exists = false",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_STRIKER_NOT_IN_SQUAD",
+      "issue_check_names": ["open_delivery_striker_not_in_match_squad"],
+      "applies_to_metrics": ["squad_membership_features"],
+      "row_filter": "delivery striker has no match_squads row in that match",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_BOWLER_NOT_IN_SQUAD",
+      "issue_check_names": ["open_delivery_bowler_not_in_match_squad"],
+      "applies_to_metrics": ["squad_membership_features"],
+      "row_filter": "delivery bowler has no match_squads row in that match",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_DISMISSED_NO_FLAG",
+      "issue_check_names": ["open_dismissed_player_without_wicket_flag"],
+      "applies_to_metrics": ["wicket_event_label", "batter_dismissal_rate", "bowler_wicket_rate"],
+      "row_filter": "dismissed_player_id IS NOT NULL AND NOT is_wicket",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_WICKET_NO_DISMISSED",
+      "issue_check_names": ["open_wicket_without_dismissed_player"],
+      "applies_to_metrics": ["wicket_event_label", "batter_dismissal_rate"],
+      "row_filter": "is_wicket AND dismissed_player_id IS NULL",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_MOM_SENTINEL",
+      "issue_check_names": ["open_man_of_the_match_zero_sentinel"],
+      "applies_to_metrics": ["player_match_of_match_label"],
+      "row_filter": "matches.man_of_the_match = 0",
+      "effect": "DO_NOT_USE_AS_LABEL",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_UTC_SUFFIX",
+      "issue_check_names": ["open_delivery_time_utc_suffix_vs_ist_column_name"],
+      "applies_to_metrics": ["delivery_timestamp_features"],
+      "row_filter": "delivery_time_raw LIKE '%UTC%' (all deliveries)",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_MIDNIGHT_TIMES",
+      "issue_check_names": ["open_delivery_time_midnight_rows"],
+      "applies_to_metrics": ["delivery_timestamp_features"],
+      "row_filter": "delivery_time_is_midnight",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_DUPLICATE_NAMES",
+      "issue_check_names": ["open_duplicate_player_names_with_different_ids"],
+      "applies_to_metrics": ["player_identity_join"],
+      "row_filter": "players.shares_name_with_other_id",
+      "effect": "NO_JOIN_ON_NAME",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_CRICSHEET_TOTALS",
+      "issue_check_names": ["open_cricsheet_innings_total_disagreements"],
+      "applies_to_metrics": ["innings_total_runs", "batter_runs_per_ball", "bowler_economy", "chase_target_features"],
+      "row_filter": "(match_id, innings_number) in the ten innings listed in the register",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_UNLINKABLE_MATCHES",
+      "issue_check_names": ["open_matches_not_linkable_to_cricsheet"],
+      "applies_to_metrics": ["cricsheet_validation_coverage"],
+      "row_filter": "matches without a Cricsheet counterpart",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_NO_RESULT_MATCHES",
+      "issue_check_names": ["carried_no_result_or_abandoned_with_deliveries"],
+      "applies_to_metrics": ["match_outcome_label", "win_probability_features"],
+      "row_filter": "result_status IN ('NO_RESULT', 'ABANDONED') AND has_deliveries",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_DLS_TARGETS",
+      "issue_check_names": ["carried_dls_revised_targets"],
+      "applies_to_metrics": ["chase_target_features", "win_probability_features"],
+      "row_filter": "revised_target IS NOT NULL OR revised overs IS NOT NULL",
+      "effect": "REQUIRE_REVISED_FIELDS",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_XI_COUNT",
+      "issue_check_names": ["carried_playing_xi_count_not_11"],
+      "applies_to_metrics": ["team_composition_features"],
+      "row_filter": "(match_id, team_id) with a played-row count different from 11",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_FIRST_INNINGS_TEAM",
+      "issue_check_names": ["carried_first_innings_batting_team_not_fk"],
+      "applies_to_metrics": ["innings_order_features"],
+      "row_filter": "matches.first_innings_batting_team_id",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_INFO_NO_DELIVERY_MATCHES",
+      "issue_check_names": ["reconcile_matches_without_deliveries"],
+      "applies_to_metrics": ["match_coverage_denominators"],
+      "row_filter": "NOT has_deliveries",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_INFO_RESULT_STATUS",
+      "issue_check_names": ["result_status_distribution"],
+      "applies_to_metrics": ["match_outcome_label"],
+      "row_filter": "result_status NOT IN ('COMPLETED')",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_INFO_COMP_TYPE",
+      "issue_check_names": ["competition_type_distribution"],
+      "applies_to_metrics": ["format_assignment"],
+      "row_filter": "competition_type = 'OTHER_T20'",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_INFO_IPL_FORMAT",
+      "issue_check_names": ["ipl_competitions_not_format_T20"],
+      "applies_to_metrics": ["format_assignment"],
+      "row_filter": "IPL competitions whose match_format is not T20",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    },
+    {
+      "rule_id": "RULE_INFO_EXTRAS1_COMPARISON",
+      "issue_check_names": ["comparison_columns_that_differ"],
+      "applies_to_metrics": ["extras_type_features"],
+      "row_filter": "ball_by_ball.csv vs updated_ball_by_ball.csv differences",
+      "effect": "DOCUMENT_ONLY",
+      "global_exclusion": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+squad_row,team_no,squad_team_name,squad_player,squad_nationality,squad_role,squad_designation,match_type,candidate_ids,player_id,inferred_team_id,team_corroborated,variant_team_corroborated,team_text_agrees,player_id_repeated,reason
+8,1,Mumbai Indians,Will Jacks,Overseas,All Rounder,,NO_MATCH,,,2,False,False,True,False,No player in the data has this name; user must supply the id
+11,1,Mumbai Indians,AM Ghazanfar,Overseas,Bowler,,NO_MATCH,,,2,False,False,True,False,No player in the data has this name; user must supply the id
+13,1,Mumbai Indians,Tilak Varma,Indian,Batter,,NO_MATCH,,,2,False,False,True,False,No player in the data has this name; user must supply the id
+28,2,Chennai Super Kings,MS Dhoni,Indian,Wicket Keeper,,NO_MATCH,,,1,False,False,True,False,No player in the data has this name; user must supply the id
+31,2,Chennai Super Kings,Ayush Matre,Indian,Batter,,NO_MATCH,,,1,False,False,True,False,No player in the data has this name; user must supply the id
+35,2,Chennai Super Kings,Shivam Dubey,Indian,All Rounder,,NO_MATCH,,,1,False,False,True,False,No player in the data has this name; user must supply the id
+36,2,Chennai Super Kings,Zak Foulkes,Overseas,All Rounder,,NO_MATCH,,,1,False,False,True,False,No player in the data has this name; user must supply the id
+83,4,Royal Challengers Bengaluru,Devdutt Padikal,Indian,Batter,,NO_MATCH,,,5,False,False,True,False,No player in the data has this name; user must supply the id
+107,5,Gujrat Titans,Shahrukh Khan,Indian,Batter,,NO_MATCH,,,3508,False,False,False,False,No player in the data has this name; user must supply the id
+115,5,Gujrat Titans,Nishant Sindhu,Indian,All Rounder,,NO_MATCH,,,3508,False,False,False,False,No player in the data has this name; user must supply the id
+116,5,Gujrat Titans,Rashid Khan,Overseas,All Rounder,,EXACT_AMBIGUOUS,"4722,20172",,3508,False,False,False,False,More than one player_id has this exact name; user must supply the id
+128,5,Gujrat Titans,Prithvi Raj,Indian,Bowler,,NO_MATCH,,,3508,False,False,False,False,No player in the data has this name; user must supply the id
+132,6,Rajasthan Royals,Aman Rao,Indian,Batter,,NO_MATCH,,,3,False,False,True,False,No player in the data has this name; user must supply the id
+139,6,Rajasthan Royals,Lhuan-dre Pretorius,Overseas,Wicket Keeper,,NO_MATCH,,,3,False,False,True,False,No player in the data has this name; user must supply the id
+154,6,Rajasthan Royals,Yash Raj Punja,Indian,Bowler,,NO_MATCH,,,3,False,False,True,False,No player in the data has this name; user must supply the id
+168,7,Sunrisers Hyderabad,Nitish Kumar Reddy,Indian,All Rounder,,NO_MATCH,,,242,False,False,True,False,No player in the data has this name; user must supply the id
+175,7,Sunrisers Hyderabad,Pat Cummins,Overseas,Bowler,,NO_MATCH,,,242,False,False,True,False,No player in the data has this name; user must supply the id
+178,7,Sunrisers Hyderabad,Onkar Tarmale,Indian,Bowler,,NO_MATCH,,,242,False,False,True,False,No player in the data has this name; user must supply the id
+185,8,Punjab Kings,Harnoor Singh,Indian,Batter,,NO_MATCH,,,4,False,False,True,False,No player in the data has this name; user must supply the id
+202,8,Punjab Kings,Vijaykumar Vyshak,Indian,Bowler,,NO_MATCH,,,4,False,False,True,False,No player in the data has this name; user must supply the id
+215,9,Delhi Capitals,Abhishek Porel,Indian,Wicket Keeper,,NO_MATCH,,,7,False,False,True,False,No player in the data has this name; user must supply the id
+216,9,Delhi Capitals,KL Rahul,Indian,Wicket Keeper,,NO_MATCH,,,7,False,False,True,False,No player in the data has this name; user must supply the id
+232,9,Delhi Capitals,T Natrajan,Indian,Bowler,,NO_MATCH,,,7,False,False,True,False,No player in the data has this name; user must supply the id
+238,10,Lucknow Super Giants,Akshat Raghuvanshi,Indian,Batter,,NO_MATCH,,,3509,False,False,True,False,No player in the data has this name; user must supply the id
+242,10,Lucknow Super Giants,Abdul Samad,Indian,Batter,,EXACT_AMBIGUOUS,"6922,7446",,3509,False,False,True,False,More than one player_id has this exact name; user must supply the id

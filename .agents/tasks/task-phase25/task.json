@@ -1,0 +1,7 @@
+{
+  "task_id": "task-phase25",
+  "task_description": "SupeRR Selector Season 2 Phase 2.5: format-weight sensitivity grid, data-driven eligibility thresholds, Cricsheet Super Over validation (validation-only) and data-quality impact register, all as PROXY_NOT_PRESSURE harnesses/descriptive runs. No pressure scores, rankings or ML. Plan: d:/Data/.agents/tasks/phase25_plan.md",
+  "status": "pending",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003"],
+  "blocked_reason": null
+}

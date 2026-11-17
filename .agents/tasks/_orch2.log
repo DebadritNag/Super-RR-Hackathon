@@ -1,0 +1,17 @@
+[ok] phase5_classification (exit 0) official data unchanged: True
+[ok] phase5_date_verification (exit 0) {'official_db_unchanged': True, 'matches_date_column_unchanged': True, 'source_csvs_unchanged': True, 'phase4_lock_log_s
+[ok] phase5_gates (exit 0) strict-uncapped request -> INTERNAL_EXPERIMENTAL_ONLY ['data_weight_gate_passed', 'methodology_validated', 'strict_class
+[ok] phase5_investigation (exit 0) investigation done | preserved: True | spot checks: True True
+[ok] phase5_sensitivity (exit 0) sensitivity done | preserved: True
+[ok] phase5_ranking_stability (exit 0) stability done | preserved: True
+[ok] phase5_context_engine (exit 0) preserved: True
+[ok] phase5_context_coverage (exit 0) preserved: True
+[ok] phase5_dynamic_demo (exit 0) preserved: True
+[ok] phase5_gates_dynamic_section (exit 0) strict-uncapped request -> INTERNAL_EXPERIMENTAL_ONLY ['data_weight_gate_passed', 'methodology_validated', 'strict_class
+[ok] phase5_context_spotcheck (exit 0) }
+[ok] phase5_reports_pre (exit 0) reports written; lock present: True refit present: True
+[ok] phase5_pre_lock_checklist (exit 0) no lock written (pass --confirm-lock to write the EXPERIMENTAL_LOCK manifest)
+[ok] phase5_refit (exit 0) preservation (refit): True | overall: True
+[ok] phase5_reports_final (exit 0) reports written; lock present: True refit present: True
+compare-hashes: 0 differing files []
+missing deliverables: [] | preservation: True

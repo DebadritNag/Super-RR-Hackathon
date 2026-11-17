@@ -1,0 +1,6 @@
+{
+  "version": "p5_gates_v1",
+  "min_public_pool": 10,
+  "min_public_pool_note": "PROVISIONAL. Minimum eligible rows after all filters for a public output.",
+  "gates": ["data_weight_gate_passed", "methodology_validated", "strict_classification_available", "min_eligible_pool", "date_verification"]
+}

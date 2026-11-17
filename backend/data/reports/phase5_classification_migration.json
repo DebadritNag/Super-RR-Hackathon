@@ -1,0 +1,209 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "classification_version": "p5_classification_v2",
+  "migration_map": [
+    {
+      "phase4_status": "Capped",
+      "phase4_verification": "DERIVED_FROM_OFFICIAL_T20I_APPEARANCES",
+      "phase5_status": "DERIVED_CAPPED"
+    },
+    {
+      "phase4_status": "Capped",
+      "phase4_verification": "VERIFIED_FROM_SOURCE",
+      "phase5_status": "VERIFIED_CAPPED"
+    },
+    {
+      "phase4_status": "Uncapped",
+      "phase4_verification": "VERIFIED_FROM_SOURCE",
+      "phase5_status": "VERIFIED_UNCAPPED"
+    },
+    {
+      "phase4_status": "Unknown",
+      "phase4_verification": "UNVERIFIED",
+      "phase5_status": "UNKNOWN"
+    }
+  ],
+  "coverage": {
+    "classification_version": "p5_classification_v2",
+    "players_total": 1217,
+    "status_counts": {
+      "VERIFIED_CAPPED": 0,
+      "DERIVED_CAPPED": 655,
+      "VERIFIED_UNCAPPED": 0,
+      "UNKNOWN": 562
+    },
+    "combinations_all_players": [
+      {
+        "nationality": "Indian",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "DERIVED_CAPPED",
+        "players": 52
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "UNKNOWN",
+        "players": 112
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "DERIVED_CAPPED",
+        "players": 603
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "UNKNOWN",
+        "players": 3
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "DERIVED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "UNKNOWN",
+        "players": 447
+      }
+    ],
+    "nationality_verification": {
+      "DERIVED": 770,
+      "UNVERIFIED": 447
+    },
+    "status_verification": {
+      "DERIVED_FROM_OFFICIAL_T20I_APPEARANCES": 655,
+      "UNVERIFIED": 562
+    },
+    "nationality_unknown_reasons": {
+      "NO_SOURCE_RECORD": 445,
+      "SQUAD_NAME_AMBIGUOUS": 2
+    },
+    "status_unknown_reasons": {
+      "NOT_PROVEN_CAPPED_IN_DATA": 498,
+      "FIRST_T20I_AFTER_AS_OF_DATE": 64
+    },
+    "verified_capped_count": 0,
+    "derived_capped_count": 655,
+    "uncapped_verified_count": 0,
+    "unknown_status_count": 562,
+    "unknown_status_label": "UNKNOWN_STATUS",
+    "unknown_status_banner": "NOT_PROVEN_CAPPED_IS_NOT_UNCAPPED",
+    "conflicts": 0,
+    "scored_players_total": 403,
+    "combinations_scored_players": [
+      {
+        "nationality": "Indian",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "DERIVED_CAPPED",
+        "players": 51
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Indian",
+        "international_status": "UNKNOWN",
+        "players": 35
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "DERIVED_CAPPED",
+        "players": 288
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Overseas",
+        "international_status": "UNKNOWN",
+        "players": 1
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "VERIFIED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "DERIVED_CAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "VERIFIED_UNCAPPED",
+        "players": 0
+      },
+      {
+        "nationality": "Unknown",
+        "international_status": "UNKNOWN",
+        "players": 28
+      }
+    ]
+  },
+  "phase4_comparison": {
+    "phase4_capped": 655,
+    "phase4_uncapped": 0,
+    "phase4_unknown": 562,
+    "phase5_capped_total": 655,
+    "phase5_verified_uncapped": 0,
+    "phase5_unknown": 562,
+    "players_total": 1217
+  },
+  "independent_derived_capped_recount": 655,
+  "strict_uncapped_capability": {
+    "enabled": false,
+    "reasons": [
+      "NO_AUTHORITATIVE_SOURCE",
+      "NO_VERIFIED_ROWS",
+      "COVERAGE_BELOW_MINIMUM"
+    ],
+    "source_needed": "An authoritative source of international status keyed by player_id (for example an official board or ICC record), declared in config/classification_source_manifest_v1.json with authoritative=true and id_keyed=true, plus validated override rows (source, verified_by, verified_date) in config/classification_overrides_v1.csv covering at least the minimum share of the scored pool.",
+    "verified_coverage": 0.0,
+    "min_verified_coverage": 0.95,
+    "scored_pool_size": 403,
+    "verified_rows": 0,
+    "authoritative_sources": 0
+  },
+  "overrides_loaded": 0
+}

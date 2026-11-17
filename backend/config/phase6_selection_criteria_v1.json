@@ -1,0 +1,111 @@
+{
+  "confound_control": "M1, M2 and M5 are recomputed on the intersection of individuals eligible under all nine definitions per cell; the rule uses the intersection version when it has at least 30 individuals in every cell, otherwise COMPARISON_CONFOUNDED and only the pass list is reported",
+  "declared_before_any_result": true,
+  "forbidden_inputs": [
+    "player identity",
+    "player rank",
+    "score level",
+    "Top-10 membership",
+    "nationality",
+    "capped status",
+    "TEST outcomes",
+    "Cricsheet"
+  ],
+  "metrics": {
+    "M1": "Fisher-z pooled R over the four cells (weights n-3, correlation clipped at 0.99); SE1 is the SD over bootstrap draws of the pooled value",
+    "M2": "split-covariance signal share: cov(half1, half2) / var(individual means); descriptive only",
+    "M3": "share of individuals whose match-cluster bootstrap 95% interval of the raw mean residual excludes the pooled cell mean; descriptive only",
+    "M4": "median over individuals of pressure-ball counts, pooled over the four cells",
+    "M5": "median over 1000 match-cluster resamples of the Spearman correlation between the resample ordering and the full-window ordering, per cell, then medianed over cells",
+    "M6": "control reliability of a non-pressure ball sample matched on balls per individual; descriptive only, never a selection input",
+    "R": "odd/even split-half Spearman-Brown reliability of definition d in cell c, primary stream, PRE_TEST, at least 6 pressure balls per half, at least 10 individuals; match-cluster bootstrap with 1000 draws; lo is the 2.5th percentile of the draws"
+  },
+  "metrics_in_rule": [
+    "M1",
+    "M4",
+    "M5"
+  ],
+  "multiplicity": "nine candidates examined, no correction applied; any top group is PROVISIONAL and does not replace any|q0.75",
+  "provisional_definition_unchanged": "any|q0.75 stays the provisional definition regardless of outcome; a change needs a user decision",
+  "rule": "PASS(d) iff R(d,c) is estimable in all four cells and lo(d,c) > 0 in at least three cells. TOP(d) iff PASS(d) and M1(d) >= max M1 over passing definitions minus SE1 of the best. Order inside TOP: M4 descending, then M5 descending, then id ascending. The output is a pass list and a top group, not a selection.",
+  "split_half": {
+    "aggregation": "Fisher z with weights n-3, correlation clipped at 0.99",
+    "bootstrap_draws": 1000,
+    "label": "IN_SAMPLE_DIAGNOSTIC_TRAIN_VALIDATION",
+    "min_balls_per_half": 6,
+    "min_individuals_estimable": 10,
+    "modes": [
+      "odd_even",
+      "early_late",
+      "random"
+    ],
+    "random_splits": 200,
+    "spearman_brown": "2r/(1+r), reported unclipped; a negative r gives a negative value"
+  },
+  "stability_outcomes": "if the TOP set on TRAIN only differs from the PRE_TEST TOP set the report states DEFINITION_ORDER_NOT_STABLE and names no top group",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "unit": "definition x (format, role) cell; the selection rule uses the primary stream of each role only (batter runs, bowler charged runs); other streams are descriptive",
+  "variance_floor": {
+    "flag_definitions": {
+      "H-A_null": "E7 bootstrap 95% interval contains 0 and the E6 share of draws with a positive match-cluster estimate is below positive_draw_share_min",
+      "H-A_power": "detectability simulation share of positive estimates at tau2/sigma2 = power_ratio is at least power_min",
+      "H-B(i)": "mean(sigma2/n_eff_kish) / mean(sigma2/n_i), divided by the mean balls per match, lies in [kish_ratio_to_balls_per_match_lo, ..._hi]",
+      "H-B(ii)": "the sign of the between variance differs between the Kish basis (E1) and the match-cluster basis (E1c)",
+      "H-B(iii)": "residual-variance ratio of the lowest versus highest tercile of ball counts is above tercile_variance_ratio_hi or below tercile_variance_ratio_lo",
+      "H-B(iv)": "ICC of ball residuals within match or within individual-match cluster above icc_min, or Pearson dispersion of the moment fit above pearson_dispersion_min",
+      "H-B_overall": "at least min_supported_of_hb_i_to_iv of H-B(i) to H-B(iv) supported, including H-B(ii)",
+      "H-C": "E7 or E6 lower bound > 0 and the required-sample projection for R = 0.5 is finite and larger than the observed median ball count"
+    },
+    "flags": {
+      "hb_overall_requires_hb_ii": true,
+      "icc_min": 0.05,
+      "kish_ratio_to_balls_per_match_hi": 1.25,
+      "kish_ratio_to_balls_per_match_lo": 0.75,
+      "min_supported_of_hb_i_to_iv": 2,
+      "pearson_dispersion_min": 1.5,
+      "positive_draw_share_min": 0.9,
+      "power_min": 0.8,
+      "power_ratio": 0.01,
+      "tercile_variance_ratio_hi": 1.5,
+      "tercile_variance_ratio_lo": 0.67
+    },
+    "identification_rule": {
+      "identified_positive": "E7 split-covariance bootstrap 95% lower bound > 0 and E1c match-cluster moment estimate positive in at least 90% of E6 bootstrap draws",
+      "not_identified": "E7 interval contains 0 and the E6 share of positive draws is below 90%",
+      "otherwise": "weakly_identified"
+    },
+    "sensitivity_only_estimators": [
+      "E4",
+      "E5"
+    ],
+    "sparse_context": "fewer than 8 TRAIN individuals or fewer than 10 per half is NOT_ESTIMABLE with a reason",
+    "verdict_table_in_order": [
+      [
+        "H-A_null and H-A_power and not H-B_overall",
+        "H-A_SUPPORTED"
+      ],
+      [
+        "H-A_null and not H-A_power",
+        "UNIDENTIFIED"
+      ],
+      [
+        "H-B_overall and H-C",
+        "MIXED"
+      ],
+      [
+        "H-B_overall only",
+        "H-B_SUPPORTED"
+      ],
+      [
+        "H-C only",
+        "H-C_SUPPORTED"
+      ],
+      [
+        "any other combination",
+        "UNIDENTIFIED"
+      ]
+    ]
+  },
+  "version": "phase6_selection_criteria_v1",
+  "window": "PRE_TEST (TRAIN + VALIDATION); repeated on TRAIN only as a stability check"
+}

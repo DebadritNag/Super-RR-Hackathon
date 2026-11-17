@@ -1,0 +1,13 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "gate_value": 0.5,
+  "gate_used_in_options": [
+    0.5
+  ],
+  "files_sha256": {
+    "app/phase4/eligibility.py": "4a86775f833feff7158fe4485dc2dd87ad4d1001d69c47e6f34fea4f5252e92e",
+    "config/phase5_gates_v1.json": "ea583816f4b5901f4dd760503aa13bb555dd3817cfabbfe325c8b3b66a6e32e6",
+    "config/pressure_eligibility_rules_v1.json": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0",
+    "data/reports/phase4_frozen_choices.json": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42"
+  }
+}

@@ -1,0 +1,1100 @@
+{
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "not_for_publication": true,
+  "register": "data_quality_restrictions_v1.json",
+  "global_exclusion": false,
+  "records_deleted": 0,
+  "invariants": {
+    "register_rules": 26,
+    "all_rules_implemented": true,
+    "innings_3_4_rows_in_pressure_population": false,
+    "other_penalty_mapped_to_none": 0,
+    "xi_counts_identical": true,
+    "official_unchanged": true
+  },
+  "checks": {
+    "innings_3_4": {
+      "rows": 38,
+      "matches": 6,
+      "rows_by_innings": {
+        "3": 25,
+        "4": 13
+      },
+      "reason_codes": {
+        "UNVERIFIED_INNINGS_ROLE": 22,
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET": 16
+      },
+      "matches_by_reason": {
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET": [
+          34429,
+          45512,
+          50359
+        ],
+        "UNVERIFIED_INNINGS_ROLE": [
+          40725,
+          48027,
+          48029
+        ]
+      },
+      "rows_excluded_by_mask_batter_pressure_sample": 38,
+      "rows_excluded_by_mask_bowler_pressure_sample": 38,
+      "source_rows_preserved_in_official_db": 38,
+      "any_row_in_a_pressure_population": false
+    },
+    "extras": {
+      "category_counts": {
+        "None": 189165,
+        "wide": 7714,
+        "legbyes": 2748,
+        "Overstep": 576,
+        "byes": 529,
+        "other": 264,
+        "None_with_runs": 2,
+        "Penalty": 1
+      },
+      "other_rows_mapped_to_none": 0,
+      "penalty_rows_mapped_to_none": 0,
+      "none_type_with_runs_rows": 2,
+      "unverified_label_rows": 265,
+      "penalty_rows_excluded_by_metric_mask": {
+        "batter_balls_faced": 1,
+        "bowler_legal_balls": 1
+      },
+      "secondary_runs_rows": 36,
+      "secondary_guard_blocks_economy": true
+    },
+    "wicket_flags": {
+      "dismissed_without_wicket_flag_rows": 12,
+      "wicket_flag_without_dismissed_rows": 1,
+      "rows_in_regulation": {
+        "dismissed_no_flag": 12,
+        "wicket_no_dismissed": 1
+      },
+      "state_rows_where_wicket_count_variants_differ": 739,
+      "state_rows_with_flag_disagreement_in_earlier_rows": 739,
+      "dismissal_metric_rows_excluded_primary": {
+        "wicket_event_label": 1,
+        "batter_dismissal_rate": 39,
+        "bowler_wicket_rate": 38
+      },
+      "state_features_rows_dropped": 0,
+      "handling": "state features keep is_wicket and report the alt count as a variant; only dismissal metrics apply the masks"
+    },
+    "dls": {
+      "dls_match_rows": 4433,
+      "dls_matches": 34,
+      "dls_flag_rows": 3270,
+      "rows_without_reconstructable_revised_state": 3404,
+      "matches_without_reconstructable_revised_state": 34,
+      "dls_rows_in_primary_chase_population": 0,
+      "dls_exclude_primary_rows_in_primary_chase_population": 0
+    },
+    "duplicate_names": {
+      "players_sharing_a_name": 14,
+      "distinct_shared_names": 7,
+      "ids_in_deliveries": 958,
+      "rows_if_joined_on_id": 958,
+      "rows_if_naively_joined_on_name": 968,
+      "ids_that_would_merge_by_name": 10,
+      "name_join_guard_raises": true,
+      "pipeline_join_key": "player_id only"
+    },
+    "xi_duplicates": {
+      "squad_rows": 28381,
+      "duplicate_flag_rows": 75,
+      "squad_rows_after_dedup": 28341,
+      "pressure_sample_rows": 89589,
+      "rows_with_safe_squad_join": 89589,
+      "rows_with_naive_squad_join": 89964,
+      "naive_join_extra_rows": 375,
+      "per_player_counts_identical_without_and_with_safe_join": true,
+      "matches_without_xi_rows": 0,
+      "pipeline_uses_match_squads": false,
+      "squad_inference_guard_raises": true
+    }
+  },
+  "ledger": [
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "batter_balls_faced",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 34.0,
+      "rows_excluded": 34,
+      "matches_affected": 6.0,
+      "players_affected": 22.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "batter_runs_per_ball",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 34.0,
+      "rows_excluded": 34,
+      "matches_affected": 6.0,
+      "players_affected": 22.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "batter_strike_rate",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 34.0,
+      "rows_excluded": 34,
+      "matches_affected": 6.0,
+      "players_affected": 22.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "batter_dismissal_rate",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 23.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "bowler_legal_balls",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 11.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "bowler_economy",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 11.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "bowler_wicket_rate",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 11.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "innings_total_runs",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 34.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "chase_target_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 34.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "win_probability_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 34.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "pressure_state_label",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 34.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "batter_pressure_sample",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 23.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INNINGS_3_4",
+      "metric": "bowler_pressure_sample",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 38.0,
+      "rows_in_metric_scope": 38.0,
+      "rows_excluded": 38,
+      "matches_affected": 6.0,
+      "players_affected": 11.0,
+      "reason_codes": [
+        "CONFIRMED_SUPER_OVER_BY_CRICSHEET",
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_OTHER",
+      "metric": "extras_type_features",
+      "effect": "REPORT_WITH_SENSITIVITY",
+      "kind": "FRAME",
+      "rows_flagged": 264.0,
+      "rows_in_metric_scope": 264.0,
+      "rows_excluded": 0,
+      "matches_affected": 215.0,
+      "players_affected": 278.0,
+      "reason_codes": [
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_OTHER",
+      "metric": "bowler_economy",
+      "effect": "REPORT_WITH_SENSITIVITY",
+      "kind": "FRAME",
+      "rows_flagged": 264.0,
+      "rows_in_metric_scope": 264.0,
+      "rows_excluded": 0,
+      "matches_affected": 215.0,
+      "players_affected": 145.0,
+      "reason_codes": [
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_OTHER",
+      "metric": "bowler_legal_balls",
+      "effect": "REPORT_WITH_SENSITIVITY",
+      "kind": "FRAME",
+      "rows_flagged": 264.0,
+      "rows_in_metric_scope": 264.0,
+      "rows_excluded": 0,
+      "matches_affected": 215.0,
+      "players_affected": 145.0,
+      "reason_codes": [
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_OTHER",
+      "metric": "batter_balls_faced",
+      "effect": "REPORT_WITH_SENSITIVITY",
+      "kind": "FRAME",
+      "rows_flagged": 264.0,
+      "rows_in_metric_scope": 264.0,
+      "rows_excluded": 0,
+      "matches_affected": 215.0,
+      "players_affected": 162.0,
+      "reason_codes": [
+        "UNVERIFIED_INNINGS_ROLE"
+      ],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_PENALTY",
+      "metric": "batter_balls_faced",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 0.0,
+      "rows_excluded": 0,
+      "matches_affected": 0.0,
+      "players_affected": 0.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_PENALTY",
+      "metric": "bowler_legal_balls",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 1.0,
+      "rows_excluded": 1,
+      "matches_affected": 1.0,
+      "players_affected": 1.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_PENALTY",
+      "metric": "bowler_economy",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 1.0,
+      "rows_excluded": 1,
+      "matches_affected": 1.0,
+      "players_affected": 1.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_PENALTY",
+      "metric": "extras_type_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 1.0,
+      "rows_excluded": 1,
+      "matches_affected": 1.0,
+      "players_affected": 2.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_SECONDARY",
+      "metric": "bowler_economy",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "kind": "FRAME",
+      "rows_flagged": 36.0,
+      "rows_in_metric_scope": 36.0,
+      "rows_excluded": 0,
+      "matches_affected": 36.0,
+      "players_affected": 31.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_SECONDARY",
+      "metric": "extras_type_features",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "kind": "FRAME",
+      "rows_flagged": 36.0,
+      "rows_in_metric_scope": 36.0,
+      "rows_excluded": 0,
+      "matches_affected": 36.0,
+      "players_affected": 64.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_EXTRAS_SECONDARY",
+      "metric": "innings_total_runs",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "kind": "FRAME",
+      "rows_flagged": 36.0,
+      "rows_in_metric_scope": 36.0,
+      "rows_excluded": 0,
+      "matches_affected": 36.0,
+      "players_affected": 64.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_XI_DUPLICATES",
+      "metric": "team_composition_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 75.0
+    },
+    {
+      "rule_id": "RULE_XI_DUPLICATES",
+      "metric": "squad_membership_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 75.0
+    },
+    {
+      "rule_id": "RULE_XI_DUPLICATES",
+      "metric": "batting_order_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 75.0
+    },
+    {
+      "rule_id": "RULE_NO_XI_MATCHES",
+      "metric": "team_composition_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 0.0,
+      "rows_in_metric_scope": 0.0,
+      "rows_excluded": 0,
+      "matches_affected": 0.0,
+      "players_affected": 0.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_NO_XI_MATCHES",
+      "metric": "squad_membership_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 0.0,
+      "rows_in_metric_scope": 0.0,
+      "rows_excluded": 0,
+      "matches_affected": 0.0,
+      "players_affected": 0.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_NO_MAPPING_ROW",
+      "metric": "squad_membership_features",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 5.0
+    },
+    {
+      "rule_id": "RULE_STRIKER_NOT_IN_SQUAD",
+      "metric": "squad_membership_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "FRAME",
+      "rows_flagged": 83.0,
+      "rows_in_metric_scope": 83.0,
+      "rows_excluded": 0,
+      "matches_affected": 3.0,
+      "players_affected": 17.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_BOWLER_NOT_IN_SQUAD",
+      "metric": "squad_membership_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "FRAME",
+      "rows_flagged": 30.0,
+      "rows_in_metric_scope": 30.0,
+      "rows_excluded": 0,
+      "matches_affected": 3.0,
+      "players_affected": 8.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_DISMISSED_NO_FLAG",
+      "metric": "wicket_event_label",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 12.0,
+      "rows_in_metric_scope": 12.0,
+      "rows_excluded": 0,
+      "matches_affected": 12.0,
+      "players_affected": 24.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_DISMISSED_NO_FLAG",
+      "metric": "batter_dismissal_rate",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 12.0,
+      "rows_in_metric_scope": 12.0,
+      "rows_excluded": 0,
+      "matches_affected": 12.0,
+      "players_affected": 12.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_DISMISSED_NO_FLAG",
+      "metric": "bowler_wicket_rate",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 12.0,
+      "rows_in_metric_scope": 12.0,
+      "rows_excluded": 0,
+      "matches_affected": 12.0,
+      "players_affected": 12.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_WICKET_NO_DISMISSED",
+      "metric": "wicket_event_label",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 1.0,
+      "rows_excluded": 1,
+      "matches_affected": 1.0,
+      "players_affected": 2.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_WICKET_NO_DISMISSED",
+      "metric": "batter_dismissal_rate",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1.0,
+      "rows_in_metric_scope": 1.0,
+      "rows_excluded": 1,
+      "matches_affected": 1.0,
+      "players_affected": 1.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_MOM_SENTINEL",
+      "metric": "player_match_of_match_label",
+      "effect": "DO_NOT_USE_AS_LABEL",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 119.0
+    },
+    {
+      "rule_id": "RULE_UTC_SUFFIX",
+      "metric": "delivery_timestamp_features",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 200999.0
+    },
+    {
+      "rule_id": "RULE_MIDNIGHT_TIMES",
+      "metric": "delivery_timestamp_features",
+      "effect": "DO_NOT_INTERPRET_FIELD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 42.0
+    },
+    {
+      "rule_id": "RULE_DUPLICATE_NAMES",
+      "metric": "player_identity_join",
+      "effect": "NO_JOIN_ON_NAME",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 14.0
+    },
+    {
+      "rule_id": "RULE_CRICSHEET_TOTALS",
+      "metric": "innings_total_runs",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 1221.0,
+      "rows_in_metric_scope": 1221.0,
+      "rows_excluded": 0,
+      "matches_affected": 6.0,
+      "players_affected": 86.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_CRICSHEET_TOTALS",
+      "metric": "batter_runs_per_ball",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 1221.0,
+      "rows_in_metric_scope": 1174.0,
+      "rows_excluded": 0,
+      "matches_affected": 6.0,
+      "players_affected": 65.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_CRICSHEET_TOTALS",
+      "metric": "bowler_economy",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 1221.0,
+      "rows_in_metric_scope": 1221.0,
+      "rows_excluded": 0,
+      "matches_affected": 6.0,
+      "players_affected": 47.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_CRICSHEET_TOTALS",
+      "metric": "chase_target_features",
+      "effect": "SENSITIVITY_EXCLUDE",
+      "kind": "FRAME",
+      "rows_flagged": 1221.0,
+      "rows_in_metric_scope": 1221.0,
+      "rows_excluded": 0,
+      "matches_affected": 6.0,
+      "players_affected": 86.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_UNLINKABLE_MATCHES",
+      "metric": "cricsheet_validation_coverage",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "DOCUMENT_ONLY",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_NO_RESULT_MATCHES",
+      "metric": "match_outcome_label",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1753.0,
+      "rows_in_metric_scope": 1753.0,
+      "rows_excluded": 1753,
+      "matches_affected": 24.0,
+      "players_affected": 183.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_NO_RESULT_MATCHES",
+      "metric": "win_probability_features",
+      "effect": "EXCLUDE_ROWS_FROM_METRIC",
+      "kind": "FRAME",
+      "rows_flagged": 1753.0,
+      "rows_in_metric_scope": 1753.0,
+      "rows_excluded": 1753,
+      "matches_affected": 24.0,
+      "players_affected": 183.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_DLS_TARGETS",
+      "metric": "chase_target_features",
+      "effect": "REQUIRE_REVISED_FIELDS",
+      "kind": "FRAME",
+      "rows_flagged": 4433.0,
+      "rows_in_metric_scope": 4433.0,
+      "rows_excluded": 0,
+      "matches_affected": 34.0,
+      "players_affected": 303.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_DLS_TARGETS",
+      "metric": "win_probability_features",
+      "effect": "REQUIRE_REVISED_FIELDS",
+      "kind": "FRAME",
+      "rows_flagged": 4433.0,
+      "rows_in_metric_scope": 4433.0,
+      "rows_excluded": 0,
+      "matches_affected": 34.0,
+      "players_affected": 303.0,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_XI_COUNT",
+      "metric": "team_composition_features",
+      "effect": "DO_NOT_INFER_FROM_SQUAD",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 569.0
+    },
+    {
+      "rule_id": "RULE_FIRST_INNINGS_TEAM",
+      "metric": "innings_order_features",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "DOCUMENT_ONLY",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": null
+    },
+    {
+      "rule_id": "RULE_INFO_NO_DELIVERY_MATCHES",
+      "metric": "match_coverage_denominators",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 16.0
+    },
+    {
+      "rule_id": "RULE_INFO_RESULT_STATUS",
+      "metric": "match_outcome_label",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 50.0
+    },
+    {
+      "rule_id": "RULE_INFO_COMP_TYPE",
+      "metric": "format_assignment",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 30.0
+    },
+    {
+      "rule_id": "RULE_INFO_IPL_FORMAT",
+      "metric": "format_assignment",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 0.0
+    },
+    {
+      "rule_id": "RULE_INFO_EXTRAS1_COMPARISON",
+      "metric": "extras_type_features",
+      "effect": "DOCUMENT_ONLY",
+      "kind": "OFFICIAL_SQL",
+      "rows_flagged": null,
+      "rows_in_metric_scope": null,
+      "rows_excluded": 0,
+      "matches_affected": null,
+      "players_affected": null,
+      "reason_codes": [],
+      "official_count": 57.0
+    }
+  ],
+  "official_table_counts": {
+    "RULE_XI_DUPLICATES": 75,
+    "RULE_NO_MAPPING_ROW": 5,
+    "RULE_MOM_SENTINEL": 119,
+    "RULE_UTC_SUFFIX": 200999,
+    "RULE_MIDNIGHT_TIMES": 42,
+    "RULE_DUPLICATE_NAMES": 14,
+    "RULE_XI_COUNT": 569,
+    "RULE_INFO_NO_DELIVERY_MATCHES": 16,
+    "RULE_INFO_RESULT_STATUS": 50,
+    "RULE_INFO_COMP_TYPE": 30,
+    "RULE_INFO_IPL_FORMAT": 0,
+    "RULE_INFO_EXTRAS1_COMPARISON": 57
+  },
+  "sensitivity": {
+    "batter": {
+      "RULE_EXTRAS_OTHER (drop other rows)": {
+        "rows_dropped": 118,
+        "metrics": {
+          "IPL": {
+            "min_balls": 24,
+            "pressure_rows_primary": 39646,
+            "pressure_rows_variant": 39585,
+            "eligible_primary": 180,
+            "eligible_variant": 180,
+            "eligible_in_both": 180,
+            "spearman_common": 0.999446485,
+            "max_abs_change_resid_per_ball": 0.0757364351
+          },
+          "T20I": {
+            "min_balls": 24,
+            "pressure_rows_primary": 46552,
+            "pressure_rows_variant": 46495,
+            "eligible_primary": 329,
+            "eligible_variant": 329,
+            "eligible_in_both": 329,
+            "spearman_common": 0.9996010217,
+            "max_abs_change_resid_per_ball": 0.0367127294
+          }
+        }
+      },
+      "RULE_CRICSHEET_TOTALS (drop ten innings)": {
+        "rows_dropped": 350,
+        "innings_dropped_in_sample": 3,
+        "metrics": {
+          "IPL": {
+            "min_balls": 24,
+            "pressure_rows_primary": 39646,
+            "pressure_rows_variant": 39646,
+            "eligible_primary": 180,
+            "eligible_variant": 180,
+            "eligible_in_both": 180,
+            "spearman_common": 1.0,
+            "max_abs_change_resid_per_ball": 0.0
+          },
+          "T20I": {
+            "min_balls": 24,
+            "pressure_rows_primary": 46552,
+            "pressure_rows_variant": 46218,
+            "eligible_primary": 329,
+            "eligible_variant": 328,
+            "eligible_in_both": 328,
+            "spearman_common": 0.9985173104,
+            "max_abs_change_resid_per_ball": 0.2718481194
+          }
+        }
+      },
+      "RULE_DLS_TARGETS (force DLS rows into sample, diagnostic only)": {
+        "dls_rows_added": 1763,
+        "dls_rows_in_primary": 0,
+        "metrics": {
+          "IPL": {
+            "min_balls": 24,
+            "pressure_rows_primary": 39646,
+            "pressure_rows_variant": 40106,
+            "eligible_primary": 180,
+            "eligible_variant": 180,
+            "eligible_in_both": 180,
+            "spearman_common": 0.9974237888,
+            "max_abs_change_resid_per_ball": 0.0795884295
+          },
+          "T20I": {
+            "min_balls": 24,
+            "pressure_rows_primary": 46552,
+            "pressure_rows_variant": 47785,
+            "eligible_primary": 329,
+            "eligible_variant": 333,
+            "eligible_in_both": 329,
+            "spearman_common": 0.9872586417,
+            "max_abs_change_resid_per_ball": 0.3954901755
+          }
+        },
+        "note": "diagnostic: the revised state is not reconstructable for these rows"
+      }
+    },
+    "bowler": {
+      "RULE_EXTRAS_OTHER (drop other rows)": {
+        "rows_dropped": 118,
+        "metrics": {
+          "IPL": {
+            "min_balls": 32,
+            "pressure_rows_primary": 41275,
+            "pressure_rows_variant": 41214,
+            "eligible_primary": 167,
+            "eligible_variant": 167,
+            "eligible_in_both": 167,
+            "spearman_common": 0.9993094706,
+            "max_abs_change_resid_per_ball": 0.0261531815
+          },
+          "T20I": {
+            "min_balls": 36,
+            "pressure_rows_primary": 48314,
+            "pressure_rows_variant": 48257,
+            "eligible_primary": 263,
+            "eligible_variant": 263,
+            "eligible_in_both": 263,
+            "spearman_common": 0.9997433922,
+            "max_abs_change_resid_per_ball": 0.0957313744
+          }
+        }
+      },
+      "RULE_CRICSHEET_TOTALS (drop ten innings)": {
+        "rows_dropped": 350,
+        "innings_dropped_in_sample": 3,
+        "metrics": {
+          "IPL": {
+            "min_balls": 32,
+            "pressure_rows_primary": 41275,
+            "pressure_rows_variant": 41275,
+            "eligible_primary": 167,
+            "eligible_variant": 167,
+            "eligible_in_both": 167,
+            "spearman_common": 1.0,
+            "max_abs_change_resid_per_ball": 0.0
+          },
+          "T20I": {
+            "min_balls": 36,
+            "pressure_rows_primary": 48314,
+            "pressure_rows_variant": 47964,
+            "eligible_primary": 263,
+            "eligible_variant": 263,
+            "eligible_in_both": 263,
+            "spearman_common": 0.998237388,
+            "max_abs_change_resid_per_ball": 0.1353221779
+          }
+        }
+      },
+      "RULE_DLS_TARGETS (force DLS rows into sample, diagnostic only)": {
+        "dls_rows_added": 1763,
+        "dls_rows_in_primary": 0,
+        "metrics": {
+          "IPL": {
+            "min_balls": 32,
+            "pressure_rows_primary": 41275,
+            "pressure_rows_variant": 41761,
+            "eligible_primary": 167,
+            "eligible_variant": 167,
+            "eligible_in_both": 167,
+            "spearman_common": 0.9950091212,
+            "max_abs_change_resid_per_ball": 0.1640943165
+          },
+          "T20I": {
+            "min_balls": 36,
+            "pressure_rows_primary": 48314,
+            "pressure_rows_variant": 49590,
+            "eligible_primary": 263,
+            "eligible_variant": 268,
+            "eligible_in_both": 263,
+            "spearman_common": 0.9895945201,
+            "max_abs_change_resid_per_ball": 0.2302444026
+          }
+        },
+        "note": "diagnostic: the revised state is not reconstructable for these rows"
+      }
+    },
+    "dismissal_metric_wicket_flag_variants": {
+      "dismissals_primary": 10594,
+      "dismissals_with_dismissed_no_flag": 10603,
+      "players_with_changed_dismissal_count": 9,
+      "rows_excluded_wicket_no_dismissed": 1
+    }
+  },
+  "provenance": {
+    "generated_at_utc": "2026-11-15T09:22:13Z",
+    "code_version": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd",
+    "seed": null,
+    "config_file": "data_quality_restrictions_v1.json",
+    "config_sha256": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b"
+  },
+  "preservation": {
+    "official_unchanged": true,
+    "diff": {}
+  }
+}

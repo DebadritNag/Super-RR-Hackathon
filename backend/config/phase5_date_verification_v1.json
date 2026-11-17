@@ -1,0 +1,45 @@
+{
+  "config_version": "phase5_date_verification_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "note": "Evidence checks for T20I match dates. Cricsheet is secondary, validation-only evidence and never an official record. No original date is changed.",
+  "late_cutoff": "2026-05-31",
+  "timestamp": {
+    "tolerance_days": 1,
+    "conflict_from_days": 2,
+    "min_nonmidnight_share": 0.5,
+    "suffix_note": "delivery_ist_time carries a 'UTC' suffix although the column is named IST; only the date part is compared, within the tolerance."
+  },
+  "cricsheet": {
+    "candidate_window_days": 3,
+    "confirmed_identity_window_days": 30,
+    "tolerance_days": 1,
+    "directories": {
+      "T20I": ["t20s_male_json", "2026_male_json", "india_male_json"],
+      "IPL": ["ipl_male_json"]
+    },
+    "identity": "same normalised team pair, first-innings batting team and first-innings total equal"
+  },
+  "matches_2026_csv": {
+    "tolerance_days": 0,
+    "applies_to": ["IPL"],
+    "team_abbreviations": {
+      "PBKS": "punjabkings"
+    }
+  },
+  "ordering": {
+    "max_gap_days_between_series_matches": 45
+  },
+  "independence": {
+    "counted_sources": ["timestamp", "cricsheet", "matches_2026_csv"],
+    "internal_only_checks": ["ordering", "double_booking", "season_token"],
+    "rule": "Internal checks can create a conflict but never add to the agreeing-source count."
+  },
+  "primary_set_rule": "OFFICIAL_VERIFIED, plus matches dated on or before test_core_end whose class is DATE_CONSISTENT_ACROSS_SOURCES",
+  "official_template_columns": [
+    "match_id",
+    "verified_date",
+    "source",
+    "verified_by",
+    "verified_date_of_verification"
+  ]
+}

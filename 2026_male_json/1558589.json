@@ -1,0 +1,1020 @@
+{
+  "meta": {
+    "data_version": "1.3.0",
+    "created": "2026-11-03",
+    "revision": 1
+  },
+  "info": {
+    "balls_per_over": 6,
+    "city": "Kirtipur",
+    "dates": [
+      "2026-10-31"
+    ],
+    "event": {
+      "name": "Nepal Premier League",
+      "match_number": 8
+    },
+    "gender": "male",
+    "match_type": "T20",
+    "missing": [
+      "player_of_match"
+    ],
+    "officials": {
+      "match_referees": [
+        "WC Labrooy"
+      ],
+      "reserve_umpires": [
+        "SK Sigdel"
+      ],
+      "tv_umpires": [
+        "DN Subedi"
+      ],
+      "umpires": [
+        "HR Giri",
+        "Masudur Rahman"
+      ]
+    },
+    "outcome": {
+      "winner": "Biratnagar Kings",
+      "by": {
+        "runs": 35
+      }
+    },
+    "overs": 20,
+    "players": {
+      "Biratnagar Kings": [
+        "GSNFG Jayasuriya",
+        "Lokesh Bam",
+        "AD Russell",
+        "Imran Sheikh",
+        "AD Mathews",
+        "Shubham Ranjane",
+        "Basir Ahamad",
+        "N Joshi",
+        "Pratis GC",
+        "S Lamichhane",
+        "Rupesh Singh"
+      ],
+      "Sudur Paschim Royals": [
+        "SE Rutherford",
+        "SA Zaib",
+        "DS Airee",
+        "Aarif Sheikh",
+        "SC Kuggeleijn",
+        "B Bhandari",
+        "KTH Ratnayake",
+        "I Pandey",
+        "A Kharel",
+        "H Dhami",
+        "A Bohara"
+      ]
+    },
+    "registry": {
+      "people": {
+        "A Bohara": "64fb6b15",
+        "A Kharel": "08b15b9e",
+        "AD Mathews": "896d78ad",
+        "AD Russell": "bbd41817",
+        "Aarif Sheikh": "cd4d7695",
+        "B Bhandari": "82342b13",
+        "Basir Ahamad": "218c7eab",
+        "DN Subedi": "fb0a571f",
+        "DS Airee": "1747ea18",
+        "GSNFG Jayasuriya": "b58b7db6",
+        "H Dhami": "bb20441f",
+        "HR Giri": "fea1e74f",
+        "I Pandey": "ed547c49",
+        "Imran Sheikh": "97fd166d",
+        "KTH Ratnayake": "4eb02f2e",
+        "Lokesh Bam": "75c8a26b",
+        "Masudur Rahman": "9581ac6b",
+        "N Joshi": "58c71b70",
+        "Pratis GC": "c1077ba3",
+        "Rupesh Singh": "30b93df1",
+        "S Lamichhane": "b410bd3d",
+        "SA Zaib": "ab01e323",
+        "SC Kuggeleijn": "fef92afc",
+        "SE Rutherford": "d014d5ac",
+        "SK Sigdel": "e34ab986",
+        "Shubham Ranjane": "6c7a68d0",
+        "WC Labrooy": "29d4e29b"
+      },
+      "venues": {
+        "Tribhuvan University International Cricket Ground, Kirtipur": "6056f871"
+      }
+    },
+    "season": "2026/27",
+    "team_type": "club",
+    "teams": [
+      "Biratnagar Kings",
+      "Sudur Paschim Royals"
+    ],
+    "toss": {
+      "decision": "field",
+      "winner": "Sudur Paschim Royals"
+    },
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur"
+  },
+  "innings": [
+    {
+      "team": "Biratnagar Kings",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "extras": {
+                "byes": 4
+              },
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 4,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "KTH Ratnayake",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 4,
+                "extras": 1,
+                "total": 5
+              }
+            },
+            {
+              "actual_delivery": "1.1",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "H Dhami",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "Lokesh Bam",
+              "bowler": "H Dhami",
+              "non_striker": "GSNFG Jayasuriya",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "GSNFG Jayasuriya",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "review": {
+                "by": "Sudur Paschim Royals",
+                "umpire": "HR Giri",
+                "batter": "GSNFG Jayasuriya",
+                "decision": "upheld",
+                "type": "wicket"
+              },
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "GSNFG Jayasuriya",
+                  "kind": "lbw"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "Lokesh Bam",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "AD Russell",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "AD Russell",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "AD Russell",
+              "bowler": "SC Kuggeleijn",
+              "extras": {
+                "wides": 5
+              },
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 5,
+                "total": 5
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "AD Russell",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "AD Russell",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "AD Russell",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "Lokesh Bam",
+              "bowler": "SC Kuggeleijn",
+              "non_striker": "AD Russell",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.1",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "Lokesh Bam",
+              "bowler": "A Bohara",
+              "non_striker": "AD Russell",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "AD Russell",
+              "bowler": "A Bohara",
+              "non_striker": "Lokesh Bam",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "Lokesh Bam",
+              "bowler": "A Bohara",
+              "non_striker": "AD Russell",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Lokesh Bam",
+                  "fielders": [
+                    {
+                      "name": "DS Airee"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 1.4,
+          "type": "mandatory"
+        }
+      ]
+    },
+    {
+      "team": "Sudur Paschim Royals",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "SE Rutherford",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "SE Rutherford",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "DS Airee",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "DS Airee",
+              "bowler": "AD Russell",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "DS Airee",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "DS Airee",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "SA Zaib",
+              "bowler": "AD Russell",
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "DS Airee",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "SA Zaib",
+              "bowler": "AD Mathews",
+              "extras": {
+                "byes": 2
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "SA Zaib",
+              "bowler": "AD Mathews",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "DS Airee",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "DS Airee",
+              "bowler": "AD Mathews",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "DS Airee",
+              "bowler": "AD Mathews",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "DS Airee",
+                  "fielders": [
+                    {
+                      "name": "Rupesh Singh"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "Aarif Sheikh",
+              "bowler": "AD Mathews",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "SA Zaib",
+              "bowler": "AD Mathews",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "SA Zaib",
+              "bowler": "AD Mathews",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "SA Zaib",
+              "bowler": "AD Mathews",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "Aarif Sheikh",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "SA Zaib",
+              "bowler": "AD Russell",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "Aarif Sheikh",
+              "bowler": "AD Russell",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "SA Zaib",
+              "bowler": "AD Russell",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "Aarif Sheikh",
+              "bowler": "AD Russell",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "SA Zaib",
+              "bowler": "AD Russell",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "SA Zaib",
+              "bowler": "Rupesh Singh",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "Aarif Sheikh",
+              "bowler": "Rupesh Singh",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "Aarif Sheikh",
+              "bowler": "Rupesh Singh",
+              "non_striker": "SA Zaib",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "SA Zaib",
+              "bowler": "Rupesh Singh",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "SA Zaib",
+                  "fielders": [
+                    {
+                      "name": "AD Russell"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Rupesh Singh",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Rupesh Singh",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "Aarif Sheikh",
+              "bowler": "Pratis GC",
+              "non_striker": "SC Kuggeleijn",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "Aarif Sheikh",
+              "bowler": "Pratis GC",
+              "non_striker": "SC Kuggeleijn",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Pratis GC",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Pratis GC",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Pratis GC",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "SC Kuggeleijn",
+              "bowler": "Pratis GC",
+              "non_striker": "Aarif Sheikh",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 1.4,
+          "type": "mandatory"
+        }
+      ],
+      "target": {
+        "overs": 5,
+        "runs": 106
+      }
+    }
+  ]
+}

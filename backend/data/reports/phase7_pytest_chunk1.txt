@@ -1,0 +1,30 @@
+........................................................................ [  6%]
+........................................................................ [ 13%]
+........................................................................ [ 20%]
+........................................................................ [ 27%]
+........................................................................ [ 34%]
+........................................................................ [ 41%]
+........................................................................ [ 48%]
+........................................................................ [ 55%]
+........................................................................ [ 62%]
+........................................................................ [ 68%]
+........................................................................ [ 75%]
+........................................................................ [ 82%]
+........................................................................ [ 89%]
+........................................................................ [ 96%]
+.....................................                                    [100%]
+============================== warnings summary ===============================
+C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:41
+  C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_phase4_par.py::test_lomo_is_labelled_descriptive_and_guard_rejects_it
+  D:\Data\backend\app\analytics\pressure_features.py:293: RuntimeWarning: invalid value encountered in divide
+    par.loc[rmask, "par_runs_lomo"] = (sums[np.clip(b, 0, 120)] - own_val) / (cnt - has)
+
+tests/test_phase4_par.py::test_lomo_is_labelled_descriptive_and_guard_rejects_it
+  D:\Data\backend\app\analytics\pressure_features.py:295: RuntimeWarning: invalid value encountered in divide
+    par.loc[rmask, "par_total_lomo"] = (tot.sum() - own_t) / (cnt - has)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1045 passed, 3 warnings in 468.08s (0:07:48)

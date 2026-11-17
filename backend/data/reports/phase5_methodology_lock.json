@@ -1,0 +1,281 @@
+{
+  "manifest_version": "phase5_methodology_lock_manifest_v1",
+  "label": "EXPERIMENTAL_LOCK",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "validated": false,
+  "statement": "Locks the choices used by the experimental TRAIN+VALIDATION refit. It does not validate the methodology, the pressure definition or the working pools.",
+  "lock_hash": "ea50abd44c4152eb1d5597d700f81acdd2d6a40b0a1828964d2e02f133c89595",
+  "content": {
+    "files": {
+      "config/classification_source_manifest_v1.json": "0f882b8a19cb14e593389c74cb5333866136259fe34e2214ce93f14f1a4e47fe",
+      "config/data_quality_restrictions_v1.json": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
+      "config/eligibility_rules_v1.json": "99d5e96a1b870da55e7561f8aac00b1077f27b553e4351f0b6df998f459313a0",
+      "config/format_weights_v1.json": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71",
+      "config/phase4_classification_v1.json": "16f78219b44f23ee2d9dd21a8942e34fa25a3a99df267672b8394da4f5cbeb05",
+      "config/phase4_definition_rule_v1.json": "c8ae7e837f30978dd6e252007a3a42440080ccd53c6be3606745fd28f2bb497f",
+      "config/phase4_split_v1.json": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+      "config/phase5_classification_v2.json": "8d2a71e9350d6a0de7006b421b8fdafde30cfc3006d426ee37853084b73e42bc",
+      "config/phase5_context_rules_v1.json": "d89ba12b5292fd3c1ffab4919bf24bc25fb199803709a9df6aa7bb055a159cbb",
+      "config/phase5_gates_v1.json": "ea583816f4b5901f4dd760503aa13bb555dd3817cfabbfe325c8b3b66a6e32e6",
+      "config/phase5_investigation_v1.json": "dfb6b2324524a2b0c2de21551ef905f872812951dd60ba9a661b06d65ee753b5",
+      "config/phase5_methodology_lock_v1.json": "f050335f7ff00951d761a2ea10f80a812dd3c246b14b303cc4b3dbebfc823643",
+      "config/phase5_methodology_status_v1.json": "622678cb055ed9f1b75d1c988b83104510876a671e0375f87f0f2d2c94951d05",
+      "config/pressure_eligibility_rules_v1.json": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0",
+      "config/pressure_rules_v1.json": "9f764c6918ec45b0428a35711980f792e154d7c8e83c901af07f0fdfc374d5e7",
+      "reports/phase4_frozen_choices.json": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+      "reports/phase5_test_set_manifest.json": "f2f8bec9cfc60ca7499794ae5ff5f507013f4aa4cf0f8da025d3c8b7317f9fe2"
+    },
+    "code_sha256": "3cde81773a2634eb8f4be2bcb3052054905ede3aada1c644a74bc70c79250fbd",
+    "choices": {
+      "definition": {
+        "id": "any|q0.75",
+        "status": "PROVISIONAL_NOT_VALIDATED",
+        "basis": "rule winner only; not shown superior",
+        "sensitivity_alternatives": [
+          "chase|q0.9",
+          "any|q0.9",
+          "chase|q0.75"
+        ],
+        "quantile_level_locked": true,
+        "numeric_cutoffs": "refit on TRAIN+VALIDATION at the locked quantile level"
+      },
+      "working_pools": {
+        "IPL|batter": {
+          "threshold_balls": 20,
+          "window_ratio": 1.3108108108,
+          "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+          "phase4_status": "THRESHOLD_NOT_VALIDATED"
+        },
+        "IPL|bowler": {
+          "threshold_balls": 49,
+          "window_ratio": 1.3079763663,
+          "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+          "phase4_status": "THRESHOLD_NOT_VALIDATED"
+        },
+        "T20I|batter": {
+          "threshold_balls": 16,
+          "window_ratio": 1.4742458736,
+          "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+          "phase4_status": "THRESHOLD_NOT_VALIDATED"
+        },
+        "T20I|bowler": {
+          "threshold_balls": 29,
+          "window_ratio": 1.4733962522,
+          "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+          "phase4_status": "THRESHOLD_NOT_VALIDATED"
+        }
+      },
+      "working_pool_status": "THRESHOLD_NOT_VALIDATED (internal exploratory use only)",
+      "shrinkage": {
+        "config": "shrink_tau4",
+        "choice_data": "TRAIN+VALIDATION"
+      },
+      "features": {
+        "streams": [
+          [
+            "batter",
+            "runs",
+            false
+          ],
+          [
+            "batter",
+            "dismissal",
+            true
+          ],
+          [
+            "bowler",
+            "charged",
+            false
+          ],
+          [
+            "bowler",
+            "wkt",
+            true
+          ]
+        ],
+        "primary_stream": {
+          "batter": [
+            "runs",
+            1.0
+          ],
+          "bowler": [
+            "charged",
+            -1.0
+          ]
+        },
+        "baseline_version": "p4_baseline_b0_train_frozen_v1"
+      },
+      "restrictions": "config/data_quality_restrictions_v1.json (hash in files)",
+      "classification_version": "p5_classification_v2",
+      "strict_uncapped_enabled": false,
+      "refit": {
+        "id": "p5_refit_trainval_v1",
+        "n_boot": 200,
+        "seed": 20260512,
+        "fit_window": "TRAIN+VALIDATION",
+        "test_rows": "never loaded"
+      },
+      "validation_claims": {
+        "methodology_validated": false,
+        "pressure_definition_validated": false,
+        "working_pools_validated": false
+      }
+    }
+  },
+  "pre_lock_checklist": {
+    "label": "EXPERIMENTAL_LOCK",
+    "status": "EXPERIMENTAL_NOT_VALIDATED",
+    "items": [
+      {
+        "id": "investigation_reports_present",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "7 present"
+      },
+      {
+        "id": "unresolved_issues_present",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "phase5_unresolved_issues.md"
+      },
+      {
+        "id": "date_verification_manifest_present",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "test-set manifest and date-verification summary present"
+      },
+      {
+        "id": "strict_uncapped_capability_recorded",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "recorded; strict uncapped enabled = False"
+      },
+      {
+        "id": "publication_gates_evaluated",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "phase5_publication_gates.json present"
+      },
+      {
+        "id": "phase4_outputs_unchanged",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "56 phase4 report files compared; all identical"
+      },
+      {
+        "id": "official_data_unchanged",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "14 official files compared; all identical"
+      },
+      {
+        "id": "phase4_lock_log_intact",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "events ['FREEZE', 'OPEN', 'CLOSE'] (TEST was opened once in Phase 4 and never again)"
+      },
+      {
+        "id": "phase5_test_lock_not_opened",
+        "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+        "status": "PASS",
+        "detail": "phase5 lock log events []"
+      },
+      {
+        "id": "methodology_validated",
+        "kind": "PUBLICATION_GATE",
+        "status": "FAIL",
+        "detail": "validated=false: NOT validated"
+      },
+      {
+        "id": "gate:data_weight_gate_passed",
+        "kind": "PUBLICATION_GATE",
+        "status": "FAIL",
+        "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+      },
+      {
+        "id": "gate:methodology_validated",
+        "kind": "PUBLICATION_GATE",
+        "status": "FAIL",
+        "detail": "methodology not validated"
+      },
+      {
+        "id": "gate:strict_classification_available",
+        "kind": "PUBLICATION_GATE",
+        "status": "PASS",
+        "detail": "not applicable: request uses no strict status filter"
+      },
+      {
+        "id": "gate:min_eligible_pool",
+        "kind": "PUBLICATION_GATE",
+        "status": "PASS",
+        "detail": "not applicable: evaluated per request with rows"
+      },
+      {
+        "id": "gate:date_verification",
+        "kind": "PUBLICATION_GATE",
+        "status": "FAIL",
+        "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+      },
+      {
+        "id": "strict_uncapped_enabled",
+        "kind": "PUBLICATION_GATE",
+        "status": "FAIL",
+        "detail": "no authoritative cap source keyed by player_id; strict uncapped stays disabled"
+      },
+      {
+        "id": "decision:official_rankings",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: publishing an official Top 10"
+      },
+      {
+        "id": "decision:official_ml_training",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: official ML training"
+      },
+      {
+        "id": "decision:validate_primary_definition",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: calling any|q0.75 validated"
+      },
+      {
+        "id": "decision:validate_working_pools",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: validating the working-pool thresholds"
+      },
+      {
+        "id": "decision:official_t20i_dates",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: supplying official match-level T20I dates"
+      },
+      {
+        "id": "decision:authoritative_cap_source",
+        "kind": "USER_DECISION",
+        "status": "USER_APPROVAL_PENDING",
+        "detail": "needs the user: supplying an authoritative cap source with player ids"
+      }
+    ],
+    "required_all_pass": true,
+    "failing_publication_checks": [
+      "methodology_validated",
+      "gate:data_weight_gate_passed",
+      "gate:methodology_validated",
+      "gate:date_verification",
+      "strict_uncapped_enabled"
+    ],
+    "pending_user_decisions": [
+      "decision:official_rankings",
+      "decision:official_ml_training",
+      "decision:validate_primary_definition",
+      "decision:validate_working_pools",
+      "decision:official_t20i_dates",
+      "decision:authoritative_cap_source"
+    ],
+    "methodology_validated": false,
+    "publication_ready": false
+  }
+}

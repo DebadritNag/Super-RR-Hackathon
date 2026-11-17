@@ -1,0 +1,89 @@
+== workspace root ==
+D:/Data/ (workspace root; raw datasets are read-only)
+  .agents/
+  2026_male_json/  (1621 files, 1619 .json)
+  backend/
+  bbl_male_json/  (664 files, 662 .json)
+  cpl_male_json/  (447 files, 445 .json)
+  india_male_json/  (1039 files, 1037 .json)
+  ipl_male_json/  (1245 files, 1243 .json)
+  it20s_male_json/  (242 files, 240 .json)
+  mlc_male_json/  (111 files, 109 .json)
+  t20s_male_json/  (3651 files, 3649 .json)
+  ball_by_ball.csv  (41,071,609 bytes)
+  batting_stats2026.csv  (1,178 bytes)
+  bowling_stats2026.csv  (1,175 bytes)
+  competition_team_player_mapping.csv  (462,969 bytes)
+  competitions.csv  (7,624 bytes)
+  fielding_stats2026.csv  (493 bytes)
+  ipl squad.csv  (13,837 bytes)
+  matches 2026.csv  (6,581 bytes)
+  matches.csv  (123,864 bytes)
+  playing_eleven.csv  (966,287 bytes)
+  Round 1 Problem Statement _ SupeRR Selector Season 2.docx.pdf  (254,082 bytes)
+  teams.csv  (6,922 bytes)
+  updated_ball_by_ball.csv  (41,071,837 bytes)
+
+== backend ==
+D:/Data/backend/
+|-- app/
+|   |-- core/
+|   |   |-- __init__.py
+|   |   |-- config.py
+|   |   `-- logging.py
+|   |-- data_pipeline/
+|   |   |-- __init__.py
+|   |   |-- audit_runner.py
+|   |   |-- ball_by_ball_inspector.py
+|   |   |-- cricsheet_auditor.py
+|   |   |-- data_quality.py
+|   |   |-- dataset_discovery.py
+|   |   |-- pdf_extractor.py
+|   |   |-- schema_validator.py
+|   |   `-- squad_auditor.py
+|   |-- utils/
+|   |   |-- __init__.py
+|   |   |-- jsonio.py
+|   |   `-- paths.py
+|   `-- __init__.py
+|-- data/
+|   |-- audit/
+|   |   |-- ball_by_ball_inspection.json
+|   |   |-- cricsheet_overlap_report.json
+|   |   |-- cricsheet_validation_original.csv
+|   |   |-- cricsheet_validation_updated.csv
+|   |   |-- data_quality_report.json
+|   |   |-- dataset_audit.csv
+|   |   |-- dataset_audit.json
+|   |   |-- dataset_audit.md
+|   |   |-- directory_tree.txt
+|   |   |-- extras_crosstab_original.csv
+|   |   |-- extras_crosstab_updated.csv
+|   |   |-- extras_mapping.md
+|   |   |-- match_reconciliation.csv
+|   |   |-- official_to_cricsheet_candidate_links.csv
+|   |   |-- problem_statement.txt
+|   |   |-- problem_statement_summary.md
+|   |   |-- proposed_schema.sql
+|   |   `-- schema_report.json
+|   |-- database/
+|   |-- processed/
+|   |-- raw/
+|   `-- staging/
+|       |-- cricsheet_index.parquet
+|       |-- run.log
+|       |-- run2.log
+|       |-- run2_out.log
+|       `-- run_out.log
+|-- docs/
+|-- reports/
+|-- scripts/
+|   `-- audit_datasets.py
+|-- tests/
+|   |-- __init__.py
+|   `-- test_dataset_audit.py
+|-- .env.example
+|-- .gitignore
+|-- pyproject.toml
+|-- README.md
+`-- requirements.txt

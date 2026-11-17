@@ -1,0 +1,393 @@
+[
+  {
+    "column_name": "batting_order",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "batting_team_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "batting_type",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "bowl_speed",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "bowler_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "bowler_name",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "bowling_team_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "bowling_type",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "delivery_ist_time",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "delivery_style",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "dismissal_type",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "dismissal_type_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "dismissed_player_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "extras1_runs",
+    "rows_compared": 200999,
+    "rows_different": 199980,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": [
+      {
+        "original_value": "6",
+        "updated_value": "0",
+        "extras_type": "None",
+        "rows": 189166
+      },
+      {
+        "original_value": "6",
+        "updated_value": "1",
+        "extras_type": "None",
+        "rows": 1
+      },
+      {
+        "original_value": "1",
+        "updated_value": "1",
+        "extras_type": "Overstep",
+        "rows": 576
+      },
+      {
+        "original_value": "7",
+        "updated_value": "5",
+        "extras_type": "Penalty",
+        "rows": 1
+      },
+      {
+        "original_value": "4",
+        "updated_value": "1",
+        "extras_type": "byes",
+        "rows": 348
+      },
+      {
+        "original_value": "4",
+        "updated_value": "2",
+        "extras_type": "byes",
+        "rows": 35
+      },
+      {
+        "original_value": "4",
+        "updated_value": "3",
+        "extras_type": "byes",
+        "rows": 3
+      },
+      {
+        "original_value": "4",
+        "updated_value": "4",
+        "extras_type": "byes",
+        "rows": 142
+      },
+      {
+        "original_value": "4",
+        "updated_value": "5",
+        "extras_type": "byes",
+        "rows": 1
+      },
+      {
+        "original_value": "3",
+        "updated_value": "0",
+        "extras_type": "legbyes",
+        "rows": 1
+      },
+      {
+        "original_value": "3",
+        "updated_value": "1",
+        "extras_type": "legbyes",
+        "rows": 2376
+      },
+      {
+        "original_value": "3",
+        "updated_value": "2",
+        "extras_type": "legbyes",
+        "rows": 127
+      },
+      {
+        "original_value": "3",
+        "updated_value": "3",
+        "extras_type": "legbyes",
+        "rows": 5
+      },
+      {
+        "original_value": "3",
+        "updated_value": "4",
+        "extras_type": "legbyes",
+        "rows": 237
+      },
+      {
+        "original_value": "3",
+        "updated_value": "5",
+        "extras_type": "legbyes",
+        "rows": 2
+      },
+      {
+        "original_value": "5",
+        "updated_value": "1",
+        "extras_type": "other",
+        "rows": 264
+      },
+      {
+        "original_value": "2",
+        "updated_value": "1",
+        "extras_type": "wide",
+        "rows": 7107
+      },
+      {
+        "original_value": "2",
+        "updated_value": "2",
+        "extras_type": "wide",
+        "rows": 296
+      },
+      {
+        "original_value": "2",
+        "updated_value": "3",
+        "extras_type": "wide",
+        "rows": 39
+      },
+      {
+        "original_value": "2",
+        "updated_value": "4",
+        "extras_type": "wide",
+        "rows": 2
+      },
+      {
+        "original_value": "2",
+        "updated_value": "5",
+        "extras_type": "wide",
+        "rows": 270
+      }
+    ]
+  },
+  {
+    "column_name": "extras_2_runs",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "extras_type",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "innings",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "innings_ball_num",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "is_four",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "is_six",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "is_wicket",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "match_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "non_striker_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "non_striker_name",
+    "rows_compared": 200999,
+    "rows_different": 33,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "on_or_off",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "over_ball_num",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "over_or_around",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "overid",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "pace_or_spin",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "runs",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "striker_id",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "striker_name",
+    "rows_compared": 200999,
+    "rows_different": 24,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  },
+  {
+    "column_name": "stroke",
+    "rows_compared": 200999,
+    "rows_different": 0,
+    "rows_only_in_original": 0,
+    "rows_only_in_updated": 0,
+    "details": null
+  }
+]

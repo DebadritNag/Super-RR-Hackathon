@@ -1,0 +1,14 @@
+{
+  "state": "NO_RETENTION_FILE_YET",
+  "list_received": false,
+  "generated_at": "2026-11-17T07:16:45.836389+00:00",
+  "statement": "Availability is descriptive context. It does not change any score, status or eligibility. Rows are sorted by player name, not by merit. RETAINED players are excluded; only an authoritative AUCTION_AVAILABLE row makes a player confirmed available; UNKNOWN stays UNKNOWN.",
+  "rows": 0,
+  "retained_excluded": 0,
+  "retained_player_ids": [],
+  "confirmed_available": 0,
+  "unresolved_rows_in_list": 0,
+  "unresolved_warning": "",
+  "import": null,
+  "output_sha256": "b1af573b73ac020bc03c856b9ac1540a480940ca5dc0be737bc15cb418a53b19"
+}

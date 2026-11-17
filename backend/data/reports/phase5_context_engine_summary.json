@@ -1,0 +1,75 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "model_version": "p5_context_v1_train",
+  "definition": "any|q0.75 (PROVISIONAL)",
+  "contexts": 48,
+  "context_status_counts": {
+    "ELIGIBLE_WORKING_POOL_NOT_VALIDATED": 48
+  },
+  "stats_rows": 10106,
+  "score_rows": 10082,
+  "fit_floor_hit_contexts": 48,
+  "coverage_combinations": 3888,
+  "coverage_meets_internal_min": 1889,
+  "coverage_meets_public_min": 1558,
+  "coverage_disabled": 432,
+  "strict_uncapped_enabled": false,
+  "reproduction_overall_vs_phase4": {
+    "max_abs_diff": 0.0,
+    "players_compared": 1345,
+    "opportunity_counts_equal": 1345,
+    "reproduces": true,
+    "per_cell": {
+      "IPL|batter": {
+        "compared": 267,
+        "in_store": 267,
+        "here": 267,
+        "max_abs_diff": 0.0,
+        "opportunity_counts_equal": 267
+      },
+      "IPL|bowler": {
+        "compared": 182,
+        "in_store": 182,
+        "here": 182,
+        "max_abs_diff": 0.0,
+        "opportunity_counts_equal": 182
+      },
+      "T20I|batter": {
+        "compared": 537,
+        "in_store": 537,
+        "here": 537,
+        "max_abs_diff": 0.0,
+        "opportunity_counts_equal": 537
+      },
+      "T20I|bowler": {
+        "compared": 359,
+        "in_store": 359,
+        "here": 359,
+        "max_abs_diff": 0.0,
+        "opportunity_counts_equal": 359
+      }
+    }
+  },
+  "phase4_reproduction": {
+    "max_abs_diff": 0.0,
+    "players_compared": 1345
+  },
+  "config_hashes": {
+    "investigation_config": "dfb6b2324524a2b0c2de21551ef905f872812951dd60ba9a661b06d65ee753b5",
+    "frozen_choices": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+    "format_weights": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71",
+    "eligibility_rules": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0",
+    "context_rules": "d89ba12b5292fd3c1ffab4919bf24bc25fb199803709a9df6aa7bb055a159cbb"
+  },
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true
+  },
+  "context_rules_sha256": "d89ba12b5292fd3c1ffab4919bf24bc25fb199803709a9df6aa7bb055a159cbb"
+}

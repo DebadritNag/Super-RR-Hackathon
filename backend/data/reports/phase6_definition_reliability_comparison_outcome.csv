@@ -1,0 +1,4 @@
+window,status,pass_list,top_group,confounded,stability,train_top_group,intersection_sizes,label,fit_on,seed,n_boot,criteria_sha256
+PRE_TEST,NO_DEFINITION_PASSES,[],[],True,,[],"{""IPL|batter"": 3, ""IPL|bowler"": 19, ""T20I|batter"": 2, ""T20I|bowler"": 11}",IN_SAMPLE_DIAGNOSTIC_TRAIN_VALIDATION,WINDOW_IN_SAMPLE,20260512,1000,72b08a76afaafb7dae259b05e843459871ba08c3a4fe246e470b1b1e242d3851
+TRAIN,NO_DEFINITION_PASSES,[],[],True,,[],"{""IPL|batter"": 1, ""IPL|bowler"": 14, ""T20I|batter"": 0, ""T20I|bowler"": 3}",IN_SAMPLE_DIAGNOSTIC_TRAIN_VALIDATION,WINDOW_IN_SAMPLE,20260512,1000,72b08a76afaafb7dae259b05e843459871ba08c3a4fe246e470b1b1e242d3851
+FINAL,NO_DEFINITION_PASSES,[],[],True,TOP_SETS_EQUAL,[],"{""IPL|batter"": 3, ""IPL|bowler"": 19, ""T20I|batter"": 2, ""T20I|bowler"": 11}",IN_SAMPLE_DIAGNOSTIC_TRAIN_VALIDATION,WINDOW_IN_SAMPLE,20260512,1000,72b08a76afaafb7dae259b05e843459871ba08c3a4fe246e470b1b1e242d3851

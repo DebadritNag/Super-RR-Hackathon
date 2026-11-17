@@ -1,0 +1,5 @@
+format,role,players_phase4,players_refit,players_common,eligible_phase4,eligible_refit,eligible_both,spearman_common,spearman_eligible_both,top10_overlap,top10_size,mean_abs_change,max_abs_change,note
+IPL,batter,267,267,267,132,134,132,0.9928120191299239,0.9904723641163977,9,10,0.020647144767304126,0.07188213843938919,"Phase 4 = TRAIN-fitted, PRE_TEST window; refit = TRAIN+VALIDATION-fitted. Not a validation."
+IPL,bowler,182,184,182,80,80,80,0.9888507471153971,0.989873417721519,9,10,0.019602809006242918,0.05327322819064445,"Phase 4 = TRAIN-fitted, PRE_TEST window; refit = TRAIN+VALIDATION-fitted. Not a validation."
+T20I,batter,537,538,537,243,240,239,0.9841997398534538,0.9907246580640624,9,10,0.010458189562255612,0.09667772141095216,"Phase 4 = TRAIN-fitted, PRE_TEST window; refit = TRAIN+VALIDATION-fitted. Not a validation."
+T20I,bowler,359,355,355,141,141,140,0.9841272353220447,0.985659618202095,10,10,0.009686033037571252,0.06706270907341827,"Phase 4 = TRAIN-fitted, PRE_TEST window; refit = TRAIN+VALIDATION-fitted. Not a validation."

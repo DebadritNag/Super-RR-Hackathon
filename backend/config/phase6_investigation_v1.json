@@ -1,0 +1,40 @@
+{
+  "version": "phase6_investigation_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "declared_before_any_run": true,
+  "data_used": ["TRAIN", "VALIDATION"],
+  "test_outcomes_used": false,
+  "cricsheet_used": false,
+  "seed": 20260512,
+  "n_boot": 1000,
+  "windows": ["PRE_TEST", "TRAIN"],
+  "primary_window": "PRE_TEST",
+  "definitions": {
+    "provisional": "any|q0.75",
+    "candidates": [
+      "chase|q0.75", "chase|q0.9", "chase|q0.95",
+      "inn1|q0.75", "inn1|q0.9", "inn1|q0.95",
+      "any|q0.75", "any|q0.9", "any|q0.95"
+    ]
+  },
+  "shrinkage_config": "shrink_tau4",
+  "variance_estimators": ["E1", "E1b", "E1c", "E2", "E3", "E4", "E5", "E6", "E7"],
+  "min_balls_variants": [1, 12],
+  "split_half": {
+    "modes": ["odd_even", "early_late", "random"],
+    "min_balls_per_half": 6,
+    "random_splits": 200,
+    "min_players_estimable": 10,
+    "bootstrap_draws": 1000,
+    "corr_clip": 0.99
+  },
+  "detectability": {
+    "tau2_over_sigma2_grid": [0.0005, 0.001, 0.0025, 0.005, 0.01, 0.025],
+    "replications": 400
+  },
+  "min_train_players_for_fit": 8,
+  "reliability_targets": [0.5, 0.7, 0.8],
+  "recent_form_starts": ["2024-01-01", "2025-01-01"],
+  "gate_value_expected": 0.5,
+  "criteria_file": "config/phase6_selection_criteria_v1.json"
+}

@@ -1,0 +1,70 @@
+{
+  "version": "pressure_eligibility_rules_v1",
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "basis": "Phase 2.5 eligibility_rules_v1 harness; nominal ladders rescaled for pressure sample sizes (nominal, not validated). Search grids, not chosen cutoffs.",
+  "seed": 20260512,
+  "n_boot": 1000,
+  "list_size": 10,
+  "pool_min_absolute": 30,
+  "pool_min_multiplier": 3,
+  "percentiles": [10, 25, 50, 75],
+  "practical_tolerance": 0.05,
+  "max_conjunction_pairs": 12,
+  "formats": ["IPL", "T20I"],
+  "distribution_formats": ["IPL", "T20I"],
+  "measures": ["balls", "matches", "innings", "n_eff_shrink", "n_eff_kish"],
+  "ladders": {
+    "batter": {
+      "balls": [6, 12, 18, 24, 30, 45, 60, 90, 120],
+      "matches": [2, 3, 4, 5, 8, 10, 15],
+      "innings": [2, 3, 4, 5, 8, 10, 15],
+      "n_eff_shrink": [5, 10, 20, 40, 80]
+    },
+    "bowler": {
+      "balls": [6, 12, 18, 24, 36, 48, 72, 96, 144],
+      "matches": [2, 3, 4, 5, 8, 10, 15],
+      "innings": [2, 3, 4, 5, 8, 10, 15],
+      "n_eff_shrink": [5, 10, 20, 40, 80]
+    }
+  },
+  "histogram_edges": {
+    "balls": [0, 3, 6, 12, 24, 48, 96, 192, 1000000000],
+    "matches": [0, 2, 3, 5, 8, 12, 20, 40, 1000000000],
+    "innings": [0, 2, 3, 5, 8, 12, 20, 40, 1000000000],
+    "n_eff_shrink": [0, 2, 5, 10, 20, 40, 80, 160, 1000000000],
+    "n_eff_kish": [0, 1.5, 2, 3, 5, 8, 12, 20, 1000000000]
+  },
+  "recommendation": {
+    "primary_family": "balls",
+    "spearman_min": 0.95,
+    "overlap_min": 8,
+    "ci_width_drop_max": 0.10,
+    "min_data_weight": 0.5
+  },
+  "definition_grid": {
+    "contexts": ["chase", "inn1", "any"],
+    "q": [0.75, 0.9, 0.95],
+    "batter_signal": {"chase": "rrr", "inn1": "neg_par_dev"},
+    "bowler_signal": "bowl_signal_B_all",
+    "view": "abs",
+    "note": "Pre-declared grid. 'any' = chase flag OR innings-1 flag at the same q. No definition outside the Stage 3 candidate set is used."
+  },
+  "selection_rule": {
+    "text": "Population-level quantities only. A definition is viable when, for IPL and T20I and for batters and bowlers, a data-weight rule with a sufficient pool exists. Among viable definitions choose the highest q; ties go to the larger pressure population (sum of pressure unit rows over the four format-role cells). Player scores and rankings are never used; ranking stability is reported, not used.",
+    "viable_requires": "data_weight_rule_with_sufficient_pool_in_all_four_format_role_cells"
+  },
+  "baseline": {
+    "primary": "per-candidate baseline (pressure membership as finest level), leave-player-out",
+    "sensitivity": "B0 (no pressure term), leave-player-out",
+    "min_cell_innings": 30,
+    "tau2_floor": 0.01
+  },
+  "proxy": {
+    "innings": [1, 2],
+    "batter_unit": "balls faced (excludes wide and Penalty), actual minus expected runs off the bat",
+    "bowler_threshold_measure": "legal_balls",
+    "bowler_unit": "deliveries bowled (excludes Penalty), actual minus expected charged runs and wickets",
+    "batter_score": "100 x empirical-Bayes shrunk mean actual-minus-expected runs per ball (shrunk to the pooled sample mean)",
+    "bowler_score": "-z(shrunk AvE charged runs) + z(shrunk AvE wicket rate), equal weights, arbitrary (Phase 2.5 convention)"
+  }
+}

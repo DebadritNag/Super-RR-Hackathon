@@ -1,0 +1,11 @@
+{
+  "validated": false,
+  "validated_by": "",
+  "validated_date": "",
+  "evidence_path": "",
+  "reasons": [
+    "Primary pressure definition any|q0.75 is PROVISIONAL (rule winner, not validated).",
+    "Eligibility thresholds are THRESHOLD_NOT_VALIDATED working pools.",
+    "Only a human edit of this file can set validated=true."
+  ]
+}

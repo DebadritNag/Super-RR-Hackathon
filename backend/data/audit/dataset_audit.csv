@@ -1,0 +1,180 @@
+file,file_rows,expected_rows,column,inferred_type,null_count,empty_string_count,distinct_count
+competitions.csv,141,141.0,comp_id,BIGINT,0,0,141
+competitions.csv,141,141.0,comp_name,VARCHAR,0,0,141
+competitions.csv,141,141.0,match_format,VARCHAR,0,0,2
+competitions.csv,141,141.0,season,VARCHAR,0,0,8
+teams.csv,353,353.0,comp_id,BIGINT,0,0,141
+teams.csv,353,353.0,team_id,BIGINT,0,0,38
+teams.csv,353,353.0,team_name,VARCHAR,0,0,38
+matches.csv,883,883.0,match_id,BIGINT,0,0,883
+matches.csv,883,883.0,comp_id,BIGINT,0,0,138
+matches.csv,883,883.0,match_number,BIGINT,0,0,75
+matches.csv,883,883.0,match_date,DATE,0,0,686
+matches.csv,883,883.0,stage,VARCHAR,0,0,7
+matches.csv,883,883.0,venue_id,BIGINT,0,0,98
+matches.csv,883,883.0,venue_country,VARCHAR,0,0,17
+matches.csv,883,883.0,home_team_id,BIGINT,0,0,36
+matches.csv,883,883.0,home_team,VARCHAR,0,0,36
+matches.csv,883,883.0,away_team_id,BIGINT,0,0,36
+matches.csv,883,883.0,away_team,VARCHAR,0,0,36
+matches.csv,883,883.0,home_team_captain_id,BIGINT,44,0,89
+matches.csv,883,883.0,away_team_captain_id,BIGINT,45,0,98
+matches.csv,883,883.0,toss_win_team_id,BIGINT,15,0,37
+matches.csv,883,883.0,toss_opted,VARCHAR,15,0,2
+matches.csv,883,883.0,man_of_the_match,BIGINT,0,0,293
+matches.csv,883,883.0,first_inn_revised_overs,BIGINT,858,0,13
+matches.csv,883,883.0,second_inn_revised_overs,BIGINT,858,0,12
+matches.csv,883,883.0,revised_target,BIGINT,860,0,23
+matches.csv,883,883.0,knock_out,BIGINT,0,0,2
+matches.csv,883,883.0,win_team_id,BIGINT,41,0,36
+matches.csv,883,883.0,result,VARCHAR,0,0,670
+playing_eleven.csv,28381,28381.0,match_id,BIGINT,0,0,880
+playing_eleven.csv,28381,28381.0,team_id,BIGINT,0,0,38
+playing_eleven.csv,28381,28381.0,player_id,BIGINT,0,0,1082
+playing_eleven.csv,28381,28381.0,batting_order,BIGINT,8678,0,13
+playing_eleven.csv,28381,28381.0,is_played,BOOLEAN,0,0,2
+playing_eleven.csv,28381,28381.0,is_captain,BOOLEAN,8667,0,2
+playing_eleven.csv,28381,28381.0,is_wk,BOOLEAN,8667,0,2
+playing_eleven.csv,28381,28381.0,is_impact,BIGINT,0,0,2
+playing_eleven.csv,28381,28381.0,is_impact_off,BIGINT,0,0,2
+competition_team_player_mapping.csv,6413,6413.0,comp_id,BIGINT,0,0,140
+competition_team_player_mapping.csv,6413,6413.0,comp_name,VARCHAR,0,0,140
+competition_team_player_mapping.csv,6413,6413.0,team_id,BIGINT,0,0,38
+competition_team_player_mapping.csv,6413,6413.0,team_name,VARCHAR,0,0,38
+competition_team_player_mapping.csv,6413,6413.0,player_id,BIGINT,0,0,1217
+competition_team_player_mapping.csv,6413,6413.0,player_name,VARCHAR,0,0,1210
+ball_by_ball.csv,200999,200999.0,match_id,BIGINT,0,0,867
+ball_by_ball.csv,200999,200999.0,innings,BIGINT,0,0,4
+ball_by_ball.csv,200999,200999.0,overid,BIGINT,0,0,20
+ball_by_ball.csv,200999,200999.0,over_ball_num,BIGINT,0,0,13
+ball_by_ball.csv,200999,200999.0,innings_ball_num,BIGINT,0,0,136
+ball_by_ball.csv,200999,200999.0,batting_team_id,BIGINT,0,0,38
+ball_by_ball.csv,200999,200999.0,bowling_team_id,BIGINT,0,0,38
+ball_by_ball.csv,200999,200999.0,striker_id,BIGINT,0,0,888
+ball_by_ball.csv,200999,200999.0,striker_name,VARCHAR,0,0,885
+ball_by_ball.csv,200999,200999.0,non_striker_id,BIGINT,0,0,867
+ball_by_ball.csv,200999,200999.0,non_striker_name,VARCHAR,0,0,864
+ball_by_ball.csv,200999,200999.0,bowler_id,BIGINT,0,0,647
+ball_by_ball.csv,200999,200999.0,bowler_name,VARCHAR,0,0,646
+ball_by_ball.csv,200999,200999.0,batting_type,VARCHAR,0,0,2
+ball_by_ball.csv,200999,200999.0,bowling_type,VARCHAR,0,0,12
+ball_by_ball.csv,200999,200999.0,batting_order,BIGINT,0,0,13
+ball_by_ball.csv,200999,200999.0,runs,BIGINT,0,0,7
+ball_by_ball.csv,200999,200999.0,is_four,BOOLEAN,0,0,2
+ball_by_ball.csv,200999,200999.0,is_six,BOOLEAN,0,0,2
+ball_by_ball.csv,200999,200999.0,is_wicket,BOOLEAN,0,0,2
+ball_by_ball.csv,200999,200999.0,dismissal_type_id,BIGINT,190118,0,8
+ball_by_ball.csv,200999,200999.0,dismissal_type,VARCHAR,190118,0,9
+ball_by_ball.csv,200999,200999.0,dismissed_player_id,BIGINT,190107,0,814
+ball_by_ball.csv,200999,200999.0,extras_type,VARCHAR,0,0,7
+ball_by_ball.csv,200999,200999.0,extras1_runs,BIGINT,0,0,7
+ball_by_ball.csv,200999,200999.0,extras_2_runs,BIGINT,0,0,3
+ball_by_ball.csv,200999,200999.0,pace_or_spin,VARCHAR,0,0,2
+ball_by_ball.csv,200999,200999.0,bowl_speed,DOUBLE,0,0,1033
+ball_by_ball.csv,200999,200999.0,stroke,VARCHAR,12,0,31
+ball_by_ball.csv,200999,200999.0,delivery_style,VARCHAR,7,0,35
+ball_by_ball.csv,200999,200999.0,over_or_around,VARCHAR,407,0,2
+ball_by_ball.csv,200999,200999.0,on_or_off,VARCHAR,0,0,2
+ball_by_ball.csv,200999,200999.0,delivery_ist_time,TIMESTAMP,0,0,200826
+ipl squad.csv,257,,team_no,BIGINT,0,0,10
+ipl squad.csv,257,,team_name,VARCHAR,0,0,10
+ipl squad.csv,257,,player,VARCHAR,0,0,257
+ipl squad.csv,257,,nationality,VARCHAR,0,0,2
+ipl squad.csv,257,,role,VARCHAR,0,0,4
+ipl squad.csv,257,,designation,VARCHAR,247,0,1
+updated_ball_by_ball.csv,200999,,match_id,BIGINT,0,0,867
+updated_ball_by_ball.csv,200999,,innings,BIGINT,0,0,4
+updated_ball_by_ball.csv,200999,,overid,BIGINT,0,0,20
+updated_ball_by_ball.csv,200999,,over_ball_num,BIGINT,0,0,13
+updated_ball_by_ball.csv,200999,,innings_ball_num,BIGINT,0,0,136
+updated_ball_by_ball.csv,200999,,batting_team_id,BIGINT,0,0,38
+updated_ball_by_ball.csv,200999,,bowling_team_id,BIGINT,0,0,38
+updated_ball_by_ball.csv,200999,,striker_id,BIGINT,0,0,888
+updated_ball_by_ball.csv,200999,,striker_name,VARCHAR,0,0,885
+updated_ball_by_ball.csv,200999,,non_striker_id,BIGINT,0,0,867
+updated_ball_by_ball.csv,200999,,non_striker_name,VARCHAR,0,0,864
+updated_ball_by_ball.csv,200999,,bowler_id,BIGINT,0,0,647
+updated_ball_by_ball.csv,200999,,bowler_name,VARCHAR,0,0,646
+updated_ball_by_ball.csv,200999,,batting_type,VARCHAR,0,0,2
+updated_ball_by_ball.csv,200999,,bowling_type,VARCHAR,0,0,12
+updated_ball_by_ball.csv,200999,,batting_order,BIGINT,0,0,13
+updated_ball_by_ball.csv,200999,,runs,BIGINT,0,0,7
+updated_ball_by_ball.csv,200999,,is_four,BOOLEAN,0,0,2
+updated_ball_by_ball.csv,200999,,is_six,BOOLEAN,0,0,2
+updated_ball_by_ball.csv,200999,,is_wicket,BOOLEAN,0,0,2
+updated_ball_by_ball.csv,200999,,dismissal_type_id,BIGINT,190118,0,8
+updated_ball_by_ball.csv,200999,,dismissal_type,VARCHAR,190118,0,9
+updated_ball_by_ball.csv,200999,,dismissed_player_id,BIGINT,190107,0,814
+updated_ball_by_ball.csv,200999,,extras_type,VARCHAR,0,0,7
+updated_ball_by_ball.csv,200999,,extras1_runs,BIGINT,0,0,6
+updated_ball_by_ball.csv,200999,,extras_2_runs,BIGINT,0,0,3
+updated_ball_by_ball.csv,200999,,pace_or_spin,VARCHAR,0,0,2
+updated_ball_by_ball.csv,200999,,bowl_speed,DOUBLE,0,0,1033
+updated_ball_by_ball.csv,200999,,stroke,VARCHAR,12,0,31
+updated_ball_by_ball.csv,200999,,delivery_style,VARCHAR,7,0,35
+updated_ball_by_ball.csv,200999,,over_or_around,VARCHAR,407,0,2
+updated_ball_by_ball.csv,200999,,on_or_off,VARCHAR,0,0,2
+updated_ball_by_ball.csv,200999,,delivery_ist_time,TIMESTAMP,0,0,200826
+matches 2026.csv,39,,match_id,BIGINT,0,0,39
+matches 2026.csv,39,,date,VARCHAR,0,0,31
+matches 2026.csv,39,,venue,VARCHAR,0,0,11
+matches 2026.csv,39,,team1,VARCHAR,0,0,10
+matches 2026.csv,39,,team2,VARCHAR,0,0,10
+matches 2026.csv,39,,stage,VARCHAR,0,0,1
+matches 2026.csv,39,,toss_winner,VARCHAR,0,0,10
+matches 2026.csv,39,,toss_decision,VARCHAR,0,0,2
+matches 2026.csv,39,,first_ings_score,BIGINT,1,0,34
+matches 2026.csv,39,,first_ings_wkts,BIGINT,1,0,9
+matches 2026.csv,39,,second_ings_score,BIGINT,1,0,35
+matches 2026.csv,39,,second_ings_wkts,BIGINT,1,0,10
+matches 2026.csv,39,,match_result,VARCHAR,0,0,2
+matches 2026.csv,39,,match_winner,VARCHAR,1,0,10
+matches 2026.csv,39,,wb_runs,BIGINT,24,0,15
+matches 2026.csv,39,,wb_wickets,BIGINT,17,0,7
+matches 2026.csv,39,,balls_left,BIGINT,1,0,19
+matches 2026.csv,39,,player_of_the_match,VARCHAR,1,0,34
+matches 2026.csv,39,,top_scorer,VARCHAR,1,0,26
+matches 2026.csv,39,,highscore,BIGINT,1,0,34
+matches 2026.csv,39,,best_bowling,VARCHAR,1,0,31
+matches 2026.csv,39,,best_bowling_figure,VARCHAR,1,0,31
+matches 2026.csv,39,,super_over_match,BOOLEAN,0,0,2
+batting_stats2026.csv,15,,position,BIGINT,0,0,15
+batting_stats2026.csv,15,,batsman,VARCHAR,0,0,15
+batting_stats2026.csv,15,,team,VARCHAR,0,0,7
+batting_stats2026.csv,15,,matches,BIGINT,0,0,3
+batting_stats2026.csv,15,,innings,BIGINT,0,0,3
+batting_stats2026.csv,15,,runs,BIGINT,0,0,15
+batting_stats2026.csv,15,,impact,DOUBLE,0,0,15
+batting_stats2026.csv,15,,average,DOUBLE,0,0,15
+batting_stats2026.csv,15,,strike_rate,DOUBLE,0,0,15
+batting_stats2026.csv,15,,not_outs,BIGINT,0,0,3
+batting_stats2026.csv,15,,high_score,BIGINT,0,0,15
+batting_stats2026.csv,15,,balls_faced,BIGINT,0,0,14
+batting_stats2026.csv,15,,hundreds,BIGINT,0,0,3
+batting_stats2026.csv,15,,fifties,BIGINT,0,0,4
+batting_stats2026.csv,15,,ducks,BIGINT,0,0,3
+batting_stats2026.csv,15,,fours,BIGINT,0,0,12
+batting_stats2026.csv,15,,sixes,BIGINT,0,0,11
+bowling_stats2026.csv,15,,position,BIGINT,0,0,15
+bowling_stats2026.csv,15,,bowler,VARCHAR,0,0,15
+bowling_stats2026.csv,15,,team,VARCHAR,0,0,7
+bowling_stats2026.csv,15,,matches,BIGINT,0,0,4
+bowling_stats2026.csv,15,,innings,BIGINT,0,0,4
+bowling_stats2026.csv,15,,wickets,BIGINT,0,0,6
+bowling_stats2026.csv,15,,economy,DOUBLE,0,0,15
+bowling_stats2026.csv,15,,impact,DOUBLE,0,0,15
+bowling_stats2026.csv,15,,bbi,VARCHAR,0,0,14
+bowling_stats2026.csv,15,,overs,DOUBLE,0,0,11
+bowling_stats2026.csv,15,,balls,BIGINT,0,0,11
+bowling_stats2026.csv,15,,dot_balls,BIGINT,0,0,15
+bowling_stats2026.csv,15,,maiden_overs,BIGINT,0,0,3
+bowling_stats2026.csv,15,,runs,BIGINT,0,0,15
+bowling_stats2026.csv,15,,avg,DOUBLE,0,0,15
+bowling_stats2026.csv,15,,4wh,BIGINT,0,0,2
+bowling_stats2026.csv,15,,5wh,BIGINT,0,0,2
+fielding_stats2026.csv,15,,rank,BIGINT,0,0,15
+fielding_stats2026.csv,15,,player,VARCHAR,0,0,15
+fielding_stats2026.csv,15,,team,VARCHAR,0,0,9
+fielding_stats2026.csv,15,,matches,BIGINT,0,0,4
+fielding_stats2026.csv,15,,catches,BIGINT,0,0,5
+fielding_stats2026.csv,15,,cpm,DOUBLE,0,0,9

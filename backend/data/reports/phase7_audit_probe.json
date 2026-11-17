@@ -1,0 +1,93 @@
+{
+  "pooled_odd_even": [
+    {
+      "pooled_r": 0.22371069457096546,
+      "pooled_sb": 0.3656267703852972,
+      "players_total": 757,
+      "cells": 4
+    }
+  ],
+  "context_rows": 48,
+  "estimable_contexts": 47,
+  "median_oe_sb": 0.2538111731995057,
+  "csv_floor_hit_contexts": 48,
+  "csv_gate_passed_recomputed_contexts": 0,
+  "p5_context_fit": {
+    "contexts": 48,
+    "floor_hit": 48
+  },
+  "p6_gate_status": {
+    "contexts": 48,
+    "passed": 0,
+    "gate_min": 0.5,
+    "gate_max": 0.5
+  },
+  "options": {
+    "rows_total": 304,
+    "rows_applicable": 256,
+    "applicable_rows_passing_gate": 0,
+    "rows_passing_only_on_estimable_subset": 1,
+    "distinct_option_ids": 18,
+    "best_data_weight": 0.5618979225203946,
+    "best_option_id": "O6_match_cluster_own_tau2",
+    "methodology_changing_option_ids": [
+      "O3_phases_pooled",
+      "O3_situations_pooled",
+      "O6_match_cluster_own_tau2"
+    ]
+  },
+  "options_summary_csv": {
+    "rows": 19,
+    "sum_rows_passing_gate": 0,
+    "best_data_weight": 0.5618979225203946
+  },
+  "ladder_pre_test": {
+    "0.5": {
+      "cells": 4,
+      "reached": 2
+    },
+    "0.7": {
+      "cells": 4,
+      "reached": 0
+    },
+    "0.8": {
+      "cells": 4,
+      "reached": 0
+    }
+  },
+  "season_checks": {
+    "adjacent_seasons": {
+      "median": 0.11086061548856466,
+      "units": 12
+    },
+    "leave_one_season_out_rank": {
+      "median": 0.2043432929112361,
+      "units": 16
+    },
+    "leave_one_season_out_reliability": {
+      "median": 0.32726758914214615,
+      "units": 16
+    },
+    "within_season": {
+      "median": 0.2446042038780104,
+      "units": 16
+    }
+  },
+  "recent_form_max_data_weight": {
+    "2024": {
+      "marginal_data_weight": 0.0649219364259238,
+      "median_data_weight": 0.187725631768953
+    },
+    "2025": {
+      "marginal_data_weight": 0.0384615384615384,
+      "median_data_weight": 0.106484893146647
+    }
+  },
+  "gate_config_sha256": "ea583816f4b5901f4dd760503aa13bb555dd3817cfabbfe325c8b3b66a6e32e6",
+  "gate_guard_file_hash_match": {
+    "app/phase4/eligibility.py": true,
+    "config/phase5_gates_v1.json": true,
+    "config/pressure_eligibility_rules_v1.json": true,
+    "data/reports/phase4_frozen_choices.json": true
+  }
+}

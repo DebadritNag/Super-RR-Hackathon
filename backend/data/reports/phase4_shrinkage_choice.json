@@ -1,0 +1,55 @@
+{
+  "chosen": "shrink_tau2",
+  "losses": {
+    "shrink_eb": {
+      "bootstrap_se": 0.0,
+      "choosable": true,
+      "diff_vs_eb": 0.0,
+      "loss": 0.19879814443436675
+    },
+    "shrink_floor0.001": {
+      "bootstrap_se": 0.000597239135359921,
+      "choosable": true,
+      "diff_vs_eb": 0.001459256202548248,
+      "loss": 0.200257400636915
+    },
+    "shrink_none": {
+      "bootstrap_se": 0.05480023603174248,
+      "choosable": false,
+      "diff_vs_eb": 0.2264621891815369,
+      "loss": 0.42526033361590365
+    },
+    "shrink_target0": {
+      "bootstrap_se": 0.00400613278460298,
+      "choosable": false,
+      "diff_vs_eb": -0.00010743953688888142,
+      "loss": 0.19869070489747787
+    },
+    "shrink_tau0.5": {
+      "bootstrap_se": 0.00011033036879577732,
+      "choosable": true,
+      "diff_vs_eb": -0.00020693144720571044,
+      "loss": 0.19859121298716104
+    },
+    "shrink_tau2": {
+      "bootstrap_se": 0.0006989617859008863,
+      "choosable": true,
+      "diff_vs_eb": -0.0007015697075520855,
+      "loss": 0.19809657472681466
+    },
+    "shrink_tau4": {
+      "bootstrap_se": 0.0020010728268481837,
+      "choosable": true,
+      "diff_vs_eb": -0.0010756584677213132,
+      "loss": 0.19772248596664543
+    }
+  },
+  "n_boot": 1000,
+  "rule": "non-default only if paired loss difference < -1 bootstrap SE; none/target0 never chosen",
+  "seed": 20260512,
+  "selection_data": [
+    "TRAIN",
+    "VALIDATION"
+  ],
+  "test_outcomes_used": false
+}

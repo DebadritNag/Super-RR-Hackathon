@@ -1,0 +1,156 @@
+{
+  "label": "EXPERIMENTAL_LOCK",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "items": [
+    {
+      "id": "investigation_reports_present",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "7 present"
+    },
+    {
+      "id": "unresolved_issues_present",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "phase5_unresolved_issues.md"
+    },
+    {
+      "id": "date_verification_manifest_present",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "test-set manifest and date-verification summary present"
+    },
+    {
+      "id": "strict_uncapped_capability_recorded",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "recorded; strict uncapped enabled = False"
+    },
+    {
+      "id": "publication_gates_evaluated",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "phase5_publication_gates.json present"
+    },
+    {
+      "id": "phase4_outputs_unchanged",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "56 phase4 report files compared; all identical"
+    },
+    {
+      "id": "official_data_unchanged",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "14 official files compared; all identical"
+    },
+    {
+      "id": "phase4_lock_log_intact",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "events ['FREEZE', 'OPEN', 'CLOSE'] (TEST was opened once in Phase 4 and never again)"
+    },
+    {
+      "id": "phase5_test_lock_not_opened",
+      "kind": "REQUIRED_FOR_EXPERIMENTAL_LOCK",
+      "status": "PASS",
+      "detail": "phase5 lock log events []"
+    },
+    {
+      "id": "methodology_validated",
+      "kind": "PUBLICATION_GATE",
+      "status": "FAIL",
+      "detail": "validated=false: NOT validated"
+    },
+    {
+      "id": "gate:data_weight_gate_passed",
+      "kind": "PUBLICATION_GATE",
+      "status": "FAIL",
+      "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+    },
+    {
+      "id": "gate:methodology_validated",
+      "kind": "PUBLICATION_GATE",
+      "status": "FAIL",
+      "detail": "methodology not validated"
+    },
+    {
+      "id": "gate:strict_classification_available",
+      "kind": "PUBLICATION_GATE",
+      "status": "PASS",
+      "detail": "not applicable: request uses no strict status filter"
+    },
+    {
+      "id": "gate:min_eligible_pool",
+      "kind": "PUBLICATION_GATE",
+      "status": "PASS",
+      "detail": "not applicable: evaluated per request with rows"
+    },
+    {
+      "id": "gate:date_verification",
+      "kind": "PUBLICATION_GATE",
+      "status": "FAIL",
+      "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+    },
+    {
+      "id": "strict_uncapped_enabled",
+      "kind": "PUBLICATION_GATE",
+      "status": "FAIL",
+      "detail": "no authoritative cap source keyed by player_id; strict uncapped stays disabled"
+    },
+    {
+      "id": "decision:official_rankings",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: publishing an official Top 10"
+    },
+    {
+      "id": "decision:official_ml_training",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: official ML training"
+    },
+    {
+      "id": "decision:validate_primary_definition",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: calling any|q0.75 validated"
+    },
+    {
+      "id": "decision:validate_working_pools",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: validating the working-pool thresholds"
+    },
+    {
+      "id": "decision:official_t20i_dates",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: supplying official match-level T20I dates"
+    },
+    {
+      "id": "decision:authoritative_cap_source",
+      "kind": "USER_DECISION",
+      "status": "USER_APPROVAL_PENDING",
+      "detail": "needs the user: supplying an authoritative cap source with player ids"
+    }
+  ],
+  "required_all_pass": true,
+  "failing_publication_checks": [
+    "methodology_validated",
+    "gate:data_weight_gate_passed",
+    "gate:methodology_validated",
+    "gate:date_verification",
+    "strict_uncapped_enabled"
+  ],
+  "pending_user_decisions": [
+    "decision:official_rankings",
+    "decision:official_ml_training",
+    "decision:validate_primary_definition",
+    "decision:validate_working_pools",
+    "decision:official_t20i_dates",
+    "decision:authoritative_cap_source"
+  ],
+  "methodology_validated": false,
+  "publication_ready": false
+}

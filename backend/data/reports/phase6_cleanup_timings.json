@@ -1,0 +1,30 @@
+{
+  "deepcopy_timings": {
+    "IPL|batter": {
+      "rows": 132,
+      "deepcopy_ms": 4.05
+    },
+    "IPL|bowler": {
+      "rows": 80,
+      "deepcopy_ms": 1.98
+    },
+    "T20I|batter": {
+      "rows": 243,
+      "deepcopy_ms": 7.21
+    },
+    "T20I|bowler": {
+      "rows": 141,
+      "deepcopy_ms": 3.58
+    },
+    "COMBINED_w70_30|batter": {
+      "rows": 48,
+      "deepcopy_ms": 1.44
+    },
+    "COMBINED_w70_30|bowler": {
+      "rows": 39,
+      "deepcopy_ms": 1.29
+    }
+  },
+  "worst_deepcopy_ms": 7.21,
+  "worst_context": "T20I|batter"
+}

@@ -1,0 +1,144 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "official_data_unchanged": true,
+  "differences": {},
+  "steps": {
+    "phase4_split": 0,
+    "phase4_baseline": 0,
+    "phase4_scoring": 0,
+    "phase4_sensitivity": 0,
+    "phase4_test_eval": 0,
+    "phase4_classification": 0,
+    "phase4_reports": 0
+  },
+  "lock_log_reset_for_this_run": true,
+  "lock": {
+    "log_entries": 3,
+    "FREEZE_entries": 1,
+    "OPEN_entries": 1,
+    "CLOSE_entries": 1,
+    "READ_DENIED_entries": 0,
+    "freeze_recorded_before_open": true,
+    "opened_exactly_once": true,
+    "hash_at_open_equals_hash_at_freeze": true
+  },
+  "deliverables": {
+    "phase4_temporal_validation_plan.md": {
+      "exists": true,
+      "bytes": 18589,
+      "ok": true
+    },
+    "phase4_baseline_calibration_report.md": {
+      "exists": true,
+      "bytes": 12069,
+      "ok": true
+    },
+    "phase4_pressure_scoring_report.md": {
+      "exists": true,
+      "bytes": 7043,
+      "ok": true
+    },
+    "phase4_definition_comparison.md": {
+      "exists": true,
+      "bytes": 13874,
+      "ok": true
+    },
+    "phase4_eligibility_validation.md": {
+      "exists": true,
+      "bytes": 10985,
+      "ok": true
+    },
+    "phase4_shrinkage_sensitivity.md": {
+      "exists": true,
+      "bytes": 6747,
+      "ok": true
+    },
+    "phase4_format_weight_sensitivity.md": {
+      "exists": true,
+      "bytes": 6064,
+      "ok": true
+    },
+    "phase4_ranking_stability.md": {
+      "exists": true,
+      "bytes": 16605,
+      "ok": true
+    },
+    "phase4_data_quality_report.md": {
+      "exists": true,
+      "bytes": 6129,
+      "ok": true
+    },
+    "phase4_user_summary.md": {
+      "exists": true,
+      "bytes": 13560,
+      "ok": true
+    },
+    "phase4_split_manifest.json": {
+      "exists": true,
+      "bytes": 19391,
+      "status": "EXPERIMENTAL_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "phase4_calibration.json": {
+      "exists": true,
+      "bytes": 51232,
+      "status": "EXPERIMENTAL_NOT_VALIDATED",
+      "official_ranking": null,
+      "ok": true
+    },
+    "phase4_definition_comparison.csv": {
+      "exists": true,
+      "bytes": 14872,
+      "ok": true
+    },
+    "phase4_eligibility_candidates.csv": {
+      "exists": true,
+      "bytes": 16650,
+      "ok": true
+    },
+    "phase4_pressure_scores_frozen_rules.csv": {
+      "exists": true,
+      "bytes": 11695316,
+      "ok": true
+    },
+    "phase4_shrinkage_sensitivity.csv": {
+      "exists": true,
+      "bytes": 7835,
+      "ok": true
+    },
+    "phase4_format_weight_results.csv": {
+      "exists": true,
+      "bytes": 5071,
+      "ok": true
+    },
+    "phase4_ranking_distributions.csv": {
+      "exists": true,
+      "bytes": 91128,
+      "ok": true
+    },
+    "phase4_frozen_choices.json": {
+      "exists": true,
+      "bytes": 3593,
+      "status": "EXPERIMENTAL_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "phase4_test_evaluation.json": {
+      "exists": true,
+      "bytes": 14939,
+      "status": "EXPERIMENTAL_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "phase4_spot_checks.json": {
+      "exists": true,
+      "bytes": 3604,
+      "status": "EXPERIMENTAL_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    }
+  },
+  "determinism_comparison_differences": {}
+}

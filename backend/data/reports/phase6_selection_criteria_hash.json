@@ -1,0 +1,7 @@
+{
+  "criteria_path": "config/phase6_selection_criteria_v1.json",
+  "git_blob_sha": "191889ffa36278a4ac6ab9aaabb5058375b2c0ee",
+  "investigation_config_sha256": "29ec41e89153ff114f86a38bee8976e39e90aac65379a8ad4b87ffd80372509c",
+  "note": "written before any estimator output; ordering is enforced by p6_run_log",
+  "sha256": "72b08a76afaafb7dae259b05e843459871ba08c3a4fe246e470b1b1e242d3851"
+}

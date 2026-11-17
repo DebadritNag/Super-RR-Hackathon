@@ -1,0 +1,17 @@
+{"verdict":"CHANGES_REQUESTED","findings":[
+{"id":1,"severity":"HIGH","title":"Selection rule not mechanical (pooled vs per-cell M1, undefined SE, M4 two numbers, unused M2/M3, undefined TRAIN-disagreement and confounded outcomes)"},
+{"id":2,"severity":"HIGH","title":"Criteria-before-results check unenforceable (DuckDB tables have no timestamps; self-supplied results_started_at); use append-only p6_run_log"},
+{"id":3,"severity":"HIGH","title":"STATUS_VALUES to three values breaks classification_v2 lines 124/301/307/323, override path and phase4_service:570; not enumerated"},
+{"id":4,"severity":"MEDIUM","title":"Public schema scan forbids 'rank' but public model has official_ranking; Disabled union on /players unhandled"},
+{"id":5,"severity":"MEDIUM","title":"Variance verdict rule partly undefined (E2 not bootstrapped, no numeric cuts for H-B tests, no flag-to-verdict table)"},
+{"id":6,"severity":"MEDIUM","title":"Recent-form residuals confounded by B0 TRAIN fit; window_ratio undefined for window without TRAIN rows"},
+{"id":7,"severity":"MEDIUM","title":"No non-pressure control: reliability may reflect stable traits, not pressure"},
+{"id":8,"severity":"MEDIUM","title":"O3/O6 data weight mixes Kish n_eff with match-cluster tau2; n_eff basis unspecified"},
+{"id":9,"severity":"MEDIUM","title":"Brief-required tests missing from section 10 (Cricsheet, classification wording, retention reference, internal players routes)"},
+{"id":10,"severity":"MEDIUM","title":"Replacement for or True at test_phase5_dynamic_ranking.py:583 is conditional/undecided"},
+{"id":11,"severity":"MEDIUM","title":"Cache signature changes: callers/tests not listed, gate_state_hash source unnamed, docstring says gates not cached"},
+{"id":12,"severity":"LOW","title":"SciPy already a dependency; permit scipy.special.gammaln for E4/E5"},
+{"id":13,"severity":"LOW","title":"Criteria unit says primary stream but 4.6 uses four streams; state selection uses primary only"},
+{"id":14,"severity":"LOW","title":"Runtime of bootstrap/split grid not estimated or capped"},
+{"id":15,"severity":"LOW","title":"Deliverable-to-script mapping and Phase 5 register carry-forward statuses not specified"}
+],"reviewDoc":"d:/Data/.agents/tasks/phase6_design_review.md"}

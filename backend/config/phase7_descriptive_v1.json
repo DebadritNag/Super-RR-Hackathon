@@ -1,0 +1,39 @@
+{
+  "version": "p7_descriptive_v1",
+  "status": "DESCRIPTIVE_NOT_A_PRESSURE_MEASURE",
+  "note": "Descriptive statistics only. No composite score, no ordering of players, no auction-suitability implication.",
+  "scope": {
+    "formats": ["IPL", "T20I"],
+    "innings": [1, 2],
+    "periods_excluded": ["TEST"],
+    "format_out_of_scope_excluded": true,
+    "other_t20_note": "OTHER_T20 is outside the IPL and T20I columns and is not profiled."
+  },
+  "window": "PRE_TEST 2022-2025 (TRAIN + VALIDATION matches); TEST-period matches are never read",
+  "display_sample_convention": {
+    "low_sample_balls_batter": 60,
+    "low_sample_balls_bowler": 60,
+    "phase_min_balls": 30,
+    "note": "Display flag only. It is not an eligibility rule and does not hide any player."
+  },
+  "bootstrap": {
+    "n_boot": 1000,
+    "seed": 20260512,
+    "level": 0.95,
+    "unit": "match",
+    "min_matches": 5,
+    "max_undefined_share": 0.05
+  },
+  "radar": {
+    "min_cohort_size": 10,
+    "note": "Percentile of the raw value within a named cohort; no composite and no direction of merit."
+  },
+  "compare": {"min_players": 2, "max_players": 4},
+  "context_sample": {
+    "definition_id": "any|q0.75",
+    "definition_label": "PROVISIONAL",
+    "label": "DESCRIPTIVE_EXPERIMENTAL_COUNT_ONLY",
+    "note": "Counts of deliveries falling into the provisional pressure-context definition. Not a pressure measure."
+  },
+  "cors_origins": ["http://localhost:5173", "http://127.0.0.1:5173"]
+}

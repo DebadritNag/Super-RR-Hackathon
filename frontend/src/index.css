@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #246B4B;
+  --color-primary-green-hover: #1b533a;
+  --color-dark-charcoal: #202522;
+  --color-ivory: #F7F6F2;
+  --color-surface-white: #FFFFFF;
+  --color-amber-accent: #D97736;
+  --color-amber-light: #FDF3EB;
+  --color-muted-text: #777F79;
+  --color-border-subtle: #E5E8E3;
+  --color-success-green: #27845B;
+  --color-warning-amber: #D97736;
+  --color-error-red: #C44747;
+}
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+}
+
+body {
+  background-color: #F7F6F2;
+  color: #202522;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling for financial terminal / data-dense density */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F6F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}

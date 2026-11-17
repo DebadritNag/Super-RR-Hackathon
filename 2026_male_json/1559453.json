@@ -1,0 +1,5448 @@
+{
+  "meta": {
+    "data_version": "1.3.0",
+    "created": "2026-11-02",
+    "revision": 1
+  },
+  "info": {
+    "balls_per_over": 6,
+    "city": "Nairobi",
+    "dates": [
+      "2026-10-31"
+    ],
+    "event": {
+      "name": "CWC Challenge League",
+      "match_number": 44
+    },
+    "gender": "male",
+    "match_type": "ODM",
+    "officials": {
+      "match_referees": [
+        "S Wadvalla"
+      ],
+      "reserve_umpires": [
+        "A Premji"
+      ],
+      "umpires": [
+        "IC Soysa",
+        "DH Mclean"
+      ]
+    },
+    "outcome": {
+      "winner": "Kenya",
+      "by": {
+        "runs": 88
+      }
+    },
+    "overs": 50,
+    "player_of_match": [
+      "F Mutua"
+    ],
+    "players": {
+      "Kenya": [
+        "Subham Patel",
+        "DM Gondaria",
+        "IA Karim",
+        "SR Bhudia",
+        "RR Patel",
+        "B Likavu",
+        "S Gill",
+        "F Mutua",
+        "SO Ngoche",
+        "Vishil Patel",
+        "Vraj Patel"
+      ],
+      "Papua New Guinea": [
+        "TP Ura",
+        "Doko Rupa",
+        "S Bau",
+        "L Siaka",
+        "A Vala",
+        "Patrick Nou",
+        "Boio Ray",
+        "KV Morea",
+        "A Nao",
+        "J Kariko",
+        "SI Kamea"
+      ]
+    },
+    "registry": {
+      "people": {
+        "A Nao": "4d1ec7eb",
+        "A Premji": "40a68f89",
+        "A Vala": "72e60730",
+        "B Likavu": "3aad4933",
+        "Boio Ray": "9cf15e95",
+        "DH Mclean": "281d4749",
+        "DM Gondaria": "9048c17e",
+        "Doko Rupa": "952ac07c",
+        "F Mutua": "21b67523",
+        "IA Karim": "ca92a578",
+        "IC Soysa": "717a7971",
+        "J Kariko": "cde067e1",
+        "KV Morea": "270bf7e2",
+        "L Siaka": "6b4593ee",
+        "Patrick Nou": "75657526",
+        "RR Patel": "7fa6bd8e",
+        "S Bau": "9a95bebb",
+        "S Gill": "3e6e9a5f",
+        "S Wadvalla": "c1a1acf3",
+        "SI Kamea": "0730a707",
+        "SO Ngoche": "49118dc7",
+        "SR Bhudia": "e9173fb0",
+        "Subham Patel": "2a20a333",
+        "TP Ura": "a82eb3fb",
+        "Vishil Patel": "3df8f9d5",
+        "Vraj Patel": "2af28253"
+      },
+      "venues": {
+        "Gymkhana Club Ground, Nairobi": "8243d26f"
+      }
+    },
+    "season": "2026/27",
+    "team_type": "international",
+    "teams": [
+      "Kenya",
+      "Papua New Guinea"
+    ],
+    "toss": {
+      "decision": "field",
+      "winner": "Papua New Guinea"
+    },
+    "venue": "Gymkhana Club Ground, Nairobi"
+  },
+  "innings": [
+    {
+      "team": "Kenya",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "Subham Patel",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 1,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "Subham Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "Subham Patel",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "Subham Patel",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "Subham Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "Subham Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "Subham Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Subham Patel",
+                  "fielders": [
+                    {
+                      "name": "Doko Rupa"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.1",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 1,
+                "extras": 1,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "IA Karim",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "extras": {
+                "legbyes": 2
+              },
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "IA Karim",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "IA Karim",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "IA Karim",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "IA Karim",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "IA Karim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "IA Karim",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "IA Karim",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "IA Karim",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "SR Bhudia",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "SR Bhudia",
+              "bowler": "SI Kamea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "SR Bhudia",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "SR Bhudia",
+              "bowler": "SI Kamea",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "SR Bhudia",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "SR Bhudia",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "SR Bhudia",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "SR Bhudia",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "DM Gondaria",
+              "bowler": "L Siaka",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "SR Bhudia",
+              "bowler": "L Siaka",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "DM Gondaria",
+              "bowler": "L Siaka",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "DM Gondaria",
+              "bowler": "L Siaka",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "DM Gondaria",
+              "bowler": "L Siaka",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "DM Gondaria",
+              "bowler": "L Siaka",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.1",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "SR Bhudia",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "SR Bhudia",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "SR Bhudia",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "SR Bhudia",
+                  "fielders": [
+                    {
+                      "name": "KV Morea"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.6",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 17,
+          "deliveries": [
+            {
+              "actual_delivery": "17.1",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.2",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.3",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.4",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.5",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.6",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 18,
+          "deliveries": [
+            {
+              "actual_delivery": "18.1",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.2",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.3",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "18.4",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.5",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.6",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 19,
+          "deliveries": [
+            {
+              "actual_delivery": "19.1",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.2",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.3",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.4",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.5",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.6",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 20,
+          "deliveries": [
+            {
+              "actual_delivery": "20.1",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "20.2",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.3",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.4",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.5",
+              "batter": "RR Patel",
+              "bowler": "A Nao",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.6",
+              "batter": "DM Gondaria",
+              "bowler": "A Nao",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 21,
+          "deliveries": [
+            {
+              "actual_delivery": "21.1",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.2",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.3",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.4",
+              "batter": "RR Patel",
+              "bowler": "A Vala",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "21.5",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.6",
+              "batter": "DM Gondaria",
+              "bowler": "A Vala",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 22,
+          "deliveries": [
+            {
+              "actual_delivery": "22.1",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "22.2",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.3",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.4",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "22.5",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.6",
+              "batter": "DM Gondaria",
+              "bowler": "J Kariko",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 23,
+          "deliveries": [
+            {
+              "actual_delivery": "23.1",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "extras": {
+                "byes": 4
+              },
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 4,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "23.2",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.3",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.4",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.5",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.6",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "RR Patel",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 24,
+          "deliveries": [
+            {
+              "actual_delivery": "24.1",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.2",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "24.3",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.4",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.5",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.6",
+              "batter": "RR Patel",
+              "bowler": "J Kariko",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 25,
+          "deliveries": [
+            {
+              "actual_delivery": "25.1",
+              "batter": "RR Patel",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "RR Patel",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "25.2",
+              "batter": "B Likavu",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.3",
+              "batter": "B Likavu",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.4",
+              "batter": "B Likavu",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "25.5",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.6",
+              "batter": "DM Gondaria",
+              "bowler": "SI Kamea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 1,
+                "extras": 1,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "25.6",
+              "batter": "B Likavu",
+              "bowler": "SI Kamea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 26,
+          "deliveries": [
+            {
+              "actual_delivery": "26.1",
+              "batter": "B Likavu",
+              "bowler": "KV Morea",
+              "extras": {
+                "wides": 2
+              },
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "26.1",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "26.2",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.3",
+              "batter": "B Likavu",
+              "bowler": "KV Morea",
+              "non_striker": "DM Gondaria",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.4",
+              "batter": "DM Gondaria",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "DM Gondaria",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "26.5",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "26.6",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 27,
+          "deliveries": [
+            {
+              "actual_delivery": "27.1",
+              "batter": "B Likavu",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "27.2",
+              "batter": "S Gill",
+              "bowler": "A Nao",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "27.3",
+              "batter": "B Likavu",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "27.4",
+              "batter": "B Likavu",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "27.5",
+              "batter": "S Gill",
+              "bowler": "A Nao",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "27.6",
+              "batter": "S Gill",
+              "bowler": "A Nao",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 28,
+          "deliveries": [
+            {
+              "actual_delivery": "28.1",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "28.2",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "B Likavu",
+              "runs": {
+                "batter": 3,
+                "extras": 0,
+                "total": 3
+              }
+            },
+            {
+              "actual_delivery": "28.3",
+              "batter": "B Likavu",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "28.4",
+              "batter": "B Likavu",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "B Likavu",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "28.5",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "28.6",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 29,
+          "deliveries": [
+            {
+              "actual_delivery": "29.1",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "29.2",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.3",
+              "batter": "F Mutua",
+              "bowler": "J Kariko",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "29.4",
+              "batter": "F Mutua",
+              "bowler": "J Kariko",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.5",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.6",
+              "batter": "F Mutua",
+              "bowler": "J Kariko",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 30,
+          "deliveries": [
+            {
+              "actual_delivery": "30.1",
+              "batter": "F Mutua",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "30.2",
+              "batter": "F Mutua",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "30.3",
+              "batter": "F Mutua",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "30.4",
+              "batter": "S Gill",
+              "bowler": "A Nao",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "30.5",
+              "batter": "S Gill",
+              "bowler": "A Nao",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "30.6",
+              "batter": "F Mutua",
+              "bowler": "A Nao",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 31,
+          "deliveries": [
+            {
+              "actual_delivery": "31.1",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "31.2",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "31.3",
+              "batter": "F Mutua",
+              "bowler": "J Kariko",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "31.4",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "31.5",
+              "batter": "F Mutua",
+              "bowler": "J Kariko",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "31.6",
+              "batter": "S Gill",
+              "bowler": "J Kariko",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 32,
+          "deliveries": [
+            {
+              "actual_delivery": "32.1",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "32.2",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 2,
+                "extras": 1,
+                "total": 3
+              }
+            },
+            {
+              "actual_delivery": "32.2",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "32.3",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "32.4",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "32.5",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "32.6",
+              "batter": "S Gill",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 33,
+          "deliveries": [
+            {
+              "actual_delivery": "33.1",
+              "batter": "S Gill",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "33.2",
+              "batter": "S Gill",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "33.3",
+              "batter": "F Mutua",
+              "bowler": "A Vala",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "33.4",
+              "batter": "F Mutua",
+              "bowler": "A Vala",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "33.5",
+              "batter": "S Gill",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "33.6",
+              "batter": "S Gill",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 34,
+          "deliveries": [
+            {
+              "actual_delivery": "34.1",
+              "batter": "S Gill",
+              "bowler": "SI Kamea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "34.2",
+              "batter": "S Gill",
+              "bowler": "SI Kamea",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "34.2",
+              "batter": "S Gill",
+              "bowler": "SI Kamea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "34.3",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "S Gill",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "34.4",
+              "batter": "S Gill",
+              "bowler": "SI Kamea",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "34.4",
+              "batter": "S Gill",
+              "bowler": "SI Kamea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              },
+              "wickets": [
+                {
+                  "player_out": "S Gill",
+                  "fielders": [
+                    {
+                      "name": "TP Ura"
+                    },
+                    {
+                      "name": "A Vala"
+                    }
+                  ],
+                  "kind": "run out"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "34.5",
+              "batter": "SO Ngoche",
+              "bowler": "SI Kamea",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "34.6",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 35,
+          "deliveries": [
+            {
+              "actual_delivery": "35.1",
+              "batter": "SO Ngoche",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "35.2",
+              "batter": "SO Ngoche",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "35.3",
+              "batter": "SO Ngoche",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "35.4",
+              "batter": "SO Ngoche",
+              "bowler": "A Vala",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "35.5",
+              "batter": "F Mutua",
+              "bowler": "A Vala",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "35.6",
+              "batter": "F Mutua",
+              "bowler": "A Vala",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "35.6",
+              "batter": "F Mutua",
+              "bowler": "A Vala",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 36,
+          "deliveries": [
+            {
+              "actual_delivery": "36.1",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "36.2",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "36.3",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "36.4",
+              "batter": "SO Ngoche",
+              "bowler": "SI Kamea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "36.5",
+              "batter": "SO Ngoche",
+              "bowler": "SI Kamea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "36.6",
+              "batter": "SO Ngoche",
+              "bowler": "SI Kamea",
+              "extras": {
+                "noballs": 1,
+                "legbyes": 1
+              },
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "36.6",
+              "batter": "F Mutua",
+              "bowler": "SI Kamea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 37,
+          "deliveries": [
+            {
+              "actual_delivery": "37.1",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "37.2",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "37.3",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "37.3",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "37.4",
+              "batter": "SO Ngoche",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "37.5",
+              "batter": "SO Ngoche",
+              "bowler": "KV Morea",
+              "non_striker": "F Mutua",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "37.6",
+              "batter": "F Mutua",
+              "bowler": "KV Morea",
+              "non_striker": "SO Ngoche",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 7.7,
+          "type": "mandatory"
+        },
+        {
+          "from": 8.1,
+          "to": 30.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 31.1,
+          "to": 37.7,
+          "type": "mandatory"
+        }
+      ]
+    },
+    {
+      "team": "Papua New Guinea",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "Doko Rupa",
+              "bowler": "SO Ngoche",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "Doko Rupa",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "Doko Rupa",
+              "bowler": "SO Ngoche",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "Doko Rupa",
+              "bowler": "SO Ngoche",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              },
+              "wickets": [
+                {
+                  "player_out": "Doko Rupa",
+                  "fielders": [
+                    {
+                      "name": "RR Patel"
+                    },
+                    {
+                      "name": "SO Ngoche"
+                    }
+                  ],
+                  "kind": "run out"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "S Bau",
+              "bowler": "S Gill",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "S Bau",
+              "bowler": "S Gill",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "TP Ura",
+              "bowler": "SO Ngoche",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "S Bau",
+              "bowler": "SO Ngoche",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "S Bau",
+              "bowler": "SO Ngoche",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "S Bau",
+              "bowler": "SO Ngoche",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "S Bau",
+              "bowler": "S Gill",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "TP Ura",
+              "bowler": "Vraj Patel",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "TP Ura",
+              "bowler": "Vraj Patel",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "S Bau",
+              "bowler": "S Gill",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "S Bau",
+              "bowler": "S Gill",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "TP Ura",
+              "bowler": "S Gill",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "S Bau",
+              "bowler": "Vraj Patel",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "TP Ura",
+              "bowler": "Vraj Patel",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "TP Ura",
+              "bowler": "Vraj Patel",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "TP Ura",
+              "bowler": "Vraj Patel",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "TP Ura",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "TP Ura",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "S Bau",
+              "bowler": "F Mutua",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "S Bau",
+              "bowler": "F Mutua",
+              "non_striker": "TP Ura",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "TP Ura",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "TP Ura",
+                  "fielders": [
+                    {
+                      "name": "Vraj Patel"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "S Bau",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "S Bau",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "S Bau",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "S Bau",
+              "bowler": "F Mutua",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "S Bau",
+              "bowler": "F Mutua",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "S Bau",
+                  "fielders": [
+                    {
+                      "name": "Vishil Patel"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "A Vala",
+              "bowler": "F Mutua",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "A Vala",
+              "bowler": "F Mutua",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "A Vala",
+              "bowler": "F Mutua",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "L Siaka",
+              "bowler": "F Mutua",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "L Siaka",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "L Siaka",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "L Siaka",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "L Siaka",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "L Siaka",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "L Siaka",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "L Siaka",
+                  "fielders": [
+                    {
+                      "name": "IA Karim"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.6",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 17,
+          "deliveries": [
+            {
+              "actual_delivery": "17.1",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.2",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.3",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.4",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.5",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.6",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 18,
+          "deliveries": [
+            {
+              "actual_delivery": "18.1",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.2",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.3",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.4",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.5",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.6",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 19,
+          "deliveries": [
+            {
+              "actual_delivery": "19.1",
+              "batter": "A Vala",
+              "bowler": "DM Gondaria",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.2",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.3",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "19.4",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "19.5",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "19.6",
+              "batter": "Patrick Nou",
+              "bowler": "DM Gondaria",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 20,
+          "deliveries": [
+            {
+              "actual_delivery": "20.1",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.2",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.3",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.4",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.5",
+              "batter": "A Vala",
+              "bowler": "Vishil Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.6",
+              "batter": "Patrick Nou",
+              "bowler": "Vishil Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 21,
+          "deliveries": [
+            {
+              "actual_delivery": "21.1",
+              "batter": "A Vala",
+              "bowler": "SO Ngoche",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "21.2",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.3",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.4",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "21.5",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.6",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 22,
+          "deliveries": [
+            {
+              "actual_delivery": "22.1",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "22.2",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.3",
+              "batter": "Patrick Nou",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "22.4",
+              "batter": "Patrick Nou",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.5",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "extras": {
+                "legbyes": 2
+              },
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "22.6",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 23,
+          "deliveries": [
+            {
+              "actual_delivery": "23.1",
+              "batter": "A Vala",
+              "bowler": "SO Ngoche",
+              "non_striker": "Patrick Nou",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "23.2",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.3",
+              "batter": "Patrick Nou",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Patrick Nou",
+                  "fielders": [
+                    {
+                      "name": "IA Karim"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "23.4",
+              "batter": "Boio Ray",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.5",
+              "batter": "Boio Ray",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.6",
+              "batter": "Boio Ray",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 24,
+          "deliveries": [
+            {
+              "actual_delivery": "24.1",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "Boio Ray",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "24.2",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "Boio Ray",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "24.3",
+              "batter": "Boio Ray",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.4",
+              "batter": "Boio Ray",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.5",
+              "batter": "Boio Ray",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "24.6",
+              "batter": "Boio Ray",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 25,
+          "deliveries": [
+            {
+              "actual_delivery": "25.1",
+              "batter": "A Vala",
+              "bowler": "SO Ngoche",
+              "non_striker": "Boio Ray",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "25.2",
+              "batter": "Boio Ray",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.3",
+              "batter": "Boio Ray",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Boio Ray",
+                  "fielders": [
+                    {
+                      "name": "IA Karim"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "25.4",
+              "batter": "KV Morea",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.5",
+              "batter": "KV Morea",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "25.6",
+              "batter": "KV Morea",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 26,
+          "deliveries": [
+            {
+              "actual_delivery": "26.1",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "KV Morea",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.2",
+              "batter": "KV Morea",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.3",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "KV Morea",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.4",
+              "batter": "KV Morea",
+              "bowler": "Vraj Patel",
+              "non_striker": "A Vala",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "26.5",
+              "batter": "A Vala",
+              "bowler": "Vraj Patel",
+              "non_striker": "KV Morea",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "A Vala",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "26.6",
+              "batter": "A Nao",
+              "bowler": "Vraj Patel",
+              "non_striker": "KV Morea",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 27,
+          "deliveries": [
+            {
+              "actual_delivery": "27.1",
+              "batter": "KV Morea",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "KV Morea",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "27.2",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "27.3",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "27.4",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "27.5",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "27.6",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "A Nao",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 28,
+          "deliveries": [
+            {
+              "actual_delivery": "28.1",
+              "batter": "A Nao",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "28.2",
+              "batter": "A Nao",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "28.3",
+              "batter": "A Nao",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "A Nao",
+                  "fielders": [
+                    {
+                      "name": "IA Karim"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "28.4",
+              "batter": "SI Kamea",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "28.5",
+              "batter": "SI Kamea",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "28.6",
+              "batter": "SI Kamea",
+              "bowler": "Vraj Patel",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 29,
+          "deliveries": [
+            {
+              "actual_delivery": "29.1",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "SI Kamea",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.2",
+              "batter": "SI Kamea",
+              "bowler": "SO Ngoche",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "29.3",
+              "batter": "SI Kamea",
+              "bowler": "SO Ngoche",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "29.4",
+              "batter": "SI Kamea",
+              "bowler": "SO Ngoche",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.5",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SI Kamea",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.5",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "SI Kamea",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.5",
+              "batter": "J Kariko",
+              "bowler": "SO Ngoche",
+              "non_striker": "SI Kamea",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "29.6",
+              "batter": "SI Kamea",
+              "bowler": "SO Ngoche",
+              "non_striker": "J Kariko",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 30,
+          "deliveries": [
+            {
+              "actual_delivery": "30.1",
+              "batter": "J Kariko",
+              "bowler": "Vraj Patel",
+              "non_striker": "SI Kamea",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "J Kariko",
+                  "fielders": [
+                    {
+                      "name": "Subham Patel"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 7.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 8.1,
+          "to": 30.1,
+          "type": "mandatory"
+        }
+      ],
+      "target": {
+        "overs": 38,
+        "runs": 231
+      }
+    }
+  ]
+}

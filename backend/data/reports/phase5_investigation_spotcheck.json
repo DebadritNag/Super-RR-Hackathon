@@ -1,0 +1,24 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "split_half": {
+    "stream": "IPL batter runs, any|q0.75, PRE_TEST, odd/even, min 6 balls per half",
+    "independent_players": 144,
+    "independent_r": 0.243384658,
+    "independent_sb": 0.3914873108,
+    "module_players": 144,
+    "module_r": 0.243384658,
+    "module_sb": 0.3914873108,
+    "abs_diff_r": 0.0,
+    "players_equal": true
+  },
+  "snr": {
+    "stream": "T20I bowler charged runs, any|q0.75, TRAIN, Phase 4 basis",
+    "independent_snr": -0.7063956475,
+    "module_snr": -0.7063956475,
+    "abs_diff": 0.0,
+    "independent_tau2": -0.990255113,
+    "module_tau2": -0.990255113
+  },
+  "split_half_agrees": true,
+  "snr_agrees": true
+}

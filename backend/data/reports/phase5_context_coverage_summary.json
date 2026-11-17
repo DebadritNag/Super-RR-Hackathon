@@ -1,0 +1,583 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "minimum_pool_rule": {
+    "min_internal_pool": 5,
+    "min_public_pool": 10,
+    "both_provisional": true
+  },
+  "combinations": 3888,
+  "enabled": 3456,
+  "disabled_strict_uncapped": 432,
+  "meets_internal_min": 1889,
+  "meets_public_min": 1558,
+  "empty_pool": 1328,
+  "strict_uncapped_enabled": false,
+  "by_format_role": [
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "combinations": 576,
+      "meets_internal_min": 220,
+      "meets_public_min": 135,
+      "empty": 286
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "combinations": 576,
+      "meets_internal_min": 235,
+      "meets_public_min": 195,
+      "empty": 286
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "combinations": 576,
+      "meets_internal_min": 443,
+      "meets_public_min": 383,
+      "empty": 104
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "combinations": 576,
+      "meets_internal_min": 421,
+      "meets_public_min": 365,
+      "empty": 100
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "combinations": 576,
+      "meets_internal_min": 280,
+      "meets_public_min": 220,
+      "empty": 276
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "combinations": 576,
+      "meets_internal_min": 290,
+      "meets_public_min": 260,
+      "empty": 276
+    }
+  ],
+  "unfiltered_pool_by_context": [
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 48
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 42
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 19
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 27
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 26
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 12
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 29
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 26
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 11
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 8
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 1
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 4
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 39
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 40
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 24
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 36
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 30
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 17
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 27
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 27
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 14
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 8
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 1
+    },
+    {
+      "format": "COMBINED_w70_30",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 5
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 132
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 111
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 94
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 103
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 89
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 69
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 91
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 68
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 64
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 42
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 19
+    },
+    {
+      "format": "IPL",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 38
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 80
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 74
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 68
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 70
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 60
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 52
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 69
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 67
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 57
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 42
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 21
+    },
+    {
+      "format": "IPL",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 41
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 243
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 199
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 172
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 171
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 159
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 105
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 179
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 122
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 114
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 64
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 36
+    },
+    {
+      "format": "T20I",
+      "role": "batter",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 48
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "ALL",
+      "final_pool": 141
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "chase",
+      "final_pool": 121
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "ALL",
+      "situation": "first_innings",
+      "final_pool": 121
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "ALL",
+      "final_pool": 110
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "chase",
+      "final_pool": 92
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "death",
+      "situation": "first_innings",
+      "final_pool": 68
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "ALL",
+      "final_pool": 113
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "chase",
+      "final_pool": 72
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "middle",
+      "situation": "first_innings",
+      "final_pool": 85
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "ALL",
+      "final_pool": 61
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "chase",
+      "final_pool": 19
+    },
+    {
+      "format": "T20I",
+      "role": "bowler",
+      "phase": "powerplay",
+      "situation": "first_innings",
+      "final_pool": 48
+    }
+  ],
+  "note": "meets_public_min only counts the pool-size rule; every other publication gate currently fails, so no combination is publishable.",
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true
+  }
+}

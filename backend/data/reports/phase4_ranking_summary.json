@@ -1,0 +1,70 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "records": [
+    {
+      "scope": "IPL",
+      "role": "batter",
+      "eligibility_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "threshold_balls": 20,
+      "pool_size": 132,
+      "top10_size": 10,
+      "trivial_full_pool": false,
+      "expected_top10_overlap": 5.243,
+      "mean_jaccard": 0.3642848765,
+      "mean_spearman": 0.8046163835,
+      "spearman_p2_5": 0.7203987699,
+      "spearman_p97_5": 0.8719708515,
+      "pool_size_p2_5": 107.0,
+      "pool_size_p97_5": 123.0
+    },
+    {
+      "scope": "T20I",
+      "role": "batter",
+      "eligibility_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "threshold_balls": 16,
+      "pool_size": 243,
+      "top10_size": 10,
+      "trivial_full_pool": false,
+      "expected_top10_overlap": 4.88,
+      "mean_jaccard": 0.332322667,
+      "mean_spearman": 0.819756146,
+      "spearman_p2_5": 0.7567473188,
+      "spearman_p97_5": 0.8721218169,
+      "pool_size_p2_5": 183.0,
+      "pool_size_p97_5": 211.0
+    },
+    {
+      "scope": "IPL",
+      "role": "bowler",
+      "eligibility_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "threshold_balls": 49,
+      "pool_size": 80,
+      "top10_size": 10,
+      "trivial_full_pool": false,
+      "expected_top10_overlap": 6.2,
+      "mean_jaccard": 0.4580701504,
+      "mean_spearman": 0.7577660255,
+      "spearman_p2_5": 0.6449057229,
+      "spearman_p97_5": 0.8442715195,
+      "pool_size_p2_5": 64.975,
+      "pool_size_p97_5": 76.0
+    },
+    {
+      "scope": "T20I",
+      "role": "bowler",
+      "eligibility_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "threshold_balls": 29,
+      "pool_size": 141,
+      "top10_size": 10,
+      "trivial_full_pool": false,
+      "expected_top10_overlap": 5.531,
+      "mean_jaccard": 0.3917077587,
+      "mean_spearman": 0.7736985149,
+      "spearman_p2_5": 0.6852624047,
+      "spearman_p97_5": 0.8446550013,
+      "pool_size_p2_5": 112.0,
+      "pool_size_p97_5": 128.0
+    }
+  ]
+}

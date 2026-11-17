@@ -1,0 +1,1022 @@
+{
+  "files": {
+    "competitions.csv": {
+      "columns": [
+        "comp_id",
+        "comp_name",
+        "match_format",
+        "season"
+      ],
+      "column_count": 4,
+      "expected_column_count": 4,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "comp_id": "BIGINT",
+        "comp_name": "VARCHAR",
+        "match_format": "VARCHAR",
+        "season": "VARCHAR"
+      }
+    },
+    "teams.csv": {
+      "columns": [
+        "comp_id",
+        "team_id",
+        "team_name"
+      ],
+      "column_count": 3,
+      "expected_column_count": 3,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "comp_id": "BIGINT",
+        "team_id": "BIGINT",
+        "team_name": "VARCHAR"
+      }
+    },
+    "matches.csv": {
+      "columns": [
+        "match_id",
+        "comp_id",
+        "match_number",
+        "match_date",
+        "stage",
+        "venue_id",
+        "venue_country",
+        "home_team_id",
+        "home_team",
+        "away_team_id",
+        "away_team",
+        "home_team_captain_id",
+        "away_team_captain_id",
+        "toss_win_team_id",
+        "toss_opted",
+        "man_of_the_match",
+        "first_inn_revised_overs",
+        "second_inn_revised_overs",
+        "revised_target",
+        "knock_out",
+        "win_team_id",
+        "result"
+      ],
+      "column_count": 22,
+      "expected_column_count": 22,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "match_id": "BIGINT",
+        "comp_id": "BIGINT",
+        "match_number": "BIGINT",
+        "match_date": "DATE",
+        "stage": "VARCHAR",
+        "venue_id": "BIGINT",
+        "venue_country": "VARCHAR",
+        "home_team_id": "BIGINT",
+        "home_team": "VARCHAR",
+        "away_team_id": "BIGINT",
+        "away_team": "VARCHAR",
+        "home_team_captain_id": "BIGINT",
+        "away_team_captain_id": "BIGINT",
+        "toss_win_team_id": "BIGINT",
+        "toss_opted": "VARCHAR",
+        "man_of_the_match": "BIGINT",
+        "first_inn_revised_overs": "BIGINT",
+        "second_inn_revised_overs": "BIGINT",
+        "revised_target": "BIGINT",
+        "knock_out": "BIGINT",
+        "win_team_id": "BIGINT",
+        "result": "VARCHAR"
+      }
+    },
+    "playing_eleven.csv": {
+      "columns": [
+        "match_id",
+        "team_id",
+        "player_id",
+        "batting_order",
+        "is_played",
+        "is_captain",
+        "is_wk",
+        "is_impact",
+        "is_impact_off"
+      ],
+      "column_count": 9,
+      "expected_column_count": 9,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "match_id": "BIGINT",
+        "team_id": "BIGINT",
+        "player_id": "BIGINT",
+        "batting_order": "BIGINT",
+        "is_played": "BOOLEAN",
+        "is_captain": "BOOLEAN",
+        "is_wk": "BOOLEAN",
+        "is_impact": "BIGINT",
+        "is_impact_off": "BIGINT"
+      }
+    },
+    "competition_team_player_mapping.csv": {
+      "columns": [
+        "comp_id",
+        "comp_name",
+        "team_id",
+        "team_name",
+        "player_id",
+        "player_name"
+      ],
+      "column_count": 6,
+      "expected_column_count": 6,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "comp_id": "BIGINT",
+        "comp_name": "VARCHAR",
+        "team_id": "BIGINT",
+        "team_name": "VARCHAR",
+        "player_id": "BIGINT",
+        "player_name": "VARCHAR"
+      }
+    },
+    "ball_by_ball.csv": {
+      "columns": [
+        "match_id",
+        "innings",
+        "overid",
+        "over_ball_num",
+        "innings_ball_num",
+        "batting_team_id",
+        "bowling_team_id",
+        "striker_id",
+        "striker_name",
+        "non_striker_id",
+        "non_striker_name",
+        "bowler_id",
+        "bowler_name",
+        "batting_type",
+        "bowling_type",
+        "batting_order",
+        "runs",
+        "is_four",
+        "is_six",
+        "is_wicket",
+        "dismissal_type_id",
+        "dismissal_type",
+        "dismissed_player_id",
+        "extras_type",
+        "extras1_runs",
+        "extras_2_runs",
+        "pace_or_spin",
+        "bowl_speed",
+        "stroke",
+        "delivery_style",
+        "over_or_around",
+        "on_or_off",
+        "delivery_ist_time"
+      ],
+      "column_count": 33,
+      "expected_column_count": 33,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": true,
+        "matches_exactly": false
+      },
+      "inferred_types": {
+        "match_id": "BIGINT",
+        "innings": "BIGINT",
+        "overid": "BIGINT",
+        "over_ball_num": "BIGINT",
+        "innings_ball_num": "BIGINT",
+        "batting_team_id": "BIGINT",
+        "bowling_team_id": "BIGINT",
+        "striker_id": "BIGINT",
+        "striker_name": "VARCHAR",
+        "non_striker_id": "BIGINT",
+        "non_striker_name": "VARCHAR",
+        "bowler_id": "BIGINT",
+        "bowler_name": "VARCHAR",
+        "batting_type": "VARCHAR",
+        "bowling_type": "VARCHAR",
+        "batting_order": "BIGINT",
+        "runs": "BIGINT",
+        "is_four": "BOOLEAN",
+        "is_six": "BOOLEAN",
+        "is_wicket": "BOOLEAN",
+        "dismissal_type_id": "BIGINT",
+        "dismissal_type": "VARCHAR",
+        "dismissed_player_id": "BIGINT",
+        "extras_type": "VARCHAR",
+        "extras1_runs": "BIGINT",
+        "extras_2_runs": "BIGINT",
+        "pace_or_spin": "VARCHAR",
+        "bowl_speed": "DOUBLE",
+        "stroke": "VARCHAR",
+        "delivery_style": "VARCHAR",
+        "over_or_around": "VARCHAR",
+        "on_or_off": "VARCHAR",
+        "delivery_ist_time": "TIMESTAMP"
+      }
+    },
+    "ipl squad.csv": {
+      "columns": [
+        "team_no",
+        "team_name",
+        "player",
+        "nationality",
+        "role",
+        "designation"
+      ],
+      "column_count": 6,
+      "expected_column_count": 6,
+      "schema_vs_spec": {
+        "missing": [],
+        "unexpected": [],
+        "order_differs": false,
+        "matches_exactly": true
+      },
+      "inferred_types": {
+        "team_no": "BIGINT",
+        "team_name": "VARCHAR",
+        "player": "VARCHAR",
+        "nationality": "VARCHAR",
+        "role": "VARCHAR",
+        "designation": "VARCHAR"
+      }
+    },
+    "updated_ball_by_ball.csv": {
+      "columns": [
+        "match_id",
+        "innings",
+        "overid",
+        "over_ball_num",
+        "innings_ball_num",
+        "batting_team_id",
+        "bowling_team_id",
+        "striker_id",
+        "striker_name",
+        "non_striker_id",
+        "non_striker_name",
+        "bowler_id",
+        "bowler_name",
+        "batting_type",
+        "bowling_type",
+        "batting_order",
+        "runs",
+        "is_four",
+        "is_six",
+        "is_wicket",
+        "dismissal_type_id",
+        "dismissal_type",
+        "dismissed_player_id",
+        "extras_type",
+        "extras1_runs",
+        "extras_2_runs",
+        "pace_or_spin",
+        "bowl_speed",
+        "stroke",
+        "delivery_style",
+        "over_or_around",
+        "on_or_off",
+        "delivery_ist_time"
+      ],
+      "column_count": 33,
+      "expected_column_count": null,
+      "schema_vs_spec": null,
+      "inferred_types": {
+        "match_id": "BIGINT",
+        "innings": "BIGINT",
+        "overid": "BIGINT",
+        "over_ball_num": "BIGINT",
+        "innings_ball_num": "BIGINT",
+        "batting_team_id": "BIGINT",
+        "bowling_team_id": "BIGINT",
+        "striker_id": "BIGINT",
+        "striker_name": "VARCHAR",
+        "non_striker_id": "BIGINT",
+        "non_striker_name": "VARCHAR",
+        "bowler_id": "BIGINT",
+        "bowler_name": "VARCHAR",
+        "batting_type": "VARCHAR",
+        "bowling_type": "VARCHAR",
+        "batting_order": "BIGINT",
+        "runs": "BIGINT",
+        "is_four": "BOOLEAN",
+        "is_six": "BOOLEAN",
+        "is_wicket": "BOOLEAN",
+        "dismissal_type_id": "BIGINT",
+        "dismissal_type": "VARCHAR",
+        "dismissed_player_id": "BIGINT",
+        "extras_type": "VARCHAR",
+        "extras1_runs": "BIGINT",
+        "extras_2_runs": "BIGINT",
+        "pace_or_spin": "VARCHAR",
+        "bowl_speed": "DOUBLE",
+        "stroke": "VARCHAR",
+        "delivery_style": "VARCHAR",
+        "over_or_around": "VARCHAR",
+        "on_or_off": "VARCHAR",
+        "delivery_ist_time": "TIMESTAMP"
+      }
+    },
+    "matches 2026.csv": {
+      "columns": [
+        "match_id",
+        "date",
+        "venue",
+        "team1",
+        "team2",
+        "stage",
+        "toss_winner",
+        "toss_decision",
+        "first_ings_score",
+        "first_ings_wkts",
+        "second_ings_score",
+        "second_ings_wkts",
+        "match_result",
+        "match_winner",
+        "wb_runs",
+        "wb_wickets",
+        "balls_left",
+        "player_of_the_match",
+        "top_scorer",
+        "highscore",
+        "best_bowling",
+        "best_bowling_figure",
+        "super_over_match"
+      ],
+      "column_count": 23,
+      "expected_column_count": null,
+      "schema_vs_spec": null,
+      "inferred_types": {
+        "match_id": "BIGINT",
+        "date": "VARCHAR",
+        "venue": "VARCHAR",
+        "team1": "VARCHAR",
+        "team2": "VARCHAR",
+        "stage": "VARCHAR",
+        "toss_winner": "VARCHAR",
+        "toss_decision": "VARCHAR",
+        "first_ings_score": "BIGINT",
+        "first_ings_wkts": "BIGINT",
+        "second_ings_score": "BIGINT",
+        "second_ings_wkts": "BIGINT",
+        "match_result": "VARCHAR",
+        "match_winner": "VARCHAR",
+        "wb_runs": "BIGINT",
+        "wb_wickets": "BIGINT",
+        "balls_left": "BIGINT",
+        "player_of_the_match": "VARCHAR",
+        "top_scorer": "VARCHAR",
+        "highscore": "BIGINT",
+        "best_bowling": "VARCHAR",
+        "best_bowling_figure": "VARCHAR",
+        "super_over_match": "BOOLEAN"
+      }
+    },
+    "batting_stats2026.csv": {
+      "columns": [
+        "position",
+        "batsman",
+        "team",
+        "matches",
+        "innings",
+        "runs",
+        "impact",
+        "average",
+        "strike_rate",
+        "not_outs",
+        "high_score",
+        "balls_faced",
+        "hundreds",
+        "fifties",
+        "ducks",
+        "fours",
+        "sixes"
+      ],
+      "column_count": 17,
+      "expected_column_count": null,
+      "schema_vs_spec": null,
+      "inferred_types": {
+        "position": "BIGINT",
+        "batsman": "VARCHAR",
+        "team": "VARCHAR",
+        "matches": "BIGINT",
+        "innings": "BIGINT",
+        "runs": "BIGINT",
+        "impact": "DOUBLE",
+        "average": "DOUBLE",
+        "strike_rate": "DOUBLE",
+        "not_outs": "BIGINT",
+        "high_score": "BIGINT",
+        "balls_faced": "BIGINT",
+        "hundreds": "BIGINT",
+        "fifties": "BIGINT",
+        "ducks": "BIGINT",
+        "fours": "BIGINT",
+        "sixes": "BIGINT"
+      }
+    },
+    "bowling_stats2026.csv": {
+      "columns": [
+        "position",
+        "bowler",
+        "team",
+        "matches",
+        "innings",
+        "wickets",
+        "economy",
+        "impact",
+        "bbi",
+        "overs",
+        "balls",
+        "dot_balls",
+        "maiden_overs",
+        "runs",
+        "avg",
+        "4wh",
+        "5wh"
+      ],
+      "column_count": 17,
+      "expected_column_count": null,
+      "schema_vs_spec": null,
+      "inferred_types": {
+        "position": "BIGINT",
+        "bowler": "VARCHAR",
+        "team": "VARCHAR",
+        "matches": "BIGINT",
+        "innings": "BIGINT",
+        "wickets": "BIGINT",
+        "economy": "DOUBLE",
+        "impact": "DOUBLE",
+        "bbi": "VARCHAR",
+        "overs": "DOUBLE",
+        "balls": "BIGINT",
+        "dot_balls": "BIGINT",
+        "maiden_overs": "BIGINT",
+        "runs": "BIGINT",
+        "avg": "DOUBLE",
+        "4wh": "BIGINT",
+        "5wh": "BIGINT"
+      }
+    },
+    "fielding_stats2026.csv": {
+      "columns": [
+        "rank",
+        "player",
+        "team",
+        "matches",
+        "catches",
+        "cpm"
+      ],
+      "column_count": 6,
+      "expected_column_count": null,
+      "schema_vs_spec": null,
+      "inferred_types": {
+        "rank": "BIGINT",
+        "player": "VARCHAR",
+        "team": "VARCHAR",
+        "matches": "BIGINT",
+        "catches": "BIGINT",
+        "cpm": "DOUBLE"
+      }
+    }
+  },
+  "cricsheet_key_variations": {
+    "ipl_male_json": {
+      "top_keys": {
+        "meta": 1243,
+        "info": 1243,
+        "innings": 1243
+      },
+      "info_keys": {
+        "balls_per_over": 1243,
+        "dates": 1243,
+        "event": 1243,
+        "gender": 1243,
+        "match_type": 1243,
+        "officials": 1243,
+        "outcome": 1243,
+        "overs": 1243,
+        "players": 1243,
+        "registry": 1243,
+        "season": 1243,
+        "team_type": 1243,
+        "teams": 1243,
+        "toss": 1243,
+        "venue": 1243,
+        "player_of_match": 1234,
+        "city": 1192
+      },
+      "outcome_keys": {
+        "by": 1218,
+        "winner": 1218,
+        "result": 25,
+        "method": 23,
+        "eliminator": 16
+      },
+      "innings_keys": {
+        "team": 2514,
+        "overs": 2514,
+        "powerplays": 2480,
+        "target": 1237,
+        "super_over": 34,
+        "miscounted_overs": 8,
+        "absent_hurt": 6
+      },
+      "delivery_keys": {
+        "actual_delivery": 295732,
+        "batter": 295732,
+        "bowler": 295732,
+        "non_striker": 295732,
+        "runs": 295732,
+        "extras": 16227,
+        "wickets": 14705,
+        "review": 990,
+        "replacements": 585
+      },
+      "extras_keys": {
+        "wides": 9876,
+        "legbyes": 4406,
+        "noballs": 1226,
+        "byes": 745,
+        "penalty": 2
+      },
+      "data_version": {
+        "1.3.0": 1243
+      }
+    },
+    "t20s_male_json": {
+      "top_keys": {
+        "meta": 3649,
+        "info": 3649,
+        "innings": 3649
+      },
+      "info_keys": {
+        "balls_per_over": 3649,
+        "dates": 3649,
+        "gender": 3649,
+        "match_type": 3649,
+        "match_type_number": 3649,
+        "outcome": 3649,
+        "overs": 3649,
+        "players": 3649,
+        "registry": 3649,
+        "season": 3649,
+        "team_type": 3649,
+        "teams": 3649,
+        "toss": 3649,
+        "venue": 3649,
+        "event": 3587,
+        "city": 3526,
+        "officials": 3395,
+        "player_of_match": 3330,
+        "missing": 392,
+        "bowl_out": 2,
+        "supersubs": 1
+      },
+      "outcome_keys": {
+        "winner": 3530,
+        "by": 3527,
+        "method": 129,
+        "result": 119,
+        "eliminator": 33,
+        "bowl_out": 2
+      },
+      "innings_keys": {
+        "team": 7309,
+        "overs": 7309,
+        "powerplays": 7237,
+        "target": 3567,
+        "super_over": 70,
+        "miscounted_overs": 50,
+        "absent_hurt": 30,
+        "penalty_runs": 1
+      },
+      "delivery_keys": {
+        "actual_delivery": 820658,
+        "batter": 820658,
+        "bowler": 820658,
+        "non_striker": 820658,
+        "runs": 820658,
+        "extras": 50581,
+        "wickets": 46966,
+        "review": 1412,
+        "replacements": 157
+      },
+      "extras_keys": {
+        "wides": 31841,
+        "legbyes": 11528,
+        "noballs": 3692,
+        "byes": 3671,
+        "penalty": 14
+      },
+      "data_version": {
+        "1.3.0": 3649
+      }
+    },
+    "it20s_male_json": {
+      "top_keys": {
+        "meta": 240,
+        "info": 240,
+        "innings": 240
+      },
+      "info_keys": {
+        "balls_per_over": 240,
+        "dates": 240,
+        "event": 240,
+        "gender": 240,
+        "match_type": 240,
+        "officials": 240,
+        "outcome": 240,
+        "overs": 240,
+        "players": 240,
+        "registry": 240,
+        "season": 240,
+        "team_type": 240,
+        "teams": 240,
+        "toss": 240,
+        "venue": 240,
+        "city": 215,
+        "player_of_match": 207,
+        "missing": 30
+      },
+      "outcome_keys": {
+        "winner": 235,
+        "by": 235,
+        "method": 7,
+        "result": 5
+      },
+      "innings_keys": {
+        "team": 476,
+        "overs": 476,
+        "powerplays": 475,
+        "target": 220,
+        "miscounted_overs": 6,
+        "absent_hurt": 1
+      },
+      "delivery_keys": {
+        "actual_delivery": 52749,
+        "batter": 52749,
+        "bowler": 52749,
+        "non_striker": 52749,
+        "runs": 52749,
+        "wickets": 3091,
+        "extras": 3085,
+        "replacements": 9
+      },
+      "extras_keys": {
+        "wides": 1814,
+        "legbyes": 813,
+        "noballs": 237,
+        "byes": 230,
+        "penalty": 1
+      },
+      "data_version": {
+        "1.3.0": 240
+      }
+    },
+    "bbl_male_json": {
+      "top_keys": {
+        "meta": 662,
+        "info": 662,
+        "innings": 662
+      },
+      "info_keys": {
+        "balls_per_over": 662,
+        "dates": 662,
+        "event": 662,
+        "gender": 662,
+        "match_type": 662,
+        "officials": 662,
+        "outcome": 662,
+        "overs": 662,
+        "players": 662,
+        "registry": 662,
+        "season": 662,
+        "team_type": 662,
+        "teams": 662,
+        "toss": 662,
+        "venue": 662,
+        "player_of_match": 651,
+        "city": 583,
+        "supersubs": 40
+      },
+      "outcome_keys": {
+        "by": 647,
+        "winner": 647,
+        "method": 32,
+        "result": 15,
+        "eliminator": 4
+      },
+      "innings_keys": {
+        "team": 1326,
+        "overs": 1326,
+        "powerplays": 1318,
+        "target": 656,
+        "super_over": 8,
+        "penalty_runs": 2,
+        "miscounted_overs": 1
+      },
+      "delivery_keys": {
+        "actual_delivery": 153250,
+        "batter": 153250,
+        "bowler": 153250,
+        "non_striker": 153250,
+        "runs": 153250,
+        "wickets": 8202,
+        "extras": 7954,
+        "review": 205,
+        "replacements": 73
+      },
+      "extras_keys": {
+        "wides": 4476,
+        "legbyes": 2516,
+        "noballs": 515,
+        "byes": 457
+      },
+      "data_version": {
+        "1.3.0": 662
+      }
+    },
+    "cpl_male_json": {
+      "top_keys": {
+        "meta": 445,
+        "info": 445,
+        "innings": 445
+      },
+      "info_keys": {
+        "balls_per_over": 445,
+        "dates": 445,
+        "event": 445,
+        "gender": 445,
+        "match_type": 445,
+        "officials": 445,
+        "outcome": 445,
+        "overs": 445,
+        "players": 445,
+        "registry": 445,
+        "season": 445,
+        "team_type": 445,
+        "teams": 445,
+        "toss": 445,
+        "venue": 445,
+        "city": 444,
+        "player_of_match": 438
+      },
+      "outcome_keys": {
+        "winner": 436,
+        "by": 436,
+        "method": 30,
+        "result": 9,
+        "eliminator": 2
+      },
+      "innings_keys": {
+        "team": 888,
+        "overs": 888,
+        "powerplays": 884,
+        "target": 438,
+        "super_over": 4,
+        "absent_hurt": 4,
+        "miscounted_overs": 3
+      },
+      "delivery_keys": {
+        "actual_delivery": 103717,
+        "batter": 103717,
+        "bowler": 103717,
+        "non_striker": 103717,
+        "runs": 103717,
+        "extras": 6743,
+        "wickets": 5497,
+        "review": 400,
+        "replacements": 27
+      },
+      "extras_keys": {
+        "wides": 4424,
+        "legbyes": 1569,
+        "noballs": 446,
+        "byes": 319
+      },
+      "data_version": {
+        "1.3.0": 445
+      }
+    },
+    "mlc_male_json": {
+      "top_keys": {
+        "meta": 109,
+        "info": 109,
+        "innings": 109
+      },
+      "info_keys": {
+        "balls_per_over": 109,
+        "city": 109,
+        "dates": 109,
+        "event": 109,
+        "gender": 109,
+        "match_type": 109,
+        "officials": 109,
+        "outcome": 109,
+        "overs": 109,
+        "players": 109,
+        "registry": 109,
+        "season": 109,
+        "team_type": 109,
+        "teams": 109,
+        "toss": 109,
+        "venue": 109,
+        "player_of_match": 108
+      },
+      "outcome_keys": {
+        "winner": 108,
+        "by": 108,
+        "method": 3,
+        "result": 1
+      },
+      "innings_keys": {
+        "team": 218,
+        "overs": 218,
+        "powerplays": 218,
+        "target": 109,
+        "absent_hurt": 1
+      },
+      "delivery_keys": {
+        "actual_delivery": 25529,
+        "batter": 25529,
+        "bowler": 25529,
+        "non_striker": 25529,
+        "runs": 25529,
+        "extras": 1547,
+        "wickets": 1406,
+        "review": 203,
+        "replacements": 15
+      },
+      "extras_keys": {
+        "wides": 993,
+        "legbyes": 387,
+        "noballs": 120,
+        "byes": 52
+      },
+      "data_version": {
+        "1.3.0": 109
+      }
+    },
+    "india_male_json": {
+      "top_keys": {
+        "meta": 1037,
+        "info": 1037,
+        "innings": 1037
+      },
+      "info_keys": {
+        "balls_per_over": 1037,
+        "dates": 1037,
+        "gender": 1037,
+        "match_type": 1037,
+        "match_type_number": 1037,
+        "officials": 1037,
+        "outcome": 1037,
+        "players": 1037,
+        "registry": 1037,
+        "season": 1037,
+        "team_type": 1037,
+        "teams": 1037,
+        "toss": 1037,
+        "venue": 1037,
+        "event": 1020,
+        "player_of_match": 1001,
+        "city": 949,
+        "overs": 818,
+        "missing": 31,
+        "supersubs": 15,
+        "bowl_out": 1
+      },
+      "outcome_keys": {
+        "winner": 941,
+        "by": 941,
+        "result": 96,
+        "method": 50,
+        "eliminator": 4,
+        "bowl_out": 1
+      },
+      "innings_keys": {
+        "team": 2431,
+        "overs": 2431,
+        "powerplays": 1514,
+        "target": 790,
+        "declared": 125,
+        "miscounted_overs": 34,
+        "absent_hurt": 11,
+        "super_over": 8,
+        "penalty_runs": 2
+      },
+      "delivery_keys": {
+        "actual_delivery": 778911,
+        "batter": 778911,
+        "bowler": 778911,
+        "non_striker": 778911,
+        "runs": 778911,
+        "extras": 22789,
+        "wickets": 17903,
+        "review": 2211,
+        "replacements": 138
+      },
+      "extras_keys": {
+        "wides": 9969,
+        "legbyes": 6679,
+        "noballs": 4122,
+        "byes": 2027,
+        "penalty": 17
+      },
+      "data_version": {
+        "1.3.0": 1037
+      }
+    },
+    "2026_male_json": {
+      "top_keys": {
+        "meta": 1619,
+        "info": 1619,
+        "innings": 1619
+      },
+      "info_keys": {
+        "balls_per_over": 1619,
+        "city": 1619,
+        "dates": 1619,
+        "event": 1619,
+        "gender": 1619,
+        "match_type": 1619,
+        "outcome": 1619,
+        "players": 1619,
+        "registry": 1619,
+        "season": 1619,
+        "team_type": 1619,
+        "teams": 1619,
+        "toss": 1619,
+        "venue": 1619,
+        "officials": 1552,
+        "overs": 1394,
+        "player_of_match": 1105,
+        "match_type_number": 671,
+        "missing": 90
+      },
+      "outcome_keys": {
+        "winner": 1505,
+        "by": 1505,
+        "result": 114,
+        "method": 65,
+        "eliminator": 7
+      },
+      "innings_keys": {
+        "team": 3595,
+        "overs": 3594,
+        "powerplays": 2757,
+        "target": 1186,
+        "declared": 88,
+        "miscounted_overs": 22,
+        "absent_hurt": 20,
+        "super_over": 14,
+        "penalty_runs": 3,
+        "forfeited": 1
+      },
+      "delivery_keys": {
+        "actual_delivery": 773693,
+        "batter": 773693,
+        "bowler": 773693,
+        "non_striker": 773693,
+        "runs": 773693,
+        "extras": 27333,
+        "wickets": 25780,
+        "review": 1328,
+        "replacements": 386
+      },
+      "extras_keys": {
+        "wides": 14115,
+        "legbyes": 7252,
+        "noballs": 3482,
+        "byes": 2566,
+        "penalty": 12
+      },
+      "data_version": {
+        "1.3.0": 1619
+      }
+    }
+  }
+}

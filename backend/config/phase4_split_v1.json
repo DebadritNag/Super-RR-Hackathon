@@ -1,0 +1,33 @@
+{
+  "config_version": "phase4_split_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "fixed_before_evaluation": true,
+  "note": "Boundaries are calendar dates applied to match_date. Matches and their deliveries stay together. Chosen from match-date coverage only, before any outcome was read.",
+  "seed": 20260512,
+  "scope_competition_types": ["IPL", "T20I"],
+  "periods": {
+    "TRAIN": {"start": null, "end": "2024-12-31"},
+    "VALIDATION": {"start": "2025-01-01", "end": "2025-12-31"},
+    "TEST": {"start": "2026-01-01", "end": null}
+  },
+  "pre_test_window": ["TRAIN", "VALIDATION"],
+  "test_core_end": "2026-05-31",
+  "rolling_origins": [
+    {"origin": "2024-01-01", "evaluation_start": "2024-01-01", "evaluation_end": "2024-12-31"},
+    {"origin": "2025-01-01", "evaluation_start": "2025-01-01", "evaluation_end": "2025-12-31"}
+  ],
+  "par": {
+    "same_day_rule": "EXCLUDE_SAME_DATE",
+    "min_prior_innings": 30,
+    "min_prior_innings_sensitivity": [15, 60],
+    "insufficient_prior": "NULL_AND_FLAG"
+  },
+  "meaningful_split": {
+    "min_pressure_deliveries_per_period": 500,
+    "min_distinct_matches_per_period": 20,
+    "min_players_for_player_level_test": 15,
+    "player_level_ball_threshold_for_counting": 36
+  },
+  "outcome_column_prefixes": ["out_", "den_", "post_innings_"]
+}

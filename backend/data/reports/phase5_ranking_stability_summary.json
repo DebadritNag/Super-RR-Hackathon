@@ -1,0 +1,90 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "primary_definition": "any|q0.75",
+  "n_boot": 1000,
+  "seed": 20260512,
+  "code_version": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd",
+  "config_hashes": {
+    "investigation_config": "dfb6b2324524a2b0c2de21551ef905f872812951dd60ba9a661b06d65ee753b5",
+    "frozen_choices": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+    "format_weights": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71",
+    "eligibility_rules": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0"
+  },
+  "phase4_reproduction": {
+    "definition": "any|q0.75",
+    "shrinkage": "shrink_tau4",
+    "tolerance": 1e-09,
+    "max_abs_diff": 0.0,
+    "players_compared": 1345,
+    "reproduces": true
+  },
+  "reading": [
+    "- Primary definition, non-trivial cells (4): the point Top 10 keeps on average 4.9 to 6.2 of its 10 members in a resampled Top 10; two independent resamples agree on 3.1 to 5.3 of 10. Fewer than 10 means the membership of the Top 10 depends on which matches happen to be in the sample.",
+    "- 21 of the 40 point-Top-10 slots in these cells have a Top-10 inclusion probability below 0.5.",
+    "- Phase x situation contexts by status: {'ESTIMATED': 48}. Thin contexts are reported as such, never padded.",
+    "- Because the between-player variance is not identified (investigation report), this instability should be read as a lower bound on the problem: filters change which players are compared, they do not add information about each player.",
+    "- No ranking is validated and none may be published while the gates below fail."
+  ],
+  "unresolved_issues": [
+    "Rankings are unstable where pools are non-trivial (section 1); the ordering is not reliable enough for any selection use, and no ranking is validated.",
+    "Context pools use per-context working thresholds that are not validated; many contexts are thin or not estimable.",
+    "Between-player variance is unidentified (see the investigation report), so the shrinkage that stabilises these rankings is itself provisional.",
+    "Bootstrap holds baseline, thresholds and shrinkage parameters fixed, so it understates total uncertainty.",
+    "Date verification, strict classification and the methodology-validation gate remain failing (section 7)."
+  ],
+  "gates": {
+    "available": true,
+    "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+    "failing": [
+      "data_weight_gate_passed",
+      "methodology_validated",
+      "date_verification"
+    ],
+    "gate_results": [
+      {
+        "gate_id": "data_weight_gate_passed",
+        "passed": false,
+        "applicable": true,
+        "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+      },
+      {
+        "gate_id": "methodology_validated",
+        "passed": false,
+        "applicable": true,
+        "detail": "methodology not validated"
+      },
+      {
+        "gate_id": "strict_classification_available",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: request uses no strict status filter"
+      },
+      {
+        "gate_id": "min_eligible_pool",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: evaluated per request with rows"
+      },
+      {
+        "gate_id": "date_verification",
+        "passed": false,
+        "applicable": true,
+        "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+      }
+    ]
+  },
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true
+  },
+  "context_status_counts": {
+    "ESTIMATED": 48
+  }
+}

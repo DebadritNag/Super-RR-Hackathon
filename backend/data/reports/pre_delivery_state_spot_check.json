@@ -1,0 +1,96 @@
+{
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "method": "stdlib csv on updated_ball_by_ball.csv and matches.csv; no engine code, no pandas, no DuckDB",
+  "rows_checked_all_rows_independent_counters": 200999,
+  "counter_mismatches": 0,
+  "counter_mismatch_examples": [],
+  "chase_targets_checked": 845,
+  "revised_targets_checked_against_matches_csv": 23,
+  "target_mismatches": 0,
+  "target_mismatch_examples": [],
+  "fixed_ball_spot_checks": [
+    {
+      "match_id": 13511,
+      "ball": 30,
+      "runs_required": 76,
+      "legal_balls_remaining": 91,
+      "rrr": 5.010989010989011,
+      "wickets_remaining": 10,
+      "matches_store": true
+    },
+    {
+      "match_id": 13511,
+      "ball": 60,
+      "runs_required": 47,
+      "legal_balls_remaining": 61,
+      "rrr": 4.6229508196721305,
+      "wickets_remaining": 9,
+      "matches_store": true
+    },
+    {
+      "match_id": 13511,
+      "ball": 100,
+      "runs_required": 4,
+      "legal_balls_remaining": 21,
+      "rrr": 1.1428571428571428,
+      "wickets_remaining": 9,
+      "matches_store": true
+    },
+    {
+      "match_id": 13512,
+      "ball": 30,
+      "runs_required": 152,
+      "legal_balls_remaining": 92,
+      "rrr": 9.91304347826087,
+      "wickets_remaining": 8,
+      "matches_store": true
+    },
+    {
+      "match_id": 13512,
+      "ball": 60,
+      "runs_required": 119,
+      "legal_balls_remaining": 62,
+      "rrr": 11.516129032258064,
+      "wickets_remaining": 6,
+      "matches_store": true
+    },
+    {
+      "match_id": 13512,
+      "ball": 100,
+      "runs_required": 69,
+      "legal_balls_remaining": 22,
+      "rrr": 18.818181818181817,
+      "wickets_remaining": 2,
+      "matches_store": true
+    },
+    {
+      "match_id": 13513,
+      "ball": 30,
+      "runs_required": 178,
+      "legal_balls_remaining": 93,
+      "rrr": 11.483870967741936,
+      "wickets_remaining": 9,
+      "matches_store": true
+    },
+    {
+      "match_id": 13513,
+      "ball": 60,
+      "runs_required": 134,
+      "legal_balls_remaining": 64,
+      "rrr": 12.5625,
+      "wickets_remaining": 7,
+      "matches_store": true
+    },
+    {
+      "match_id": 13513,
+      "ball": 100,
+      "runs_required": 71,
+      "legal_balls_remaining": 27,
+      "rrr": 15.777777777777779,
+      "wickets_remaining": 5,
+      "matches_store": true
+    }
+  ],
+  "death_rows_independent_unrevised_innings": 44285,
+  "death_rows_store_L120": 44285
+}

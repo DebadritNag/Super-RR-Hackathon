@@ -1,0 +1,22 @@
+{
+  "version": "format_weights_v1",
+  "created_date": "2026-11-15",
+  "status": "PROVISIONAL",
+  "rationale": "Decision 1: IPL and T20I scores are computed independently and combined only for players eligible in both formats. The 70:30 default is the provisional weighting carried over from Phase 2; it is not a validated final choice. The grid exists to measure how much rankings move when the weighting changes.",
+  "default_config_id": "w70_30",
+  "default_flag": "PROVISIONAL_NOT_VALIDATED",
+  "eligibility_levels": {
+    "primary": "P25",
+    "robustness": ["P10", "P50"]
+  },
+  "configurations": [
+    {"id": "w100_0", "ipl_weight": 1.0, "t20i_weight": 0.0},
+    {"id": "w85_15", "ipl_weight": 0.85, "t20i_weight": 0.15},
+    {"id": "w80_20", "ipl_weight": 0.8, "t20i_weight": 0.2},
+    {"id": "w70_30", "ipl_weight": 0.7, "t20i_weight": 0.3},
+    {"id": "w60_40", "ipl_weight": 0.6, "t20i_weight": 0.4},
+    {"id": "w55_45", "ipl_weight": 0.55, "t20i_weight": 0.45},
+    {"id": "w50_50", "ipl_weight": 0.5, "t20i_weight": 0.5},
+    {"id": "w0_100", "ipl_weight": 0.0, "t20i_weight": 1.0}
+  ]
+}

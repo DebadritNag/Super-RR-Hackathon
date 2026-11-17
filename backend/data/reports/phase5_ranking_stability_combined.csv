@@ -1,0 +1,3 @@
+definition,format,role,pool_size,status,expected_overlap_with_point_top10,mean_jaccard,mean_spearman_vs_point,trivial_full_pool,label
+any|q0.75,COMBINED_w70_30,batter,48,ESTIMATED,5.776,0.41628796040560745,0.7294547951254416,False,EXPERIMENTAL_NOT_VALIDATED_DESCRIPTIVE
+any|q0.75,COMBINED_w70_30,bowler,39,ESTIMATED,7.091,0.5602550782550781,0.8083769899882984,False,EXPERIMENTAL_NOT_VALIDATED_DESCRIPTIVE

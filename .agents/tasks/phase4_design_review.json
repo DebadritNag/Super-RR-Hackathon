@@ -1,0 +1,20 @@
+{
+  "verdict": "CHANGES_REQUESTED",
+  "findings": [
+    {"severity": "HIGH", "text": "Definition signals for inn1/any and the bowler side use LOMO par, LOMO exp_remaining and full-sample ranks in existing code; design only makes par strictly prior. Specify prior-only/TRAIN-only signals per candidate and extend LeakageGuard."},
+    {"severity": "HIGH", "text": "Unique exact name matches to ipl squad.csv are labelled VERIFIED_FROM_SOURCE, contradicting 'name matching only generates candidates'. Require team/player_id corroboration (DERIVED) or leave Unknown."},
+    {"severity": "MEDIUM", "text": "Order of selection steps (definition, shrinkage, eligibility) not fixed; B_i depends on k and definition. State the order."},
+    {"severity": "MEDIUM", "text": "Definition score Sc under-specified: Spearman-Brown/Fisher-z bounds, weights, one-non-estimable-cell comparability, undefined Gate 2, margin ignores Sc noise."},
+    {"severity": "MEDIUM", "text": "Tie-break by largest absolute pooled D rewards extreme thresholds mechanically and ignores direction. Pre-declare expected sign or make D report-only."},
+    {"severity": "MEDIUM", "text": "Eligibility data-weight gate uses median over eligible players, so thin players pass; 'significantly negative' reproducibility undefined; fallback picks a noisy maximum."},
+    {"severity": "MEDIUM", "text": "Window for eligibility ball counts and for shrinkage mu_{-i} in PRE_TEST scoring is ambiguous; TRAIN-derived thresholds applied to a longer window; possible deviation from 'training only'."},
+    {"severity": "MEDIUM", "text": "Frozen-choices hash location unspecified, freeze-before-test order not auditable, and LockedFrame is bypassable by direct DuckDB/pandas reads."},
+    {"severity": "MEDIUM", "text": "Capped status derived from all T20I appearances including TEST period (no as_of_date); 'played' undefined; API profile stats may expose TEST outcomes before the lock opens."},
+    {"severity": "MEDIUM", "text": "Optimiser score scale, direction (bowler runs conceded), two-sided players and role enumeration undefined."},
+    {"severity": "MEDIUM", "text": "Format-combined estimate formula/interval, meaningful Top-10 overlap rule and baseline alternatives not specified in these documents."},
+    {"severity": "MEDIUM", "text": "Shrinkage choice rule uses an undefined bootstrap standard error; specify paired match-cluster SE of loss difference vs shrink_eb."},
+    {"severity": "NIT", "text": "Rolling-origin folds need per-origin refit of baseline and shrinkage parameters to be out-of-sample."},
+    {"severity": "NIT", "text": "State whether selection-stability bootstrap recomputes TRAIN quantile thresholds per resample."}
+  ],
+  "reviewDoc": "d:/Data/.agents/tasks/phase4_design_review.md"
+}

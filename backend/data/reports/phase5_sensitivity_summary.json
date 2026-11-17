@@ -1,0 +1,143 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "primary_definition": "any|q0.75",
+  "shrinkage": "shrink_tau4",
+  "n_boot": 1000,
+  "seed": 20260512,
+  "code_version": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd",
+  "config_hashes": {
+    "investigation_config": "dfb6b2324524a2b0c2de21551ef905f872812951dd60ba9a661b06d65ee753b5",
+    "frozen_choices": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+    "format_weights": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71",
+    "eligibility_rules": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0"
+  },
+  "phase4_reproduction": {
+    "definition": "any|q0.75",
+    "shrinkage": "shrink_tau4",
+    "tolerance": 1e-09,
+    "max_abs_diff": 0.0,
+    "players_compared": 1345,
+    "reproduces": true
+  },
+  "test_sets": {
+    "status": "SET_DEFINITIONS_ONLY_NO_TEST_OUTCOMES",
+    "manifest_status": "EXPERIMENTAL_NOT_VALIDATED",
+    "test_evaluated_in_phase5": false,
+    "sets": [
+      {
+        "set": "PRIMARY_RESTRICTED",
+        "rule": "OFFICIAL_VERIFIED, or date <= core_end and class DATE_CONSISTENT_ACROSS_SOURCES",
+        "matches": 99,
+        "deliveries": 23039,
+        "players": 324,
+        "matches_IPL": 74,
+        "matches_T20I": 25
+      },
+      {
+        "set": "STRICT_OFFICIAL_ONLY",
+        "rule": "match in the user-supplied official verification record with an unchanged date",
+        "matches": 0,
+        "deliveries": 0,
+        "players": 0,
+        "matches_IPL": 0,
+        "matches_T20I": 0
+      },
+      {
+        "set": "SENSITIVITY_ALL",
+        "rule": "all TEST matches, as Phase 4 evaluated them",
+        "matches": 144,
+        "deliveries": 33086,
+        "players": 417,
+        "matches_IPL": 74,
+        "matches_T20I": 70
+      }
+    ],
+    "excluded_from_primary": {
+      "excluded_matches": 45,
+      "excluded_deliveries": 10047,
+      "players_in_excluded_matches": 207,
+      "players_only_in_excluded_matches": 93
+    },
+    "excluded_from_strict": {
+      "excluded_matches": 144,
+      "excluded_deliveries": 33086,
+      "players_in_excluded_matches": 417,
+      "players_only_in_excluded_matches": 417
+    },
+    "manifest_self_sha256": "032bbde633066dc32594b3383b89adedb78f2cff3c957fd597fa56a0aea283d9"
+  },
+  "reading": [
+    "- Definition axis: over 31 non-trivial single-format comparisons the Top-10 overlap with the primary ranges from 0 to 8 of 10 (median 4.0), Spearman from 0.27 to 0.90. The ordering depends on the pressure definition.",
+    "- Shrinkage axis: against the same definition's frozen shrinkage the Top-10 overlap ranges from 0 to 10 (median 9.0); Spearman -0.87 to 1.00.",
+    "- Baseline axis: Top-10 overlap with B0 7 to 10; Spearman 0.96 to 1.00.",
+    "- Format-weight axis: Top-10 overlap with w70_30 3 to 10; Spearman 0.46 to 0.99. Pools are small (see `pool`), so many rows are trivial or near trivial.",
+    "- None of these results selects a setting. Every setting stays PROVISIONAL."
+  ],
+  "unresolved_issues": [
+    "No setting is validated. Definition, shrinkage, baseline, thresholds and format weights all stay PROVISIONAL.",
+    "Eligibility thresholds are the unvalidated TRAIN-median working pools; the marginal data weight gate (0.5) was not met by any candidate in any cell, so pool sizes here are a function of an unvalidated choice.",
+    "Pools are small. Several overlap figures are trivial (Top 10 equals the whole pool) and carry no information.",
+    "TEST sensitivity cannot be measured while TEST is closed; only set composition is reported.",
+    "The Phase 4 noise estimator (see the investigation report) drives the strong shrinkage; a different noise model would change the shrinkage axis and is a methodology decision for review.",
+    "Date verification, strict classification and the methodology-validation gate remain failing (section 9)."
+  ],
+  "gates": {
+    "available": true,
+    "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+    "failing": [
+      "data_weight_gate_passed",
+      "methodology_validated",
+      "date_verification"
+    ],
+    "gate_results": [
+      {
+        "gate_id": "data_weight_gate_passed",
+        "passed": false,
+        "applicable": true,
+        "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+      },
+      {
+        "gate_id": "methodology_validated",
+        "passed": false,
+        "applicable": true,
+        "detail": "methodology not validated"
+      },
+      {
+        "gate_id": "strict_classification_available",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: request uses no strict status filter"
+      },
+      {
+        "gate_id": "min_eligible_pool",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: evaluated per request with rows"
+      },
+      {
+        "gate_id": "date_verification",
+        "passed": false,
+        "applicable": true,
+        "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+      }
+    ]
+  },
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true
+  },
+  "rows": {
+    "definitions": 54,
+    "shrinkage": 336,
+    "thresholds": 53,
+    "baselines": 16,
+    "format_weights": 16
+  }
+}

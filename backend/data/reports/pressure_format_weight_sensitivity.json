@@ -1,0 +1,4616 @@
+{
+  "proxy_run": true,
+  "pressure_status": "EXPLORATORY_PROXY_NOT_VALIDATED_PRESSURE",
+  "score_label": "PROXY_ACTUAL_MINUS_EXPECTED_NOT_A_PRESSURE_SCORE",
+  "not_for_publication": true,
+  "decision": "Decision 1: IPL/T20I weight sensitivity",
+  "config": {
+    "version": "format_weights_v1",
+    "status": "PROVISIONAL",
+    "default_config_id": "w70_30",
+    "default_flag": "PROVISIONAL_NOT_VALIDATED",
+    "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+    "configurations": [
+      {
+        "id": "w100_0",
+        "ipl_weight": 1.0,
+        "t20i_weight": 0.0
+      },
+      {
+        "id": "w85_15",
+        "ipl_weight": 0.85,
+        "t20i_weight": 0.15
+      },
+      {
+        "id": "w80_20",
+        "ipl_weight": 0.8,
+        "t20i_weight": 0.2
+      },
+      {
+        "id": "w70_30",
+        "ipl_weight": 0.7,
+        "t20i_weight": 0.3
+      },
+      {
+        "id": "w60_40",
+        "ipl_weight": 0.6,
+        "t20i_weight": 0.4
+      },
+      {
+        "id": "w55_45",
+        "ipl_weight": 0.55,
+        "t20i_weight": 0.45
+      },
+      {
+        "id": "w50_50",
+        "ipl_weight": 0.5,
+        "t20i_weight": 0.5
+      },
+      {
+        "id": "w0_100",
+        "ipl_weight": 0.0,
+        "t20i_weight": 1.0
+      }
+    ]
+  },
+  "method_notes": {
+    "eligibility": "Weight independent: injected eligibility tables (Phase 3 pressure-specific).",
+    "format_scores": "Independent per format; z-score within the format's eligible pool.",
+    "combined": "Only BOTH_FORMATS_VALID players; others NULL with an explicit status.",
+    "missing_formats": "Never zero-filled and never imputed.",
+    "degenerate": "100:0 and 0:100 use the same combined population as every other configuration, so their ranks equal the IPL or T20I z-score ranks within that population."
+  },
+  "eligibility_level": "PRESSURE_SPECIFIC",
+  "roles": {
+    "batter": {
+      "combined_population": 8,
+      "configs": {
+        "w100_0": {
+          "config_id": "w100_0",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 1.0,
+          "t20i_weight": 0.0,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            20702,
+            6396,
+            4722,
+            4986,
+            3605,
+            6726,
+            4101,
+            7808
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.9523809524,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.5,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 7,
+                "change": 1
+              },
+              {
+                "player_id": 6396,
+                "rank_a": 1,
+                "rank_b": 2,
+                "change": 1
+              },
+              {
+                "player_id": 6726,
+                "rank_a": 7,
+                "rank_b": 6,
+                "change": -1
+              },
+              {
+                "player_id": 20702,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              },
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w85_15": {
+          "config_id": "w85_15",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.85,
+          "t20i_weight": 0.15,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            20702,
+            6396,
+            4722,
+            4986,
+            3605,
+            6726,
+            4101,
+            7808
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.9523809524,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.5,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 7,
+                "change": 1
+              },
+              {
+                "player_id": 6396,
+                "rank_a": 1,
+                "rank_b": 2,
+                "change": 1
+              },
+              {
+                "player_id": 6726,
+                "rank_a": 7,
+                "rank_b": 6,
+                "change": -1
+              },
+              {
+                "player_id": 20702,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              },
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w80_20": {
+          "config_id": "w80_20",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.8,
+          "t20i_weight": 0.2,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            20702,
+            6396,
+            4722,
+            4986,
+            3605,
+            6726,
+            4101,
+            7808
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.9523809524,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.5,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 7,
+                "change": 1
+              },
+              {
+                "player_id": 6396,
+                "rank_a": 1,
+                "rank_b": 2,
+                "change": 1
+              },
+              {
+                "player_id": 6726,
+                "rank_a": 7,
+                "rank_b": 6,
+                "change": -1
+              },
+              {
+                "player_id": 20702,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              },
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w70_30": {
+          "config_id": "w70_30",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.7,
+          "t20i_weight": 0.3,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            6396,
+            20702,
+            4722,
+            4986,
+            3605,
+            4101,
+            6726,
+            7808
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 1.0,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.0,
+            "max_abs_change": 0,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              },
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 6,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 3,
+                "rank_b": 3,
+                "change": 0
+              },
+              {
+                "player_id": 4986,
+                "rank_a": 4,
+                "rank_b": 4,
+                "change": 0
+              },
+              {
+                "player_id": 6396,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w60_40": {
+          "config_id": "w60_40",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.6,
+          "t20i_weight": 0.4,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            6396,
+            20702,
+            4722,
+            3605,
+            4986,
+            4101,
+            6726,
+            7808
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.9761904762,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.25,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 4,
+                "change": -1
+              },
+              {
+                "player_id": 4986,
+                "rank_a": 4,
+                "rank_b": 5,
+                "change": 1
+              },
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 6,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 3,
+                "rank_b": 3,
+                "change": 0
+              },
+              {
+                "player_id": 6396,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w55_45": {
+          "config_id": "w55_45",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.55,
+          "t20i_weight": 0.45,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            6396,
+            20702,
+            3605,
+            4722,
+            4986,
+            4101,
+            7808,
+            6726
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.9047619048,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.75,
+            "max_abs_change": 2,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 3,
+                "change": -2
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 3,
+                "rank_b": 4,
+                "change": 1
+              },
+              {
+                "player_id": 4986,
+                "rank_a": 4,
+                "rank_b": 5,
+                "change": 1
+              },
+              {
+                "player_id": 6726,
+                "rank_a": 7,
+                "rank_b": 8,
+                "change": 1
+              },
+              {
+                "player_id": 7808,
+                "rank_a": 8,
+                "rank_b": 7,
+                "change": -1
+              }
+            ]
+          }
+        },
+        "w50_50": {
+          "config_id": "w50_50",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.5,
+          "t20i_weight": 0.5,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            6396,
+            20702,
+            3605,
+            4986,
+            4722,
+            4101,
+            7808,
+            6726
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.880952381,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 0.75,
+            "max_abs_change": 2,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 3,
+                "change": -2
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 3,
+                "rank_b": 5,
+                "change": 2
+              },
+              {
+                "player_id": 6726,
+                "rank_a": 7,
+                "rank_b": 8,
+                "change": 1
+              },
+              {
+                "player_id": 7808,
+                "rank_a": 8,
+                "rank_b": 7,
+                "change": -1
+              },
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 6,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w0_100": {
+          "config_id": "w0_100",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.0,
+          "t20i_weight": 1.0,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 8,
+          "top10_player_ids": [
+            6396,
+            7808,
+            3605,
+            4986,
+            4101,
+            20702,
+            4722,
+            6726
+          ],
+          "overlap_with_default": 8,
+          "spearman_with_default": 0.119047619,
+          "spearman_n": 8,
+          "movement_vs_default": {
+            "n_common": 8,
+            "mean_abs_change": 2.25,
+            "max_abs_change": 6,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 7808,
+                "rank_a": 8,
+                "rank_b": 2,
+                "change": -6
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 3,
+                "rank_b": 7,
+                "change": 4
+              },
+              {
+                "player_id": 20702,
+                "rank_a": 2,
+                "rank_b": 6,
+                "change": 4
+              },
+              {
+                "player_id": 3605,
+                "rank_a": 5,
+                "rank_b": 3,
+                "change": -2
+              },
+              {
+                "player_id": 4101,
+                "rank_a": 6,
+                "rank_b": 5,
+                "change": -1
+              }
+            ]
+          }
+        }
+      },
+      "pairwise": {
+        "config_ids": [
+          "w100_0",
+          "w85_15",
+          "w80_20",
+          "w70_30",
+          "w60_40",
+          "w55_45",
+          "w50_50",
+          "w0_100"
+        ],
+        "top_k_overlap": [
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        ],
+        "spearman": [
+          [
+            1.0,
+            1.0,
+            1.0,
+            0.9523809524,
+            0.9285714286,
+            0.8333333333,
+            0.8095238095,
+            -0.0714285714
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            0.9523809524,
+            0.9285714286,
+            0.8333333333,
+            0.8095238095,
+            -0.0714285714
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            0.9523809524,
+            0.9285714286,
+            0.8333333333,
+            0.8095238095,
+            -0.0714285714
+          ],
+          [
+            0.9523809524,
+            0.9523809524,
+            0.9523809524,
+            1.0,
+            0.9761904762,
+            0.9047619048,
+            0.880952381,
+            0.119047619
+          ],
+          [
+            0.9285714286,
+            0.9285714286,
+            0.9285714286,
+            0.9761904762,
+            1.0,
+            0.9523809524,
+            0.9047619048,
+            0.1428571429
+          ],
+          [
+            0.8333333333,
+            0.8333333333,
+            0.8333333333,
+            0.9047619048,
+            0.9523809524,
+            1.0,
+            0.9761904762,
+            0.380952381
+          ],
+          [
+            0.8095238095,
+            0.8095238095,
+            0.8095238095,
+            0.880952381,
+            0.9047619048,
+            0.9761904762,
+            1.0,
+            0.4523809524
+          ],
+          [
+            -0.0714285714,
+            -0.0714285714,
+            -0.0714285714,
+            0.119047619,
+            0.1428571429,
+            0.380952381,
+            0.4523809524,
+            1.0
+          ]
+        ],
+        "n_common": [
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        ]
+      },
+      "degenerate_check": {
+        "w100_0": {
+          "ranks_equal_single_format_zscore_ranks": true,
+          "population": 8
+        },
+        "w0_100": {
+          "ranks_equal_single_format_zscore_ranks": true,
+          "population": 8
+        }
+      },
+      "status_counts": {
+        "players_total": 454,
+        "combined_status": {
+          "BOTH_FORMATS_VALID": 8,
+          "SINGLE_FORMAT_IPL_ONLY": 48,
+          "SINGLE_FORMAT_T20I_ONLY": 53,
+          "NO_VALID_FORMAT": 345
+        },
+        "ipl_status": {
+          "ELIGIBLE": 56,
+          "OBSERVED_NOT_ELIGIBLE": 155,
+          "NOT_OBSERVED": 243
+        },
+        "t20i_status": {
+          "ELIGIBLE": 61,
+          "OBSERVED_NOT_ELIGIBLE": 273,
+          "NOT_OBSERVED": 120
+        }
+      },
+      "format_rankings": {
+        "IPL": {
+          "label": "TECHNICAL_TOP_IDS_NOT_A_PUBLISHED_RANKING",
+          "n_ranked": 56,
+          "top_rows": [
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4708,
+              "rank": 1,
+              "score": 81.8148800995,
+              "z": 2.4169829393,
+              "balls": 108.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 20702,
+              "rank": 2,
+              "score": 61.1897795561,
+              "z": 1.7592779399,
+              "balls": 57.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 143,
+              "rank": 3,
+              "score": 57.6762925499,
+              "z": 1.6472378572,
+              "balls": 47.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 25139,
+              "rank": 4,
+              "score": 53.091931307,
+              "z": 1.5010491246,
+              "balls": 24.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6396,
+              "rank": 5,
+              "score": 51.7207493977,
+              "z": 1.4573240918,
+              "balls": 64.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 2639,
+              "rank": 6,
+              "score": 46.5857594549,
+              "z": 1.2935765964,
+              "balls": 35.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4722,
+              "rank": 7,
+              "score": 45.0281919885,
+              "z": 1.2439079944,
+              "balls": 82.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 8,
+              "rank": 8,
+              "score": 41.9027218442,
+              "z": 1.1442412153,
+              "balls": 123.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 8654,
+              "rank": 9,
+              "score": 39.1645649846,
+              "z": 1.0569253037,
+              "balls": 27.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6725,
+              "rank": 10,
+              "score": 38.3925461918,
+              "z": 1.032306727,
+              "balls": 45.0
+            }
+          ]
+        },
+        "T20I": {
+          "label": "TECHNICAL_TOP_IDS_NOT_A_PUBLISHED_RANKING",
+          "n_ranked": 61,
+          "top_rows": [
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 5553,
+              "rank": 1,
+              "score": 82.6189882699,
+              "z": 2.3376110519,
+              "balls": 28.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 2436,
+              "rank": 2,
+              "score": 74.1502754604,
+              "z": 2.0638293014,
+              "balls": 46.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6396,
+              "rank": 3,
+              "score": 66.5353281913,
+              "z": 1.8176486078,
+              "balls": 27.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 2984,
+              "rank": 4,
+              "score": 66.4306488817,
+              "z": 1.8142644707,
+              "balls": 31.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 7808,
+              "rank": 5,
+              "score": 65.6032270299,
+              "z": 1.7875150688,
+              "balls": 43.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 8301,
+              "rank": 6,
+              "score": 64.16643161,
+              "z": 1.7410654637,
+              "balls": 29.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 3605,
+              "rank": 7,
+              "score": 58.1294176136,
+              "z": 1.5458971664,
+              "balls": 26.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4986,
+              "rank": 8,
+              "score": 50.0816746701,
+              "z": 1.2857247883,
+              "balls": 75.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 1077,
+              "rank": 9,
+              "score": 46.4777231848,
+              "z": 1.1692140306,
+              "balls": 76.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 2417,
+              "rank": 10,
+              "score": 44.4406062373,
+              "z": 1.1033568624,
+              "balls": 48.0
+            }
+          ]
+        }
+      },
+      "adjusted_estimate": {
+        "label": "ADJUSTED_ESTIMATE",
+        "note": "Weights renormalised over the eligible formats of each player. Not a combined score, not used in the default ranking, and not comparable across single-format and two-format players.",
+        "config_id": "w70_30",
+        "n_players": 109,
+        "ranking": [
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 4708,
+            "rank": 1,
+            "adjusted_estimate": 2.4169829393,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 5553,
+            "rank": 2,
+            "adjusted_estimate": 2.3376110519,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 2436,
+            "rank": 3,
+            "adjusted_estimate": 2.0638293014,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 2984,
+            "rank": 4,
+            "adjusted_estimate": 1.8142644707,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 8301,
+            "rank": 5,
+            "adjusted_estimate": 1.7410654637,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 143,
+            "rank": 6,
+            "adjusted_estimate": 1.6472378572,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 6396,
+            "rank": 7,
+            "adjusted_estimate": 1.5654214466,
+            "combined_status": "BOTH_FORMATS_VALID"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 25139,
+            "rank": 8,
+            "adjusted_estimate": 1.5010491246,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 20702,
+            "rank": 9,
+            "adjusted_estimate": 1.4583899863,
+            "combined_status": "BOTH_FORMATS_VALID"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 2639,
+            "rank": 10,
+            "adjusted_estimate": 1.2935765964,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          }
+        ],
+        "n_ranked": 109,
+        "label_scope": "SEPARATE_SECTION_SINGLE_FORMAT_ADJUSTED_ESTIMATES_TRIMMED_TO_TOP_IDS"
+      },
+      "eligibility_change_summary": {
+        "combined_population_by_config": {
+          "w100_0": 8,
+          "w85_15": 8,
+          "w80_20": 8,
+          "w70_30": 8,
+          "w60_40": 8,
+          "w55_45": 8,
+          "w50_50": 8,
+          "w0_100": 8
+        },
+        "eligibility_identical_across_configs": true,
+        "single_format_players_excluded_from_combined": {
+          "SINGLE_FORMAT_IPL_ONLY": 48,
+          "SINGLE_FORMAT_T20I_ONLY": 53,
+          "NO_VALID_FORMAT": 345
+        }
+      },
+      "format_populations": {
+        "IPL_eligible": 56,
+        "T20I_eligible": 61,
+        "both_eligible": 8
+      }
+    },
+    "bowler": {
+      "combined_population": 6,
+      "configs": {
+        "w100_0": {
+          "config_id": "w100_0",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 1.0,
+          "t20i_weight": 0.0,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4722,
+            7967,
+            3697,
+            4900,
+            6464,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.7142857143,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 1.0,
+            "max_abs_change": 2,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 3,
+                "change": -2
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 4,
+                "change": 2
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 5,
+                "change": 1
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 2,
+                "change": -1
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w85_15": {
+          "config_id": "w85_15",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.85,
+          "t20i_weight": 0.15,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4722,
+            7967,
+            4900,
+            6464,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.9428571429,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.3333333333,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 3,
+                "change": 1
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 2,
+                "change": -1
+              },
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 4,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w80_20": {
+          "config_id": "w80_20",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.8,
+          "t20i_weight": 0.2,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4722,
+            4900,
+            7967,
+            6464,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 1.0,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.0,
+            "max_abs_change": 0,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 2,
+                "change": 0
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 4,
+                "change": 0
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 3,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w70_30": {
+          "config_id": "w70_30",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.7,
+          "t20i_weight": 0.3,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4722,
+            4900,
+            7967,
+            6464,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 1.0,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.0,
+            "max_abs_change": 0,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 2,
+                "change": 0
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 4,
+                "change": 0
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 3,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w60_40": {
+          "config_id": "w60_40",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.6,
+          "t20i_weight": 0.4,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4722,
+            4900,
+            6464,
+            7967,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.9428571429,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.3333333333,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 3,
+                "change": -1
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 4,
+                "change": 1
+              },
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              },
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 1,
+                "change": 0
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 2,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w55_45": {
+          "config_id": "w55_45",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.55,
+          "t20i_weight": 0.45,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4900,
+            4722,
+            6464,
+            7967,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.8857142857,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.6666666667,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 2,
+                "change": 1
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 3,
+                "change": -1
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 4,
+                "change": 1
+              },
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w50_50": {
+          "config_id": "w50_50",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.5,
+          "t20i_weight": 0.5,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4900,
+            4722,
+            6464,
+            7967,
+            3697,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.8857142857,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 0.6666666667,
+            "max_abs_change": 1,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 2,
+                "change": 1
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 3,
+                "change": -1
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 4,
+                "change": 1
+              },
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 5,
+                "change": 0
+              }
+            ]
+          }
+        },
+        "w0_100": {
+          "config_id": "w0_100",
+          "config_version": "format_weights_v1",
+          "ipl_weight": 0.0,
+          "t20i_weight": 1.0,
+          "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+          "n_ranked": 6,
+          "top10_player_ids": [
+            4900,
+            6464,
+            4722,
+            3697,
+            7967,
+            39657
+          ],
+          "overlap_with_default": 6,
+          "spearman_with_default": 0.6,
+          "spearman_n": 6,
+          "movement_vs_default": {
+            "n_common": 6,
+            "mean_abs_change": 1.3333333333,
+            "max_abs_change": 2,
+            "entering_top_k": [],
+            "leaving_top_k": [],
+            "biggest_movers": [
+              {
+                "player_id": 4722,
+                "rank_a": 1,
+                "rank_b": 3,
+                "change": 2
+              },
+              {
+                "player_id": 6464,
+                "rank_a": 4,
+                "rank_b": 2,
+                "change": -2
+              },
+              {
+                "player_id": 7967,
+                "rank_a": 3,
+                "rank_b": 5,
+                "change": 2
+              },
+              {
+                "player_id": 3697,
+                "rank_a": 5,
+                "rank_b": 4,
+                "change": -1
+              },
+              {
+                "player_id": 4900,
+                "rank_a": 2,
+                "rank_b": 1,
+                "change": -1
+              }
+            ]
+          }
+        }
+      },
+      "pairwise": {
+        "config_ids": [
+          "w100_0",
+          "w85_15",
+          "w80_20",
+          "w70_30",
+          "w60_40",
+          "w55_45",
+          "w50_50",
+          "w0_100"
+        ],
+        "top_k_overlap": [
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        ],
+        "spearman": [
+          [
+            1.0,
+            0.8285714286,
+            0.7142857143,
+            0.7142857143,
+            0.5428571429,
+            0.3714285714,
+            0.3714285714,
+            0.0857142857
+          ],
+          [
+            0.8285714286,
+            1.0,
+            0.9428571429,
+            0.9428571429,
+            0.8285714286,
+            0.7142857143,
+            0.7142857143,
+            0.3714285714
+          ],
+          [
+            0.7142857143,
+            0.9428571429,
+            1.0,
+            1.0,
+            0.9428571429,
+            0.8857142857,
+            0.8857142857,
+            0.6
+          ],
+          [
+            0.7142857143,
+            0.9428571429,
+            1.0,
+            1.0,
+            0.9428571429,
+            0.8857142857,
+            0.8857142857,
+            0.6
+          ],
+          [
+            0.5428571429,
+            0.8285714286,
+            0.9428571429,
+            0.9428571429,
+            1.0,
+            0.9428571429,
+            0.9428571429,
+            0.7714285714
+          ],
+          [
+            0.3714285714,
+            0.7142857143,
+            0.8857142857,
+            0.8857142857,
+            0.9428571429,
+            1.0,
+            1.0,
+            0.8857142857
+          ],
+          [
+            0.3714285714,
+            0.7142857143,
+            0.8857142857,
+            0.8857142857,
+            0.9428571429,
+            1.0,
+            1.0,
+            0.8857142857
+          ],
+          [
+            0.0857142857,
+            0.3714285714,
+            0.6,
+            0.6,
+            0.7714285714,
+            0.8857142857,
+            0.8857142857,
+            1.0
+          ]
+        ],
+        "n_common": [
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        ]
+      },
+      "degenerate_check": {
+        "w100_0": {
+          "ranks_equal_single_format_zscore_ranks": true,
+          "population": 6
+        },
+        "w0_100": {
+          "ranks_equal_single_format_zscore_ranks": true,
+          "population": 6
+        }
+      },
+      "status_counts": {
+        "players_total": 361,
+        "combined_status": {
+          "BOTH_FORMATS_VALID": 6,
+          "SINGLE_FORMAT_IPL_ONLY": 37,
+          "SINGLE_FORMAT_T20I_ONLY": 26,
+          "NO_VALID_FORMAT": 292
+        },
+        "ipl_status": {
+          "ELIGIBLE": 43,
+          "OBSERVED_NOT_ELIGIBLE": 126,
+          "NOT_OBSERVED": 192
+        },
+        "t20i_status": {
+          "ELIGIBLE": 32,
+          "OBSERVED_NOT_ELIGIBLE": 237,
+          "NOT_OBSERVED": 92
+        }
+      },
+      "format_rankings": {
+        "IPL": {
+          "label": "TECHNICAL_TOP_IDS_NOT_A_PUBLISHED_RANKING",
+          "n_ranked": 43,
+          "top_rows": [
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 29888,
+              "rank": 1,
+              "score": 3.7625989268,
+              "z": 2.3061975392,
+              "balls": 51.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 7250,
+              "rank": 2,
+              "score": 3.2660895089,
+              "z": 1.9912924055,
+              "balls": 41.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 58134,
+              "rank": 3,
+              "score": 2.5432139836,
+              "z": 1.5328172876,
+              "balls": 77.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6669,
+              "rank": 4,
+              "score": 2.4441483067,
+              "z": 1.4699860721,
+              "balls": 35.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 1758,
+              "rank": 5,
+              "score": 2.2289702282,
+              "z": 1.3335119608,
+              "balls": 58.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 7322,
+              "rank": 6,
+              "score": 1.3334452026,
+              "z": 0.7655359713,
+              "balls": 33.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4722,
+              "rank": 7,
+              "score": 1.2163842479,
+              "z": 0.691291467,
+              "balls": 68.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 7325,
+              "rank": 8,
+              "score": 1.1943349,
+              "z": 0.677306933,
+              "balls": 49.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 56817,
+              "rank": 9,
+              "score": 1.1276292477,
+              "z": 0.6349996744,
+              "balls": 33.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6256,
+              "rank": 10,
+              "score": 1.0681941805,
+              "z": 0.5973036971,
+              "balls": 89.0
+            }
+          ]
+        },
+        "T20I": {
+          "label": "TECHNICAL_TOP_IDS_NOT_A_PUBLISHED_RANKING",
+          "n_ranked": 32,
+          "top_rows": [
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 5837,
+              "rank": 1,
+              "score": 4.3678123904,
+              "z": 2.2616280206,
+              "balls": 46.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4900,
+              "rank": 2,
+              "score": 3.7445408237,
+              "z": 1.9654322019,
+              "balls": 146.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 7364,
+              "rank": 3,
+              "score": 1.9774874152,
+              "z": 1.1256797425,
+              "balls": 47.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6726,
+              "rank": 4,
+              "score": 1.9630416128,
+              "z": 1.1188146992,
+              "balls": 93.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6355,
+              "rank": 5,
+              "score": 1.9162009339,
+              "z": 1.0965547182,
+              "balls": 41.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 2417,
+              "rank": 6,
+              "score": 1.5114964756,
+              "z": 0.9042280107,
+              "balls": 114.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6464,
+              "rank": 7,
+              "score": 1.4477910642,
+              "z": 0.8739534442,
+              "balls": 46.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 6450,
+              "rank": 8,
+              "score": 1.1004681509,
+              "z": 0.7088960275,
+              "balls": 38.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4874,
+              "rank": 9,
+              "score": 1.0541932637,
+              "z": 0.6869049263,
+              "balls": 68.0
+            },
+            {
+              "config_id": "FORMAT_SPECIFIC_NOT_WEIGHTED",
+              "config_version": "format_weights_v1",
+              "ipl_weight": null,
+              "t20i_weight": null,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "player_id": 4722,
+              "rank": 10,
+              "score": 1.0345472829,
+              "z": 0.6775686151,
+              "balls": 45.0
+            }
+          ]
+        }
+      },
+      "adjusted_estimate": {
+        "label": "ADJUSTED_ESTIMATE",
+        "note": "Weights renormalised over the eligible formats of each player. Not a combined score, not used in the default ranking, and not comparable across single-format and two-format players.",
+        "config_id": "w70_30",
+        "n_players": 69,
+        "ranking": [
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 29888,
+            "rank": 1,
+            "adjusted_estimate": 2.3061975392,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 5837,
+            "rank": 2,
+            "adjusted_estimate": 2.2616280206,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 7250,
+            "rank": 3,
+            "adjusted_estimate": 1.9912924055,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 58134,
+            "rank": 4,
+            "adjusted_estimate": 1.5328172876,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 6669,
+            "rank": 5,
+            "adjusted_estimate": 1.4699860721,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 1758,
+            "rank": 6,
+            "adjusted_estimate": 1.3335119608,
+            "combined_status": "SINGLE_FORMAT_IPL_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 7364,
+            "rank": 7,
+            "adjusted_estimate": 1.1256797425,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 6726,
+            "rank": 8,
+            "adjusted_estimate": 1.1188146992,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 6355,
+            "rank": 9,
+            "adjusted_estimate": 1.0965547182,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          },
+          {
+            "config_id": "w70_30",
+            "config_version": "format_weights_v1",
+            "ipl_weight": 0.7,
+            "t20i_weight": 0.3,
+            "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+            "player_id": 2417,
+            "rank": 10,
+            "adjusted_estimate": 0.9042280107,
+            "combined_status": "SINGLE_FORMAT_T20I_ONLY"
+          }
+        ],
+        "n_ranked": 69,
+        "label_scope": "SEPARATE_SECTION_SINGLE_FORMAT_ADJUSTED_ESTIMATES_TRIMMED_TO_TOP_IDS"
+      },
+      "eligibility_change_summary": {
+        "combined_population_by_config": {
+          "w100_0": 6,
+          "w85_15": 6,
+          "w80_20": 6,
+          "w70_30": 6,
+          "w60_40": 6,
+          "w55_45": 6,
+          "w50_50": 6,
+          "w0_100": 6
+        },
+        "eligibility_identical_across_configs": true,
+        "single_format_players_excluded_from_combined": {
+          "SINGLE_FORMAT_IPL_ONLY": 37,
+          "SINGLE_FORMAT_T20I_ONLY": 26,
+          "NO_VALID_FORMAT": 292
+        }
+      },
+      "format_populations": {
+        "IPL_eligible": 43,
+        "T20I_eligible": 32,
+        "both_eligible": 6
+      }
+    }
+  },
+  "robustness": {
+    "STRICTER_highest_sufficient_pool": {
+      "thresholds": {
+        "batter": {
+          "IPL": 30,
+          "T20I": 24
+        },
+        "bowler": {
+          "IPL": 36,
+          "T20I": 36
+        }
+      },
+      "roles": {
+        "batter": {
+          "combined_population": 6,
+          "configs": {
+            "w100_0": {
+              "config_id": "w100_0",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 1.0,
+              "t20i_weight": 0.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                20702,
+                6396,
+                4722,
+                4986,
+                3605,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.9428571429,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.3333333333,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 2,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 20702,
+                    "rank_a": 2,
+                    "rank_b": 1,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 5,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w85_15": {
+              "config_id": "w85_15",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.85,
+              "t20i_weight": 0.15,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                20702,
+                6396,
+                4722,
+                4986,
+                3605,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.9428571429,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.3333333333,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 2,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 20702,
+                    "rank_a": 2,
+                    "rank_b": 1,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 5,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w80_20": {
+              "config_id": "w80_20",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.8,
+              "t20i_weight": 0.2,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                20702,
+                6396,
+                4722,
+                4986,
+                3605,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.9428571429,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.3333333333,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 2,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 20702,
+                    "rank_a": 2,
+                    "rank_b": 1,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 5,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w70_30": {
+              "config_id": "w70_30",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.7,
+              "t20i_weight": 0.3,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                6396,
+                20702,
+                4722,
+                4986,
+                3605,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 1.0,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 5,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 6,
+                    "rank_b": 6,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w60_40": {
+              "config_id": "w60_40",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.6,
+              "t20i_weight": 0.4,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                6396,
+                20702,
+                4722,
+                3605,
+                4986,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.9428571429,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.3333333333,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 4,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 5,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 6,
+                    "rank_b": 6,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w55_45": {
+              "config_id": "w55_45",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.55,
+              "t20i_weight": 0.45,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                6396,
+                20702,
+                3605,
+                4722,
+                4986,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.8285714286,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.6666666667,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 3,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 4,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 5,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 6,
+                    "rank_b": 6,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w50_50": {
+              "config_id": "w50_50",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.5,
+              "t20i_weight": 0.5,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                6396,
+                20702,
+                3605,
+                4986,
+                4722,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.7714285714,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 0.6666666667,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 3,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 5,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 6,
+                    "rank_b": 6,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w0_100": {
+              "config_id": "w0_100",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.0,
+              "t20i_weight": 1.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 6,
+              "top10_player_ids": [
+                6396,
+                3605,
+                4986,
+                20702,
+                4722,
+                6726
+              ],
+              "overlap_with_default": 6,
+              "spearman_with_default": 0.4857142857,
+              "spearman_n": 6,
+              "movement_vs_default": {
+                "n_common": 6,
+                "mean_abs_change": 1.3333333333,
+                "max_abs_change": 3,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 5,
+                    "rank_b": 2,
+                    "change": -3
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 3,
+                    "rank_b": 5,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 20702,
+                    "rank_a": 2,
+                    "rank_b": 4,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4986,
+                    "rank_a": 4,
+                    "rank_b": 3,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  }
+                ]
+              }
+            }
+          },
+          "degenerate_check": {
+            "w100_0": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 6
+            },
+            "w0_100": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 6
+            }
+          },
+          "status_counts": {
+            "players_total": 454,
+            "combined_status": {
+              "BOTH_FORMATS_VALID": 6,
+              "SINGLE_FORMAT_IPL_ONLY": 31,
+              "SINGLE_FORMAT_T20I_ONLY": 55,
+              "NO_VALID_FORMAT": 362
+            },
+            "ipl_status": {
+              "ELIGIBLE": 37,
+              "OBSERVED_NOT_ELIGIBLE": 174,
+              "NOT_OBSERVED": 243
+            },
+            "t20i_status": {
+              "ELIGIBLE": 61,
+              "OBSERVED_NOT_ELIGIBLE": 273,
+              "NOT_OBSERVED": 120
+            }
+          },
+          "eligibility_change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 8,
+            "combined_population_this_level": 6,
+            "entering": 0,
+            "leaving": 2
+          }
+        },
+        "bowler": {
+          "combined_population": 4,
+          "configs": {
+            "w100_0": {
+              "config_id": "w100_0",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 1.0,
+              "t20i_weight": 0.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                7967,
+                6464,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 1.0,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 2,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w85_15": {
+              "config_id": "w85_15",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.85,
+              "t20i_weight": 0.15,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                7967,
+                6464,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 1.0,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 2,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w80_20": {
+              "config_id": "w80_20",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.8,
+              "t20i_weight": 0.2,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                7967,
+                6464,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 1.0,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 2,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w70_30": {
+              "config_id": "w70_30",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.7,
+              "t20i_weight": 0.3,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                7967,
+                6464,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 1.0,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 2,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w60_40": {
+              "config_id": "w60_40",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.6,
+              "t20i_weight": 0.4,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                6464,
+                7967,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 0.8,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 2,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w55_45": {
+              "config_id": "w55_45",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.55,
+              "t20i_weight": 0.45,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                6464,
+                7967,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 0.8,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 2,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w50_50": {
+              "config_id": "w50_50",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.5,
+              "t20i_weight": 0.5,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                4722,
+                6464,
+                7967,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 0.8,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 2,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w0_100": {
+              "config_id": "w0_100",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.0,
+              "t20i_weight": 1.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 4,
+              "top10_player_ids": [
+                6464,
+                4722,
+                7967,
+                39657
+              ],
+              "overlap_with_default": 4,
+              "spearman_with_default": 0.4,
+              "spearman_n": 4,
+              "movement_vs_default": {
+                "n_common": 4,
+                "mean_abs_change": 1.0,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6464,
+                    "rank_a": 3,
+                    "rank_b": 1,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 1,
+                    "rank_b": 2,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            }
+          },
+          "degenerate_check": {
+            "w100_0": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 4
+            },
+            "w0_100": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 4
+            }
+          },
+          "status_counts": {
+            "players_total": 361,
+            "combined_status": {
+              "BOTH_FORMATS_VALID": 4,
+              "SINGLE_FORMAT_IPL_ONLY": 30,
+              "SINGLE_FORMAT_T20I_ONLY": 28,
+              "NO_VALID_FORMAT": 299
+            },
+            "ipl_status": {
+              "ELIGIBLE": 34,
+              "OBSERVED_NOT_ELIGIBLE": 135,
+              "NOT_OBSERVED": 192
+            },
+            "t20i_status": {
+              "ELIGIBLE": 32,
+              "OBSERVED_NOT_ELIGIBLE": 237,
+              "NOT_OBSERVED": 92
+            }
+          },
+          "eligibility_change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 6,
+            "combined_population_this_level": 4,
+            "entering": 0,
+            "leaving": 2
+          }
+        }
+      }
+    },
+    "LOOSER_previous_rung": {
+      "thresholds": {
+        "batter": {
+          "IPL": 18,
+          "T20I": 18
+        },
+        "bowler": {
+          "IPL": 24,
+          "T20I": 24
+        }
+      },
+      "roles": {
+        "batter": {
+          "combined_population": 12,
+          "configs": {
+            "w100_0": {
+              "config_id": "w100_0",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 1.0,
+              "t20i_weight": 0.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                20702,
+                6396,
+                4722,
+                7897,
+                4986,
+                3605,
+                4823,
+                6726,
+                2876
+              ],
+              "overlap_with_default": 9,
+              "spearman_with_default": 0.958041958,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 0.6666666667,
+                "max_abs_change": 2,
+                "entering_top_k": [
+                  2876
+                ],
+                "leaving_top_k": [
+                  4101
+                ],
+                "biggest_movers": [
+                  {
+                    "player_id": 2876,
+                    "rank_a": 12,
+                    "rank_b": 10,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 11,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 10,
+                    "rank_b": 9,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7808,
+                    "rank_a": 11,
+                    "rank_b": 12,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w85_15": {
+              "config_id": "w85_15",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.85,
+              "t20i_weight": 0.15,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                20702,
+                6396,
+                4722,
+                7897,
+                4986,
+                3605,
+                4823,
+                6726,
+                4101
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.979020979,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 2876,
+                    "rank_a": 12,
+                    "rank_b": 11,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 10,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 10,
+                    "rank_b": 9,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7808,
+                    "rank_a": 11,
+                    "rank_b": 12,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w80_20": {
+              "config_id": "w80_20",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.8,
+              "t20i_weight": 0.2,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                20702,
+                6396,
+                4722,
+                7897,
+                4986,
+                3605,
+                4823,
+                6726,
+                4101
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.979020979,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 2876,
+                    "rank_a": 12,
+                    "rank_b": 11,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 10,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6396,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 6726,
+                    "rank_a": 10,
+                    "rank_b": 9,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 7808,
+                    "rank_a": 11,
+                    "rank_b": 12,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w70_30": {
+              "config_id": "w70_30",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.7,
+              "t20i_weight": 0.3,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                6396,
+                20702,
+                4722,
+                7897,
+                4986,
+                3605,
+                4823,
+                4101,
+                6726
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 1.0,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 1077,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 2876,
+                    "rank_a": 12,
+                    "rank_b": 12,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 3605,
+                    "rank_a": 7,
+                    "rank_b": 7,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 9,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w60_40": {
+              "config_id": "w60_40",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.6,
+              "t20i_weight": 0.4,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                6396,
+                20702,
+                4722,
+                3605,
+                4986,
+                7897,
+                4101,
+                4823,
+                6726
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.965034965,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 0.5,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 7,
+                    "rank_b": 5,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 7897,
+                    "rank_a": 5,
+                    "rank_b": 7,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 8,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4823,
+                    "rank_a": 8,
+                    "rank_b": 9,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 1077,
+                    "rank_a": 1,
+                    "rank_b": 1,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w55_45": {
+              "config_id": "w55_45",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.55,
+              "t20i_weight": 0.45,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                6396,
+                20702,
+                3605,
+                4986,
+                4722,
+                7897,
+                4101,
+                4823,
+                7808
+              ],
+              "overlap_with_default": 9,
+              "spearman_with_default": 0.9230769231,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 1.0,
+                "max_abs_change": 3,
+                "entering_top_k": [
+                  7808
+                ],
+                "leaving_top_k": [
+                  6726
+                ],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 7,
+                    "rank_b": 4,
+                    "change": -3
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 4,
+                    "rank_b": 6,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 7897,
+                    "rank_a": 5,
+                    "rank_b": 7,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4101,
+                    "rank_a": 9,
+                    "rank_b": 8,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4823,
+                    "rank_a": 8,
+                    "rank_b": 9,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w50_50": {
+              "config_id": "w50_50",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.5,
+              "t20i_weight": 0.5,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                1077,
+                6396,
+                20702,
+                3605,
+                4986,
+                4722,
+                7897,
+                4101,
+                7808,
+                4823
+              ],
+              "overlap_with_default": 9,
+              "spearman_with_default": 0.9020979021,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 1.1666666667,
+                "max_abs_change": 3,
+                "entering_top_k": [
+                  7808
+                ],
+                "leaving_top_k": [
+                  6726
+                ],
+                "biggest_movers": [
+                  {
+                    "player_id": 3605,
+                    "rank_a": 7,
+                    "rank_b": 4,
+                    "change": -3
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 4,
+                    "rank_b": 6,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4823,
+                    "rank_a": 8,
+                    "rank_b": 10,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 7808,
+                    "rank_a": 11,
+                    "rank_b": 9,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 7897,
+                    "rank_a": 5,
+                    "rank_b": 7,
+                    "change": 2
+                  }
+                ]
+              }
+            },
+            "w0_100": {
+              "config_id": "w0_100",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.0,
+              "t20i_weight": 1.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 12,
+              "top10_player_ids": [
+                6396,
+                7808,
+                3605,
+                4986,
+                1077,
+                4101,
+                20702,
+                4722,
+                4823,
+                6726
+              ],
+              "overlap_with_default": 9,
+              "spearman_with_default": 0.3146853147,
+              "spearman_n": 12,
+              "movement_vs_default": {
+                "n_common": 12,
+                "mean_abs_change": 3.1666666667,
+                "max_abs_change": 9,
+                "entering_top_k": [
+                  7808
+                ],
+                "leaving_top_k": [
+                  7897
+                ],
+                "biggest_movers": [
+                  {
+                    "player_id": 7808,
+                    "rank_a": 11,
+                    "rank_b": 2,
+                    "change": -9
+                  },
+                  {
+                    "player_id": 7897,
+                    "rank_a": 5,
+                    "rank_b": 11,
+                    "change": 6
+                  },
+                  {
+                    "player_id": 1077,
+                    "rank_a": 1,
+                    "rank_b": 5,
+                    "change": 4
+                  },
+                  {
+                    "player_id": 3605,
+                    "rank_a": 7,
+                    "rank_b": 3,
+                    "change": -4
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 4,
+                    "rank_b": 8,
+                    "change": 4
+                  }
+                ]
+              }
+            }
+          },
+          "degenerate_check": {
+            "w100_0": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 12
+            },
+            "w0_100": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 12
+            }
+          },
+          "status_counts": {
+            "players_total": 454,
+            "combined_status": {
+              "BOTH_FORMATS_VALID": 12,
+              "SINGLE_FORMAT_IPL_ONLY": 59,
+              "SINGLE_FORMAT_T20I_ONLY": 72,
+              "NO_VALID_FORMAT": 311
+            },
+            "ipl_status": {
+              "ELIGIBLE": 71,
+              "OBSERVED_NOT_ELIGIBLE": 140,
+              "NOT_OBSERVED": 243
+            },
+            "t20i_status": {
+              "ELIGIBLE": 84,
+              "OBSERVED_NOT_ELIGIBLE": 250,
+              "NOT_OBSERVED": 120
+            }
+          },
+          "eligibility_change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 8,
+            "combined_population_this_level": 12,
+            "entering": 4,
+            "leaving": 0
+          }
+        },
+        "bowler": {
+          "combined_population": 10,
+          "configs": {
+            "w100_0": {
+              "config_id": "w100_0",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 1.0,
+              "t20i_weight": 0.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                4722,
+                6256,
+                7967,
+                3644,
+                3697,
+                4900,
+                6464,
+                3174,
+                39657,
+                7503
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.8303030303,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 1.2,
+                "max_abs_change": 3,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 6,
+                    "change": 3
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 6,
+                    "rank_b": 3,
+                    "change": -3
+                  },
+                  {
+                    "player_id": 3697,
+                    "rank_a": 7,
+                    "rank_b": 5,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 5,
+                    "rank_b": 7,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 1,
+                    "change": -1
+                  }
+                ]
+              }
+            },
+            "w85_15": {
+              "config_id": "w85_15",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.85,
+              "t20i_weight": 0.15,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4722,
+                3644,
+                7967,
+                4900,
+                6464,
+                3697,
+                3174,
+                39657,
+                7503
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.9393939394,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 0.6,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 5,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 6,
+                    "rank_b": 4,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 3,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 6464,
+                    "rank_a": 5,
+                    "rank_b": 6,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 8,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w80_20": {
+              "config_id": "w80_20",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.8,
+              "t20i_weight": 0.2,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4722,
+                4900,
+                3644,
+                7967,
+                6464,
+                3697,
+                3174,
+                39657,
+                7503
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.9878787879,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 0.2,
+                "max_abs_change": 1,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 6464,
+                    "rank_a": 5,
+                    "rank_b": 6,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 6,
+                    "rank_b": 5,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 8,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 3697,
+                    "rank_a": 7,
+                    "rank_b": 7,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w70_30": {
+              "config_id": "w70_30",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.7,
+              "t20i_weight": 0.3,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4722,
+                4900,
+                3644,
+                6464,
+                7967,
+                3697,
+                3174,
+                39657,
+                7503
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 1.0,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 0.0,
+                "max_abs_change": 0,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 8,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 4,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 3697,
+                    "rank_a": 7,
+                    "rank_b": 7,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 2,
+                    "change": 0
+                  },
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 3,
+                    "change": 0
+                  }
+                ]
+              }
+            },
+            "w60_40": {
+              "config_id": "w60_40",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.6,
+              "t20i_weight": 0.4,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4900,
+                4722,
+                3644,
+                6464,
+                7967,
+                3697,
+                7503,
+                3174,
+                39657
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.9515151515,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 0.6,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 7503,
+                    "rank_a": 10,
+                    "rank_b": 8,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 9,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 2,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 39657,
+                    "rank_a": 9,
+                    "rank_b": 10,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w55_45": {
+              "config_id": "w55_45",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.55,
+              "t20i_weight": 0.45,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4900,
+                4722,
+                6464,
+                3644,
+                7967,
+                3697,
+                7503,
+                3174,
+                39657
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.9393939394,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 0.8,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 7503,
+                    "rank_a": 10,
+                    "rank_b": 8,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 9,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 5,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 2,
+                    "change": -1
+                  }
+                ]
+              }
+            },
+            "w50_50": {
+              "config_id": "w50_50",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.5,
+              "t20i_weight": 0.5,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                6256,
+                4900,
+                4722,
+                6464,
+                3644,
+                3697,
+                7967,
+                7503,
+                3174,
+                39657
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.9272727273,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 1.0,
+                "max_abs_change": 2,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 7503,
+                    "rank_a": 10,
+                    "rank_b": 8,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 3174,
+                    "rank_a": 8,
+                    "rank_b": 9,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 5,
+                    "change": 1
+                  },
+                  {
+                    "player_id": 3697,
+                    "rank_a": 7,
+                    "rank_b": 6,
+                    "change": -1
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 3,
+                    "change": 1
+                  }
+                ]
+              }
+            },
+            "w0_100": {
+              "config_id": "w0_100",
+              "config_version": "format_weights_v1",
+              "ipl_weight": 0.0,
+              "t20i_weight": 1.0,
+              "config_hash": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+              "n_ranked": 10,
+              "top10_player_ids": [
+                4900,
+                6256,
+                7503,
+                6464,
+                4722,
+                3644,
+                3697,
+                7967,
+                3174,
+                39657
+              ],
+              "overlap_with_default": 10,
+              "spearman_with_default": 0.5515151515,
+              "spearman_n": 10,
+              "movement_vs_default": {
+                "n_common": 10,
+                "mean_abs_change": 2.0,
+                "max_abs_change": 7,
+                "entering_top_k": [],
+                "leaving_top_k": [],
+                "biggest_movers": [
+                  {
+                    "player_id": 7503,
+                    "rank_a": 10,
+                    "rank_b": 3,
+                    "change": -7
+                  },
+                  {
+                    "player_id": 4722,
+                    "rank_a": 2,
+                    "rank_b": 5,
+                    "change": 3
+                  },
+                  {
+                    "player_id": 3644,
+                    "rank_a": 4,
+                    "rank_b": 6,
+                    "change": 2
+                  },
+                  {
+                    "player_id": 4900,
+                    "rank_a": 3,
+                    "rank_b": 1,
+                    "change": -2
+                  },
+                  {
+                    "player_id": 7967,
+                    "rank_a": 6,
+                    "rank_b": 8,
+                    "change": 2
+                  }
+                ]
+              }
+            }
+          },
+          "degenerate_check": {
+            "w100_0": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 10
+            },
+            "w0_100": {
+              "ranks_equal_single_format_zscore_ranks": true,
+              "population": 10
+            }
+          },
+          "status_counts": {
+            "players_total": 361,
+            "combined_status": {
+              "BOTH_FORMATS_VALID": 10,
+              "SINGLE_FORMAT_IPL_ONLY": 55,
+              "SINGLE_FORMAT_T20I_ONLY": 46,
+              "NO_VALID_FORMAT": 250
+            },
+            "ipl_status": {
+              "ELIGIBLE": 65,
+              "OBSERVED_NOT_ELIGIBLE": 104,
+              "NOT_OBSERVED": 192
+            },
+            "t20i_status": {
+              "ELIGIBLE": 56,
+              "OBSERVED_NOT_ELIGIBLE": 213,
+              "NOT_OBSERVED": 92
+            }
+          },
+          "eligibility_change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 6,
+            "combined_population_this_level": 10,
+            "entering": 4,
+            "leaving": 0
+          }
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "batter": {
+      "IPL": 24,
+      "T20I": 24
+    },
+    "bowler": {
+      "IPL": 32,
+      "T20I": 36
+    }
+  },
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "config_hash_all_results": "a77cb111d1efe20e2637fed21f528bb5ee2d4e627e0963338b73d64ef1ec7417",
+  "audit": {
+    "batter": {
+      "players_not_in_both_formats": 446,
+      "combined_scores_present_for_them": 0,
+      "z_present_for_not_eligible_format": 0,
+      "rule": "combined score = NULL unless ELIGIBLE in both formats; no zero fill, no imputation"
+    },
+    "bowler": {
+      "players_not_in_both_formats": 355,
+      "combined_scores_present_for_them": 0,
+      "z_present_for_not_eligible_format": 0,
+      "rule": "combined score = NULL unless ELIGIBLE in both formats; no zero fill, no imputation"
+    }
+  },
+  "pressure_definition": {
+    "id": "chase|q0.9",
+    "ctx": "chase",
+    "q": 0.9,
+    "view": "abs"
+  },
+  "pressure_thresholds_min_balls": {
+    "IPL": {
+      "batter": 24,
+      "bowler": 32
+    },
+    "T20I": {
+      "batter": 24,
+      "bowler": 36
+    }
+  },
+  "threshold_source": "pressure_threshold_experiment.json provisional_recommendation",
+  "robustness_thresholds_min_balls": {
+    "STRICTER_highest_sufficient_pool": {
+      "IPL": {
+        "batter": 30,
+        "bowler": 36
+      },
+      "T20I": {
+        "batter": 24,
+        "bowler": 36
+      }
+    },
+    "LOOSER_previous_rung": {
+      "IPL": {
+        "batter": 18,
+        "bowler": 24
+      },
+      "T20I": {
+        "batter": 18,
+        "bowler": 24
+      }
+    }
+  },
+  "population_changes": {
+    "batter": {
+      "pressure_primary": {
+        "IPL_eligible": 56,
+        "T20I_eligible": 61,
+        "combined": 8
+      },
+      "pressure_robustness": {
+        "STRICTER_highest_sufficient_pool": {
+          "IPL_eligible": 37,
+          "T20I_eligible": 61,
+          "combined": 6,
+          "change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 8,
+            "combined_population_this_level": 6,
+            "entering": 0,
+            "leaving": 2
+          }
+        },
+        "LOOSER_previous_rung": {
+          "IPL_eligible": 71,
+          "T20I_eligible": 84,
+          "combined": 12,
+          "change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 8,
+            "combined_population_this_level": 12,
+            "entering": 4,
+            "leaving": 0
+          }
+        }
+      },
+      "phase25_all_situation": {
+        "IPL_eligible": 257,
+        "T20I_eligible": 506,
+        "combined": 133,
+        "level": "P25"
+      }
+    },
+    "bowler": {
+      "pressure_primary": {
+        "IPL_eligible": 43,
+        "T20I_eligible": 32,
+        "combined": 6
+      },
+      "pressure_robustness": {
+        "STRICTER_highest_sufficient_pool": {
+          "IPL_eligible": 34,
+          "T20I_eligible": 32,
+          "combined": 4,
+          "change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 6,
+            "combined_population_this_level": 4,
+            "entering": 0,
+            "leaving": 2
+          }
+        },
+        "LOOSER_previous_rung": {
+          "IPL_eligible": 65,
+          "T20I_eligible": 56,
+          "combined": 10,
+          "change_vs_primary": {
+            "primary_level": "PRESSURE_SPECIFIC",
+            "combined_population_primary": 6,
+            "combined_population_this_level": 10,
+            "entering": 4,
+            "leaving": 0
+          }
+        }
+      },
+      "phase25_all_situation": {
+        "IPL_eligible": 202,
+        "T20I_eligible": 374,
+        "combined": 114,
+        "level": "P25"
+      }
+    }
+  },
+  "degenerate_populations_equal_across_configs": {
+    "batter": true,
+    "bowler": true
+  },
+  "weights_status": "70:30 is a PROVISIONAL default, not a validated optimum",
+  "provenance": {
+    "generated_at_utc": "2026-11-15T09:22:06Z",
+    "code_version": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd",
+    "seed": null,
+    "config_file": "format_weights_v1.json",
+    "config_sha256": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71"
+  },
+  "preservation": {
+    "official_unchanged": true,
+    "diff": {}
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "public_players": {
+    "status": 200,
+    "keys": [
+      "basis",
+      "descriptive_only",
+      "disclaimer",
+      "distinct_matches",
+      "group",
+      "group_label",
+      "international_status",
+      "international_status_verification",
+      "items",
+      "limit",
+      "matches",
+      "name",
+      "nationality",
+      "nationality_verification",
+      "offset",
+      "page",
+      "player_id",
+      "squad_role",
+      "status",
+      "total"
+    ],
+    "forbidden_keys": [],
+    "descriptive_only": true,
+    "has_publication_status": false,
+    "items_returned": 3,
+    "total": 1217
+  },
+  "public_min_pressure_matches_ignored": {
+    "status": 200,
+    "total_unfiltered": 1217,
+    "total_with_param": 1217
+  },
+  "openapi_params": {
+    "public_players": [
+      "basis",
+      "q",
+      "sort_by",
+      "order",
+      "limit",
+      "offset",
+      "official",
+      "publish",
+      "classification",
+      "uncapped_mode",
+      "min_matches"
+    ],
+    "internal_players": [
+      "basis",
+      "q",
+      "sort_by",
+      "order",
+      "limit",
+      "offset",
+      "official",
+      "publish",
+      "classification",
+      "uncapped_mode",
+      "min_matches",
+      "min_pressure_matches",
+      "x-admin-token"
+    ],
+    "public_has_min_pressure_matches": false,
+    "internal_has_min_pressure_matches": true
+  },
+  "internal_players": {
+    "no_token": 401,
+    "wrong_token": 401,
+    "with_token": 200,
+    "has_eligible_scopes": true,
+    "has_conflict_flag": true,
+    "has_publication_status": true,
+    "no_token_configured": 503
+  },
+  "public_rankings_batter": 403,
+  "public_dynamic_rankings": 403,
+  "cache_live": {
+    "internal_first": 200,
+    "internal_second_cache_hit": true,
+    "public_status": 403,
+    "stats": {
+      "entries": 1,
+      "max_entries": 256,
+      "hits": 1,
+      "misses": 1,
+      "invalidations": 0,
+      "evictions": 0
+    },
+    "first_has_cache_hit_false": true,
+    "mutation_leaks_into_cache": false
+  },
+  "cache_key_components_change_key": {
+    "spec": true,
+    "data": true,
+    "model": true,
+    "gate_version": true,
+    "scope": true,
+    "lock": true,
+    "gate_state": true
+  },
+  "cache_unit_copy_isolation": true,
+  "cache_unknown_scope_refused": true
+}

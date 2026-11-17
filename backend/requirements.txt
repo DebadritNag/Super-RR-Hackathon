@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic>=2
+pydantic-settings
+sqlalchemy
+pandas
+numpy
+scipy
+duckdb
+pyarrow
+scikit-learn
+pytest
+httpx
+ruff
+pypdf
+openpyxl

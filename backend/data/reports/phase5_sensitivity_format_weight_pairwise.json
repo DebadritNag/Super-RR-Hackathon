@@ -1,0 +1,774 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "records": [
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w100_0",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w85_15",
+      "spearman": 0.9910985671
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w80_20",
+      "spearman": 0.9767694312
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w70_30",
+      "spearman": 0.9525618758
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w60_40",
+      "spearman": 0.9038211029
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w55_45",
+      "spearman": 0.8675640469
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w50_50",
+      "spearman": 0.8287016934
+    },
+    {
+      "role": "batter",
+      "config_a": "w100_0",
+      "config_b": "w0_100",
+      "spearman": 0.2388189318
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w100_0",
+      "spearman": 0.9910985671
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w85_15",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w80_20",
+      "spearman": 0.9934867564
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w70_30",
+      "spearman": 0.9753582284
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w60_40",
+      "spearman": 0.9388840643
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w55_45",
+      "spearman": 0.9121797655
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w50_50",
+      "spearman": 0.8809161963
+    },
+    {
+      "role": "batter",
+      "config_a": "w85_15",
+      "config_b": "w0_100",
+      "spearman": 0.3216456795
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w100_0",
+      "spearman": 0.9767694312
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w85_15",
+      "spearman": 0.9934867564
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w80_20",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w70_30",
+      "spearman": 0.9904472427
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w60_40",
+      "spearman": 0.9640686062
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w55_45",
+      "spearman": 0.9426834564
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w50_50",
+      "spearman": 0.9159791576
+    },
+    {
+      "role": "batter",
+      "config_a": "w80_20",
+      "config_b": "w0_100",
+      "spearman": 0.3833043856
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w100_0",
+      "spearman": 0.9525618758
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w85_15",
+      "spearman": 0.9753582284
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w80_20",
+      "spearman": 0.9904472427
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w70_30",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w60_40",
+      "spearman": 0.9867564047
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w55_45",
+      "spearman": 0.9712331741
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w50_50",
+      "spearman": 0.9506079027
+    },
+    {
+      "role": "batter",
+      "config_a": "w70_30",
+      "config_b": "w0_100",
+      "spearman": 0.4591836735
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w100_0",
+      "spearman": 0.9038211029
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w85_15",
+      "spearman": 0.9388840643
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w80_20",
+      "spearman": 0.9640686062
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w70_30",
+      "spearman": 0.9867564047
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w60_40",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w55_45",
+      "spearman": 0.994572297
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w50_50",
+      "spearman": 0.9829570126
+    },
+    {
+      "role": "batter",
+      "config_a": "w60_40",
+      "config_b": "w0_100",
+      "spearman": 0.5550369084
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w100_0",
+      "spearman": 0.8675640469
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w85_15",
+      "spearman": 0.9121797655
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w80_20",
+      "spearman": 0.9426834564
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w70_30",
+      "spearman": 0.9712331741
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w60_40",
+      "spearman": 0.994572297
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w55_45",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w50_50",
+      "spearman": 0.9944637429
+    },
+    {
+      "role": "batter",
+      "config_a": "w55_45",
+      "config_b": "w0_100",
+      "spearman": 0.6093139383
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w100_0",
+      "spearman": 0.8287016934
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w85_15",
+      "spearman": 0.8809161963
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w80_20",
+      "spearman": 0.9159791576
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w70_30",
+      "spearman": 0.9506079027
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w60_40",
+      "spearman": 0.9829570126
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w55_45",
+      "spearman": 0.9944637429
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w50_50",
+      "spearman": 1.0
+    },
+    {
+      "role": "batter",
+      "config_a": "w50_50",
+      "config_b": "w0_100",
+      "spearman": 0.6597915762
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w100_0",
+      "spearman": 0.2388189318
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w85_15",
+      "spearman": 0.3216456795
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w80_20",
+      "spearman": 0.3833043856
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w70_30",
+      "spearman": 0.4591836735
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w60_40",
+      "spearman": 0.5550369084
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w55_45",
+      "spearman": 0.6093139383
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w50_50",
+      "spearman": 0.6597915762
+    },
+    {
+      "role": "batter",
+      "config_a": "w0_100",
+      "config_b": "w0_100",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w100_0",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w85_15",
+      "spearman": 0.9789473684
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w80_20",
+      "spearman": 0.9619433198
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w70_30",
+      "spearman": 0.9163967611
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w60_40",
+      "spearman": 0.8564777328
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w55_45",
+      "spearman": 0.832388664
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w50_50",
+      "spearman": 0.7929149798
+    },
+    {
+      "role": "bowler",
+      "config_a": "w100_0",
+      "config_b": "w0_100",
+      "spearman": 0.3042510121
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w100_0",
+      "spearman": 0.9789473684
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w85_15",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w80_20",
+      "spearman": 0.9953441296
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w70_30",
+      "spearman": 0.9708502024
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w60_40",
+      "spearman": 0.9273279352
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w55_45",
+      "spearman": 0.9103238866
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w50_50",
+      "spearman": 0.8801619433
+    },
+    {
+      "role": "bowler",
+      "config_a": "w85_15",
+      "config_b": "w0_100",
+      "spearman": 0.4366396761
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w100_0",
+      "spearman": 0.9619433198
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w85_15",
+      "spearman": 0.9953441296
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w80_20",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w70_30",
+      "spearman": 0.9860323887
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w60_40",
+      "spearman": 0.9524291498
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w55_45",
+      "spearman": 0.937854251
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w50_50",
+      "spearman": 0.9119433198
+    },
+    {
+      "role": "bowler",
+      "config_a": "w80_20",
+      "config_b": "w0_100",
+      "spearman": 0.491902834
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w100_0",
+      "spearman": 0.9163967611
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w85_15",
+      "spearman": 0.9708502024
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w80_20",
+      "spearman": 0.9860323887
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w70_30",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w60_40",
+      "spearman": 0.9854251012
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w55_45",
+      "spearman": 0.9765182186
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w50_50",
+      "spearman": 0.9591093117
+    },
+    {
+      "role": "bowler",
+      "config_a": "w70_30",
+      "config_b": "w0_100",
+      "spearman": 0.6052631579
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w100_0",
+      "spearman": 0.8564777328
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w85_15",
+      "spearman": 0.9273279352
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w80_20",
+      "spearman": 0.9524291498
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w70_30",
+      "spearman": 0.9854251012
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w60_40",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w55_45",
+      "spearman": 0.9967611336
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w50_50",
+      "spearman": 0.9892712551
+    },
+    {
+      "role": "bowler",
+      "config_a": "w60_40",
+      "config_b": "w0_100",
+      "spearman": 0.7052631579
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w100_0",
+      "spearman": 0.832388664
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w85_15",
+      "spearman": 0.9103238866
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w80_20",
+      "spearman": 0.937854251
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w70_30",
+      "spearman": 0.9765182186
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w60_40",
+      "spearman": 0.9967611336
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w55_45",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w50_50",
+      "spearman": 0.9951417004
+    },
+    {
+      "role": "bowler",
+      "config_a": "w55_45",
+      "config_b": "w0_100",
+      "spearman": 0.7384615385
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w100_0",
+      "spearman": 0.7929149798
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w85_15",
+      "spearman": 0.8801619433
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w80_20",
+      "spearman": 0.9119433198
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w70_30",
+      "spearman": 0.9591093117
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w60_40",
+      "spearman": 0.9892712551
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w55_45",
+      "spearman": 0.9951417004
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w50_50",
+      "spearman": 1.0
+    },
+    {
+      "role": "bowler",
+      "config_a": "w50_50",
+      "config_b": "w0_100",
+      "spearman": 0.7817813765
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w100_0",
+      "spearman": 0.3042510121
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w85_15",
+      "spearman": 0.4366396761
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w80_20",
+      "spearman": 0.491902834
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w70_30",
+      "spearman": 0.6052631579
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w60_40",
+      "spearman": 0.7052631579
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w55_45",
+      "spearman": 0.7384615385
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w50_50",
+      "spearman": 0.7817813765
+    },
+    {
+      "role": "bowler",
+      "config_a": "w0_100",
+      "config_b": "w0_100",
+      "spearman": 1.0
+    }
+  ]
+}

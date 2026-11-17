@@ -1,0 +1,2103 @@
+{
+  "proxy_run": true,
+  "pressure_status": "PENDING_PHASE3",
+  "score_label": "PROXY_NOT_PRESSURE",
+  "not_for_publication": true,
+  "window": {
+    "IPL": {
+      "matches_with_deliveries": 367,
+      "first_date": "2022-03-26",
+      "last_date": "2026-05-31"
+    },
+    "OTHER_T20": {
+      "matches_with_deliveries": 30,
+      "first_date": "2024-10-18",
+      "last_date": "2025-11-23"
+    },
+    "T20I": {
+      "matches_with_deliveries": 470,
+      "first_date": "2022-01-22",
+      "last_date": "2026-11-01"
+    }
+  },
+  "formats": {
+    "IPL": {
+      "batter": {
+        "observed_players": 341,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 341,
+              "mean": 246.6891495601,
+              "std": 391.2638836095,
+              "min": 1.0,
+              "p5": 2.0,
+              "p10": 5.0,
+              "p25": 14.0,
+              "p50": 53.0,
+              "p75": 301.0,
+              "p90": 827.0,
+              "p95": 1134.0,
+              "max": 2091.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 45
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 32
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 61
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 38
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 36
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 32
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 33
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 39
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 25
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 341,
+              "mean": 16.7008797654,
+              "std": 19.6918533272,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 3.0,
+              "p50": 8.0,
+              "p75": 25.0,
+              "p90": 54.0,
+              "p95": 60.0,
+              "max": 76.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 55
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 27
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 47
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 38
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 43
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 33
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 42
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 56
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 341,
+              "mean": 16.7008797654,
+              "std": 19.6918533272,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 3.0,
+              "p50": 8.0,
+              "p75": 25.0,
+              "p90": 54.0,
+              "p95": 60.0,
+              "max": 76.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 55
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 27
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 47
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 38
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 43
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 33
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 42
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 56
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 341,
+              "mean": 202.6900309178,
+              "std": 364.2923752402,
+              "min": 0.0092953221,
+              "p5": 0.0368388595,
+              "p10": 0.2240524933,
+              "p25": 1.6254634571,
+              "p50": 17.6023467626,
+              "p75": 222.2895602264,
+              "p90": 732.5866787225,
+              "p95": 1036.5756091809,
+              "max": 1989.5881021713
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 131
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 25
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 19
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 18
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 25
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 25
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 23
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 75
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 341,
+              "mean": 10.9318205862,
+              "std": 13.0627595512,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 1.9756097561,
+              "p50": 4.6421052632,
+              "p75": 15.5404530744,
+              "p90": 33.3013341719,
+              "p95": 42.8077268023,
+              "max": 53.1481717167
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 62
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 24
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 45
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 42
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 41
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 29
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 30
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 68
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 45,
+          "single_match_players": 55,
+          "single_match_share": 0.1612903226
+        },
+        "prior_parameters": {
+          "runs": {
+            "players": 341,
+            "total_n": 84121.0,
+            "mu0": 1.4689435456,
+            "sigma2": 3.1841161212,
+            "tau2": 0.0298750836,
+            "k": 106.5809943919
+          }
+        },
+        "matches_in_sample": 367
+      },
+      "bowler": {
+        "observed_players": 260,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 260,
+              "mean": 322.0846153846,
+              "std": 397.3925446098,
+              "min": 1.0,
+              "p5": 11.85,
+              "p10": 18.0,
+              "p25": 36.0,
+              "p50": 162.0,
+              "p75": 452.75,
+              "p90": 962.4,
+              "p95": 1242.25,
+              "max": 1718.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 4
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 9
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 37
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 35
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 29
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 43
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 41
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 35
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 27
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 260,
+              "mean": 16.6692307692,
+              "std": 18.5686198785,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 3.0,
+              "p50": 8.0,
+              "p75": 25.0,
+              "p90": 45.0,
+              "p95": 60.1,
+              "max": 77.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 36
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 26
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 23
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 34
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 32
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 27
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 46
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 36
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 260,
+              "mean": 16.6692307692,
+              "std": 18.5686198785,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 3.0,
+              "p50": 8.0,
+              "p75": 25.0,
+              "p90": 45.0,
+              "p95": 60.1,
+              "max": 77.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 36
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 26
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 23
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 34
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 32
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 27
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 46
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 36
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 260,
+              "mean": 249.8508007425,
+              "std": 368.6016908798,
+              "min": 0.0050990845,
+              "p5": 0.684883704,
+              "p10": 1.520315676,
+              "p25": 6.194403859,
+              "p50": 81.3067513528,
+              "p75": 336.4680415301,
+              "p90": 854.4627039716,
+              "p95": 1117.0317830498,
+              "max": 1581.3879605714
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 57
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 19
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 19
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 18
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 17
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 34
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 30
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 66
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 260,
+              "mean": 15.493376208,
+              "std": 17.621581353,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.7493849938,
+              "p50": 7.7270465309,
+              "p75": 22.6281624311,
+              "p90": 42.3164651974,
+              "p95": 56.6689690222,
+              "max": 74.2170221121
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 37
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 25
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 10
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 28
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 34
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 25
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 26
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 75
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 4,
+          "single_match_players": 36,
+          "single_match_share": 0.1384615385
+        },
+        "prior_parameters": {
+          "econ": {
+            "players": 260,
+            "total_n": 87673.0,
+            "mu0": 1.4614419491,
+            "sigma2": 3.0990370842,
+            "tau2": 0.015883242,
+            "k": 195.1136349644
+          },
+          "wkt": {
+            "players": 260,
+            "total_n": 87673.0,
+            "mu0": 0.0479166904,
+            "sigma2": 0.045606897,
+            "tau2": 1.44435e-05,
+            "k": 3157.6130881365
+          }
+        },
+        "matches_in_sample": 367
+      }
+    },
+    "T20I": {
+      "batter": {
+        "observed_players": 665,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 665,
+              "mean": 153.9759398496,
+              "std": 244.5409998856,
+              "min": 1.0,
+              "p5": 3.0,
+              "p10": 5.0,
+              "p25": 15.0,
+              "p50": 50.0,
+              "p75": 163.0,
+              "p90": 458.2,
+              "p95": 721.0,
+              "max": 1456.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 75
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 62
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 113
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 116
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 94
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 74
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 67
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 49
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 15
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 665,
+              "mean": 11.3293233083,
+              "std": 13.791305876,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 5.0,
+              "p75": 14.0,
+              "p90": 33.0,
+              "p95": 44.0,
+              "max": 75.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 80
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 100
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 111
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 100
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 88
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 60
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 79
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 47
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 665,
+              "mean": 11.3293233083,
+              "std": 13.791305876,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 5.0,
+              "p75": 14.0,
+              "p90": 33.0,
+              "p95": 44.0,
+              "max": 75.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 80
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 100
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 111
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 100
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 88
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 60
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 79
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 47
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 665,
+              "mean": 118.3881011702,
+              "std": 225.1901958007,
+              "min": 0.0113308178,
+              "p5": 0.099717596,
+              "p10": 0.2709883649,
+              "p25": 2.2003839087,
+              "p50": 18.2142881786,
+              "p75": 106.1677584069,
+              "p90": 384.9030799374,
+              "p95": 643.1649205578,
+              "max": 1373.6784654405
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 224
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 46
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 76
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 69
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 54
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 59
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 52
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 85
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 665,
+              "mean": 7.4174428489,
+              "std": 8.7423175245,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 1.9513513514,
+              "p50": 3.7674418605,
+              "p75": 8.7225806452,
+              "p90": 20.7715818195,
+              "p95": 27.8937324558,
+              "max": 48.6719022688
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 111
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 79
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 102
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 104
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 86
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 56
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 55
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 72
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 75,
+          "single_match_players": 80,
+          "single_match_share": 0.1203007519
+        },
+        "prior_parameters": {
+          "runs": {
+            "players": 665,
+            "total_n": 102394.0,
+            "mu0": 1.3429790808,
+            "sigma2": 2.8686468708,
+            "tau2": 0.0328766341,
+            "k": 87.2548833909
+          }
+        },
+        "matches_in_sample": 470
+      },
+      "bowler": {
+        "observed_players": 479,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 479,
+              "mean": 212.8371607516,
+              "std": 280.9304374154,
+              "min": 1.0,
+              "p5": 6.0,
+              "p10": 16.0,
+              "p25": 36.0,
+              "p50": 97.0,
+              "p75": 266.0,
+              "p90": 570.0,
+              "p95": 835.1,
+              "max": 1627.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 4
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 26
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 61
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 84
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 90
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 83
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 65
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 46
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 20
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 479,
+              "mean": 11.2651356994,
+              "std": 13.5772489808,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 6.0,
+              "p75": 15.0,
+              "p90": 29.2,
+              "p95": 41.1,
+              "max": 75.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 69
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 64
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 79
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 61
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 60
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 53
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 65
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 28
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 479,
+              "mean": 11.2651356994,
+              "std": 13.5772489808,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 6.0,
+              "p75": 15.0,
+              "p90": 29.2,
+              "p95": 41.1,
+              "max": 75.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 69
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 64
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 79
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 61
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 60
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 53
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 65
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 28
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 479,
+              "mean": 159.1378250702,
+              "std": 261.4477043314,
+              "min": 0.0068993891,
+              "p5": 0.3246315108,
+              "p10": 2.0007364575,
+              "p25": 8.3141846118,
+              "p50": 42.302937279,
+              "p75": 178.7521803092,
+              "p90": 467.5644431882,
+              "p95": 741.302273134,
+              "max": 1612.028124409
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 88
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 44
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 50
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 51
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 58
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 57
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 54
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 77
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 479,
+              "mean": 10.4027749133,
+              "std": 12.7362983994,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 1.9991993605,
+              "p50": 4.9980178394,
+              "p75": 13.1694611385,
+              "p90": 26.9540166682,
+              "p95": 39.7043096213,
+              "max": 72.121100874
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 71
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 50
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 64
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 55
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 56
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 54
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 52
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 77
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 4,
+          "single_match_players": 69,
+          "single_match_share": 0.1440501044
+        },
+        "prior_parameters": {
+          "econ": {
+            "players": 479,
+            "total_n": 106314.0,
+            "mu0": 1.3418458529,
+            "sigma2": 2.8031441132,
+            "tau2": 0.019474343,
+            "k": 143.9403689011
+          },
+          "wkt": {
+            "players": 479,
+            "total_n": 106314.0,
+            "mu0": 0.0535959516,
+            "sigma2": 0.0507199235,
+            "tau2": 4.0019e-06,
+            "k": 12674.1134981643
+          }
+        },
+        "matches_in_sample": 470
+      }
+    },
+    "OTHER_T20": {
+      "batter": {
+        "observed_players": 159,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 159,
+              "mean": 42.358490566,
+              "std": 44.3180797205,
+              "min": 1.0,
+              "p5": 1.9,
+              "p10": 2.8,
+              "p25": 9.0,
+              "p50": 30.0,
+              "p75": 64.5,
+              "p90": 94.0,
+              "p95": 122.0,
+              "max": 293.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 30
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 17
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 29
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 38
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 36
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 8
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 1
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 0
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 159,
+              "mean": 3.106918239,
+              "std": 1.8778899921,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 3.0,
+              "p75": 4.0,
+              "p90": 6.0,
+              "p95": 7.0,
+              "max": 9.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 38
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 27
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 65
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 23
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 6
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 0
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 159,
+              "mean": 3.106918239,
+              "std": 1.8778899921,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 3.0,
+              "p75": 4.0,
+              "p90": 6.0,
+              "p95": 7.0,
+              "max": 9.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 38
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 27
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 65
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 23
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 6
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 0
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 159,
+              "mean": 25.9399149588,
+              "std": 36.1852152307,
+              "min": 0.0236956605,
+              "p5": 0.0856993888,
+              "p10": 0.1814069589,
+              "p25": 1.6134873211,
+              "p50": 12.6401263412,
+              "p75": 39.3587166911,
+              "p90": 65.3541498385,
+              "p95": 91.199963357,
+              "max": 256.8777154196
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 58
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 12
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 24
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 28
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 27
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 8
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 2
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 159,
+              "mean": 2.3472327712,
+              "std": 1.3143027659,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 1.178501157,
+              "p50": 2.0,
+              "p75": 2.8419354839,
+              "p90": 3.9562822564,
+              "p95": 5.4448479389,
+              "max": 6.9151996033
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 48
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 29
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 47
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 26
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 9
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 0
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 30,
+          "single_match_players": 38,
+          "single_match_share": 0.2389937107
+        },
+        "prior_parameters": {
+          "runs": {
+            "players": 159,
+            "total_n": 6735.0,
+            "mu0": 1.25077951,
+            "sigma2": 2.7322069007,
+            "tau2": 0.0663127722,
+            "k": 41.2018199584
+          }
+        },
+        "matches_in_sample": 30
+      },
+      "bowler": {
+        "observed_players": 112,
+        "measures": {
+          "balls": {
+            "summary": {
+              "count": 112,
+              "mean": 60.0,
+              "std": 42.1624913362,
+              "min": 2.0,
+              "p5": 6.0,
+              "p10": 12.0,
+              "p25": 24.0,
+              "p50": 54.0,
+              "p75": 78.0,
+              "p90": 119.5,
+              "p95": 139.35,
+              "max": 192.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 6,
+                "count": 1
+              },
+              {
+                "lower": 6,
+                "upper": 12,
+                "count": 7
+              },
+              {
+                "lower": 12,
+                "upper": 30,
+                "count": 23
+              },
+              {
+                "lower": 30,
+                "upper": 60,
+                "count": 27
+              },
+              {
+                "lower": 60,
+                "upper": 120,
+                "count": 42
+              },
+              {
+                "lower": 120,
+                "upper": 240,
+                "count": 12
+              },
+              {
+                "lower": 240,
+                "upper": 480,
+                "count": 0
+              },
+              {
+                "lower": 480,
+                "upper": 960,
+                "count": 0
+              },
+              {
+                "lower": 960,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "matches": {
+            "summary": {
+              "count": 112,
+              "mean": 3.25,
+              "std": 1.8911839087,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 3.0,
+              "p75": 4.0,
+              "p90": 6.0,
+              "p95": 7.0,
+              "max": 8.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 24
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 22
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 41
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 22
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 3
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 0
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "innings": {
+            "summary": {
+              "count": 112,
+              "mean": 3.25,
+              "std": 1.8911839087,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 2.0,
+              "p50": 3.0,
+              "p75": 4.0,
+              "p90": 6.0,
+              "p95": 7.0,
+              "max": 8.0
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 2,
+                "count": 24
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 22
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 41
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 22
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 3
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 0
+              },
+              {
+                "lower": 40,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "n_eff_shrink": {
+            "summary": {
+              "count": 112,
+              "mean": 42.3531587971,
+              "std": 37.4259444495,
+              "min": 0.1071052113,
+              "p5": 1.1571216412,
+              "p10": 4.1820754085,
+              "p25": 10.8537520426,
+              "p50": 33.4839155259,
+              "p75": 59.121990468,
+              "p90": 93.5497358318,
+              "p95": 115.2388043732,
+              "max": 169.9621943651
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 5,
+                "count": 12
+              },
+              {
+                "lower": 5,
+                "upper": 10,
+                "count": 13
+              },
+              {
+                "lower": 10,
+                "upper": 20,
+                "count": 18
+              },
+              {
+                "lower": 20,
+                "upper": 40,
+                "count": 17
+              },
+              {
+                "lower": 40,
+                "upper": 80,
+                "count": 35
+              },
+              {
+                "lower": 80,
+                "upper": 160,
+                "count": 16
+              },
+              {
+                "lower": 160,
+                "upper": 320,
+                "count": 1
+              },
+              {
+                "lower": 320,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          },
+          "n_eff_kish": {
+            "summary": {
+              "count": 112,
+              "mean": 3.0328657032,
+              "std": 1.7765242166,
+              "min": 1.0,
+              "p5": 1.0,
+              "p10": 1.0,
+              "p25": 1.5683451575,
+              "p50": 2.9000465948,
+              "p75": 3.958198143,
+              "p90": 5.4451225497,
+              "p95": 6.5469398134,
+              "max": 7.9904115062
+            },
+            "histogram": [
+              {
+                "lower": 0,
+                "upper": 1.5,
+                "count": 26
+              },
+              {
+                "lower": 1.5,
+                "upper": 2,
+                "count": 18
+              },
+              {
+                "lower": 2,
+                "upper": 3,
+                "count": 21
+              },
+              {
+                "lower": 3,
+                "upper": 5,
+                "count": 32
+              },
+              {
+                "lower": 5,
+                "upper": 8,
+                "count": 15
+              },
+              {
+                "lower": 8,
+                "upper": 12,
+                "count": 0
+              },
+              {
+                "lower": 12,
+                "upper": 20,
+                "count": 0
+              },
+              {
+                "lower": 20,
+                "upper": null,
+                "count": 0
+              }
+            ]
+          }
+        },
+        "zero_inflation": {
+          "balls_le_5": 1,
+          "single_match_players": 24,
+          "single_match_share": 0.2142857143
+        },
+        "prior_parameters": {
+          "econ": {
+            "players": 112,
+            "total_n": 6973.0,
+            "mu0": 1.2512548401,
+            "sigma2": 2.6505758963,
+            "tau2": 0.0749884497,
+            "k": 35.3464554246
+          },
+          "wkt": {
+            "players": 112,
+            "total_n": 6973.0,
+            "mu0": 0.0519145275,
+            "sigma2": 0.0490140177,
+            "tau2": 0.0002152646,
+            "k": 227.6919092072
+          }
+        },
+        "matches_in_sample": 30
+      }
+    }
+  },
+  "distinct_dismissal_types": [
+    "Bowled",
+    "Caught",
+    "Hit Wicket",
+    "LBW",
+    "Obstracting the field",
+    "Obstructing the field",
+    "Retire Out",
+    "RunOut",
+    "Stump"
+  ],
+  "provenance": {
+    "generated_at_utc": "2026-11-14T20:53:06Z",
+    "code_version": "bbcb52669ee61f080700813c1d64811481d41cb2dc859d29afbc76621b29f08a",
+    "seed": 20260512,
+    "config_file": "eligibility_rules_v1.json",
+    "config_sha256": "99d5e96a1b870da55e7561f8aac00b1077f27b553e4351f0b6df998f459313a0",
+    "data_version": "data-8c617454671e",
+    "source_sha256": {
+      "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+    }
+  },
+  "preservation": {
+    "unchanged": true,
+    "diff": {},
+    "snapshot": {
+      "csv_sha256": {
+        "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+        "batting_stats2026.csv": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+        "bowling_stats2026.csv": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+        "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+        "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+        "fielding_stats2026.csv": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+        "ipl squad.csv": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+        "matches 2026.csv": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+        "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+        "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+        "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+        "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+      },
+      "tables": {
+        "ball_by_ball_comparison_detail": {
+          "rows": 57,
+          "content_hash": "6424049670836342807"
+        },
+        "ball_by_ball_comparison": {
+          "rows": 33,
+          "content_hash": "6556012316708249722"
+        },
+        "match_reconciliation": {
+          "rows": 883,
+          "content_hash": "8191618280319093247"
+        },
+        "deliveries": {
+          "rows": 200999,
+          "content_hash": "2472089235370398535"
+        },
+        "innings": {
+          "rows": 1724,
+          "content_hash": "2486840171759231281"
+        },
+        "match_squads": {
+          "rows": 28381,
+          "content_hash": "11232610400671811020"
+        },
+        "matches": {
+          "rows": 883,
+          "content_hash": "13176953439193494225"
+        },
+        "player_competition_mapping": {
+          "rows": 6413,
+          "content_hash": "595047445318026641"
+        },
+        "players": {
+          "rows": 1217,
+          "content_hash": "5617674674654928061"
+        },
+        "venues": {
+          "rows": 98,
+          "content_hash": "14876321384663441804"
+        },
+        "competition_teams": {
+          "rows": 353,
+          "content_hash": "15187849804718752551"
+        },
+        "teams": {
+          "rows": 38,
+          "content_hash": "13847215763956492045"
+        },
+        "competitions": {
+          "rows": 141,
+          "content_hash": "4698846567658472722"
+        },
+        "raw_ball_by_ball_updated": {
+          "rows": 200999,
+          "content_hash": "16279601034874580097"
+        },
+        "raw_ball_by_ball": {
+          "rows": 200999,
+          "content_hash": "14284978838386518736"
+        }
+      },
+      "db_file_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+      "cricsheet": {
+        "2026_male_json": {
+          "files": 1621,
+          "bytes": 267865691,
+          "sha256": "9605d27a0fcc0619476e58a3d9a9565b11f197c2007dedc6b3929232e39dd530"
+        },
+        "bbl_male_json": {
+          "files": 664,
+          "bytes": 54772655,
+          "sha256": "695bdd9b272d2a480791c5b4307283c42e63489c0a3d836b100456af95405f32"
+        },
+        "cpl_male_json": {
+          "files": 447,
+          "bytes": 37167606,
+          "sha256": "214c3a41faebce9ec69ae5451649437f5dd0ef4bb533fae608e090897eb21631"
+        },
+        "india_male_json": {
+          "files": 1039,
+          "bytes": 264034861,
+          "sha256": "718484e89142833a2c029119f599482bc953b718488330bd01c6d1ee0b0b7a6f"
+        },
+        "ipl_male_json": {
+          "files": 1245,
+          "bytes": 105718906,
+          "sha256": "03631a85a3463332f2b49167a23ac5c56b6e79048a32beb05043e0b5568df845"
+        },
+        "it20s_male_json": {
+          "files": 242,
+          "bytes": 19023902,
+          "sha256": "e2a02352a49dfc45e4ea6025af786d74849bbd5d7f41847b8a0326a3ba12dbce"
+        },
+        "mlc_male_json": {
+          "files": 111,
+          "bytes": 9253438,
+          "sha256": "aa046883ac8536fbce2190c77f6a16fb530ea5d401f81a2c50cc3725d61dbf3e"
+        },
+        "t20s_male_json": {
+          "files": 3651,
+          "bytes": 296564757,
+          "sha256": "8f92a901816c0276e62a7f0cdeb2060e6de1dfc83c6b8d34a2c465806154822d"
+        }
+      }
+    }
+  }
+}

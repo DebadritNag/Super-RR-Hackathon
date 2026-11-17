@@ -1,0 +1,48 @@
+{
+  "version": "p4_selection_presets_v1",
+  "note": "Parameter templates only. They are run over the stored experimental scores and never relaxed silently. Uncapped presets depend on verified classification (override or source file).",
+  "presets": [
+    {
+      "preset_id": "best_indian_uncapped_xi",
+      "name": "Best Indian Uncapped XI",
+      "description": "Eleven Indian verified-Uncapped eligible players, best combined side score.",
+      "depends_on_verified_classification": true,
+      "request": {"total": 11, "groups": {"IN_UNCAPPED": {"exact": 11}}, "allow_fewer": false}
+    },
+    {
+      "preset_id": "top_indian_uncapped_batters",
+      "name": "Top Indian Uncapped Batters",
+      "description": "Up to ten Indian verified-Uncapped eligible batters (fewer if fewer qualify).",
+      "depends_on_verified_classification": true,
+      "request": {"total": 10, "groups": {"IN_UNCAPPED": {"min": 0, "max": 10}, "IN_CAPPED": {"exact": 0}, "OS_CAPPED": {"exact": 0}, "OS_UNCAPPED": {"exact": 0}}, "side": "batter", "allow_fewer": true}
+    },
+    {
+      "preset_id": "top_indian_uncapped_bowlers",
+      "name": "Top Indian Uncapped Bowlers",
+      "description": "Up to ten Indian verified-Uncapped eligible bowlers (fewer if fewer qualify).",
+      "depends_on_verified_classification": true,
+      "request": {"total": 10, "groups": {"IN_UNCAPPED": {"min": 0, "max": 10}, "IN_CAPPED": {"exact": 0}, "OS_CAPPED": {"exact": 0}, "OS_UNCAPPED": {"exact": 0}}, "side": "bowler", "allow_fewer": true}
+    },
+    {
+      "preset_id": "best_overseas_uncapped_players",
+      "name": "Best Overseas Uncapped Players",
+      "description": "Up to ten Overseas verified-Uncapped eligible players (fewer if fewer qualify).",
+      "depends_on_verified_classification": true,
+      "request": {"total": 10, "groups": {"OS_UNCAPPED": {"min": 0, "max": 10}, "IN_CAPPED": {"exact": 0}, "IN_UNCAPPED": {"exact": 0}, "OS_CAPPED": {"exact": 0}}, "allow_fewer": true}
+    },
+    {
+      "preset_id": "emerging_domestic_talent",
+      "name": "Emerging Domestic Talent",
+      "description": "Indian verified-Uncapped eligible players, requiring the minimum matches in min_matches if supplied. Available only from verified classification evidence.",
+      "depends_on_verified_classification": true,
+      "request": {"total": 10, "groups": {"IN_UNCAPPED": {"min": 0, "max": 10}, "IN_CAPPED": {"exact": 0}, "OS_CAPPED": {"exact": 0}, "OS_UNCAPPED": {"exact": 0}}, "allow_fewer": true}
+    },
+    {
+      "preset_id": "mixed_capped_and_uncapped_xi",
+      "name": "Mixed Capped and Uncapped XI",
+      "description": "Eleven players with at least two Indian Uncapped and one Overseas Uncapped; the rest from the capped pools.",
+      "depends_on_verified_classification": true,
+      "request": {"total": 11, "groups": {"IN_UNCAPPED": {"min": 2}, "OS_UNCAPPED": {"min": 1}}, "allow_fewer": false}
+    }
+  ]
+}

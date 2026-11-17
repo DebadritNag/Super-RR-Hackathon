@@ -1,0 +1,812 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "split_version": "phase4_split_v1",
+  "split_config_sha256": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+  "seed": 20260512,
+  "boundaries": {
+    "TRAIN": {
+      "start": null,
+      "end": "2024-12-31"
+    },
+    "VALIDATION": {
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    "TEST": {
+      "start": "2026-01-01",
+      "end": null
+    }
+  },
+  "matches_by_format_period": [
+    {
+      "competition_type": "IPL",
+      "period": "TEST",
+      "matches": 74,
+      "first": "2026-03-28",
+      "last": "2026-05-31"
+    },
+    {
+      "competition_type": "IPL",
+      "period": "TRAIN",
+      "matches": 219,
+      "first": "2022-03-26",
+      "last": "2024-05-26"
+    },
+    {
+      "competition_type": "IPL",
+      "period": "VALIDATION",
+      "matches": 74,
+      "first": "2025-03-22",
+      "last": "2025-06-03"
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "TRAIN",
+      "matches": 15,
+      "first": "2024-10-18",
+      "last": "2024-10-27"
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "VALIDATION",
+      "matches": 15,
+      "first": "2025-11-14",
+      "last": "2025-11-23"
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TEST",
+      "matches": 70,
+      "first": "2026-01-07",
+      "last": "2026-11-01"
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TRAIN",
+      "matches": 278,
+      "first": "2022-01-22",
+      "last": "2024-12-30"
+    },
+    {
+      "competition_type": "T20I",
+      "period": "VALIDATION",
+      "matches": 122,
+      "first": "2025-01-02",
+      "last": "2025-12-19"
+    }
+  ],
+  "deliveries_by_format_period_innings": [
+    {
+      "competition_type": "IPL",
+      "period": "TEST",
+      "innings_number": 1,
+      "rows": 9123
+    },
+    {
+      "competition_type": "IPL",
+      "period": "TEST",
+      "innings_number": 2,
+      "rows": 8400
+    },
+    {
+      "competition_type": "IPL",
+      "period": "TRAIN",
+      "innings_number": 1,
+      "rows": 27352
+    },
+    {
+      "competition_type": "IPL",
+      "period": "TRAIN",
+      "innings_number": 2,
+      "rows": 25523
+    },
+    {
+      "competition_type": "IPL",
+      "period": "VALIDATION",
+      "innings_number": 1,
+      "rows": 9113
+    },
+    {
+      "competition_type": "IPL",
+      "period": "VALIDATION",
+      "innings_number": 2,
+      "rows": 8162
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "TRAIN",
+      "innings_number": 1,
+      "rows": 1835
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "TRAIN",
+      "innings_number": 2,
+      "rows": 1684
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "VALIDATION",
+      "innings_number": 1,
+      "rows": 1838
+    },
+    {
+      "competition_type": "OTHER_T20",
+      "period": "VALIDATION",
+      "innings_number": 2,
+      "rows": 1616
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TEST",
+      "innings_number": 1,
+      "rows": 8345
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TEST",
+      "innings_number": 2,
+      "rows": 7214
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TRAIN",
+      "innings_number": 1,
+      "rows": 33660
+    },
+    {
+      "competition_type": "T20I",
+      "period": "TRAIN",
+      "innings_number": 2,
+      "rows": 30189
+    },
+    {
+      "competition_type": "T20I",
+      "period": "VALIDATION",
+      "innings_number": 1,
+      "rows": 14461
+    },
+    {
+      "competition_type": "T20I",
+      "period": "VALIDATION",
+      "innings_number": 2,
+      "rows": 12446
+    }
+  ],
+  "integrity": {
+    "matches_in_more_than_one_period": 0,
+    "rows_with_period_not_equal_to_date_rule": 0,
+    "periods_strictly_ordered_by_date": true,
+    "periods_present": [
+      "TEST",
+      "TRAIN",
+      "VALIDATION"
+    ],
+    "matches_total": 867,
+    "delivery_rows_total": 200999,
+    "same_date_groups": {
+      "IPL": {
+        "dates": 64,
+        "matches": 128
+      },
+      "OTHER_T20": {
+        "dates": 14,
+        "matches": 28
+      },
+      "T20I": {
+        "dates": 70,
+        "matches": 147
+      }
+    }
+  },
+  "pressure_state_counts": [
+    {
+      "format": "IPL",
+      "period": "TRAIN",
+      "rrr_threshold_train_only": 16.1886792453,
+      "pressure_deliveries": 2512,
+      "distinct_matches": 115
+    },
+    {
+      "format": "IPL",
+      "period": "VALIDATION",
+      "rrr_threshold_train_only": 16.1886792453,
+      "pressure_deliveries": 796,
+      "distinct_matches": 31
+    },
+    {
+      "format": "IPL",
+      "period": "TEST",
+      "rrr_threshold_train_only": 16.1886792453,
+      "pressure_deliveries": 673,
+      "distinct_matches": 27
+    },
+    {
+      "format": "T20I",
+      "period": "TRAIN",
+      "rrr_threshold_train_only": 15.4117647059,
+      "pressure_deliveries": 2922,
+      "distinct_matches": 134
+    },
+    {
+      "format": "T20I",
+      "period": "VALIDATION",
+      "rrr_threshold_train_only": 15.4117647059,
+      "pressure_deliveries": 1283,
+      "distinct_matches": 53
+    },
+    {
+      "format": "T20I",
+      "period": "TEST",
+      "rrr_threshold_train_only": 15.4117647059,
+      "pressure_deliveries": 936,
+      "distinct_matches": 31
+    }
+  ],
+  "player_pressure_ball_distribution": [
+    {
+      "cell": "IPL batter",
+      "period": "TRAIN",
+      "players": 158,
+      "p50_balls": 9.5,
+      "p90_balls": 38.9,
+      "players_ge_24": 36,
+      "players_ge_36": 17,
+      "players_ge_60": 6,
+      "players_ge_count_threshold": 17
+    },
+    {
+      "cell": "IPL bowler",
+      "period": "TRAIN",
+      "players": 105,
+      "p50_balls": 15.0,
+      "p90_balls": 58.0,
+      "players_ge_24": 37,
+      "players_ge_36": 27,
+      "players_ge_60": 11,
+      "players_ge_count_threshold": 27
+    },
+    {
+      "cell": "IPL batter",
+      "period": "VALIDATION",
+      "players": 79,
+      "p50_balls": 6.0,
+      "p90_balls": 26.2,
+      "players_ge_24": 12,
+      "players_ge_36": 1,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 1
+    },
+    {
+      "cell": "IPL bowler",
+      "period": "VALIDATION",
+      "players": 59,
+      "p50_balls": 12.0,
+      "p90_balls": 25.0,
+      "players_ge_24": 9,
+      "players_ge_36": 1,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 1
+    },
+    {
+      "cell": "IPL batter",
+      "period": "TEST",
+      "players": 70,
+      "p50_balls": 7.0,
+      "p90_balls": 22.0,
+      "players_ge_24": 4,
+      "players_ge_36": 1,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 1
+    },
+    {
+      "cell": "IPL bowler",
+      "period": "TEST",
+      "players": 50,
+      "p50_balls": 12.0,
+      "p90_balls": 26.3,
+      "players_ge_24": 6,
+      "players_ge_36": 3,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 3
+    },
+    {
+      "cell": "T20I batter",
+      "period": "TRAIN",
+      "players": 254,
+      "p50_balls": 7.0,
+      "p90_balls": 29.0,
+      "players_ge_24": 35,
+      "players_ge_36": 15,
+      "players_ge_60": 2,
+      "players_ge_count_threshold": 15
+    },
+    {
+      "cell": "T20I bowler",
+      "period": "TRAIN",
+      "players": 165,
+      "p50_balls": 12.0,
+      "p90_balls": 40.0,
+      "players_ge_24": 33,
+      "players_ge_36": 20,
+      "players_ge_60": 9,
+      "players_ge_count_threshold": 20
+    },
+    {
+      "cell": "T20I batter",
+      "period": "VALIDATION",
+      "players": 124,
+      "p50_balls": 7.0,
+      "p90_balls": 23.0,
+      "players_ge_24": 12,
+      "players_ge_36": 4,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 4
+    },
+    {
+      "cell": "T20I bowler",
+      "period": "VALIDATION",
+      "players": 98,
+      "p50_balls": 10.0,
+      "p90_balls": 23.6,
+      "players_ge_24": 10,
+      "players_ge_36": 6,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 6
+    },
+    {
+      "cell": "T20I batter",
+      "period": "TEST",
+      "players": 96,
+      "p50_balls": 7.0,
+      "p90_balls": 21.0,
+      "players_ge_24": 7,
+      "players_ge_36": 3,
+      "players_ge_60": 1,
+      "players_ge_count_threshold": 3
+    },
+    {
+      "cell": "T20I bowler",
+      "period": "TEST",
+      "players": 76,
+      "p50_balls": 12.0,
+      "p90_balls": 24.5,
+      "players_ge_24": 9,
+      "players_ge_36": 0,
+      "players_ge_60": 0,
+      "players_ge_count_threshold": 0
+    }
+  ],
+  "verdicts": [
+    {
+      "level": "population",
+      "format": "IPL",
+      "period": "TRAIN",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "population",
+      "format": "IPL",
+      "period": "VALIDATION",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "population",
+      "format": "IPL",
+      "period": "TEST",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "population",
+      "format": "T20I",
+      "period": "TRAIN",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "population",
+      "format": "T20I",
+      "period": "VALIDATION",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "population",
+      "format": "T20I",
+      "period": "TEST",
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "player",
+      "format": "IPL batter",
+      "period": "TRAIN",
+      "players_with_enough_balls": 17,
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "player",
+      "format": "IPL bowler",
+      "period": "TRAIN",
+      "players_with_enough_balls": 27,
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "player",
+      "format": "IPL batter",
+      "period": "VALIDATION",
+      "players_with_enough_balls": 1,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "IPL bowler",
+      "period": "VALIDATION",
+      "players_with_enough_balls": 1,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "IPL batter",
+      "period": "TEST",
+      "players_with_enough_balls": 1,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "IPL bowler",
+      "period": "TEST",
+      "players_with_enough_balls": 3,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "T20I batter",
+      "period": "TRAIN",
+      "players_with_enough_balls": 15,
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "player",
+      "format": "T20I bowler",
+      "period": "TRAIN",
+      "players_with_enough_balls": 20,
+      "supported": true,
+      "label": "SUPPORTED"
+    },
+    {
+      "level": "player",
+      "format": "T20I batter",
+      "period": "VALIDATION",
+      "players_with_enough_balls": 4,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "T20I bowler",
+      "period": "VALIDATION",
+      "players_with_enough_balls": 6,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "T20I batter",
+      "period": "TEST",
+      "players_with_enough_balls": 3,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    },
+    {
+      "level": "player",
+      "format": "T20I bowler",
+      "period": "TEST",
+      "players_with_enough_balls": 0,
+      "supported": false,
+      "label": "INSUFFICIENT_FOR_PLAYER_LEVEL_TEST"
+    }
+  ],
+  "par_coverage": {
+    "min_prior_innings_note": "NULL and flagged, never zero-filled, no cross-format fallback",
+    "rows": [
+      {
+        "competition_type": "IPL",
+        "period": "TEST",
+        "innings1_rows": 9123,
+        "rows_unavailable": 0,
+        "innings_unavailable": 0,
+        "matches": 74,
+        "last_unavailable_date": null
+      },
+      {
+        "competition_type": "IPL",
+        "period": "TRAIN",
+        "innings1_rows": 27352,
+        "rows_unavailable": 3737,
+        "innings_unavailable": 30,
+        "matches": 219,
+        "last_unavailable_date": "2022-04-18"
+      },
+      {
+        "competition_type": "IPL",
+        "period": "VALIDATION",
+        "innings1_rows": 9113,
+        "rows_unavailable": 0,
+        "innings_unavailable": 0,
+        "matches": 74,
+        "last_unavailable_date": null
+      },
+      {
+        "competition_type": "T20I",
+        "period": "TEST",
+        "innings1_rows": 8345,
+        "rows_unavailable": 0,
+        "innings_unavailable": 0,
+        "matches": 70,
+        "last_unavailable_date": null
+      },
+      {
+        "competition_type": "T20I",
+        "period": "TRAIN",
+        "innings1_rows": 33660,
+        "rows_unavailable": 3955,
+        "innings_unavailable": 33,
+        "matches": 278,
+        "last_unavailable_date": "2022-07-18"
+      },
+      {
+        "competition_type": "T20I",
+        "period": "VALIDATION",
+        "innings1_rows": 14461,
+        "rows_unavailable": 0,
+        "innings_unavailable": 0,
+        "matches": 122,
+        "last_unavailable_date": null
+      }
+    ],
+    "total_rows_unavailable": 7692,
+    "total_innings_unavailable": 63
+  },
+  "par_equivalence": {
+    "rows_compared": 200999,
+    "rows_only_in_one_table": 0,
+    "null_pattern_identical": true,
+    "max_abs_difference_where_both_present": 0.0
+  },
+  "par_sensitivity": {
+    "30": 7692,
+    "15": 3733,
+    "60": 15491
+  },
+  "par_min_prior_innings": 30,
+  "rolling_origins": [
+    {
+      "origin": "2024-01-01",
+      "evaluation_start": "2024-01-01",
+      "evaluation_end": "2024-12-31"
+    },
+    {
+      "origin": "2025-01-01",
+      "evaluation_start": "2025-01-01",
+      "evaluation_end": "2025-12-31"
+    }
+  ],
+  "phases": {
+    "shortened": {
+      "limits_present": [
+        30,
+        42,
+        48,
+        54,
+        60,
+        66,
+        72,
+        78,
+        84,
+        90,
+        102,
+        108,
+        114,
+        120
+      ],
+      "limit_constant_within_every_innings": true,
+      "by_limit": [
+        {
+          "limit": 30,
+          "innings": 4,
+          "deliveries": 97,
+          "powerplay_end_ball": 9,
+          "death_start_ball": 23,
+          "powerplay_balls": 9,
+          "middle_balls": 14,
+          "death_balls": 7
+        },
+        {
+          "limit": 42,
+          "innings": 3,
+          "deliveries": 126,
+          "powerplay_end_ball": 12,
+          "death_start_ball": 32,
+          "powerplay_balls": 12,
+          "middle_balls": 20,
+          "death_balls": 10
+        },
+        {
+          "limit": 48,
+          "innings": 4,
+          "deliveries": 187,
+          "powerplay_end_ball": 14,
+          "death_start_ball": 36,
+          "powerplay_balls": 14,
+          "middle_balls": 22,
+          "death_balls": 12
+        },
+        {
+          "limit": 54,
+          "innings": 4,
+          "deliveries": 173,
+          "powerplay_end_ball": 16,
+          "death_start_ball": 41,
+          "powerplay_balls": 16,
+          "middle_balls": 25,
+          "death_balls": 13
+        },
+        {
+          "limit": 60,
+          "innings": 3,
+          "deliveries": 184,
+          "powerplay_end_ball": 18,
+          "death_start_ball": 45,
+          "powerplay_balls": 18,
+          "middle_balls": 27,
+          "death_balls": 15
+        },
+        {
+          "limit": 66,
+          "innings": 6,
+          "deliveries": 422,
+          "powerplay_end_ball": 19,
+          "death_start_ball": 50,
+          "powerplay_balls": 19,
+          "middle_balls": 31,
+          "death_balls": 16
+        },
+        {
+          "limit": 72,
+          "innings": 2,
+          "deliveries": 100,
+          "powerplay_end_ball": 21,
+          "death_start_ball": 54,
+          "powerplay_balls": 21,
+          "middle_balls": 33,
+          "death_balls": 18
+        },
+        {
+          "limit": 78,
+          "innings": 2,
+          "deliveries": 141,
+          "powerplay_end_ball": 23,
+          "death_start_ball": 59,
+          "powerplay_balls": 23,
+          "middle_balls": 36,
+          "death_balls": 19
+        },
+        {
+          "limit": 84,
+          "innings": 4,
+          "deliveries": 267,
+          "powerplay_end_ball": 25,
+          "death_start_ball": 63,
+          "powerplay_balls": 25,
+          "middle_balls": 38,
+          "death_balls": 21
+        },
+        {
+          "limit": 90,
+          "innings": 7,
+          "deliveries": 610,
+          "powerplay_end_ball": 27,
+          "death_start_ball": 68,
+          "powerplay_balls": 27,
+          "middle_balls": 41,
+          "death_balls": 22
+        },
+        {
+          "limit": 102,
+          "innings": 4,
+          "deliveries": 420,
+          "powerplay_end_ball": 30,
+          "death_start_ball": 77,
+          "powerplay_balls": 30,
+          "middle_balls": 47,
+          "death_balls": 25
+        },
+        {
+          "limit": 108,
+          "innings": 2,
+          "deliveries": 173,
+          "powerplay_end_ball": 32,
+          "death_start_ball": 81,
+          "powerplay_balls": 32,
+          "middle_balls": 49,
+          "death_balls": 27
+        },
+        {
+          "limit": 114,
+          "innings": 5,
+          "deliveries": 504,
+          "powerplay_end_ball": 34,
+          "death_start_ball": 86,
+          "powerplay_balls": 34,
+          "middle_balls": 52,
+          "death_balls": 28
+        },
+        {
+          "limit": 120,
+          "innings": 1662,
+          "deliveries": 197557,
+          "powerplay_end_ball": 36,
+          "death_start_ball": 90,
+          "powerplay_balls": 36,
+          "middle_balls": 54,
+          "death_balls": 30
+        }
+      ],
+      "regulation_innings_total": 1712,
+      "shortened_innings": 50,
+      "shortened_matches": 34,
+      "shortened_deliveries": 3404,
+      "shortened_innings_by_innings_number": {
+        "1": 25,
+        "2": 25
+      },
+      "shortened_innings_by_limit_source": {
+        "CARRIED_FROM_FIRST_INNINGS_UNVERIFIED": 2,
+        "REVISED_FIELD": 48
+      },
+      "shortened_innings_by_period": {
+        "IPL|TEST": 4,
+        "IPL|TRAIN": 1,
+        "IPL|VALIDATION": 3,
+        "T20I|TEST": 10,
+        "T20I|TRAIN": 23,
+        "T20I|VALIDATION": 9
+      },
+      "shortened_innings_all_rows_dls_excluded": 50
+    },
+    "label_checks": {
+      "rows_checked": 200961,
+      "stored_labels_equal_recomputed_from_B_and_L": true,
+      "labels_unchanged_when_last_30pct_of_each_innings_removed": true,
+      "labels_independent_of_row_order_and_other_innings": true
+    },
+    "revision_timing": {
+      "shortened_deliveries": 3404,
+      "deliveries_whose_label_depends_on_revised_limit": 1154,
+      "announcement_time_in_data": false,
+      "handling": "all such innings are excluded from primary scoring (dls_exclude_primary)"
+    },
+    "dls": {
+      "total_rows": 200999,
+      "regulation_rows": 200961,
+      "dls_excluded_regulation_rows": 3404,
+      "dls_excluded_regulation_innings": 50,
+      "dls_excluded_rows_in_scope": 3404,
+      "dls_excluded_chase_rows_otherwise_eligible": 1775,
+      "dls_resources_imputed": false,
+      "rows_deleted": 0
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "config_version": "pressure_rules_v1",
+  "state_version": "pre_delivery_state_v1",
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "not_for_publication": true,
+  "restricted_innings": {
+    "regulation_innings": [1, 2],
+    "reason_codes": {
+      "CONFIRMED_SUPER_OVER_BY_CRICSHEET": [34429, 45512, 50359],
+      "UNVERIFIED_INNINGS_ROLE": [40725, 48027, 48029]
+    },
+    "default_reason_code": "UNVERIFIED_INNINGS_ROLE",
+    "rule_id": "RULE_INNINGS_3_4",
+    "note": "Match ids are cross-checked in the build against data/reports/cricsheet_super_over_validation.json (a Phase 2.5 report). No Cricsheet file is opened and no Cricsheet delivery is loaded."
+  },
+  "engine": {
+    "default_innings_limit_balls": 120,
+    "wickets_total": 10,
+    "no_extras_literal": "None",
+    "non_legal_extras_types": ["wide", "Overstep", "other"],
+    "unverified_extras_types": ["other", "Penalty"],
+    "zero_legal_extras_types": ["Penalty"],
+    "not_ball_faced_extras_types": ["wide", "Penalty"],
+    "bowler_charged_extras_types": ["wide", "Overstep", "other"],
+    "bowler_credited_dismissals": ["Caught", "Bowled", "LBW", "Stump", "Hit Wicket"],
+    "revised_overs_unit": "BALLS",
+    "revised_overs_note": "All observed values are multiples of 6, so first_inn_revised_overs and second_inn_revised_overs are balls despite the column name. A non-multiple of 6 stops the build."
+  },
+  "parameters": {
+    "phase_bounds_L120": {
+      "value": {"powerplay_end_ball": 36, "death_start_ball": 90},
+      "basis": "EXTERNAL_CONVENTION",
+      "sensitivity": "death from over 17 (B >= 96); powerplay overs 1-5"
+    },
+    "phase_fractions": {
+      "value": {"powerplay_num": 3, "powerplay_den": 10, "death_num": 3, "death_den": 4},
+      "basis": "ARBITRARY_PLACEHOLDER",
+      "sensitivity": "exclude the 48 shortened innings from phase-dependent metrics"
+    },
+    "min_cell_innings": {"value": 30, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [15, 30, 60]},
+    "min_prior_innings": {"value": 30, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [15, 30, 60]},
+    "par_ball_bin": {"value": 6, "basis": "DATA_DERIVED", "sensitivity": [3, 12]},
+    "exp_brem_bin": {"value": 6, "basis": "DATA_DERIVED", "sensitivity": [3, 12]},
+    "exp_cell_fallback_chain": {
+      "value": ["E0_BINNED", "E1_BREM_BIN", "E2_COMP_TYPE", "NONE"],
+      "basis": "DATA_DERIVED",
+      "sensitivity": "thresholds 15 and 60 via min_cell_innings and min_prior_innings"
+    },
+    "wickets_bins": {
+      "value": "DETERMINISTIC_GLOBAL_MERGE",
+      "basis": "DATA_DERIVED",
+      "sensitivity": "4 bins (10-8, 7-5, 4-3, 2-1)"
+    },
+    "rrr_cap": {
+      "value": null,
+      "basis": "DATA_DERIVED",
+      "sensitivity": "reported variant: observed p99 of chase RRR, always shown beside uncapped"
+    },
+    "rrr_min_brem_report": {"value": 6, "basis": "DATA_DERIVED", "sensitivity": "reported as a separate column"},
+    "quantile_grid": {
+      "value": [0.5, 0.6, 0.75, 0.8, 0.85, 0.9, 0.95],
+      "basis": "ARBITRARY_PLACEHOLDER",
+      "sensitivity": "coarse subset 0.50, 0.75, 0.90, 0.95; extended 0.975 and 0.99"
+    },
+    "par_source_rule": {
+      "value": "L == 120 and (W == 10 or legal_balls == L), other matches only",
+      "basis": "DATA_DERIVED",
+      "sensitivity": "section 6 rule 3"
+    },
+    "bootstrap": {
+      "value": {"seed": 20260512, "n_resamples_eligibility": 1000, "n_resamples_baseline": 500},
+      "basis": "EXISTING_RULE",
+      "sensitivity": "baseline resamples 1000 (the 500 default is ARBITRARY_PLACEHOLDER)"
+    },
+    "n_eff": {
+      "value": {"kish": "app/analytics/confidence_engine.py", "shrink": "app/analytics/shrinkage.py", "cluster": "innings"},
+      "basis": "EXISTING_RULE",
+      "sensitivity": "none"
+    },
+    "bowl_B_early_balls": {"value": 12, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [6, 18]},
+    "break_reproducibility_tol": {"value": 0.05, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [0.025, 0.1]},
+    "zero_inflation_share": {"value": 0.05, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [0.02, 0.1]},
+    "knee_rule": {
+      "value": "max perpendicular distance to the chord of the min-max normalised cumulative curve",
+      "basis": "ARBITRARY_PLACEHOLDER",
+      "sensitivity": "normalise the x axis by quantile rank instead of signal value"
+    },
+    "wrem_low_quantile": {
+      "value": "1 - q lower quantile of Wrem in the context",
+      "basis": "ARBITRARY_PLACEHOLDER",
+      "sensitivity": "lowest global wickets_bins bin; 1 - q on the strictly-prior population"
+    },
+    "quantile_grid_by_family": {
+      "value": {"a": "all", "b": "all", "c": "none"},
+      "basis": "ARBITRARY_PLACEHOLDER",
+      "sensitivity": "coarse subset for (a) and (b); extended top 0.975 and 0.99 for (a)"
+    },
+    "tau2_floor": {"value": 0.01, "basis": "ARBITRARY_PLACEHOLDER", "sensitivity": [0.001, 0.1]}
+  }
+}

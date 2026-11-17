@@ -1,0 +1,132 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "rule_sha256": "c8ae7e837f30978dd6e252007a3a42440080ccd53c6be3606745fd28f2bb497f",
+  "selection": {
+    "candidates": [
+      {
+        "definition_id": "chase|q0.75",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.2522106718,
+        "Sc_boot_se": 0.0609625258,
+        "min_P": 93,
+        "total_P": 427,
+        "total_pressure_balls_TRAIN": 26535,
+        "status": "OK",
+        "selection_share": 0.304
+      },
+      {
+        "definition_id": "chase|q0.9",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.1697244917,
+        "Sc_boot_se": 0.0922632137,
+        "min_P": 41,
+        "total_P": 189,
+        "total_pressure_balls_TRAIN": 10564,
+        "status": "OK",
+        "selection_share": 0.052
+      },
+      {
+        "definition_id": "chase|q0.95",
+        "gate1_pass": true,
+        "rankable": false,
+        "Sc": 0.2218460775,
+        "Sc_boot_se": 0.1636758792,
+        "min_P": 18,
+        "total_P": 85,
+        "total_pressure_balls_TRAIN": 5275,
+        "status": "NOT_RANKABLE",
+        "selection_share": 0.0
+      },
+      {
+        "definition_id": "inn1|q0.75",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.1543889651,
+        "Sc_boot_se": 0.0532609446,
+        "min_P": 92,
+        "total_P": 438,
+        "total_pressure_balls_TRAIN": 25947,
+        "status": "OK",
+        "selection_share": 0.024
+      },
+      {
+        "definition_id": "inn1|q0.9",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.1042400477,
+        "Sc_boot_se": 0.1094599211,
+        "min_P": 49,
+        "total_P": 215,
+        "total_pressure_balls_TRAIN": 10377,
+        "status": "OK",
+        "selection_share": 0.046
+      },
+      {
+        "definition_id": "inn1|q0.95",
+        "gate1_pass": true,
+        "rankable": false,
+        "Sc": -0.2486491263,
+        "Sc_boot_se": 0.2742629069,
+        "min_P": 19,
+        "total_P": 91,
+        "total_pressure_balls_TRAIN": 5184,
+        "status": "NOT_RANKABLE",
+        "selection_share": 0.0
+      },
+      {
+        "definition_id": "any|q0.75",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.2432416009,
+        "Sc_boot_se": 0.0409842837,
+        "min_P": 123,
+        "total_P": 666,
+        "total_pressure_balls_TRAIN": 52482,
+        "status": "OK",
+        "selection_share": 0.329
+      },
+      {
+        "definition_id": "any|q0.9",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.2604522436,
+        "Sc_boot_se": 0.0552362648,
+        "min_P": 78,
+        "total_P": 371,
+        "total_pressure_balls_TRAIN": 20941,
+        "status": "OK",
+        "selection_share": 0.152
+      },
+      {
+        "definition_id": "any|q0.95",
+        "gate1_pass": true,
+        "rankable": true,
+        "Sc": 0.1535680228,
+        "Sc_boot_se": 0.086099442,
+        "min_P": 45,
+        "total_P": 200,
+        "total_pressure_balls_TRAIN": 10459,
+        "status": "OK",
+        "selection_share": 0.093
+      }
+    ],
+    "leading_provisional": "chase|q0.9",
+    "sample_size_confound_spearman": 0.6785714286,
+    "sample_size_confound_n": 7,
+    "winner": "any|q0.75",
+    "best_Sc_candidate": "any|q0.9",
+    "tie_margin_used": 0.0552362648,
+    "top_group": [
+      "any|q0.75",
+      "any|q0.9",
+      "chase|q0.75"
+    ],
+    "label": "PROVISIONAL, one of 9 examined (multiplicity not corrected)",
+    "leading_status": "OK",
+    "leading_in_top_group": false
+  },
+  "carried_definition": "any|q0.75",
+  "carried_label": "PROVISIONAL rule winner"
+}

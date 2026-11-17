@@ -1,0 +1,114 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "checks": [
+    {
+      "id": "strictly_prior_par_from_raw_csv",
+      "description": "IPL first-innings par at legal ball 60 for match 40694 (2025-03-22 00:00:00)",
+      "method": "csv module on updated_ball_by_ball.csv and matches.csv; prior dates only",
+      "match_id": 40694,
+      "stored_innings_ball_num": 64,
+      "stored_par": 83.7627906977,
+      "independent_par": 83.7627906977,
+      "prior_source_innings_independent": 215,
+      "same_day_matches_excluded": 0,
+      "ok": true
+    },
+    {
+      "id": "period_match_counts_from_raw_csv",
+      "description": "matches per format and period from raw match dates",
+      "method": "csv module on matches.csv and matches 2026.csv; boundaries from split config",
+      "independent": {
+        "IPL|TEST": 74,
+        "IPL|TRAIN": 219,
+        "IPL|VALIDATION": 74,
+        "OTHER_T20|TRAIN": 15,
+        "OTHER_T20|VALIDATION": 15,
+        "T20I|TEST": 70,
+        "T20I|TRAIN": 278,
+        "T20I|VALIDATION": 122
+      },
+      "stored": {
+        "IPL|TEST": 74,
+        "IPL|TRAIN": 219,
+        "IPL|VALIDATION": 74,
+        "OTHER_T20|TRAIN": 15,
+        "OTHER_T20|VALIDATION": 15,
+        "T20I|TEST": 70,
+        "T20I|TRAIN": 278,
+        "T20I|VALIDATION": 122
+      },
+      "differences_independent_vs_stored": {},
+      "ok": true
+    },
+    {
+      "id": "player_pressure_balls_direct_sql",
+      "description": "IPL batter 3125 pressure balls, matches and runs per ball",
+      "method": "DuckDB SQL on the stored state table, definition rebuilt from frozen thresholds",
+      "player_id": 3125,
+      "stored": {
+        "pressure_opportunities": 343,
+        "distinct_matches": 25,
+        "raw_pressure_outcome": 1.5597667638
+      },
+      "independent": {
+        "pressure_opportunities": 343,
+        "distinct_matches": 25,
+        "raw_pressure_outcome": 1.5597667638
+      },
+      "ok": true
+    },
+    {
+      "id": "shrunk_estimate_from_stored_components",
+      "description": "B = n_eff / (n_eff + k); implied shrink target is near-constant per cell",
+      "method": "pandas on the stored frozen-rules score table",
+      "records_checked": 2690,
+      "max_abs_B_error": 0.0,
+      "max_abs_residual_identity_error": 0.0,
+      "max_implied_target_range_within_cell": 0.0147187077,
+      "share_point_estimate_inside_interval": 1.0,
+      "ok": true
+    },
+    {
+      "id": "capped_count_from_playing_eleven_csv",
+      "description": "players with a played T20I on or before 2025-12-31",
+      "method": "csv module on competitions.csv, matches.csv and playing_eleven.csv",
+      "independent": 655,
+      "stored_capped": 655,
+      "ok": true
+    },
+    {
+      "id": "top10_inclusion_probability_sums",
+      "description": "inclusion probabilities sum to about min(10, pool size) per pool",
+      "method": "pandas on the stored ranking distributions",
+      "pools": {
+        "IPL|batter": {
+          "sum": 10.0,
+          "expected": 10.0
+        },
+        "IPL|bowler": {
+          "sum": 10.0,
+          "expected": 10.0
+        },
+        "T20I|batter": {
+          "sum": 10.0,
+          "expected": 10.0
+        },
+        "T20I|bowler": {
+          "sum": 10.0,
+          "expected": 10.0
+        }
+      },
+      "ok": true
+    },
+    {
+      "id": "official_data_hashes",
+      "description": "superr.duckdb and source files equal the pre-Phase-4 hashes",
+      "method": "SHA-256 against phase4_hash_before.txt",
+      "files_checked": 22,
+      "changed": [],
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

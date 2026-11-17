@@ -1,0 +1,590 @@
+﻿{
+    "created_utc":  "2026-11-16T09:02:39.7259466Z",
+    "count":  146,
+    "files":  {
+                  "d:/Data/backend/data/database/superr.duckdb":  {
+                                                                      "sha256":  "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+                                                                      "bytes":  50343936
+                                                                  },
+                  "d:/Data/backend/data/database/exploratory.duckdb":  {
+                                                                           "sha256":  "64d83545d3e65d6e97df8d8803af49a09b5bb17525d73edf2f6d06e55f7261b1",
+                                                                           "bytes":  47198208
+                                                                       },
+                  "d:/Data/ball_by_ball.csv":  {
+                                                   "sha256":  "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+                                                   "bytes":  41071609
+                                               },
+                  "d:/Data/batting_stats2026.csv":  {
+                                                        "sha256":  "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+                                                        "bytes":  1178
+                                                    },
+                  "d:/Data/bowling_stats2026.csv":  {
+                                                        "sha256":  "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+                                                        "bytes":  1175
+                                                    },
+                  "d:/Data/competitions.csv":  {
+                                                   "sha256":  "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+                                                   "bytes":  7624
+                                               },
+                  "d:/Data/competition_team_player_mapping.csv":  {
+                                                                      "sha256":  "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+                                                                      "bytes":  462969
+                                                                  },
+                  "d:/Data/fielding_stats2026.csv":  {
+                                                         "sha256":  "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+                                                         "bytes":  493
+                                                     },
+                  "d:/Data/ipl squad.csv":  {
+                                                "sha256":  "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+                                                "bytes":  13837
+                                            },
+                  "d:/Data/matches 2026.csv":  {
+                                                   "sha256":  "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+                                                   "bytes":  6581
+                                               },
+                  "d:/Data/matches.csv":  {
+                                              "sha256":  "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+                                              "bytes":  123864
+                                          },
+                  "d:/Data/playing_eleven.csv":  {
+                                                     "sha256":  "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+                                                     "bytes":  966287
+                                                 },
+                  "d:/Data/teams.csv":  {
+                                            "sha256":  "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+                                            "bytes":  6922
+                                        },
+                  "d:/Data/updated_ball_by_ball.csv":  {
+                                                           "sha256":  "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e",
+                                                           "bytes":  41071837
+                                                       },
+                  "d:/Data/backend/data/reports/phase4_baseline_alternatives.csv":  {
+                                                                                        "sha256":  "5793bf17d42bd7ed05229ac0696a876ca51b91932835a7f0ef5748a5a67b7c4f",
+                                                                                        "bytes":  2302
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_baseline_alternatives.json":  {
+                                                                                         "sha256":  "73e64cbfa8e7b340d1d4f294f657e39cfd77705773a814d1e22d457fbdcf82fd",
+                                                                                         "bytes":  7952
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_baseline_alternatives.md":  {
+                                                                                       "sha256":  "8b470de5cf9490e1c672747a02d24762eb157487d53c92741d093e2d1a12c431",
+                                                                                       "bytes":  2314
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase4_baseline_calibration_report.md":  {
+                                                                                             "sha256":  "d1b3833e2e53273f78f9aa6b9ae17bf7840988fe9020f94514728b5a53a8f0fa",
+                                                                                             "bytes":  12069
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase4_calibration.json":  {
+                                                                               "sha256":  "52293bc23bf803e8cb48bb5401b84449b2e16c918736de43cb1167f95050f2a2",
+                                                                               "bytes":  51232
+                                                                           },
+                  "d:/Data/backend/data/reports/phase4_chunk1_preservation.json":  {
+                                                                                       "sha256":  "2e638ff225a1bd86bf0bc8e589cef37a716dc5408023d437c5bf866020f4e5e5",
+                                                                                       "bytes":  58
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase4_classification.csv":  {
+                                                                                 "sha256":  "6f6503e6040c38eedc4762e916fb7321bfc1a1cd5d6be96e62e64f864a3a50f6",
+                                                                                 "bytes":  263335
+                                                                             },
+                  "d:/Data/backend/data/reports/phase4_classification_coverage.json":  {
+                                                                                           "sha256":  "074d1b2e45e165bc831ce31c764997e885e2e1f6b7dfb08249affebe92029548",
+                                                                                           "bytes":  2531
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase4_classification_coverage_report.md":  {
+                                                                                                "sha256":  "6fb58b7dae3dd80d9eb186ce72a170baffbc50bc55cdab44a09c9aae3a8948a0",
+                                                                                                "bytes":  4482
+                                                                                            },
+                  "d:/Data/backend/data/reports/phase4_data_quality_report.md":  {
+                                                                                     "sha256":  "6379fd3d324b8f78ffe407e40d0b40e053aa5d0791c8eb6ba99ec187d40b772b",
+                                                                                     "bytes":  6129
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase4_definition_candidates.csv":  {
+                                                                                        "sha256":  "2b7d808e6d56f99721d76f8aa5b566d24f90525d5e6a743dd31989964984ba03",
+                                                                                        "bytes":  879
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_definition_comparison.csv":  {
+                                                                                        "sha256":  "ebe0d08f2b107efbb31fb6377ac9a42b8ac572e256f6a21097bf3c5d51251263",
+                                                                                        "bytes":  14872
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_definition_comparison.json":  {
+                                                                                         "sha256":  "9b1d1f77f150d8e33bd1bad72a4f002f8d496eadbb5f117f8a148195f2f5ec75",
+                                                                                         "bytes":  40950
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_definition_comparison.md":  {
+                                                                                       "sha256":  "83ac71a10801844ced5b12c8ba3735e7f54ccf515492a83981d94e68efd9e20b",
+                                                                                       "bytes":  13874
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase4_definition_selection.json":  {
+                                                                                        "sha256":  "bb7320748141d66ea97c5555c2259bc7276c72709ebd512b43bdbbd91af4f5af",
+                                                                                        "bytes":  3608
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_eligibility_candidates.csv":  {
+                                                                                         "sha256":  "4a8caead20ac5674f9d1576dd5ca6bf167beea3dafc724e5e1fbddca12b27cc1",
+                                                                                         "bytes":  16650
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_eligibility_candidates.json":  {
+                                                                                          "sha256":  "19eed486d33613fc896bea7e9cd78a33c16b899c908ad99ca250979d621cd1b0",
+                                                                                          "bytes":  54833
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase4_eligibility_frozen.csv":  {
+                                                                                     "sha256":  "68440e7cdadf0c6d3eea86f1987af4eb3a4f7f47228497f3357321080bf84d0b",
+                                                                                     "bytes":  983
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase4_eligibility_frozen.json":  {
+                                                                                      "sha256":  "94db27f8601f8eb1fa2a6e61a903fda0e4a6bb2186e9df1a81940f504f60213c",
+                                                                                      "bytes":  2348
+                                                                                  },
+                  "d:/Data/backend/data/reports/phase4_eligibility_validation.md":  {
+                                                                                        "sha256":  "b67f98bc2d2c6d966e1d618e528e3d02b019b89e41d6f6b55ce537b926dae4c2",
+                                                                                        "bytes":  10985
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_format_weight_pairwise.csv":  {
+                                                                                         "sha256":  "00a0e584827dde1f627096624903cb0354d5b63fed9b173cfc1b7b5895b21347",
+                                                                                         "bytes":  5037
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_format_weight_pairwise.json":  {
+                                                                                          "sha256":  "4d5ebb4b6a19681d30e4f0d1c1ba803c17d4beebaf89605c4976edb7e0b983fa",
+                                                                                          "bytes":  15812
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase4_format_weight_players.csv":  {
+                                                                                        "sha256":  "7a7ff45e06f0cf900b4d3a6c4bfcd1dab4b48d87bf8d99777ff0388e6343ff72",
+                                                                                        "bytes":  46918
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_format_weight_players.json":  {
+                                                                                         "sha256":  "26841d96bdc9201243fa842dfe84fc22a98923d818cce9aa9768d166be631f4b",
+                                                                                         "bytes":  181052
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_format_weight_results.csv":  {
+                                                                                        "sha256":  "da5e65f677bc6c041fe2a4b3e0b0817a0adbfa755d4526b77063bc9d1190a657",
+                                                                                        "bytes":  5071
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_format_weight_results.json":  {
+                                                                                         "sha256":  "9edae2b35bd7702923ec86442c2b7ce165cac780170fd369cff3a70d73a9cd82",
+                                                                                         "bytes":  15166
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_format_weight_sensitivity.md":  {
+                                                                                           "sha256":  "dbeab8029862aeb92101d3e1a3d28e6957d37b80b260bd05b57387340b557968",
+                                                                                           "bytes":  6064
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase4_frozen_choices.json":  {
+                                                                                  "sha256":  "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+                                                                                  "bytes":  3593
+                                                                              },
+                  "d:/Data/backend/data/reports/phase4_lock_log.json":  {
+                                                                            "sha256":  "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+                                                                            "bytes":  315
+                                                                        },
+                  "d:/Data/backend/data/reports/phase4_output_hashes.json":  {
+                                                                                 "sha256":  "8f9b1c30527ce360b738fe8fda15b18df86340f4132e3a1415d03aa965e73c06",
+                                                                                 "bytes":  5721
+                                                                             },
+                  "d:/Data/backend/data/reports/phase4_phase_boundaries.md":  {
+                                                                                  "sha256":  "80f6907a16b358d3f948ba90eccc3115a5d5045012a8cad2a42d5acda8eed077",
+                                                                                  "bytes":  3308
+                                                                              },
+                  "d:/Data/backend/data/reports/phase4_preservation.json":  {
+                                                                                "sha256":  "dfa373b0f79a025350abfcb7c0af6a498544b3761134f904ad33e13653844062",
+                                                                                "bytes":  3365
+                                                                            },
+                  "d:/Data/backend/data/reports/phase4_pressure_scores_experimental.csv":  {
+                                                                                               "sha256":  "4ac8b9f28f6dd3444c933a7a20a91d2f1a76248e23a222b6f9fc02c14086ce68",
+                                                                                               "bytes":  1816279
+                                                                                           },
+                  "d:/Data/backend/data/reports/phase4_pressure_scores_experimental.json":  {
+                                                                                                "sha256":  "3a3c29ecc463019a39a6b9086d6c94a8d8c8dac448b75d2de79f997b23fa648d",
+                                                                                                "bytes":  3842924
+                                                                                            },
+                  "d:/Data/backend/data/reports/phase4_pressure_scores_frozen_rules.csv":  {
+                                                                                               "sha256":  "915cce0a3ec932bad84b01501957864d31a0fc2522cd8d18875bcb54f1188cfd",
+                                                                                               "bytes":  11695316
+                                                                                           },
+                  "d:/Data/backend/data/reports/phase4_pressure_scores_frozen_rules.json":  {
+                                                                                                "sha256":  "8d75738ecd9c3362116528b2d1e82bd619829b51ace77b069f725adc441c73bd",
+                                                                                                "bytes":  24668203
+                                                                                            },
+                  "d:/Data/backend/data/reports/phase4_pressure_scoring_report.md":  {
+                                                                                         "sha256":  "b1bd030e33cb5f9bf381a8e1c8aff50f6fb0477726c2ae9866e2b82f630907b2",
+                                                                                         "bytes":  7043
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_ranking_distributions.csv":  {
+                                                                                        "sha256":  "5ee3e17847ed4ad80400ba5a0c59101a9a131c6fc4c3528f173c90eac9181624",
+                                                                                        "bytes":  91128
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_ranking_distributions.json":  {
+                                                                                         "sha256":  "538038f4e4d971d72a1b781e16db3341e9af388e33a962e81dda9a0342d81a7f",
+                                                                                         "bytes":  295540
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_ranking_stability.md":  {
+                                                                                   "sha256":  "bd5113ef19d4fb343eaa0412a9a02a297c2416c3b0045b77088402d879822be5",
+                                                                                   "bytes":  16605
+                                                                               },
+                  "d:/Data/backend/data/reports/phase4_ranking_summary.csv":  {
+                                                                                  "sha256":  "4d85baf791c39617e45346ced6645b18acf7425e506fa2f6e11d7e74cd74dfc1",
+                                                                                  "bytes":  826
+                                                                              },
+                  "d:/Data/backend/data/reports/phase4_ranking_summary.json":  {
+                                                                                   "sha256":  "1e27033d475dad6fd49194f500f061665d4dc2904c33c1b447660f13b8bbead4",
+                                                                                   "bytes":  2028
+                                                                               },
+                  "d:/Data/backend/data/reports/phase4_ranking_threshold_variants.csv":  {
+                                                                                             "sha256":  "2ec9f18620683ff6fbecc3b90eec11f9e9343110c3af3d32ccc2151ff785ef31",
+                                                                                             "bytes":  5832
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase4_ranking_threshold_variants.json":  {
+                                                                                              "sha256":  "202aa798cdf0e20ee7bf3eed488255d15c856b8c7064514c26d85b77306f1eab",
+                                                                                              "bytes":  26366
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase4_shrinkage_choice.json":  {
+                                                                                    "sha256":  "ddb242f2826071af1db0ac259d832cd251d867e9d134dfedc4c57faaa984e910",
+                                                                                    "bytes":  1526
+                                                                                },
+                  "d:/Data/backend/data/reports/phase4_shrinkage_choice_final.json":  {
+                                                                                          "sha256":  "155c2de185b6ae1cd19b38915c353af4ad10eaabac7699fa511eaaa9df3ce8a6",
+                                                                                          "bytes":  1492
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase4_shrinkage_sensitivity.csv":  {
+                                                                                        "sha256":  "94b976a3342b673f0f741e6e4ac87df6f7c14f6197bc88473328c26e313a550d",
+                                                                                        "bytes":  7835
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase4_shrinkage_sensitivity.json":  {
+                                                                                         "sha256":  "ec1a508deac8598e3881169378a1c12f711af1fb822a144e0a26be3102651e2d",
+                                                                                         "bytes":  23250
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase4_shrinkage_sensitivity.md":  {
+                                                                                       "sha256":  "498e37f899a17acbd6b82c35ca7d913e61fc5eaa84d5600d8d5f2a172f9b44c7",
+                                                                                       "bytes":  6747
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase4_split_manifest.json":  {
+                                                                                  "sha256":  "e951dc248d4bd66179d75d44186766721cd9e581e34086579a4d83abf922de58",
+                                                                                  "bytes":  19391
+                                                                              },
+                  "d:/Data/backend/data/reports/phase4_spot_checks.json":  {
+                                                                               "sha256":  "8aabe2a9f6f6ca9e9841244631864373821220016647d7b86ada5e0e55601a83",
+                                                                               "bytes":  3604
+                                                                           },
+                  "d:/Data/backend/data/reports/phase4_temporal_validation_plan.md":  {
+                                                                                          "sha256":  "59b01151a3cee3c7ccaa28efdc4dd9b33c11db5e515da128478655132dda0952",
+                                                                                          "bytes":  18589
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase4_test_evaluation.json":  {
+                                                                                   "sha256":  "27b3c0846a8b3c50617f16ca429ea5af6f8ed84976bca8860aa345cb7d1b90c5",
+                                                                                   "bytes":  14939
+                                                                               },
+                  "d:/Data/backend/data/reports/phase4_test_evaluation.md":  {
+                                                                                 "sha256":  "f1e026823e20ca9bfdfadc67f201cb365423d41a8f4efd56680d85451507acf9",
+                                                                                 "bytes":  5609
+                                                                             },
+                  "d:/Data/backend/data/reports/phase4_unresolved_players.csv":  {
+                                                                                     "sha256":  "2b4f6883ac985b2192c2a2b9d179897fd07736e977ca2a9a077d2a1f41dd375e",
+                                                                                     "bytes":  4124
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase4_user_summary.md":  {
+                                                                              "sha256":  "e0bce009341bfd7bc410be798477e5f2917c3c069db27e646855db73e96a6124",
+                                                                              "bytes":  13560
+                                                                          },
+                  "d:/Data/backend/data/reports/phase5_bowler_signal_sensitivity.csv":  {
+                                                                                            "sha256":  "e775d10bd4a49cb1fdfa5c0337af5836b30fa76ab8f39bd9a6e7e453bab870f9",
+                                                                                            "bytes":  37938
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_bowler_signal_sensitivity.json":  {
+                                                                                             "sha256":  "5180ba22ba27505aa4059f3639754aaebb48bfce18dfd72fc24ac6004b609cdd",
+                                                                                             "bytes":  126547
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_classification.csv":  {
+                                                                                 "sha256":  "d73c9ed5d34c0cc0b51d8bafb3cabd4b942c963fdd31ed1f11b4e39a65fc1da8",
+                                                                                 "bytes":  178759
+                                                                             },
+                  "d:/Data/backend/data/reports/phase5_classification_coverage.csv":  {
+                                                                                          "sha256":  "28b6597745c7ebad51447ff936d4635afb81ebbcf70332d3194f07c6fa5906b6",
+                                                                                          "bytes":  970
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_classification_migration.json":  {
+                                                                                            "sha256":  "63d4b9f41361bbfcadcceb70a1f1e83e3de54029c4c8ed33c94ce2475dbb08e8",
+                                                                                            "bytes":  5678
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_classification_migration.md":  {
+                                                                                          "sha256":  "2f30066fcc2957b5e4cd42b3fd1b83f35e0d8e3114c52f1503e2266fbd7cb38a",
+                                                                                          "bytes":  4842
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_context_coverage.csv":  {
+                                                                                   "sha256":  "28093a7cc1c23788e3f3da41bbd24a7ebbc66c281a72e9bf3a85894b9a3f72d0",
+                                                                                   "bytes":  1149851
+                                                                               },
+                  "d:/Data/backend/data/reports/phase5_context_coverage.json":  {
+                                                                                    "sha256":  "1f7f39f2e818141c0919e9f03ef5419e13b1b1db68f98e449431a7285aac610e",
+                                                                                    "bytes":  3617846
+                                                                                },
+                  "d:/Data/backend/data/reports/phase5_context_coverage_summary.json":  {
+                                                                                            "sha256":  "6efb1bb4cd04a1a8916cc87cb5da5c8d207c1efc7bfba38fc9a44f166e959f9b",
+                                                                                            "bytes":  12307
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_context_eligibility_rules.csv":  {
+                                                                                            "sha256":  "8b2d98789291be5ef64bbd52fe09898e9cfa3515885f8be5ff41e3ec5cc0ad9c",
+                                                                                            "bytes":  13538
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_context_eligibility_rules.json":  {
+                                                                                             "sha256":  "e0010f555baca37ba7614e09047336385384cceee5df944f3ae666efa310eb65",
+                                                                                             "bytes":  42502
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_context_engine_summary.json":  {
+                                                                                          "sha256":  "b962ca79d1204bc71a205dc7113ba712e67fc5b4e51f65bd4e702c07001f3a41",
+                                                                                          "bytes":  2443
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_context_fit.csv":  {
+                                                                              "sha256":  "d1099892b3869db8cea17b2e0b20e35bb392083f863807f7c28c6313aa5c72b4",
+                                                                              "bytes":  6768
+                                                                          },
+                  "d:/Data/backend/data/reports/phase5_context_fit.json":  {
+                                                                               "sha256":  "c0911c98feda12bda7d2129fac51e981a941cc0b1bfcb68a9e8af0f6b4473182",
+                                                                               "bytes":  18464
+                                                                           },
+                  "d:/Data/backend/data/reports/phase5_context_spotcheck.json":  {
+                                                                                     "sha256":  "3f795b26055dd5a124d22dfc9db462c7d976a2dc8a131a140dc703d1af601374",
+                                                                                     "bytes":  1792
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase5_detectability_simulation.csv":  {
+                                                                                           "sha256":  "683f537007b1939c0e8e70cc3239914eb08a84df3a4597aae6cd569f42c89978",
+                                                                                           "bytes":  10573
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_detectability_simulation.json":  {
+                                                                                            "sha256":  "96a38bee00e2d671df73d2c9ec29efc5a94cd0c3a9949a6d59b187da0400d726",
+                                                                                            "bytes":  31214
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_dynamic_examples.json":  {
+                                                                                    "sha256":  "0b6c298fb0ecbd8661e47695ac2797192d319f581dda4880c3372b1953aee443",
+                                                                                    "bytes":  29073
+                                                                                },
+                  "d:/Data/backend/data/reports/phase5_dynamic_ranking_architecture.md":  {
+                                                                                              "sha256":  "b6232818c9798fd814ead68c7db6e505d24c5c7e72175133aa91ca8444499ca6",
+                                                                                              "bytes":  15426
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_investigation_report.md":  {
+                                                                                      "sha256":  "96e5dc0d8ea6a1a43bde2eb7306b2c6b64789026447473405465178159d60db2",
+                                                                                      "bytes":  38344
+                                                                                  },
+                  "d:/Data/backend/data/reports/phase5_investigation_spotcheck.json":  {
+                                                                                           "sha256":  "54bb96dc338be4e490f4ee139d0220854adf753cd9ad49d7fcb675dfbe8b7918",
+                                                                                           "bytes":  695
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_investigation_summary.json":  {
+                                                                                         "sha256":  "367cd14a4a5cd7097845952094c47ab49b69b30459349440649965139664b5ba",
+                                                                                         "bytes":  7281
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_lock_log.json":  {
+                                                                            "sha256":  "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                                                                            "bytes":  2
+                                                                        },
+                  "d:/Data/backend/data/reports/phase5_methodology_lock.json":  {
+                                                                                    "sha256":  "0c08d7572eabc53ca7ddc5c800656b9ade0c8eb64fe1253733b2e80a2829941f",
+                                                                                    "bytes":  10475
+                                                                                },
+                  "d:/Data/backend/data/reports/phase5_methodology_lock_and_refit.md":  {
+                                                                                            "sha256":  "0f7db07f9eed330b738280cf91e732353b7c21b5c42dbebf22d2f1a7620cc33b",
+                                                                                            "bytes":  7015
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_multiformat_pooling.csv":  {
+                                                                                      "sha256":  "ab3e5dc20645a2640e0dd7075385a8aabc972bcee14910f3ef0099e2110673b8",
+                                                                                      "bytes":  4915
+                                                                                  },
+                  "d:/Data/backend/data/reports/phase5_multiformat_pooling.json":  {
+                                                                                       "sha256":  "c30d61df98e9dcb33dca675bfd3e8403c51f4909a97bed8a1f11c646b891cdbf",
+                                                                                       "bytes":  13475
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase5_orchestrator_run.json":  {
+                                                                                    "sha256":  "831e913450ca67815fe57d73697d58b563a3bc24d9a5e086e001bc4d9c09c3d2",
+                                                                                    "bytes":  2715
+                                                                                },
+                  "d:/Data/backend/data/reports/phase5_output_hashes.json":  {
+                                                                                 "sha256":  "49037175af8e1b13719f905ff689339e2168c2bb21dba3c00a85cf52930bd3de",
+                                                                                 "bytes":  8161
+                                                                             },
+                  "d:/Data/backend/data/reports/phase5_pre_lock_checklist.json":  {
+                                                                                      "sha256":  "df2447a558570eaae6fb1c684f12796ac6a042d7fc49d512be877815865eff1d",
+                                                                                      "bytes":  4960
+                                                                                  },
+                  "d:/Data/backend/data/reports/phase5_publication_gates.json":  {
+                                                                                     "sha256":  "ac36f08906c809c3c944abd4dca74e72ed2200bde2e2481ab385fe4a0b3e92e9",
+                                                                                     "bytes":  4842
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase5_publication_gates.md":  {
+                                                                                   "sha256":  "28e9a4acaa5ac7c18a7d84d2970988d3782cb1682e6fc389370d58f3eb3fda60",
+                                                                                   "bytes":  4797
+                                                                               },
+                  "d:/Data/backend/data/reports/phase5_ranking_context_spearman.csv":  {
+                                                                                           "sha256":  "e4201275e79bade705fbef74b2f3e809566586cb03875ad39b5b4fa07164c5dd",
+                                                                                           "bytes":  22647
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_ranking_context_spearman.json":  {
+                                                                                            "sha256":  "32a66a688c11d5932090f3a014c70f48065b257c89df4dfe28807686f1375ebc",
+                                                                                            "bytes":  78520
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_ranking_cross_definition.csv":  {
+                                                                                           "sha256":  "7c09d87e8c371febb7e9a238d457d6788e9732ef2c9781b2e0af0f052b6d078f",
+                                                                                           "bytes":  2459
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_ranking_cross_definition.json":  {
+                                                                                            "sha256":  "69e5c5704ada272b5c46dd8d7ba0de8cbdfae36fcee93de33cc603421ee03554",
+                                                                                            "bytes":  9430
+                                                                                        },
+                  "d:/Data/backend/data/reports/phase5_ranking_distributions.csv":  {
+                                                                                        "sha256":  "6a4e8d8c049e0bd3e6570ed92c3cc5003223524d06e9b0ce0f2c7045ffa66bb6",
+                                                                                        "bytes":  182981
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase5_ranking_distributions.json":  {
+                                                                                         "sha256":  "fe606fba6efd897a1892d18f3c6736595144e3f2a8856f2c01d984736ecc09f3",
+                                                                                         "bytes":  698227
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability.md":  {
+                                                                                   "sha256":  "f082286ae480d4e5b6126324834e9d79c0c238793195ab736f76cd5c7722f4aa",
+                                                                                   "bytes":  34861
+                                                                               },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_cells.csv":  {
+                                                                                          "sha256":  "ab38d1d67322730aa95b71c916660e98adde9e9c3d967dfb6c9c5f1fed802335",
+                                                                                          "bytes":  4332
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_cells.json":  {
+                                                                                           "sha256":  "107f3823fc74cbe911003f2b83a79988031455579c211a72a2e81f5179b01f10",
+                                                                                           "bytes":  14724
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_combined.csv":  {
+                                                                                             "sha256":  "7cc290de0c1e39c260931785718190f90089593bc36ba8c4e30b9bacca5e1c41",
+                                                                                             "bytes":  408
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_combined.json":  {
+                                                                                              "sha256":  "71a84d87fcd0e3821dcd1d5d1a8f9402dce324fc73c5198b327cdb19695e22c2",
+                                                                                              "bytes":  848
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_contexts.csv":  {
+                                                                                             "sha256":  "8e60a122e9ac6cc5903ca1af3f9aaab1efdde5ddd20919545dd347566557efeb",
+                                                                                             "bytes":  13428
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_contexts.json":  {
+                                                                                              "sha256":  "f2c393d42bd8ccc0014de855bd6df69f26ef3bed817dd1a6126460110fdbc995",
+                                                                                              "bytes":  50978
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_ranking_stability_summary.json":  {
+                                                                                             "sha256":  "296d8a6b190a557ae6b12a36b48a23ad2565c54fd76491dbe075e5c8dd969a07",
+                                                                                             "bytes":  4157
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_reliability_by_opportunity.csv":  {
+                                                                                             "sha256":  "5dac54715f8a3cba7a383f50d67f0a07394c7b7e89629d12595ca52a7cff70e9",
+                                                                                             "bytes":  29688
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_reliability_by_opportunity.json":  {
+                                                                                              "sha256":  "6c63936c160aa11104a4749fc202e384649fd36a874c670c2e88ab2bb2babf30",
+                                                                                              "bytes":  81723
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_required_sample_projection.csv":  {
+                                                                                             "sha256":  "72c90ddda72e957b8ab0f60345caaf12d7d91c8df59622f29cdaf37c1c9286af",
+                                                                                             "bytes":  89294
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_required_sample_projection.json":  {
+                                                                                              "sha256":  "293e740328c259962551007fb02c2286ca3cbeed1795f3c1acf26a60b6427978",
+                                                                                              "bytes":  277584
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_baselines.csv":  {
+                                                                                        "sha256":  "5793bf17d42bd7ed05229ac0696a876ca51b91932835a7f0ef5748a5a67b7c4f",
+                                                                                        "bytes":  2302
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_baselines.json":  {
+                                                                                         "sha256":  "73e64cbfa8e7b340d1d4f294f657e39cfd77705773a814d1e22d457fbdcf82fd",
+                                                                                         "bytes":  7952
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_definitions.csv":  {
+                                                                                          "sha256":  "a4ed1d408a67d6449825d385247142894b81cfd77cb00ef86f60ce34a3fa240a",
+                                                                                          "bytes":  6898
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_definitions.json":  {
+                                                                                           "sha256":  "3aecd9f27324342f6bff7aed8588a0ecbcfe40602ccdd79bfa6f1d76c6c6e3a1",
+                                                                                           "bytes":  31131
+                                                                                       },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_format_weights.csv":  {
+                                                                                             "sha256":  "da5e65f677bc6c041fe2a4b3e0b0817a0adbfa755d4526b77063bc9d1190a657",
+                                                                                             "bytes":  5071
+                                                                                         },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_format_weights.json":  {
+                                                                                              "sha256":  "9edae2b35bd7702923ec86442c2b7ce165cac780170fd369cff3a70d73a9cd82",
+                                                                                              "bytes":  15166
+                                                                                          },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_format_weight_pairwise.csv":  {
+                                                                                                     "sha256":  "00a0e584827dde1f627096624903cb0354d5b63fed9b173cfc1b7b5895b21347",
+                                                                                                     "bytes":  5037
+                                                                                                 },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_format_weight_pairwise.json":  {
+                                                                                                      "sha256":  "4d5ebb4b6a19681d30e4f0d1c1ba803c17d4beebaf89605c4976edb7e0b983fa",
+                                                                                                      "bytes":  15812
+                                                                                                  },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_report.md":  {
+                                                                                    "sha256":  "0babfd65457dd8eb1f961fe83105bd8ff6cd3a9a0821a4b6ec8a0681fb2b0aa0",
+                                                                                    "bytes":  33908
+                                                                                },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_shrinkage.csv":  {
+                                                                                        "sha256":  "597d4e6735574e785bdffb2f0efb46edc6e4cf28fa60c7b38c4afe2ad5bbdb15",
+                                                                                        "bytes":  50860
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_shrinkage.json":  {
+                                                                                         "sha256":  "5b97298614d34c6455345b2d738e4f766bf9f791852cc103d622a3c411e7bff8",
+                                                                                         "bytes":  191839
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_summary.json":  {
+                                                                                       "sha256":  "4afa8c48c6abbed88a0d0cca0396114602f44ad0874bd3b4fbef770fa2a48457",
+                                                                                       "bytes":  5787
+                                                                                   },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_thresholds.csv":  {
+                                                                                         "sha256":  "3b44dbd18b4c0ca2cc7f03792710a0e825ad5db4d917d603400f29a6d2f9a264",
+                                                                                         "bytes":  5280
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_sensitivity_thresholds.json":  {
+                                                                                          "sha256":  "29c20bcec4cc6149cc892d2e93068f7d66a94d8a0deeef6583ab3a07bbb5380c",
+                                                                                          "bytes":  25094
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_split_half_reliability.csv":  {
+                                                                                         "sha256":  "f7ff196eaacf206c0fe30c07ca746e93c2643054f17feb115290f7c1f3299a65",
+                                                                                         "bytes":  47537
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_split_half_reliability.json":  {
+                                                                                          "sha256":  "7a23211855206d8827389c94f9033f9a01982759f7e654ecf1de8c09e3d47872",
+                                                                                          "bytes":  124837
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_t20i_date_verification.csv":  {
+                                                                                         "sha256":  "1753cfeabc24518b50aace6b1c4fa9d7919ac42fbb50a86aa7f6868ae091b635",
+                                                                                         "bytes":  13106
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_t20i_date_verification.json":  {
+                                                                                          "sha256":  "1cc98a03067a4515090ca1c9c4175f6a30772fbbeaa05ffca8f55a9f23d96dad",
+                                                                                          "bytes":  58295
+                                                                                      },
+                  "d:/Data/backend/data/reports/phase5_t20i_date_verification.md":  {
+                                                                                        "sha256":  "3ff408ba36098c8899e1cf9a8778a78ef70d2c7b563f55bbe80419910a62f255",
+                                                                                        "bytes":  13552
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase5_t20i_official_verification_template.csv":  {
+                                                                                                      "sha256":  "d2442e3736b88e51d32ce31e4fcb365c6340050aaa91277620f7f38db38a9156",
+                                                                                                      "bytes":  72
+                                                                                                  },
+                  "d:/Data/backend/data/reports/phase5_test_match_date_check.csv":  {
+                                                                                        "sha256":  "d4790b0cc39ff67033ef7dceb55b8e5d4f2a7b0acdfa076285a46156cb9b4281",
+                                                                                        "bytes":  44333
+                                                                                    },
+                  "d:/Data/backend/data/reports/phase5_test_set_manifest.json":  {
+                                                                                     "sha256":  "f2f8bec9cfc60ca7499794ae5ff5f507013f4aa4cf0f8da025d3c8b7317f9fe2",
+                                                                                     "bytes":  6971
+                                                                                 },
+                  "d:/Data/backend/data/reports/phase5_unresolved_issues.md":  {
+                                                                                   "sha256":  "c79c8668fa7fd0529d14a5f9fe3a1e31b7003691c395dcf40366ba3af86e64db",
+                                                                                   "bytes":  2972
+                                                                               },
+                  "d:/Data/backend/data/reports/phase5_user_summary.md":  {
+                                                                              "sha256":  "ed6adf4df2c9f306d406384ff3577908df6eb5bd2888368c92fb81a924f923b7",
+                                                                              "bytes":  4284
+                                                                          },
+                  "d:/Data/backend/data/reports/phase5_variance_decomposition.csv":  {
+                                                                                         "sha256":  "f3bde126ca542a518a8bbe3f92c71aef1a7b23c1fdb5eb30b5af4660aadae921",
+                                                                                         "bytes":  206914
+                                                                                     },
+                  "d:/Data/backend/data/reports/phase5_variance_decomposition.json":  {
+                                                                                          "sha256":  "e287d2a5e3a9058c9b7e645e2effaab01c796a0faf67963c8b68cad5142e0e19",
+                                                                                          "bytes":  529793
+                                                                                      }
+              }
+}

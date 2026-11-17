@@ -1,0 +1,102 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "steps": [
+    {
+      "step": "phase6_cleanup_checks",
+      "script": "phase6_cleanup_checks.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_investigation_plan",
+      "script": "phase6_investigation_plan.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_variance_floor",
+      "script": "phase6_variance_floor.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_split_half",
+      "script": "phase6_split_half.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_definition_reliability",
+      "script": "phase6_definition_compare.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_context_reliability",
+      "script": "phase6_context_reliability.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_eligibility_reliability",
+      "script": "phase6_eligibility_reliability.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_data_weight_options",
+      "script": "phase6_data_weight_options.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_recent_form",
+      "script": "phase6_recent_form.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_season_robustness",
+      "script": "phase6_season_robustness.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_retention_stub",
+      "script": "phase6_retention_stub.py",
+      "args": [],
+      "exit_code": 0
+    },
+    {
+      "step": "phase6_reports",
+      "script": "phase6_reports.py",
+      "args": [],
+      "exit_code": 0
+    }
+  ],
+  "missing_deliverables": [],
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true,
+    "p4_tables_byte_identical": true,
+    "p5_tables_byte_identical": true,
+    "p4_p5_tables_hashed": 67,
+    "prerun_files": {
+      "files_checked": 145,
+      "changed": [],
+      "missing": [],
+      "byte_identical": true
+    },
+    "lock_state_unchanged": true,
+    "retention_stub_rows": 0,
+    "creates_lock": false,
+    "opens_test": false,
+    "imports_retention_data": false
+  }
+}

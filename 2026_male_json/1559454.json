@@ -1,0 +1,3698 @@
+{
+  "meta": {
+    "data_version": "1.3.0",
+    "created": "2026-11-02",
+    "revision": 1
+  },
+  "info": {
+    "balls_per_over": 6,
+    "city": "Nairobi",
+    "dates": [
+      "2026-10-31"
+    ],
+    "event": {
+      "name": "CWC Challenge League",
+      "match_number": 45
+    },
+    "gender": "male",
+    "match_type": "ODM",
+    "officials": {
+      "match_referees": [
+        "S Wadvalla"
+      ],
+      "reserve_umpires": [
+        "N Bathi"
+      ],
+      "umpires": [
+        "IO Oyieko",
+        "RA Kottahachchi"
+      ]
+    },
+    "outcome": {
+      "winner": "Jersey",
+      "by": {
+        "runs": 34
+      }
+    },
+    "overs": 50,
+    "player_of_match": [
+      "ZM Tribe"
+    ],
+    "players": {
+      "Jersey": [
+        "H Carlyon",
+        "J Sumerauer",
+        "JW Jenner",
+        "ZM Tribe",
+        "C Brennan",
+        "JAD Lawrenson",
+        "B Ward",
+        "SA van Breda",
+        "JE Dunford",
+        "CW Perchard",
+        "T Britton"
+      ],
+      "Qatar": [
+        "Zubair Ali",
+        "Shahzeb Afridi",
+        "I Liyanage",
+        "Muhammad Asim",
+        "MM Baig",
+        "Zeeshan Haider",
+        "DAM Louis",
+        "Shahzaib Jamil",
+        "Ikramullah Khan",
+        "Mujeeb-ur-Rehman",
+        "Owais Ahmed"
+      ]
+    },
+    "registry": {
+      "people": {
+        "B Ward": "9e0bd203",
+        "C Brennan": "80f9fd4f",
+        "CW Perchard": "9f998ed8",
+        "DAM Louis": "b975210d",
+        "H Carlyon": "42bf1b7d",
+        "I Liyanage": "826e1017",
+        "IO Oyieko": "de4828fa",
+        "Ikramullah Khan": "c6e1354c",
+        "J Sumerauer": "0b581ed6",
+        "JAD Lawrenson": "c810b349",
+        "JE Dunford": "89a7dd4a",
+        "JW Jenner": "32a8161e",
+        "MM Baig": "add288ea",
+        "Muhammad Asim": "b424d3d3",
+        "Mujeeb-ur-Rehman": "1a8f879b",
+        "N Bathi": "96a0edf9",
+        "Owais Ahmed": "cef52835",
+        "RA Kottahachchi": "808f2939",
+        "S Wadvalla": "c1a1acf3",
+        "SA van Breda": "a91e7c2f",
+        "Shahzaib Jamil": "fbb6d1a7",
+        "Shahzeb Afridi": "53494306",
+        "T Britton": "f91c322b",
+        "ZM Tribe": "96fe3e9f",
+        "Zeeshan Haider": "e4d76518",
+        "Zubair Ali": "f16e776a"
+      },
+      "venues": {
+        "Ruaraka Sports Club Ground, Nairobi": "9a0e6fdf"
+      }
+    },
+    "season": "2026/27",
+    "team_type": "international",
+    "teams": [
+      "Jersey",
+      "Qatar"
+    ],
+    "toss": {
+      "decision": "field",
+      "winner": "Qatar"
+    },
+    "venue": "Ruaraka Sports Club Ground, Nairobi"
+  },
+  "innings": [
+    {
+      "team": "Jersey",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "H Carlyon",
+              "bowler": "MM Baig",
+              "non_striker": "J Sumerauer",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "J Sumerauer",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "J Sumerauer",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "J Sumerauer",
+                  "fielders": [
+                    {
+                      "name": "Mujeeb-ur-Rehman"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "extras": {
+                "legbyes": 4
+              },
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 0,
+                "extras": 4,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JW Jenner",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "JW Jenner",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "JW Jenner",
+                  "fielders": [
+                    {
+                      "name": "Shahzeb Afridi"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "ZM Tribe",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "ZM Tribe",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "H Carlyon",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "ZM Tribe",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "H Carlyon",
+              "bowler": "MM Baig",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "ZM Tribe",
+              "bowler": "MM Baig",
+              "non_striker": "H Carlyon",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "H Carlyon",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "H Carlyon",
+                  "fielders": [
+                    {
+                      "name": "I Liyanage"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "ZM Tribe",
+              "bowler": "Owais Ahmed",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "ZM Tribe",
+              "bowler": "Owais Ahmed",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "ZM Tribe",
+              "bowler": "Owais Ahmed",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "C Brennan",
+              "bowler": "Owais Ahmed",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "extras": {
+                "wides": 2
+              },
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 2,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "8.1",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "extras": {
+                "wides": 1
+              },
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.1",
+              "batter": "C Brennan",
+              "bowler": "Muhammad Asim",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "ZM Tribe",
+              "bowler": "Muhammad Asim",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "C Brennan",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "C Brennan",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "C Brennan",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "extras": {
+                "noballs": 1
+              },
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "C Brennan",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "C Brennan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "C Brennan",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "C Brennan",
+                  "fielders": [
+                    {
+                      "name": "Zubair Ali"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "JAD Lawrenson",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "JAD Lawrenson",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "JAD Lawrenson",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "ZM Tribe",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "Mujeeb-ur-Rehman",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "ZM Tribe",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "ZM Tribe",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "ZM Tribe",
+                  "fielders": [
+                    {
+                      "name": "Zeeshan Haider"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "B Ward",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "B Ward",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "B Ward",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "B Ward",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "B Ward",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "B Ward",
+              "bowler": "Muhammad Asim",
+              "extras": {
+                "byes": 4
+              },
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 4,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "B Ward",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "B Ward",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "B Ward",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "16.6",
+              "batter": "SA van Breda",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 17,
+          "deliveries": [
+            {
+              "actual_delivery": "17.1",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.2",
+              "batter": "SA van Breda",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.3",
+              "batter": "SA van Breda",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "17.4",
+              "batter": "SA van Breda",
+              "bowler": "DAM Louis",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.5",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "17.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "DAM Louis",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 3,
+                "extras": 0,
+                "total": 3
+              }
+            }
+          ]
+        },
+        {
+          "over": 18,
+          "deliveries": [
+            {
+              "actual_delivery": "18.1",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.2",
+              "batter": "SA van Breda",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.4",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "18.5",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.6",
+              "batter": "SA van Breda",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 19,
+          "deliveries": [
+            {
+              "actual_delivery": "19.1",
+              "batter": "SA van Breda",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.2",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.4",
+              "batter": "SA van Breda",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "19.5",
+              "batter": "SA van Breda",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 20,
+          "deliveries": [
+            {
+              "actual_delivery": "20.1",
+              "batter": "SA van Breda",
+              "bowler": "Muhammad Asim",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.2",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "20.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "SA van Breda",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.4",
+              "batter": "SA van Breda",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "SA van Breda",
+                  "fielders": [
+                    {
+                      "name": "Zubair Ali"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "20.5",
+              "batter": "JE Dunford",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.6",
+              "batter": "JAD Lawrenson",
+              "bowler": "Muhammad Asim",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 21,
+          "deliveries": [
+            {
+              "actual_delivery": "21.1",
+              "batter": "JE Dunford",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "21.2",
+              "batter": "JE Dunford",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "21.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.4",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.5",
+              "batter": "JAD Lawrenson",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "21.6",
+              "batter": "JE Dunford",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 22,
+          "deliveries": [
+            {
+              "actual_delivery": "22.1",
+              "batter": "JAD Lawrenson",
+              "bowler": "MM Baig",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.2",
+              "batter": "JE Dunford",
+              "bowler": "MM Baig",
+              "non_striker": "JAD Lawrenson",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.3",
+              "batter": "JAD Lawrenson",
+              "bowler": "MM Baig",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "JAD Lawrenson",
+                  "kind": "bowled"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "22.4",
+              "batter": "CW Perchard",
+              "bowler": "MM Baig",
+              "extras": {
+                "byes": 1
+              },
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.5",
+              "batter": "JE Dunford",
+              "bowler": "MM Baig",
+              "non_striker": "CW Perchard",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.6",
+              "batter": "CW Perchard",
+              "bowler": "MM Baig",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 23,
+          "deliveries": [
+            {
+              "actual_delivery": "23.1",
+              "batter": "CW Perchard",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "23.2",
+              "batter": "JE Dunford",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "CW Perchard",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "23.3",
+              "batter": "CW Perchard",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "23.4",
+              "batter": "CW Perchard",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "23.5",
+              "batter": "CW Perchard",
+              "bowler": "Ikramullah Khan",
+              "extras": {
+                "byes": 1
+              },
+              "non_striker": "JE Dunford",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "23.6",
+              "batter": "JE Dunford",
+              "bowler": "Ikramullah Khan",
+              "non_striker": "CW Perchard",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 4.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 5.1,
+          "to": 18.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 19.1,
+          "to": 23.6,
+          "type": "mandatory"
+        }
+      ]
+    },
+    {
+      "team": "Qatar",
+      "overs": [
+        {
+          "over": 0,
+          "deliveries": [
+            {
+              "actual_delivery": "0.1",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.2",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.3",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.4",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "0.5",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "0.6",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 1,
+          "deliveries": [
+            {
+              "actual_delivery": "1.1",
+              "batter": "Shahzeb Afridi",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "1.2",
+              "batter": "Shahzeb Afridi",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.3",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "1.4",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "1.5",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "Shahzeb Afridi",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "1.6",
+              "batter": "Shahzeb Afridi",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Shahzeb Afridi",
+                  "kind": "bowled"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "over": 2,
+          "deliveries": [
+            {
+              "actual_delivery": "2.1",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "2.2",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "2.3",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.4",
+              "batter": "I Liyanage",
+              "bowler": "H Carlyon",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.5",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "2.6",
+              "batter": "I Liyanage",
+              "bowler": "H Carlyon",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 3,
+          "deliveries": [
+            {
+              "actual_delivery": "3.1",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.2",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.3",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.4",
+              "batter": "I Liyanage",
+              "bowler": "CW Perchard",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "3.5",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "3.6",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 4,
+          "deliveries": [
+            {
+              "actual_delivery": "4.1",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "4.2",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "4.3",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.4",
+              "batter": "I Liyanage",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "4.5",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "4.6",
+              "batter": "Zubair Ali",
+              "bowler": "J Sumerauer",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 5,
+          "deliveries": [
+            {
+              "actual_delivery": "5.1",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "5.2",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "5.3",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "5.4",
+              "batter": "Zubair Ali",
+              "bowler": "H Carlyon",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "5.5",
+              "batter": "I Liyanage",
+              "bowler": "H Carlyon",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "5.6",
+              "batter": "I Liyanage",
+              "bowler": "H Carlyon",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 6,
+          "deliveries": [
+            {
+              "actual_delivery": "6.1",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.2",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "6.3",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "6.4",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.5",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "6.6",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 7,
+          "deliveries": [
+            {
+              "actual_delivery": "7.1",
+              "batter": "Zubair Ali",
+              "bowler": "SA van Breda",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "7.2",
+              "batter": "Zubair Ali",
+              "bowler": "SA van Breda",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.3",
+              "batter": "I Liyanage",
+              "bowler": "SA van Breda",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.4",
+              "batter": "Zubair Ali",
+              "bowler": "SA van Breda",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "7.5",
+              "batter": "Zubair Ali",
+              "bowler": "SA van Breda",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "7.6",
+              "batter": "I Liyanage",
+              "bowler": "SA van Breda",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 8,
+          "deliveries": [
+            {
+              "actual_delivery": "8.1",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "8.2",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "8.3",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.4",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.5",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "8.6",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 9,
+          "deliveries": [
+            {
+              "actual_delivery": "9.1",
+              "batter": "I Liyanage",
+              "bowler": "CW Perchard",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.2",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.3",
+              "batter": "I Liyanage",
+              "bowler": "CW Perchard",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "9.4",
+              "batter": "I Liyanage",
+              "bowler": "CW Perchard",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "9.5",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "9.6",
+              "batter": "Zubair Ali",
+              "bowler": "CW Perchard",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 10,
+          "deliveries": [
+            {
+              "actual_delivery": "10.1",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "10.2",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.3",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "10.4",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "10.5",
+              "batter": "I Liyanage",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "10.6",
+              "batter": "Zubair Ali",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "I Liyanage",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 11,
+          "deliveries": [
+            {
+              "actual_delivery": "11.1",
+              "batter": "I Liyanage",
+              "bowler": "B Ward",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "I Liyanage",
+                  "fielders": [
+                    {
+                      "name": "JW Jenner"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "11.2",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.3",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "11.4",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "11.5",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "Zubair Ali",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "11.6",
+              "batter": "Zubair Ali",
+              "bowler": "B Ward",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Zubair Ali",
+                  "fielders": [
+                    {
+                      "name": "JE Dunford"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "over": 12,
+          "deliveries": [
+            {
+              "actual_delivery": "12.1",
+              "batter": "Muhammad Asim",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.2",
+              "batter": "MM Baig",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "12.3",
+              "batter": "Muhammad Asim",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.4",
+              "batter": "Muhammad Asim",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "12.5",
+              "batter": "Muhammad Asim",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "12.6",
+              "batter": "Muhammad Asim",
+              "bowler": "JAD Lawrenson",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 13,
+          "deliveries": [
+            {
+              "actual_delivery": "13.1",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "13.2",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.3",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.4",
+              "batter": "Muhammad Asim",
+              "bowler": "B Ward",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "13.5",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "13.6",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 14,
+          "deliveries": [
+            {
+              "actual_delivery": "14.1",
+              "batter": "Muhammad Asim",
+              "bowler": "ZM Tribe",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.2",
+              "batter": "MM Baig",
+              "bowler": "ZM Tribe",
+              "non_striker": "Muhammad Asim",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.3",
+              "batter": "Muhammad Asim",
+              "bowler": "ZM Tribe",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Muhammad Asim",
+                  "fielders": [
+                    {
+                      "name": "B Ward"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "14.4",
+              "batter": "Zeeshan Haider",
+              "bowler": "ZM Tribe",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.5",
+              "batter": "MM Baig",
+              "bowler": "ZM Tribe",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "14.6",
+              "batter": "Zeeshan Haider",
+              "bowler": "ZM Tribe",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 15,
+          "deliveries": [
+            {
+              "actual_delivery": "15.1",
+              "batter": "MM Baig",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.2",
+              "batter": "Zeeshan Haider",
+              "bowler": "J Sumerauer",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "15.3",
+              "batter": "Zeeshan Haider",
+              "bowler": "J Sumerauer",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "15.4",
+              "batter": "MM Baig",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "15.5",
+              "batter": "MM Baig",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "15.6",
+              "batter": "MM Baig",
+              "bowler": "J Sumerauer",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            }
+          ]
+        },
+        {
+          "over": 16,
+          "deliveries": [
+            {
+              "actual_delivery": "16.1",
+              "batter": "Zeeshan Haider",
+              "bowler": "B Ward",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.2",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "16.3",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.4",
+              "batter": "Zeeshan Haider",
+              "bowler": "B Ward",
+              "non_striker": "MM Baig",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "16.5",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            },
+            {
+              "actual_delivery": "16.6",
+              "batter": "MM Baig",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "MM Baig",
+                  "fielders": [
+                    {
+                      "name": "H Carlyon"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "over": 17,
+          "deliveries": [
+            {
+              "actual_delivery": "17.1",
+              "batter": "Zeeshan Haider",
+              "bowler": "CW Perchard",
+              "non_striker": "DAM Louis",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.2",
+              "batter": "DAM Louis",
+              "bowler": "CW Perchard",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.3",
+              "batter": "Zeeshan Haider",
+              "bowler": "CW Perchard",
+              "non_striker": "DAM Louis",
+              "runs": {
+                "batter": 3,
+                "extras": 0,
+                "total": 3
+              }
+            },
+            {
+              "actual_delivery": "17.4",
+              "batter": "DAM Louis",
+              "bowler": "CW Perchard",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            },
+            {
+              "actual_delivery": "17.5",
+              "batter": "DAM Louis",
+              "bowler": "CW Perchard",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "17.6",
+              "batter": "Zeeshan Haider",
+              "bowler": "CW Perchard",
+              "non_striker": "DAM Louis",
+              "runs": {
+                "batter": 6,
+                "extras": 0,
+                "total": 6
+              }
+            }
+          ]
+        },
+        {
+          "over": 18,
+          "deliveries": [
+            {
+              "actual_delivery": "18.1",
+              "batter": "DAM Louis",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "DAM Louis",
+                  "fielders": [
+                    {
+                      "name": "JE Dunford"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "18.2",
+              "batter": "Shahzaib Jamil",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "18.3",
+              "batter": "Shahzaib Jamil",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.4",
+              "batter": "Zeeshan Haider",
+              "bowler": "B Ward",
+              "non_striker": "Shahzaib Jamil",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.5",
+              "batter": "Shahzaib Jamil",
+              "bowler": "B Ward",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "18.6",
+              "batter": "Zeeshan Haider",
+              "bowler": "B Ward",
+              "non_striker": "Shahzaib Jamil",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 19,
+          "deliveries": [
+            {
+              "actual_delivery": "19.1",
+              "batter": "Zeeshan Haider",
+              "bowler": "ZM Tribe",
+              "non_striker": "Shahzaib Jamil",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.2",
+              "batter": "Shahzaib Jamil",
+              "bowler": "ZM Tribe",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "19.3",
+              "batter": "Shahzaib Jamil",
+              "bowler": "ZM Tribe",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Shahzaib Jamil",
+                  "fielders": [
+                    {
+                      "name": "J Sumerauer"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "19.4",
+              "batter": "Ikramullah Khan",
+              "bowler": "ZM Tribe",
+              "non_striker": "Zeeshan Haider",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "19.5",
+              "batter": "Zeeshan Haider",
+              "bowler": "ZM Tribe",
+              "non_striker": "Ikramullah Khan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "19.6",
+              "batter": "Zeeshan Haider",
+              "bowler": "ZM Tribe",
+              "non_striker": "Ikramullah Khan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Zeeshan Haider",
+                  "fielders": [
+                    {
+                      "name": "JE Dunford"
+                    }
+                  ],
+                  "kind": "stumped"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "over": 20,
+          "deliveries": [
+            {
+              "actual_delivery": "20.1",
+              "batter": "Ikramullah Khan",
+              "bowler": "B Ward",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.2",
+              "batter": "Ikramullah Khan",
+              "bowler": "B Ward",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.3",
+              "batter": "Mujeeb-ur-Rehman",
+              "bowler": "B Ward",
+              "non_striker": "Ikramullah Khan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.4",
+              "batter": "Mujeeb-ur-Rehman",
+              "bowler": "B Ward",
+              "non_striker": "Ikramullah Khan",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "20.5",
+              "batter": "Mujeeb-ur-Rehman",
+              "bowler": "B Ward",
+              "non_striker": "Ikramullah Khan",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "20.6",
+              "batter": "Ikramullah Khan",
+              "bowler": "B Ward",
+              "extras": {
+                "legbyes": 1
+              },
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 1,
+                "total": 1
+              }
+            }
+          ]
+        },
+        {
+          "over": 21,
+          "deliveries": [
+            {
+              "actual_delivery": "21.1",
+              "batter": "Ikramullah Khan",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "21.2",
+              "batter": "Ikramullah Khan",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.3",
+              "batter": "Ikramullah Khan",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Ikramullah Khan",
+                  "fielders": [
+                    {
+                      "name": "JAD Lawrenson"
+                    }
+                  ],
+                  "kind": "caught"
+                }
+              ]
+            },
+            {
+              "actual_delivery": "21.4",
+              "batter": "Owais Ahmed",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 2,
+                "extras": 0,
+                "total": 2
+              }
+            },
+            {
+              "actual_delivery": "21.5",
+              "batter": "Owais Ahmed",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              }
+            },
+            {
+              "actual_delivery": "21.6",
+              "batter": "Owais Ahmed",
+              "bowler": "ZM Tribe",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 4,
+                "extras": 0,
+                "total": 4
+              }
+            }
+          ]
+        },
+        {
+          "over": 22,
+          "deliveries": [
+            {
+              "actual_delivery": "22.1",
+              "batter": "Mujeeb-ur-Rehman",
+              "bowler": "J Sumerauer",
+              "non_striker": "Owais Ahmed",
+              "runs": {
+                "batter": 1,
+                "extras": 0,
+                "total": 1
+              }
+            },
+            {
+              "actual_delivery": "22.2",
+              "batter": "Owais Ahmed",
+              "bowler": "J Sumerauer",
+              "non_striker": "Mujeeb-ur-Rehman",
+              "runs": {
+                "batter": 0,
+                "extras": 0,
+                "total": 0
+              },
+              "wickets": [
+                {
+                  "player_out": "Owais Ahmed",
+                  "kind": "bowled"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "powerplays": [
+        {
+          "from": 0.1,
+          "to": 4.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 5.1,
+          "to": 18.6,
+          "type": "mandatory"
+        },
+        {
+          "from": 19.1,
+          "to": 22.2,
+          "type": "mandatory"
+        }
+      ],
+      "target": {
+        "overs": 24,
+        "runs": 195
+      }
+    }
+  ]
+}

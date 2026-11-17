@@ -1,0 +1,2009 @@
+{
+  "skipped": false,
+  "per_directory": {
+    "ipl_male_json": {
+      "directory": "ipl_male_json",
+      "total_files_in_dir": 1245,
+      "json_files": 1243,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 1243,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 1243,
+      "read_errors": [],
+      "date_min": "2008-04-18",
+      "date_max": "2026-05-31",
+      "flags": {
+        "has_registry": 1243,
+        "dls_method": 23,
+        "innings_super_over": 34
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 1243
+        },
+        "revision": {
+          "2": 784,
+          "3": 357,
+          "4": 97,
+          "5": 5
+        },
+        "top_keys": {
+          "meta": 1243,
+          "info": 1243,
+          "innings": 1243
+        },
+        "info_keys": {
+          "balls_per_over": 1243,
+          "dates": 1243,
+          "event": 1243,
+          "gender": 1243,
+          "match_type": 1243,
+          "officials": 1243,
+          "outcome": 1243,
+          "overs": 1243,
+          "players": 1243,
+          "registry": 1243,
+          "season": 1243,
+          "team_type": 1243,
+          "teams": 1243,
+          "toss": 1243,
+          "venue": 1243,
+          "player_of_match": 1234,
+          "city": 1192
+        },
+        "outcome_keys": {
+          "by": 1218,
+          "winner": 1218,
+          "result": 25,
+          "method": 23,
+          "eliminator": 16
+        },
+        "outcome_by_keys": {
+          "by,winner": 1195,
+          "by,method,winner": 23,
+          "eliminator,result": 16,
+          "result": 9
+        },
+        "event_name": {
+          "Indian Premier League": 1243
+        },
+        "gender": {
+          "male": 1243
+        },
+        "team_type": {
+          "club": 1243
+        },
+        "match_type": {
+          "T20": 1243
+        },
+        "innings_keys": {
+          "team": 2514,
+          "overs": 2514,
+          "powerplays": 2480,
+          "target": 1237,
+          "super_over": 34,
+          "miscounted_overs": 8,
+          "absent_hurt": 6
+        },
+        "delivery_keys": {
+          "actual_delivery": 295732,
+          "batter": 295732,
+          "bowler": 295732,
+          "non_striker": 295732,
+          "runs": 295732,
+          "extras": 16227,
+          "wickets": 14705,
+          "review": 990,
+          "replacements": 585
+        },
+        "extras_keys": {
+          "wides": 9876,
+          "legbyes": 4406,
+          "noballs": 1226,
+          "byes": 745,
+          "penalty": 2
+        },
+        "n_innings": {
+          "2": 1221,
+          "4": 15,
+          "1": 6,
+          "6": 1
+        }
+      },
+      "n_distinct_event_names": 1
+    },
+    "t20s_male_json": {
+      "directory": "t20s_male_json",
+      "total_files_in_dir": 3651,
+      "json_files": 3649,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 3649,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 3649,
+      "read_errors": [],
+      "date_min": "2005-02-17",
+      "date_max": "2026-11-01",
+      "flags": {
+        "has_registry": 3649,
+        "dls_method": 129,
+        "innings_super_over": 70
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 3649
+        },
+        "revision": {
+          "2": 2808,
+          "3": 674,
+          "1": 91,
+          "4": 71,
+          "5": 3,
+          "6": 2
+        },
+        "top_keys": {
+          "meta": 3649,
+          "info": 3649,
+          "innings": 3649
+        },
+        "info_keys": {
+          "balls_per_over": 3649,
+          "dates": 3649,
+          "gender": 3649,
+          "match_type": 3649,
+          "match_type_number": 3649,
+          "outcome": 3649,
+          "overs": 3649,
+          "players": 3649,
+          "registry": 3649,
+          "season": 3649,
+          "team_type": 3649,
+          "teams": 3649,
+          "toss": 3649,
+          "venue": 3649,
+          "event": 3587,
+          "city": 3526,
+          "officials": 3395,
+          "player_of_match": 3330,
+          "missing": 392,
+          "bowl_out": 2,
+          "supersubs": 1
+        },
+        "outcome_keys": {
+          "winner": 3530,
+          "by": 3527,
+          "method": 129,
+          "result": 119,
+          "eliminator": 33,
+          "bowl_out": 2
+        },
+        "outcome_by_keys": {
+          "by,winner": 3403,
+          "by,method,winner": 124,
+          "result": 82,
+          "eliminator,result": 33,
+          "method,winner": 3,
+          "bowl_out,result": 2,
+          "method,result": 2
+        },
+        "event_name": {
+          "ICC Men's T20 World Cup": 173,
+          "ICC Men's T20 World Cup Sub Regional Africa Qualifier": 115,
+          "ICC World Twenty20": 104,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier": 88,
+          "ICC Men's T20 World Cup Qualifier": 70,
+          "None": 62,
+          "World T20": 57,
+          "Africa Continental Cup": 56,
+          "West Africa Trophy": 39,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier Group C": 38,
+          "Valletta Cup": 37,
+          "Continental Cup": 35,
+          "Quadrangular Twenty20 Series (Malaysia)": 35,
+          "ICC Men's T20 World Cup Sub Regional Americas Qualifier": 34,
+          "ICC Men's T20 World Cup Africa Region Qualifier": 33,
+          "ICC Men's T20 World Cup East Asia-Pacific Qualifier": 32,
+          "ICC Men's T20 World Cup Americas Region Final": 31,
+          "ICC Men's T20 World Cup Europe Region Qualifier": 31,
+          "ICC Men's T20 World Cup Sub Regional Asia Qualifier A": 30,
+          "ICC World Twenty20 Qualifier": 29,
+          "ICC Men's T20 World Cup Africa Region Final": 29,
+          "Nepal Tri-Nation T20I Series": 28,
+          "Malaysia Tri-Nation T20I Series": 24,
+          "ICC Men's T20 World Cup Americas Region Qualifier": 24,
+          "ACC Men's Premier Cup": 24,
+          "Indonesia Tri-Nation T20I Series": 24,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier A": 24,
+          "Cambodia tour of Indonesia": 23,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier C": 23,
+          "Asia Cup": 22,
+          "ICC Men's T20 World Cup East Asia-Pacific Region Qualifier A": 22,
+          "ICC Men's T20 World Cup Europe Region Final": 21,
+          "Central Europe Cup": 21,
+          "ICC Men's T20 World Cup Asia Qualifier A": 21,
+          "ICC Men's T20 World Cup Asia Qualifier B": 21,
+          "ICC Men's T20 World Cup Asia & EAP Qualifier": 21,
+          "Mdina Cup": 20,
+          "Asia Pacific Cricket Champions Trophy": 20,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier B": 19,
+          "England tour of West Indies": 18
+        },
+        "gender": {
+          "male": 3649
+        },
+        "team_type": {
+          "international": 3649
+        },
+        "match_type": {
+          "T20": 3649
+        },
+        "innings_keys": {
+          "team": 7309,
+          "overs": 7309,
+          "powerplays": 7237,
+          "target": 3567,
+          "super_over": 70,
+          "miscounted_overs": 50,
+          "absent_hurt": 30,
+          "penalty_runs": 1
+        },
+        "delivery_keys": {
+          "actual_delivery": 820658,
+          "batter": 820658,
+          "bowler": 820658,
+          "non_striker": 820658,
+          "runs": 820658,
+          "extras": 50581,
+          "wickets": 46966,
+          "review": 1412,
+          "replacements": 157
+        },
+        "extras_keys": {
+          "wides": 31841,
+          "legbyes": 11528,
+          "noballs": 3692,
+          "byes": 3671,
+          "penalty": 14
+        },
+        "n_innings": {
+          "2": 3557,
+          "1": 59,
+          "4": 32,
+          "8": 1
+        }
+      },
+      "n_distinct_event_names": 427
+    },
+    "it20s_male_json": {
+      "directory": "it20s_male_json",
+      "total_files_in_dir": 242,
+      "json_files": 240,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 240,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 240,
+      "read_errors": [],
+      "date_min": "2010-06-04",
+      "date_max": "2024-05-26",
+      "flags": {
+        "has_registry": 240,
+        "dls_method": 7
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 240
+        },
+        "revision": {
+          "2": 130,
+          "3": 74,
+          "4": 21,
+          "5": 11,
+          "6": 3,
+          "7": 1
+        },
+        "top_keys": {
+          "meta": 240,
+          "info": 240,
+          "innings": 240
+        },
+        "info_keys": {
+          "balls_per_over": 240,
+          "dates": 240,
+          "event": 240,
+          "gender": 240,
+          "match_type": 240,
+          "officials": 240,
+          "outcome": 240,
+          "overs": 240,
+          "players": 240,
+          "registry": 240,
+          "season": 240,
+          "team_type": 240,
+          "teams": 240,
+          "toss": 240,
+          "venue": 240,
+          "city": 215,
+          "player_of_match": 207,
+          "missing": 30
+        },
+        "outcome_keys": {
+          "winner": 235,
+          "by": 235,
+          "method": 7,
+          "result": 5
+        },
+        "outcome_by_keys": {
+          "by,winner": 228,
+          "by,method,winner": 7,
+          "result": 5
+        },
+        "event_name": {
+          "ICC World Twenty20 Qualifier": 74,
+          "ICC World Twenty20 Asia Region Qualifier A": 17,
+          "ICC World Twenty20 Asia Region Qualifier B": 17,
+          "ICC World Twenty20 Africa Region Qualifier C": 15,
+          "ICC World Twenty20 Africa Region Qualifier B": 11,
+          "ICC World Twenty20 East Asia-Pacific Region Qualifier A": 11,
+          "ICC World Twenty20 East Asia-Pacific Region Qualifier B": 11,
+          "ACC Twenty20 Cup": 10,
+          "ICC World Twenty20 Europe Region Qualifier B": 10,
+          "ICC World Twenty20 Americas Sub Regional Qualifier A": 10,
+          "Asian Games Men's Cricket Competition": 9,
+          "ICC World Twenty20 Europe Region Qualifier C": 9,
+          "ICC World Twenty20 Europe Region Qualifier A": 8,
+          "ICC World Cricket League Americas Region Division One Twenty20": 5,
+          "Kenya T20 Quadrangular Series": 5,
+          "ICC World Twenty20 Africa Region Qualifier A": 5,
+          "ICC World Cricket League Europe Region Division Two Twenty20": 4,
+          "East Asia Cup": 4,
+          "Desert T20 Challenge": 2,
+          "Hong Kong tour of Namibia": 1,
+          "Stan Nagaiah Trophy": 1,
+          "Continental Cup": 1
+        },
+        "gender": {
+          "male": 240
+        },
+        "team_type": {
+          "international": 240
+        },
+        "match_type": {
+          "IT20": 240
+        },
+        "innings_keys": {
+          "team": 476,
+          "overs": 476,
+          "powerplays": 475,
+          "target": 220,
+          "miscounted_overs": 6,
+          "absent_hurt": 1
+        },
+        "delivery_keys": {
+          "actual_delivery": 52749,
+          "batter": 52749,
+          "bowler": 52749,
+          "non_striker": 52749,
+          "runs": 52749,
+          "wickets": 3091,
+          "extras": 3085,
+          "replacements": 9
+        },
+        "extras_keys": {
+          "wides": 1814,
+          "legbyes": 813,
+          "noballs": 237,
+          "byes": 230,
+          "penalty": 1
+        },
+        "n_innings": {
+          "2": 236,
+          "1": 4
+        }
+      },
+      "n_distinct_event_names": 22
+    },
+    "bbl_male_json": {
+      "directory": "bbl_male_json",
+      "total_files_in_dir": 664,
+      "json_files": 662,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 662,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 662,
+      "read_errors": [],
+      "date_min": "2011-12-16",
+      "date_max": "2026-01-25",
+      "flags": {
+        "has_registry": 662,
+        "dls_method": 32,
+        "innings_super_over": 8
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 662
+        },
+        "revision": {
+          "2": 547,
+          "3": 108,
+          "4": 6,
+          "5": 1
+        },
+        "top_keys": {
+          "meta": 662,
+          "info": 662,
+          "innings": 662
+        },
+        "info_keys": {
+          "balls_per_over": 662,
+          "dates": 662,
+          "event": 662,
+          "gender": 662,
+          "match_type": 662,
+          "officials": 662,
+          "outcome": 662,
+          "overs": 662,
+          "players": 662,
+          "registry": 662,
+          "season": 662,
+          "team_type": 662,
+          "teams": 662,
+          "toss": 662,
+          "venue": 662,
+          "player_of_match": 651,
+          "city": 583,
+          "supersubs": 40
+        },
+        "outcome_keys": {
+          "by": 647,
+          "winner": 647,
+          "method": 32,
+          "result": 15,
+          "eliminator": 4
+        },
+        "outcome_by_keys": {
+          "by,winner": 615,
+          "by,method,winner": 32,
+          "result": 11,
+          "eliminator,result": 4
+        },
+        "event_name": {
+          "Big Bash League": 662
+        },
+        "gender": {
+          "male": 662
+        },
+        "team_type": {
+          "club": 662
+        },
+        "match_type": {
+          "T20": 662
+        },
+        "innings_keys": {
+          "team": 1326,
+          "overs": 1326,
+          "powerplays": 1318,
+          "target": 656,
+          "super_over": 8,
+          "penalty_runs": 2,
+          "miscounted_overs": 1
+        },
+        "delivery_keys": {
+          "actual_delivery": 153250,
+          "batter": 153250,
+          "bowler": 153250,
+          "non_striker": 153250,
+          "runs": 153250,
+          "wickets": 8202,
+          "extras": 7954,
+          "review": 205,
+          "replacements": 73
+        },
+        "extras_keys": {
+          "wides": 4476,
+          "legbyes": 2516,
+          "noballs": 515,
+          "byes": 457
+        },
+        "n_innings": {
+          "2": 652,
+          "1": 6,
+          "4": 4
+        }
+      },
+      "n_distinct_event_names": 1
+    },
+    "cpl_male_json": {
+      "directory": "cpl_male_json",
+      "total_files_in_dir": 447,
+      "json_files": 445,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 445,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 445,
+      "read_errors": [],
+      "date_min": "2013-07-30",
+      "date_max": "2026-09-20",
+      "flags": {
+        "has_registry": 445,
+        "dls_method": 30,
+        "innings_super_over": 4
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 445
+        },
+        "revision": {
+          "2": 395,
+          "3": 45,
+          "1": 3,
+          "4": 2
+        },
+        "top_keys": {
+          "meta": 445,
+          "info": 445,
+          "innings": 445
+        },
+        "info_keys": {
+          "balls_per_over": 445,
+          "dates": 445,
+          "event": 445,
+          "gender": 445,
+          "match_type": 445,
+          "officials": 445,
+          "outcome": 445,
+          "overs": 445,
+          "players": 445,
+          "registry": 445,
+          "season": 445,
+          "team_type": 445,
+          "teams": 445,
+          "toss": 445,
+          "venue": 445,
+          "city": 444,
+          "player_of_match": 438
+        },
+        "outcome_keys": {
+          "winner": 436,
+          "by": 436,
+          "method": 30,
+          "result": 9,
+          "eliminator": 2
+        },
+        "outcome_by_keys": {
+          "by,winner": 406,
+          "by,method,winner": 30,
+          "result": 7,
+          "eliminator,result": 2
+        },
+        "event_name": {
+          "Caribbean Premier League": 445
+        },
+        "gender": {
+          "male": 445
+        },
+        "team_type": {
+          "club": 445
+        },
+        "match_type": {
+          "T20": 445
+        },
+        "innings_keys": {
+          "team": 888,
+          "overs": 888,
+          "powerplays": 884,
+          "target": 438,
+          "super_over": 4,
+          "absent_hurt": 4,
+          "miscounted_overs": 3
+        },
+        "delivery_keys": {
+          "actual_delivery": 103717,
+          "batter": 103717,
+          "bowler": 103717,
+          "non_striker": 103717,
+          "runs": 103717,
+          "extras": 6743,
+          "wickets": 5497,
+          "review": 400,
+          "replacements": 27
+        },
+        "extras_keys": {
+          "wides": 4424,
+          "legbyes": 1569,
+          "noballs": 446,
+          "byes": 319
+        },
+        "n_innings": {
+          "2": 437,
+          "1": 6,
+          "4": 2
+        }
+      },
+      "n_distinct_event_names": 1
+    },
+    "mlc_male_json": {
+      "directory": "mlc_male_json",
+      "total_files_in_dir": 111,
+      "json_files": 109,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 109,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 109,
+      "read_errors": [],
+      "date_min": "2023-07-13",
+      "date_max": "2026-07-18",
+      "flags": {
+        "has_registry": 109,
+        "dls_method": 3
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 109
+        },
+        "revision": {
+          "2": 98,
+          "3": 11
+        },
+        "top_keys": {
+          "meta": 109,
+          "info": 109,
+          "innings": 109
+        },
+        "info_keys": {
+          "balls_per_over": 109,
+          "city": 109,
+          "dates": 109,
+          "event": 109,
+          "gender": 109,
+          "match_type": 109,
+          "officials": 109,
+          "outcome": 109,
+          "overs": 109,
+          "players": 109,
+          "registry": 109,
+          "season": 109,
+          "team_type": 109,
+          "teams": 109,
+          "toss": 109,
+          "venue": 109,
+          "player_of_match": 108
+        },
+        "outcome_keys": {
+          "winner": 108,
+          "by": 108,
+          "method": 3,
+          "result": 1
+        },
+        "outcome_by_keys": {
+          "by,winner": 105,
+          "by,method,winner": 3,
+          "result": 1
+        },
+        "event_name": {
+          "Major League Cricket": 109
+        },
+        "gender": {
+          "male": 109
+        },
+        "team_type": {
+          "club": 109
+        },
+        "match_type": {
+          "T20": 109
+        },
+        "innings_keys": {
+          "team": 218,
+          "overs": 218,
+          "powerplays": 218,
+          "target": 109,
+          "absent_hurt": 1
+        },
+        "delivery_keys": {
+          "actual_delivery": 25529,
+          "batter": 25529,
+          "bowler": 25529,
+          "non_striker": 25529,
+          "runs": 25529,
+          "extras": 1547,
+          "wickets": 1406,
+          "review": 203,
+          "replacements": 15
+        },
+        "extras_keys": {
+          "wides": 993,
+          "legbyes": 387,
+          "noballs": 120,
+          "byes": 52
+        },
+        "n_innings": {
+          "2": 109
+        }
+      },
+      "n_distinct_event_names": 1
+    },
+    "india_male_json": {
+      "directory": "india_male_json",
+      "total_files_in_dir": 1039,
+      "json_files": 1037,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 1037,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 1037,
+      "read_errors": [],
+      "date_min": "2001-12-19",
+      "date_max": "2026-11-01",
+      "flags": {
+        "has_registry": 1037,
+        "dls_method": 50,
+        "innings_super_over": 8
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 1037
+        },
+        "revision": {
+          "2": 723,
+          "3": 252,
+          "4": 44,
+          "1": 16,
+          "5": 2
+        },
+        "top_keys": {
+          "meta": 1037,
+          "info": 1037,
+          "innings": 1037
+        },
+        "info_keys": {
+          "balls_per_over": 1037,
+          "dates": 1037,
+          "gender": 1037,
+          "match_type": 1037,
+          "match_type_number": 1037,
+          "officials": 1037,
+          "outcome": 1037,
+          "players": 1037,
+          "registry": 1037,
+          "season": 1037,
+          "team_type": 1037,
+          "teams": 1037,
+          "toss": 1037,
+          "venue": 1037,
+          "event": 1020,
+          "player_of_match": 1001,
+          "city": 949,
+          "overs": 818,
+          "missing": 31,
+          "supersubs": 15,
+          "bowl_out": 1
+        },
+        "outcome_keys": {
+          "winner": 941,
+          "by": 941,
+          "result": 96,
+          "method": 50,
+          "eliminator": 4,
+          "bowl_out": 1
+        },
+        "outcome_by_keys": {
+          "by,winner": 893,
+          "result": 89,
+          "by,method,winner": 48,
+          "eliminator,result": 4,
+          "method,result": 2,
+          "bowl_out,result": 1
+        },
+        "event_name": {
+          "Asia Cup": 38,
+          "Australia tour of India": 37,
+          "India tour of Australia": 36,
+          "India tour of South Africa": 32,
+          "West Indies tour of India": 32,
+          "India tour of New Zealand": 31,
+          "New Zealand tour of India": 29,
+          "Sri Lanka tour of India": 29,
+          "England tour of India": 27,
+          "India tour of England": 27,
+          "ICC Cricket World Cup": 27,
+          "South Africa tour of India": 26,
+          "ICC Men's T20 World Cup": 26,
+          "Border-Gavaskar Trophy": 24,
+          "ICC Champions Trophy": 23,
+          "England in India ODI Series": 23,
+          "India tour of Sri Lanka": 23,
+          "Australia in India ODI Series": 20,
+          "ICC World Twenty20": 19,
+          "India in West Indies ODI Series": 18,
+          "None": 17,
+          "Commonwealth Bank Series": 17,
+          "India in Sri Lanka ODI Series": 16,
+          "ICC World Cup": 14,
+          "Sri Lanka in India ODI Series": 14,
+          "NatWest Series": 13,
+          "India tour of West Indies": 13,
+          "West Indies in India ODI Series": 13,
+          "India tour of Ireland and England": 13,
+          "India tour of Zimbabwe": 12,
+          "India in South Africa ODI Series": 12,
+          "England in India Test Series": 11,
+          "India in Zimbabwe ODI Series": 11,
+          "World T20": 11,
+          "India tour of Bangladesh": 10,
+          "India in New Zealand ODI Series": 10,
+          "New Zealand in India ODI Series": 10,
+          "India in Sri Lanka Test Series": 9,
+          "Pataudi Trophy": 9,
+          "India in West Indies Test Series": 9
+        },
+        "gender": {
+          "male": 1037
+        },
+        "team_type": {
+          "international": 1037
+        },
+        "match_type": {
+          "ODI": 529,
+          "T20": 289,
+          "Test": 219
+        },
+        "innings_keys": {
+          "team": 2431,
+          "overs": 2431,
+          "powerplays": 1514,
+          "target": 790,
+          "declared": 125,
+          "miscounted_overs": 34,
+          "absent_hurt": 11,
+          "super_over": 8,
+          "penalty_runs": 2
+        },
+        "delivery_keys": {
+          "actual_delivery": 778911,
+          "batter": 778911,
+          "bowler": 778911,
+          "non_striker": 778911,
+          "runs": 778911,
+          "extras": 22789,
+          "wickets": 17903,
+          "review": 2211,
+          "replacements": 138
+        },
+        "extras_keys": {
+          "wides": 9969,
+          "legbyes": 6679,
+          "noballs": 4122,
+          "byes": 2027,
+          "penalty": 17
+        },
+        "n_innings": {
+          "2": 792,
+          "4": 160,
+          "3": 61,
+          "1": 24
+        }
+      },
+      "n_distinct_event_names": 94
+    },
+    "2026_male_json": {
+      "directory": "2026_male_json",
+      "total_files_in_dir": 1621,
+      "json_files": 1619,
+      "non_json_files": [
+        "LICENSE.txt",
+        "README.txt"
+      ],
+      "expected_by_spec": 1619,
+      "delta_json_vs_spec": 0,
+      "parsed_ok": 1619,
+      "read_errors": [],
+      "date_min": "2026-01-01",
+      "date_max": "2026-11-03",
+      "flags": {
+        "has_registry": 1619,
+        "dls_method": 65,
+        "innings_super_over": 14
+      },
+      "counters": {
+        "data_version": {
+          "1.3.0": 1619
+        },
+        "revision": {
+          "2": 1405,
+          "1": 211,
+          "3": 3
+        },
+        "top_keys": {
+          "meta": 1619,
+          "info": 1619,
+          "innings": 1619
+        },
+        "info_keys": {
+          "balls_per_over": 1619,
+          "city": 1619,
+          "dates": 1619,
+          "event": 1619,
+          "gender": 1619,
+          "match_type": 1619,
+          "outcome": 1619,
+          "players": 1619,
+          "registry": 1619,
+          "season": 1619,
+          "team_type": 1619,
+          "teams": 1619,
+          "toss": 1619,
+          "venue": 1619,
+          "officials": 1552,
+          "overs": 1394,
+          "player_of_match": 1105,
+          "match_type_number": 671,
+          "missing": 90
+        },
+        "outcome_keys": {
+          "winner": 1505,
+          "by": 1505,
+          "result": 114,
+          "method": 65,
+          "eliminator": 7
+        },
+        "outcome_by_keys": {
+          "by,winner": 1441,
+          "result": 106,
+          "by,method,winner": 64,
+          "eliminator,result": 7,
+          "method,result": 1
+        },
+        "event_name": {
+          "County Championship": 126,
+          "Vitality Blast Men": 115,
+          "One-Day Cup": 77,
+          "Indian Premier League": 74,
+          "ICC Men's T20 World Cup": 49,
+          "ICC Men's Cricket World Cup League 2": 49,
+          "Major Clubs T20 Tournament": 49,
+          "Major Clubs Limited Over Tournament": 44,
+          "Pakistan Super League": 43,
+          "Major League Tournament": 42,
+          "Caribbean Premier League": 38,
+          "The Hundred Men's Competition": 34,
+          "Major League Cricket": 34,
+          "European T20 Premier League": 31,
+          "Bangladesh Premier League": 28,
+          "CWC Challenge League": 28,
+          "Big Bash League": 27,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier A": 24,
+          "Lanka Premier League": 24,
+          "SA20": 23,
+          "Super Smash": 23,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier C": 23,
+          "Sheffield Shield": 22,
+          "ICC Men's T20 World Cup East Asia-Pacific Qualifier": 21,
+          "ICC Men's T20 World Cup Sub Regional Africa Qualifier": 21,
+          "Africa Continental Cup": 21,
+          "ICC Men's T20 World Cup Sub Regional Asia Qualifier A": 21,
+          "One-Day Cup (Australia)": 19,
+          "ICC Men's T20 World Cup Sub Regional Europe Qualifier B": 19,
+          "ICC Men's T20 World Cup Sub Regional Asia Qualifier B": 15,
+          "ICC Men's T20 World Cup Africa Sub Regional Qualifier C": 15,
+          "Asian Games Men's Qualifier": 13,
+          "ECA Men's European Cup": 13,
+          "Plunket Shield": 12,
+          "ICC Men's T20 World Cup Sub Regional Americas Qualifier B": 12,
+          "ICC Men's T20 World Cup Africa Sub Regional Qualifier B": 12,
+          "Nepal Premier League": 12,
+          "Portugal T20 Tri-Series": 9,
+          "ICC World Twenty20 Americas Sub Regional Qualifier A": 9,
+          "Continental Cup": 9
+        },
+        "gender": {
+          "male": 1619
+        },
+        "team_type": {
+          "club": 920,
+          "international": 699
+        },
+        "match_type": {
+          "T20": 1109,
+          "MDM": 202,
+          "ODM": 175,
+          "ODI": 110,
+          "Test": 23
+        },
+        "innings_keys": {
+          "team": 3595,
+          "overs": 3594,
+          "powerplays": 2757,
+          "target": 1186,
+          "declared": 88,
+          "miscounted_overs": 22,
+          "absent_hurt": 20,
+          "super_over": 14,
+          "penalty_runs": 3,
+          "forfeited": 1
+        },
+        "delivery_keys": {
+          "actual_delivery": 773693,
+          "batter": 773693,
+          "bowler": 773693,
+          "non_striker": 773693,
+          "runs": 773693,
+          "extras": 27333,
+          "wickets": 25780,
+          "review": 1328,
+          "replacements": 386
+        },
+        "extras_keys": {
+          "wides": 14115,
+          "legbyes": 7252,
+          "noballs": 3482,
+          "byes": 2566,
+          "penalty": 12
+        },
+        "n_innings": {
+          "2": 1378,
+          "4": 152,
+          "3": 71,
+          "1": 18
+        }
+      },
+      "n_distinct_event_names": 117
+    }
+  },
+  "per_directory_row_sum_equals_index_rows": true,
+  "cross_directory_overlap": {
+    "total_index_rows": 9004,
+    "rows_per_directory": {
+      "2026_male_json": 1619,
+      "bbl_male_json": 662,
+      "cpl_male_json": 445,
+      "india_male_json": 1037,
+      "ipl_male_json": 1243,
+      "it20s_male_json": 240,
+      "mlc_male_json": 109,
+      "t20s_male_json": 3649
+    },
+    "distinct_match_ids": 7993,
+    "match_ids_in_multiple_directories": 974,
+    "id_overlap_by_directory_combo": {
+      "2026_male_json+t20s_male_json": 501,
+      "india_male_json+t20s_male_json": 252,
+      "2026_male_json+ipl_male_json": 74,
+      "2026_male_json+cpl_male_json": 38,
+      "2026_male_json+india_male_json+t20s_male_json": 37,
+      "2026_male_json+mlc_male_json": 34,
+      "2026_male_json+bbl_male_json": 27,
+      "2026_male_json+india_male_json": 11
+    },
+    "id_overlap_samples": {
+      "1007655": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1007657": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1007659": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1034825": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1034827": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1034829": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1041615": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1041617": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1098211": [
+        "india_male_json",
+        "t20s_male_json"
+      ],
+      "1109610": [
+        "india_male_json",
+        "t20s_male_json"
+      ]
+    },
+    "duplicate_ids_within_same_directory": 0,
+    "date_teams_keys": 7902,
+    "date_teams_keys_with_multiple_distinct_match_ids": 91,
+    "date_teams_samples": [
+      {
+        "key": "2017-04-14#papuanewguinea|unitedarabemirates",
+        "match_ids": [
+          "1089203",
+          "1089243"
+        ]
+      },
+      {
+        "key": "2020-03-08#germany|spain",
+        "match_ids": [
+          "1207081",
+          "1207082"
+        ]
+      },
+      {
+        "key": "2021-04-05#namibia|uganda",
+        "match_ids": [
+          "1257405",
+          "1257406"
+        ]
+      },
+      {
+        "key": "2021-07-08#belgium|malta",
+        "match_ids": [
+          "1268188",
+          "1268189"
+        ]
+      },
+      {
+        "key": "2021-07-10#belgium|malta",
+        "match_ids": [
+          "1268191",
+          "1268192"
+        ]
+      },
+      {
+        "key": "2021-08-08#germany|norway",
+        "match_ids": [
+          "1271450",
+          "1271451"
+        ]
+      },
+      {
+        "key": "2021-08-20#ghana|rwanda",
+        "match_ids": [
+          "1273143",
+          "1273144"
+        ]
+      },
+      {
+        "key": "2021-08-21#finland|sweden",
+        "match_ids": [
+          "1273146",
+          "1273147"
+        ]
+      },
+      {
+        "key": "2021-08-22#finland|sweden",
+        "match_ids": [
+          "1273148",
+          "1273149"
+        ]
+      },
+      {
+        "key": "2021-09-11#germany|spain",
+        "match_ids": [
+          "1275053",
+          "1275054"
+        ]
+      }
+    ],
+    "date_teams_overlap_by_directory_combo": {
+      "2026_male_json+t20s_male_json": 484,
+      "india_male_json+t20s_male_json": 252,
+      "2026_male_json+ipl_male_json": 74,
+      "2026_male_json+cpl_male_json": 38,
+      "2026_male_json+india_male_json+t20s_male_json": 37,
+      "2026_male_json+mlc_male_json": 34,
+      "2026_male_json+bbl_male_json": 27,
+      "2026_male_json+india_male_json": 11
+    }
+  },
+  "ipl_cricsheet_vs_official_csv": {
+    "ipl_competitions_in_csv": [
+      {
+        "comp_id": "1358",
+        "comp_name": "IPL 2022"
+      },
+      {
+        "comp_id": "1715",
+        "comp_name": "IPL 2023"
+      },
+      {
+        "comp_id": "2193",
+        "comp_name": "IPL 2024"
+      },
+      {
+        "comp_id": "2725",
+        "comp_name": "IPL 2025"
+      },
+      {
+        "comp_id": "3298",
+        "comp_name": "IPL 2026"
+      }
+    ],
+    "csv_ipl_matches": 371,
+    "cricsheet_ipl_matches": 1243,
+    "matched_keys": 367,
+    "ambiguous_keys": 0,
+    "csv_ipl_unmatched": 4,
+    "cricsheet_ipl_unmatched": 876,
+    "csv_ipl_unmatched_samples": [
+      {
+        "match_id": "31281",
+        "match_date": "2024-05-13",
+        "home_team": "Gujarat Titans",
+        "away_team": "Kolkata Knight Riders"
+      },
+      {
+        "match_id": "31284",
+        "match_date": "2024-05-16",
+        "home_team": "Sunrisers Hyderabad",
+        "away_team": "Gujarat Titans"
+      },
+      {
+        "match_id": "31288",
+        "match_date": "2024-05-19",
+        "home_team": "Rajasthan Royals",
+        "away_team": "Kolkata Knight Riders"
+      },
+      {
+        "match_id": "40761",
+        "match_date": "2025-05-17",
+        "home_team": "Royal Challengers Bengaluru",
+        "away_team": "Kolkata Knight Riders"
+      }
+    ],
+    "cricsheet_ipl_unmatched_samples": [
+      {
+        "match_id": "335982",
+        "date": "2008-04-18",
+        "team_a": "Kolkata Knight Riders",
+        "team_b": "Royal Challengers Bangalore",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335983",
+        "date": "2008-04-19",
+        "team_a": "Chennai Super Kings",
+        "team_b": "Kings XI Punjab",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335984",
+        "date": "2008-04-19",
+        "team_a": "Delhi Daredevils",
+        "team_b": "Rajasthan Royals",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335985",
+        "date": "2008-04-20",
+        "team_a": "Mumbai Indians",
+        "team_b": "Royal Challengers Bangalore",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335986",
+        "date": "2008-04-20",
+        "team_a": "Deccan Chargers",
+        "team_b": "Kolkata Knight Riders",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335987",
+        "date": "2008-04-21",
+        "team_a": "Kings XI Punjab",
+        "team_b": "Rajasthan Royals",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335988",
+        "date": "2008-04-22",
+        "team_a": "Deccan Chargers",
+        "team_b": "Delhi Daredevils",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335989",
+        "date": "2008-04-23",
+        "team_a": "Chennai Super Kings",
+        "team_b": "Mumbai Indians",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335990",
+        "date": "2008-04-24",
+        "team_a": "Deccan Chargers",
+        "team_b": "Rajasthan Royals",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335991",
+        "date": "2008-04-25",
+        "team_a": "Kings XI Punjab",
+        "team_b": "Mumbai Indians",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335992",
+        "date": "2008-04-26",
+        "team_a": "Rajasthan Royals",
+        "team_b": "Royal Challengers Bangalore",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335993",
+        "date": "2008-04-26",
+        "team_a": "Chennai Super Kings",
+        "team_b": "Kolkata Knight Riders",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335994",
+        "date": "2008-04-27",
+        "team_a": "Deccan Chargers",
+        "team_b": "Mumbai Indians",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335995",
+        "date": "2008-04-27",
+        "team_a": "Delhi Daredevils",
+        "team_b": "Kings XI Punjab",
+        "event_name": "Indian Premier League"
+      },
+      {
+        "match_id": "335996",
+        "date": "2008-04-28",
+        "team_a": "Chennai Super Kings",
+        "team_b": "Royal Challengers Bangalore",
+        "event_name": "Indian Premier League"
+      }
+    ],
+    "cricsheet_ipl_date_range": [
+      "2008-04-18",
+      "2026-05-31"
+    ],
+    "csv_ipl_date_range": [
+      "2022-03-26",
+      "2026-05-31"
+    ],
+    "note": "Matching is by exact date and normalised team names only; no mapping tables are created in Phase 1."
+  },
+  "ball_by_ball_validation": {
+    "link_status_all_official_matches": {
+      "LINKED": 759,
+      "NO_CRICSHEET_MATCH": 124
+    },
+    "link_status_matches_with_ball_by_ball": {
+      "LINKED": 759,
+      "NO_CRICSHEET_MATCH": 108
+    },
+    "summary_original_file": {
+      "innings_compared": 1504,
+      "matches_compared": 759,
+      "innings_without_cricsheet_counterpart": 1,
+      "ok_rows_eq_deliveries": {
+        "innings_ok": 1495,
+        "matches_all_innings_ok": 753
+      },
+      "F1_sum_runs": {
+        "innings_ok": 16,
+        "matches_all_innings_ok": 4
+      },
+      "F2_runs_plus_e2": {
+        "innings_ok": 16,
+        "matches_all_innings_ok": 4
+      },
+      "F3_runs_plus_e1_plus_e2": {
+        "innings_ok": 0,
+        "matches_all_innings_ok": 0
+      },
+      "F4_runs_plus_e1": {
+        "innings_ok": 0,
+        "matches_all_innings_ok": 0
+      },
+      "ok_runs_eq_batter_runs": {
+        "innings_ok": 1488,
+        "matches_all_innings_ok": 747
+      },
+      "ok_e1_plus_e2_eq_extras": {
+        "innings_ok": 0,
+        "matches_all_innings_ok": 0
+      },
+      "ok_wicket_count": {
+        "innings_ok": 1483,
+        "matches_all_innings_ok": 740
+      },
+      "ok_legal_R1_not_wide_not_Overstep": {
+        "innings_ok": 1285,
+        "matches_all_innings_ok": 556
+      },
+      "ok_legal_R2_also_not_other": {
+        "innings_ok": 1497,
+        "matches_all_innings_ok": 753
+      },
+      "ok_legal_R3_not_wide_only": {
+        "innings_ok": 943,
+        "matches_all_innings_ok": 318
+      },
+      "ok_e1_wide_eq_cs_wides": {
+        "innings_ok": 103,
+        "matches_all_innings_ok": 13
+      },
+      "ok_e1_Overstep_eq_cs_noballs": {
+        "innings_ok": 1290,
+        "matches_all_innings_ok": 559
+      },
+      "ok_e1_Overstep_plus_other_eq_cs_noballs": {
+        "innings_ok": 1290,
+        "matches_all_innings_ok": 559
+      },
+      "ok_e1_byes_eq_cs_byes": {
+        "innings_ok": 1205,
+        "matches_all_innings_ok": 499
+      },
+      "ok_e1_legbyes_eq_cs_legbyes": {
+        "innings_ok": 368,
+        "matches_all_innings_ok": 54
+      },
+      "ok_e1_Penalty_eq_cs_penalty": {
+        "innings_ok": 1504,
+        "matches_all_innings_ok": 759
+      }
+    },
+    "summary_updated_file": {
+      "innings_compared": 1504,
+      "matches_compared": 759,
+      "innings_without_cricsheet_counterpart": 1,
+      "ok_rows_eq_deliveries": {
+        "innings_ok": 1495,
+        "matches_all_innings_ok": 753
+      },
+      "F1_sum_runs": {
+        "innings_ok": 16,
+        "matches_all_innings_ok": 4
+      },
+      "F2_runs_plus_e2": {
+        "innings_ok": 16,
+        "matches_all_innings_ok": 4
+      },
+      "F3_runs_plus_e1_plus_e2": {
+        "innings_ok": 1494,
+        "matches_all_innings_ok": 753
+      },
+      "F4_runs_plus_e1": {
+        "innings_ok": 1460,
+        "matches_all_innings_ok": 719
+      },
+      "ok_runs_eq_batter_runs": {
+        "innings_ok": 1488,
+        "matches_all_innings_ok": 747
+      },
+      "ok_e1_plus_e2_eq_extras": {
+        "innings_ok": 1491,
+        "matches_all_innings_ok": 749
+      },
+      "ok_wicket_count": {
+        "innings_ok": 1483,
+        "matches_all_innings_ok": 740
+      },
+      "ok_legal_R1_not_wide_not_Overstep": {
+        "innings_ok": 1285,
+        "matches_all_innings_ok": 556
+      },
+      "ok_legal_R2_also_not_other": {
+        "innings_ok": 1497,
+        "matches_all_innings_ok": 753
+      },
+      "ok_legal_R3_not_wide_only": {
+        "innings_ok": 943,
+        "matches_all_innings_ok": 318
+      },
+      "ok_e1_wide_eq_cs_wides": {
+        "innings_ok": 1498,
+        "matches_all_innings_ok": 755
+      },
+      "ok_e1_Overstep_eq_cs_noballs": {
+        "innings_ok": 1290,
+        "matches_all_innings_ok": 559
+      },
+      "ok_e1_Overstep_plus_other_eq_cs_noballs": {
+        "innings_ok": 1502,
+        "matches_all_innings_ok": 757
+      },
+      "ok_e1_byes_eq_cs_byes": {
+        "innings_ok": 1475,
+        "matches_all_innings_ok": 732
+      },
+      "ok_e1_legbyes_eq_cs_legbyes": {
+        "innings_ok": 1473,
+        "matches_all_innings_ok": 731
+      },
+      "ok_e1_Penalty_eq_cs_penalty": {
+        "innings_ok": 1504,
+        "matches_all_innings_ok": 759
+      }
+    },
+    "updated_file_total_formula_mismatches": [
+      {
+        "match_id": "14130",
+        "cricsheet_id": "1304083",
+        "innings": 1,
+        "rows": 124.0,
+        "cs_deliveries": 125.0,
+        "s_runs": 159.0,
+        "s_e1": 8.0,
+        "s_e2": 0.0,
+        "cs_total": 168.0,
+        "cs_batter": 160.0,
+        "cs_extras": 8.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "14130",
+        "cricsheet_id": "1304083",
+        "innings": 2,
+        "rows": 127.0,
+        "cs_deliveries": 128.0,
+        "s_runs": 116.0,
+        "s_e1": 14.0,
+        "s_e2": 0.0,
+        "cs_total": 132.0,
+        "cs_batter": 118.0,
+        "cs_extras": 14.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "14164",
+        "cricsheet_id": "1304116",
+        "innings": 1,
+        "rows": 124.0,
+        "cs_deliveries": 125.0,
+        "s_runs": 144.0,
+        "s_e1": 12.0,
+        "s_e2": 0.0,
+        "cs_total": 157.0,
+        "cs_batter": 145.0,
+        "cs_extras": 12.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "32618",
+        "cricsheet_id": "1433364",
+        "innings": 1,
+        "rows": 123.0,
+        "cs_deliveries": 123.0,
+        "s_runs": 199.0,
+        "s_e1": 8.0,
+        "s_e2": 0.0,
+        "cs_total": 163.0,
+        "cs_batter": 153.0,
+        "cs_extras": 10.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "32618",
+        "cricsheet_id": "1433364",
+        "innings": 2,
+        "rows": 132.0,
+        "cs_deliveries": 88.0,
+        "s_runs": 167.0,
+        "s_e1": 24.0,
+        "s_e2": 0.0,
+        "cs_total": 165.0,
+        "cs_batter": 155.0,
+        "cs_extras": 10.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "37349",
+        "cricsheet_id": "1433374",
+        "innings": 1,
+        "rows": 124.0,
+        "cs_deliveries": 131.0,
+        "s_runs": 174.0,
+        "s_e1": 8.0,
+        "s_e2": 0.0,
+        "cs_total": 158.0,
+        "cs_batter": 129.0,
+        "cs_extras": 29.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "37349",
+        "cricsheet_id": "1433374",
+        "innings": 2,
+        "rows": 105.0,
+        "cs_deliveries": 95.0,
+        "s_runs": 178.0,
+        "s_e1": 5.0,
+        "s_e2": 0.0,
+        "cs_total": 161.0,
+        "cs_batter": 147.0,
+        "cs_extras": 14.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "37352",
+        "cricsheet_id": "1433377",
+        "innings": 1,
+        "rows": 123.0,
+        "cs_deliveries": 30.0,
+        "s_runs": 208.0,
+        "s_e1": 10.0,
+        "s_e2": 0.0,
+        "cs_total": 44.0,
+        "cs_batter": 43.0,
+        "cs_extras": 1.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "50504",
+        "cricsheet_id": "1538309",
+        "innings": 1,
+        "rows": 126.0,
+        "cs_deliveries": 124.0,
+        "s_runs": 183.0,
+        "s_e1": 11.0,
+        "s_e2": 0.0,
+        "cs_total": 169.0,
+        "cs_batter": 164.0,
+        "cs_extras": 5.0,
+        "cs_super_over": false
+      },
+      {
+        "match_id": "50504",
+        "cricsheet_id": "1538309",
+        "innings": 2,
+        "rows": 113.0,
+        "cs_deliveries": 127.0,
+        "s_runs": 152.0,
+        "s_e1": 5.0,
+        "s_e2": 0.0,
+        "cs_total": 170.0,
+        "cs_batter": 157.0,
+        "cs_extras": 13.0,
+        "cs_super_over": false
+      }
+    ],
+    "first_10_matches_updated_file": [
+      {
+        "match_id": "13511",
+        "cricsheet_id": "1256720",
+        "innings": 1,
+        "s_runs": 100.0,
+        "s_e1": 3.0,
+        "s_e2": 0.0,
+        "cs_total": 103.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13511",
+        "cricsheet_id": "1256720",
+        "innings": 2,
+        "s_runs": 99.0,
+        "s_e1": 5.0,
+        "s_e2": 0.0,
+        "cs_total": 104.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13512",
+        "cricsheet_id": "1256721",
+        "innings": 1,
+        "s_runs": 163.0,
+        "s_e1": 8.0,
+        "s_e2": 0.0,
+        "cs_total": 171.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13512",
+        "cricsheet_id": "1256721",
+        "innings": 2,
+        "s_runs": 158.0,
+        "s_e1": 12.0,
+        "s_e2": 0.0,
+        "cs_total": 170.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13513",
+        "cricsheet_id": "1256722",
+        "innings": 1,
+        "s_runs": 211.0,
+        "s_e1": 13.0,
+        "s_e2": 0.0,
+        "cs_total": 224.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13513",
+        "cricsheet_id": "1256722",
+        "innings": 2,
+        "s_runs": 192.0,
+        "s_e1": 12.0,
+        "s_e2": 0.0,
+        "cs_total": 204.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13514",
+        "cricsheet_id": "1256723",
+        "innings": 1,
+        "s_runs": 182.0,
+        "s_e1": 11.0,
+        "s_e2": 0.0,
+        "cs_total": 193.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13514",
+        "cricsheet_id": "1256723",
+        "innings": 2,
+        "s_runs": 150.0,
+        "s_e1": 9.0,
+        "s_e2": 0.0,
+        "cs_total": 159.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13515",
+        "cricsheet_id": "1256724",
+        "innings": 1,
+        "s_runs": 168.0,
+        "s_e1": 11.0,
+        "s_e2": 0.0,
+        "cs_total": 179.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13515",
+        "cricsheet_id": "1256724",
+        "innings": 2,
+        "s_runs": 150.0,
+        "s_e1": 12.0,
+        "s_e2": 0.0,
+        "cs_total": 162.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13522",
+        "cricsheet_id": "1278679",
+        "innings": 1,
+        "s_runs": 140.0,
+        "s_e1": 17.0,
+        "s_e2": 0.0,
+        "cs_total": 157.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13522",
+        "cricsheet_id": "1278679",
+        "innings": 2,
+        "s_runs": 158.0,
+        "s_e1": 4.0,
+        "s_e2": 0.0,
+        "cs_total": 162.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13523",
+        "cricsheet_id": "1278680",
+        "innings": 1,
+        "s_runs": 167.0,
+        "s_e1": 15.0,
+        "s_e2": 4.0,
+        "cs_total": 186.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13523",
+        "cricsheet_id": "1278680",
+        "innings": 2,
+        "s_runs": 164.0,
+        "s_e1": 14.0,
+        "s_e2": 0.0,
+        "cs_total": 178.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13524",
+        "cricsheet_id": "1278681",
+        "innings": 1,
+        "s_runs": 170.0,
+        "s_e1": 14.0,
+        "s_e2": 0.0,
+        "cs_total": 184.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13524",
+        "cricsheet_id": "1278681",
+        "innings": 2,
+        "s_runs": 157.0,
+        "s_e1": 10.0,
+        "s_e2": 0.0,
+        "cs_total": 167.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13612",
+        "cricsheet_id": "1263471",
+        "innings": 1,
+        "s_runs": 141.0,
+        "s_e1": 8.0,
+        "s_e2": 0.0,
+        "cs_total": 149.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13612",
+        "cricsheet_id": "1263471",
+        "innings": 2,
+        "s_runs": 111.0,
+        "s_e1": 11.0,
+        "s_e2": 0.0,
+        "cs_total": 122.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13613",
+        "cricsheet_id": "1263472",
+        "innings": 1,
+        "s_runs": 158.0,
+        "s_e1": 6.0,
+        "s_e2": 0.0,
+        "cs_total": 164.0,
+        "F3_runs_plus_e1_plus_e2": true
+      },
+      {
+        "match_id": "13613",
+        "cricsheet_id": "1263472",
+        "innings": 2,
+        "s_runs": 154.0,
+        "s_e1": 10.0,
+        "s_e2": 0.0,
+        "cs_total": 164.0,
+        "F3_runs_plus_e1_plus_e2": true
+      }
+    ],
+    "official_matches_without_cricsheet_counterpart_with_balls": [
+      "15609",
+      "15610",
+      "15611",
+      "16653",
+      "16655",
+      "16659",
+      "16662",
+      "16663",
+      "16683",
+      "16684",
+      "16685",
+      "16750",
+      "16751",
+      "16752",
+      "16753",
+      "16754",
+      "20878",
+      "20879",
+      "20880",
+      "23673",
+      "23674",
+      "28063",
+      "28066",
+      "28067",
+      "28960",
+      "28961",
+      "28962",
+      "29924",
+      "29925",
+      "29926",
+      "30728",
+      "30729",
+      "30730",
+      "32617",
+      "32619",
+      "36096",
+      "36097",
+      "36098",
+      "37350",
+      "37351",
+      "37353",
+      "38842",
+      "38843",
+      "38844",
+      "37085",
+      "37086",
+      "37087",
+      "37088",
+      "37089",
+      "37090",
+      "37091",
+      "37092",
+      "37093",
+      "37094",
+      "37095",
+      "37096",
+      "37097",
+      "37098",
+      "37099",
+      "38626",
+      "38627",
+      "38628",
+      "41851",
+      "45495",
+      "45503",
+      "45505",
+      "45851",
+      "45853",
+      "45854",
+      "45856",
+      "45857",
+      "46250",
+      "46753",
+      "46754",
+      "46755",
+      "46941",
+      "46942",
+      "47260",
+      "47261",
+      "47262",
+      "47976",
+      "47977",
+      "48015",
+      "48016",
+      "48017",
+      "48018",
+      "48020",
+      "48021",
+      "48022",
+      "48023",
+      "48024",
+      "48025",
+      "48026",
+      "48027",
+      "48028",
+      "48029",
+      "48514",
+      "48596",
+      "48597",
+      "48598",
+      "50503",
+      "50505",
+      "54408",
+      "54409",
+      "54410",
+      "55559",
+      "55560",
+      "55561"
+    ],
+    "ipl_matches_linked": {
+      "LINKED": 367,
+      "NO_CRICSHEET_MATCH": 4
+    }
+  }
+}

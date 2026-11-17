@@ -1,0 +1,20 @@
+{
+  "version": "p4_classification_v1",
+  "as_of_date": "2025-12-31",
+  "as_of_note": "End of the PRE_TEST window. A player whose first T20I in the data is later is NOT treated as Capped for PRE_TEST scoring.",
+  "squad_competition": {"competition_type": "IPL", "season": "2026"},
+  "squad_corroboration": {
+    "min_resolved_rows_per_team": 5,
+    "min_plurality_share": 0.8,
+    "note": "A squad team group is mapped to a team_id by the plurality of its uniquely resolved players (id-keyed evidence from competition_team_player_mapping). Team names are never joined as text."
+  },
+  "national_team_for_indian": "India",
+  "overrides_file": "config/classification_overrides_v1.csv",
+  "override_columns": ["player_id", "field", "value", "source", "verified_by", "verified_date"],
+  "status_semantics": {
+    "Capped": "Only DERIVED_FROM_OFFICIAL_T20I_APPEARANCES (listed in a T20I playing eleven on or before as_of_date) or a manual override.",
+    "Uncapped": "Only VERIFIED_FROM_SOURCE via a manual override or a source file. Never inferred from absence in the data.",
+    "Unknown": "Everything else, including players never seen in a T20I."
+  },
+  "source_needed": "An official or verified list of international caps keyed by player_id, or by player name plus team (for example a squad sheet with a capped/uncapped column), plus player_id keys for squad names that do not resolve."
+}

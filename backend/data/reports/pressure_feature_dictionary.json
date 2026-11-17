@@ -1,0 +1,2782 @@
+{
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "not_for_publication": true,
+  "version": "pressure_feature_dictionary_v1",
+  "validated_features": [],
+  "note": "Every feature is EXPLORATORY_NOT_VALIDATED. Availability: PRE_DELIVERY means computable from earlier rows only; PARTIAL_PRE_DELIVERY uses data that was not all known at the delivery (descriptive only); OUTCOME_OF_DELIVERY and the denominator flags depend on delivery k itself; POST_INNINGS and POST_MATCH are forbidden as inputs.",
+  "restriction_register": "data_quality_restrictions_v1.json",
+  "availability_counts": {
+    "PRE_DELIVERY": 55,
+    "PARTIAL_PRE_DELIVERY": 13,
+    "OUTCOME_OF_DELIVERY": 11,
+    "OUTCOME_CONDITIONED_DENOMINATOR_FLAG": 10,
+    "POST_INNINGS": 5,
+    "POST_MATCH": 5
+  },
+  "feature_count": 99,
+  "features": [
+    {
+      "name": "team_runs_before",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Team runs before delivery k",
+      "formula": "R_k = sum of total runs of rows < k",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state, par, baseline cell",
+      "leakage_risk": "none (exclusive cumulative sum)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "team_wickets_before",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Wickets fallen before delivery k (is_wicket flag)",
+      "formula": "W_k = count(is_wicket) over rows < k",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "wickets",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "Uses the is_wicket flag. Wicket-flag disagreements (RULE_DISMISSED_NO_FLAG) are reported through team_wickets_alt_before, not by dropping rows",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "team_wickets_alt_before",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Wickets before k counting rows with a dismissed player",
+      "formula": "W_alt_k = count(is_wicket OR dismissed_player_id notnull) over rows < k",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "wickets",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "sensitivity only",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "wickets_remaining",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Wickets in hand",
+      "formula": "Wrem_k = 10 - W_k",
+      "inputs": [
+        "team_wickets_before"
+      ],
+      "unit": "wickets",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state, baseline cell",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "wickets_remaining_alt",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Wickets in hand under the alternative wicket count",
+      "formula": "10 - W_alt_k",
+      "inputs": [
+        "team_wickets_alt_before"
+      ],
+      "unit": "wickets",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "sensitivity only",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "legal_balls_bowled_before",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Legal balls bowled before k",
+      "formula": "B_k = sum(legal_inc) over rows < k; legal_inc = is_legal_ball AND extras_type <> Penalty",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "balls",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none (denominator flag of EARLIER rows only)",
+      "handling_note": "RULE_EXTRAS_PENALTY: Penalty never counts. Unknown extras keep their own category",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "innings_limit_balls",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Balls available in the innings",
+      "formula": "L = 120, or the revised limit (in balls) for DLS innings",
+      "inputs": [
+        "matches.first_inn_revised_overs",
+        "matches.second_inn_revised_overs"
+      ],
+      "unit": "balls",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "PARTIAL for revised limits: the announcement ball is unknown",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "legal_balls_remaining",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Legal balls left",
+      "formula": "Brem_k = L - B_k",
+      "inputs": [
+        "innings_limit_balls",
+        "legal_balls_bowled_before"
+      ],
+      "unit": "balls",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "over_k",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Legal over index (1-based)",
+      "formula": "floor(B_k / 6) + 1",
+      "inputs": [
+        "legal_balls_bowled_before"
+      ],
+      "unit": "over",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "Derived from legal balls, never from overid or over_ball_num",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "ball_in_over_k",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Legal ball position inside the over",
+      "formula": "B_k mod 6 + 1",
+      "inputs": [
+        "legal_balls_bowled_before"
+      ],
+      "unit": "ball",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "crr",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Current run rate per over",
+      "formula": "6 * R_k / B_k (NULL when B_k = 0)",
+      "inputs": [
+        "team_runs_before",
+        "legal_balls_bowled_before"
+      ],
+      "unit": "runs/over",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "innings_phase",
+      "group": "state feature",
+      "availability": "PRE_DELIVERY",
+      "definition": "Powerplay / middle / death label",
+      "formula": "from B_k and L under the phase rule in config/pressure_rules_v1.json",
+      "inputs": [
+        "legal_balls_bowled_before",
+        "innings_limit_balls"
+      ],
+      "unit": "label",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state, baseline cell",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "target",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Runs to win, innings 2",
+      "formula": "T = innings-1 total + 1, or revised_target for DLS",
+      "inputs": [
+        "innings 1 rows",
+        "matches.revised_target"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none for unrevised; PARTIAL for revised (final target, not target at ball k)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "runs_required",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Runs still needed",
+      "formula": "Req_k = T - R_k",
+      "inputs": [
+        "target",
+        "team_runs_before"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "req_nonpositive_flag",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Req_k <= 0 marker",
+      "formula": "Req_k <= 0",
+      "inputs": [
+        "runs_required"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population filter",
+      "leakage_risk": "none",
+      "handling_note": "RRR is NULL when this flag is true",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "rrr",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Required run rate per over",
+      "formula": "6 * Req_k / Brem_k (NULL if Brem_k = 0, no target or Req_k <= 0)",
+      "inputs": [
+        "runs_required",
+        "legal_balls_remaining"
+      ],
+      "unit": "runs/over",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "state, pressure signal",
+      "leakage_risk": "none for unrevised target",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "gap",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Required minus current run rate",
+      "formula": "RRR_k - CRR_k",
+      "inputs": [
+        "rrr",
+        "crr"
+      ],
+      "unit": "runs/over",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "pressure signal",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "projected_surplus",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Projected finish at current rate minus target",
+      "formula": "R_k + CRR_k * Brem_k / 6 - T",
+      "inputs": [
+        "team_runs_before",
+        "crr",
+        "target"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "pressure signal",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "resource_ratio",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Resources left: balls and wickets share",
+      "formula": "resource definition in spec section 3",
+      "inputs": [
+        "legal_balls_remaining",
+        "wickets_remaining"
+      ],
+      "unit": "ratio",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "pressure signal",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "chase_flag",
+      "group": "context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Innings 2 of a regulation match",
+      "formula": "innings_number = 2",
+      "inputs": [
+        "deliveries.innings_number"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "dls_flag",
+      "group": "dls",
+      "availability": "PRE_DELIVERY",
+      "definition": "Row belongs to an innings with a revised limit or target",
+      "formula": "revised fields non-null for the innings",
+      "inputs": [
+        "matches revised fields"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "PARTIAL: revision announcement ball unknown",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "dls_match_flag",
+      "group": "dls",
+      "availability": "PRE_DELIVERY",
+      "definition": "Match has any revised field",
+      "formula": "any of revised_target, first_inn_revised_overs, second_inn_revised_overs non-null",
+      "inputs": [
+        "matches revised fields"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "dls_fields_complete",
+      "group": "dls",
+      "availability": "PRE_DELIVERY",
+      "definition": "Revised target and both revised limits are stated",
+      "formula": "all three revised fields non-null",
+      "inputs": [
+        "matches revised fields"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "innings_limit_unstated",
+      "group": "dls",
+      "availability": "PRE_DELIVERY",
+      "definition": "Revised innings without a stated limit",
+      "formula": "revised match, limit NULL for this innings",
+      "inputs": [
+        "matches revised fields"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "limit_applied_from_start_assumed",
+      "group": "dls",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Revised limit applied from ball 1",
+      "formula": "assumption flag",
+      "inputs": [
+        "innings_limit_balls"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "hindsight for rows before the interruption",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "dls_exclude_primary",
+      "group": "dls",
+      "availability": "PRE_DELIVERY",
+      "definition": "Row left out of primary populations because the revised state is not reconstructable",
+      "formula": "dls_flag AND NOT reliably reconstructed",
+      "inputs": [
+        "dls_flag",
+        "dls_fields_complete"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population filter",
+      "leakage_risk": "none",
+      "handling_note": "RULE_DLS_TARGETS: revised fields are required",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "target_basis_unverified",
+      "group": "chase",
+      "availability": "PRE_DELIVERY",
+      "definition": "Innings-1 total basis unverified",
+      "formula": "innings 1 incomplete or has revised fields",
+      "inputs": [
+        "innings 1 rows"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "chase_target_features",
+        "pressure_state_label",
+        "win_probability_features"
+      ],
+      "allowed_use": "population filter",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_DLS_TARGETS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DLS_TARGETS": "REQUIRE_REVISED_FIELDS"
+      }
+    },
+    {
+      "name": "state_wicket_flag_disagreement",
+      "group": "dq",
+      "availability": "PRE_DELIVERY",
+      "definition": "Wicket flag and dismissed-player disagree in earlier rows",
+      "formula": "any earlier row with dismissed_player_id and NOT is_wicket",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "wicket_event_label",
+        "batter_dismissal_rate"
+      ],
+      "allowed_use": "population filter",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "regulation_flag",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "Innings 1 or 2",
+      "formula": "innings_number IN (1, 2)",
+      "inputs": [
+        "innings_number"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "restricted_innings_flag",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "Innings 3 or 4 (Super Over or unverified)",
+      "formula": "innings_number IN (3, 4)",
+      "inputs": [
+        "innings_number"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label",
+        "batter_pressure_sample",
+        "bowler_pressure_sample"
+      ],
+      "allowed_use": "mask",
+      "leakage_risk": "none",
+      "handling_note": "RULE_INNINGS_3_4: excluded from regulation-pressure metrics; source rows preserved",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "exclusion_reason_code",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "Why a row is restricted",
+      "formula": "CONFIRMED_SUPER_OVER_BY_CRICSHEET or UNVERIFIED_INNINGS_ROLE",
+      "inputs": [
+        "restricted_innings_flag"
+      ],
+      "unit": "code",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "report",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "exclusion_rule_id",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "Register rule behind the exclusion",
+      "formula": "RULE_INNINGS_3_4 for restricted rows",
+      "inputs": [
+        "restricted_innings_flag"
+      ],
+      "unit": "code",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "report",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "format_out_of_scope",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "OTHER_T20 rows",
+      "formula": "competition_type = OTHER_T20",
+      "inputs": [
+        "competitions.competition_type"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "format_assignment"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INFO_COMP_TYPE",
+        "RULE_INFO_IPL_FORMAT"
+      ],
+      "restriction_effects": {
+        "RULE_INFO_COMP_TYPE": "DOCUMENT_ONLY",
+        "RULE_INFO_IPL_FORMAT": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "regulation_pressure_eligible",
+      "group": "population",
+      "availability": "PRE_DELIVERY",
+      "definition": "Row may enter regulation-pressure metrics",
+      "formula": "regulation_flag AND NOT restricted_innings_flag",
+      "inputs": [
+        "regulation_flag"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label",
+        "batter_pressure_sample",
+        "bowler_pressure_sample"
+      ],
+      "allowed_use": "population",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "batter_balls_faced_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Striker balls faced earlier in innings",
+      "formula": "sum(counts_as_ball_faced) over earlier rows for the striker",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "balls",
+      "register_metrics": [
+        "batter_pressure_sample",
+        "batter_balls_faced"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none (earlier rows only)",
+      "handling_note": "RULE_EXTRAS_PENALTY: Penalty not a ball faced",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "batter_runs_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Striker runs earlier in innings",
+      "formula": "sum(batter_runs) over earlier rows for the striker",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "batter_pressure_sample",
+        "batter_balls_faced"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowler_deliveries_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Bowler rows earlier in innings",
+      "formula": "count of earlier rows by the bowler",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "rows",
+      "register_metrics": [
+        "bowler_pressure_sample",
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowler_legal_balls_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Bowler legal balls earlier",
+      "formula": "sum(legal_inc) over earlier rows by the bowler",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "balls",
+      "register_metrics": [
+        "bowler_pressure_sample",
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "RULE_EXTRAS_OTHER / RULE_EXTRAS_PENALTY apply",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowler_overs_completed_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Completed overs by the bowler",
+      "formula": "floor(bowler_legal_balls_before / 6)",
+      "inputs": [
+        "bowler_legal_balls_before"
+      ],
+      "unit": "overs",
+      "register_metrics": [
+        "bowler_pressure_sample",
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowler_runs_charged_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Runs charged to the bowler earlier",
+      "formula": "sum(charged runs) over earlier rows (batter_runs + wide/Overstep/other primary extras)",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "runs",
+      "register_metrics": [
+        "bowler_economy"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "extras_secondary_runs never interpreted (RULE_EXTRAS_SECONDARY)",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "bowler_wickets_credited_before",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Bowler-credited wickets earlier",
+      "formula": "count of earlier Caught/Bowled/LBW/Stump/Hit Wicket rows",
+      "inputs": [
+        "deliveries (rows before this one in the same innings)"
+      ],
+      "unit": "wickets",
+      "register_metrics": [
+        "bowler_wicket_rate"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "striker_id",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Striker player_id",
+      "formula": "deliveries.striker_id",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "id",
+      "register_metrics": [
+        "player_identity_join"
+      ],
+      "allowed_use": "context; joins on player_id only",
+      "leakage_risk": "none",
+      "handling_note": "RULE_DUPLICATE_NAMES: never joined on name",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_DUPLICATE_NAMES"
+      ],
+      "restriction_effects": {
+        "RULE_DUPLICATE_NAMES": "NO_JOIN_ON_NAME"
+      }
+    },
+    {
+      "name": "non_striker_id",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Non-striker player_id",
+      "formula": "deliveries.non_striker_id",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "id",
+      "register_metrics": [
+        "player_identity_join"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_DUPLICATE_NAMES"
+      ],
+      "restriction_effects": {
+        "RULE_DUPLICATE_NAMES": "NO_JOIN_ON_NAME"
+      }
+    },
+    {
+      "name": "bowler_id",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Bowler player_id",
+      "formula": "deliveries.bowler_id",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "id",
+      "register_metrics": [
+        "player_identity_join"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_DUPLICATE_NAMES"
+      ],
+      "restriction_effects": {
+        "RULE_DUPLICATE_NAMES": "NO_JOIN_ON_NAME"
+      }
+    },
+    {
+      "name": "striker_batting_order",
+      "group": "player context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Striker's batting position",
+      "formula": "deliveries.batting_order for the striker",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "position",
+      "register_metrics": [
+        "batting_order_features"
+      ],
+      "allowed_use": "context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_XI_DUPLICATES"
+      ],
+      "restriction_effects": {
+        "RULE_XI_DUPLICATES": "DO_NOT_INFER_FROM_SQUAD"
+      }
+    },
+    {
+      "name": "competition_type",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "IPL / T20I / OTHER_T20",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [
+        "format_assignment"
+      ],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INFO_COMP_TYPE",
+        "RULE_INFO_IPL_FORMAT"
+      ],
+      "restriction_effects": {
+        "RULE_INFO_COMP_TYPE": "DOCUMENT_ONLY",
+        "RULE_INFO_IPL_FORMAT": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "season_label",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Season key from competitions.season and match_date",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "venue_id",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Venue id",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "stage",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Match stage",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "knock_out",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Knock-out flag",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "batting_team_id",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Batting team id",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "bowling_team_id",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Bowling team id",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "match_date",
+      "group": "match context",
+      "availability": "PRE_DELIVERY",
+      "definition": "Match date",
+      "formula": "fixed before the match",
+      "inputs": [
+        "matches / competitions"
+      ],
+      "unit": "context",
+      "register_metrics": [],
+      "allowed_use": "baseline cell, context",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [],
+      "restriction_effects": {}
+    },
+    {
+      "name": "par_runs_lomo",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Par score at this state, other matches (LOMO)",
+      "formula": "mean runs of comparable innings in cell, own match excluded",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "par_deviation_lomo",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Runs minus LOMO par",
+      "formula": "R_k - par_runs_lomo",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "par_runs_prior",
+      "group": "exploratory signal",
+      "availability": "PRE_DELIVERY",
+      "definition": "Par from strictly earlier matches",
+      "formula": "cell mean over matches dated before this match",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "par_deviation_prior",
+      "group": "exploratory signal",
+      "availability": "PRE_DELIVERY",
+      "definition": "Runs minus strictly-prior par",
+      "formula": "R_k - par_runs_prior",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "state",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "exp_remaining",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Expected remaining runs (LOMO)",
+      "formula": "cell mean of runs scored from this state, own match excluded",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "req_to_exp",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Required runs over expected remaining",
+      "formula": "Req_k / exp_remaining",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "proj_total_gap_lomo",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Projected total minus par total",
+      "formula": "R_k + exp_remaining - par_total",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowl_signal_B",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Bowling pressure signal B",
+      "formula": "spec section 7.4",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowl_rel_A",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Bowling relative signal A",
+      "formula": "spec section 7.4",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "rank_bat_pressure_rel",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Within-cell percentile of batting pressure",
+      "formula": "rank of signal inside its cell, own match excluded",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "rank_bowl_rel_B",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Within-cell percentile of bowling signal B",
+      "formula": "rank of bowl_signal_B inside its cell",
+      "inputs": [
+        "state columns",
+        "other matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "LOMO uses later matches: descriptive, not predictive",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "exp_cell_level_used",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Baseline fallback level used for exp_remaining",
+      "formula": "level index 0..n",
+      "inputs": [
+        "state columns"
+      ],
+      "unit": "level",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "report",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "shrinkage_floor_hit",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Shrinkage floor reached",
+      "formula": "flag",
+      "inputs": [
+        "state columns"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "report",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "wbin",
+      "group": "exploratory signal",
+      "availability": "PARTIAL_PRE_DELIVERY",
+      "definition": "Merged wickets-remaining bin",
+      "formula": "merge algorithm, spec section 8",
+      "inputs": [
+        "wickets_remaining"
+      ],
+      "unit": "label",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "descriptive only",
+      "leakage_risk": "FULL_SAMPLE counts decide the merge",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "bowl_B_early_flag",
+      "group": "exploratory signal",
+      "availability": "PRE_DELIVERY",
+      "definition": "Early-innings flag for bowl_signal_B",
+      "formula": "B_k < 12 legal balls",
+      "inputs": [
+        "legal_balls_bowled_before"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "pressure_state_label"
+      ],
+      "allowed_use": "population filter",
+      "leakage_risk": "none",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": true,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "out_batter_runs",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Runs off the bat on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "batter_runs_per_ball",
+        "batter_strike_rate"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "out_is_four",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Four on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "batter_runs_per_ball"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "out_is_six",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Six on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "batter_runs_per_ball"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "out_runs_row",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Total runs on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs",
+        "bowler_economy"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "out_is_wicket",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Wicket flag on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "wicket_event_label",
+        "batter_dismissal_rate",
+        "bowler_wicket_rate"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "out_dismissal_type",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Dismissal type on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "wicket_event_label"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "out_dismissed_player_id",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Dismissed player on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "wicket_event_label",
+        "batter_dismissal_rate"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "out_extras_type",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Extras category on delivery k (other, Penalty, None kept separate)",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "extras_type_features"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "out_extras_primary_runs",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Primary extras runs on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "extras_type_features",
+        "bowler_economy"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "out_extras_secondary_runs",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Secondary extras runs on delivery k (not interpreted)",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "extras_type_features",
+        "bowler_economy"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "out_is_legal_ball",
+      "group": "outcome label",
+      "availability": "OUTCOME_OF_DELIVERY",
+      "definition": "Source legal-ball flag on delivery k",
+      "formula": "source column of the delivery being predicted",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "label only, never a state input",
+      "leakage_risk": "forbidden in state (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "den_legal_inc",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Legal ball increment of row k",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "den_counts_as_ball_faced",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Row k counts as ball faced",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "batter_balls_faced"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "den_bowler_counts_row",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Row k counts for bowler workload",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "bowler_legal_balls"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "den_bowler_charged_runs",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Runs charged to the bowler on row k",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "bowler_economy"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "den_bowler_credited_wicket",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Bowler-credited wicket on row k",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "bowler_wicket_rate"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "den_extras_label_unverified",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Row k has an unverified extras label",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "extras_type_features"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "den_extras_category_known",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Row k extras category is a known one",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "extras_type_features"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "den_extras_runs_with_none_type",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Extras runs present but extras_type is None",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "extras_type_features",
+        "innings_total_runs"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_OTHER",
+        "RULE_EXTRAS_PENALTY",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS",
+        "RULE_INFO_EXTRAS1_COMPARISON"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_OTHER": "REPORT_WITH_SENSITIVITY",
+        "RULE_EXTRAS_PENALTY": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE",
+        "RULE_INFO_EXTRAS1_COMPARISON": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "den_wicket_flag_anomaly",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "Wicket flag anomaly on row k",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "wicket_event_label"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "den_wicket_without_dismissed",
+      "group": "denominator flag",
+      "availability": "OUTCOME_CONDITIONED_DENOMINATOR_FLAG",
+      "definition": "is_wicket true without dismissed player",
+      "formula": "depends on the outcome of row k",
+      "inputs": [
+        "deliveries row k"
+      ],
+      "unit": "flag",
+      "register_metrics": [
+        "wicket_event_label",
+        "batter_dismissal_rate"
+      ],
+      "allowed_use": "selects rows for rates; never enters a state, par or rank cell",
+      "leakage_risk": "outcome-conditioned (spec 5.3)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_DISMISSED_NO_FLAG",
+        "RULE_WICKET_NO_DISMISSED"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_DISMISSED_NO_FLAG": "SENSITIVITY_EXCLUDE",
+        "RULE_WICKET_NO_DISMISSED": "EXCLUDE_ROWS_FROM_METRIC"
+      }
+    },
+    {
+      "name": "post_innings_legal_balls",
+      "group": "post-innings",
+      "availability": "POST_INNINGS",
+      "definition": "Legal balls of the whole innings",
+      "formula": "aggregate over the full innings",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs"
+      ],
+      "allowed_use": "diagnostic and masks only",
+      "leakage_risk": "forbidden in state",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "post_innings_wickets",
+      "group": "post-innings",
+      "availability": "POST_INNINGS",
+      "definition": "Wickets of the whole innings",
+      "formula": "aggregate over the full innings",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs"
+      ],
+      "allowed_use": "diagnostic and masks only",
+      "leakage_risk": "forbidden in state",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "post_innings_ended_short_of_stated_limit",
+      "group": "post-innings",
+      "availability": "POST_INNINGS",
+      "definition": "Innings ended short of limit",
+      "formula": "aggregate over the full innings",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs"
+      ],
+      "allowed_use": "diagnostic and masks only",
+      "leakage_risk": "forbidden in state",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "post_dls_state_reliable",
+      "group": "post-innings",
+      "availability": "POST_INNINGS",
+      "definition": "Revised state reliable (diagnostic)",
+      "formula": "aggregate over the full innings",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs"
+      ],
+      "allowed_use": "diagnostic and masks only",
+      "leakage_risk": "forbidden in state",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "dq_cricsheet_total_disagreement_innings",
+      "group": "post-innings",
+      "availability": "POST_INNINGS",
+      "definition": "Innings total disagrees with Cricsheet (mask only)",
+      "formula": "aggregate over the full innings",
+      "inputs": [
+        "deliveries"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "innings_total_runs"
+      ],
+      "allowed_use": "diagnostic and masks only",
+      "leakage_risk": "forbidden in state",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_INNINGS_3_4",
+        "RULE_EXTRAS_SECONDARY",
+        "RULE_CRICSHEET_TOTALS"
+      ],
+      "restriction_effects": {
+        "RULE_INNINGS_3_4": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_EXTRAS_SECONDARY": "DO_NOT_INTERPRET_FIELD",
+        "RULE_CRICSHEET_TOTALS": "SENSITIVITY_EXCLUDE"
+      }
+    },
+    {
+      "name": "win_team_id",
+      "group": "post-match",
+      "availability": "POST_MATCH",
+      "definition": "Winning team",
+      "formula": "matches table field",
+      "inputs": [
+        "matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "match_outcome_label"
+      ],
+      "allowed_use": "never a feature",
+      "leakage_risk": "forbidden (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_INFO_RESULT_STATUS"
+      ],
+      "restriction_effects": {
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_INFO_RESULT_STATUS": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "result",
+      "group": "post-match",
+      "availability": "POST_MATCH",
+      "definition": "Result text",
+      "formula": "matches table field",
+      "inputs": [
+        "matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "match_outcome_label"
+      ],
+      "allowed_use": "never a feature",
+      "leakage_risk": "forbidden (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_INFO_RESULT_STATUS"
+      ],
+      "restriction_effects": {
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_INFO_RESULT_STATUS": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "result_status",
+      "group": "post-match",
+      "availability": "POST_MATCH",
+      "definition": "Result status",
+      "formula": "matches table field",
+      "inputs": [
+        "matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "match_outcome_label"
+      ],
+      "allowed_use": "never a feature",
+      "leakage_risk": "forbidden (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_INFO_RESULT_STATUS"
+      ],
+      "restriction_effects": {
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_INFO_RESULT_STATUS": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "winning_margin",
+      "group": "post-match",
+      "availability": "POST_MATCH",
+      "definition": "Winning margin",
+      "formula": "matches table field",
+      "inputs": [
+        "matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "match_outcome_label"
+      ],
+      "allowed_use": "never a feature",
+      "leakage_risk": "forbidden (spec 5.4)",
+      "handling_note": "",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_NO_RESULT_MATCHES",
+        "RULE_INFO_RESULT_STATUS"
+      ],
+      "restriction_effects": {
+        "RULE_NO_RESULT_MATCHES": "EXCLUDE_ROWS_FROM_METRIC",
+        "RULE_INFO_RESULT_STATUS": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "name": "man_of_the_match",
+      "group": "post-match",
+      "availability": "POST_MATCH",
+      "definition": "Player of the match",
+      "formula": "matches table field",
+      "inputs": [
+        "matches"
+      ],
+      "unit": "varies",
+      "register_metrics": [
+        "player_match_of_match_label"
+      ],
+      "allowed_use": "never a feature",
+      "leakage_risk": "forbidden (spec 5.4)",
+      "handling_note": "RULE_MOM_SENTINEL for man_of_the_match = 0",
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "pre_delivery": false,
+      "restriction_rules": [
+        "RULE_MOM_SENTINEL"
+      ],
+      "restriction_effects": {
+        "RULE_MOM_SENTINEL": "DO_NOT_USE_AS_LABEL"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1398 @@
+{
+  "bbb": {
+    "profile": {
+      "extras_type": [
+        [
+          "None",
+          189167
+        ],
+        [
+          "Overstep",
+          576
+        ],
+        [
+          "Penalty",
+          1
+        ],
+        [
+          "byes",
+          529
+        ],
+        [
+          "legbyes",
+          2748
+        ],
+        [
+          "other",
+          264
+        ],
+        [
+          "wide",
+          7714
+        ]
+      ],
+      "extras_type__distinct": 7,
+      "extras1_runs": [
+        [
+          "1",
+          576
+        ],
+        [
+          "2",
+          7714
+        ],
+        [
+          "3",
+          2748
+        ],
+        [
+          "4",
+          529
+        ],
+        [
+          "5",
+          264
+        ],
+        [
+          "6",
+          189167
+        ],
+        [
+          "7",
+          1
+        ]
+      ],
+      "extras1_runs__distinct": 7,
+      "extras_2_runs": [
+        [
+          "0",
+          200963
+        ],
+        [
+          "1",
+          20
+        ],
+        [
+          "4",
+          16
+        ]
+      ],
+      "extras_2_runs__distinct": 3,
+      "runs": [
+        [
+          "0",
+          79387
+        ],
+        [
+          "1",
+          72267
+        ],
+        [
+          "2",
+          12547
+        ],
+        [
+          "3",
+          656
+        ],
+        [
+          "4",
+          23303
+        ],
+        [
+          "5",
+          25
+        ],
+        [
+          "6",
+          12814
+        ]
+      ],
+      "runs__distinct": 7,
+      "is_wicket": [
+        [
+          "false",
+          190118
+        ],
+        [
+          "true",
+          10881
+        ]
+      ],
+      "is_wicket__distinct": 2,
+      "is_four": [
+        [
+          "false",
+          177716
+        ],
+        [
+          "true",
+          23283
+        ]
+      ],
+      "is_four__distinct": 2,
+      "is_six": [
+        [
+          "false",
+          188188
+        ],
+        [
+          "true",
+          12811
+        ]
+      ],
+      "is_six__distinct": 2,
+      "dismissal_type_id": [
+        [
+          "1",
+          1775
+        ],
+        [
+          "2",
+          7557
+        ],
+        [
+          "3",
+          709
+        ],
+        [
+          "4",
+          600
+        ],
+        [
+          "5",
+          214
+        ],
+        [
+          "6",
+          17
+        ],
+        [
+          "9",
+          6
+        ],
+        [
+          "10",
+          3
+        ],
+        [
+          null,
+          190118
+        ]
+      ],
+      "dismissal_type_id__distinct": 9,
+      "dismissal_type": [
+        [
+          "Bowled",
+          1775
+        ],
+        [
+          "Caught",
+          7557
+        ],
+        [
+          "Hit Wicket",
+          17
+        ],
+        [
+          "LBW",
+          709
+        ],
+        [
+          "Obstracting the field",
+          2
+        ],
+        [
+          "Obstructing the field",
+          1
+        ],
+        [
+          "Retire Out",
+          6
+        ],
+        [
+          "RunOut",
+          600
+        ],
+        [
+          "Stump",
+          214
+        ],
+        [
+          null,
+          190118
+        ]
+      ],
+      "dismissal_type__distinct": 10,
+      "overid": [
+        [
+          "1",
+          10818
+        ],
+        [
+          "2",
+          10788
+        ],
+        [
+          "3",
+          10645
+        ],
+        [
+          "4",
+          10638
+        ],
+        [
+          "5",
+          10615
+        ],
+        [
+          "6",
+          10542
+        ],
+        [
+          "7",
+          10441
+        ],
+        [
+          "8",
+          10476
+        ],
+        [
+          "9",
+          10415
+        ],
+        [
+          "10",
+          10396
+        ],
+        [
+          "11",
+          10319
+        ],
+        [
+          "12",
+          10254
+        ],
+        [
+          "13",
+          10195
+        ],
+        [
+          "14",
+          10088
+        ],
+        [
+          "15",
+          9915
+        ],
+        [
+          "16",
+          9824
+        ],
+        [
+          "17",
+          9566
+        ],
+        [
+          "18",
+          9160
+        ],
+        [
+          "19",
+          8594
+        ],
+        [
+          "20",
+          7310
+        ]
+      ],
+      "overid__distinct": 20,
+      "innings": [
+        [
+          "1",
+          105727
+        ],
+        [
+          "2",
+          95234
+        ],
+        [
+          "3",
+          25
+        ],
+        [
+          "4",
+          13
+        ]
+      ],
+      "innings__distinct": 4,
+      "over_ball_num": [
+        [
+          "1",
+          32350
+        ],
+        [
+          "2",
+          32257
+        ],
+        [
+          "3",
+          32169
+        ],
+        [
+          "4",
+          32066
+        ],
+        [
+          "5",
+          31937
+        ],
+        [
+          "6",
+          31791
+        ],
+        [
+          "7",
+          6710
+        ],
+        [
+          "8",
+          1364
+        ],
+        [
+          "9",
+          279
+        ],
+        [
+          "10",
+          57
+        ],
+        [
+          "11",
+          15
+        ],
+        [
+          "12",
+          2
+        ],
+        [
+          "13",
+          2
+        ]
+      ],
+      "over_ball_num__distinct": 13,
+      "pace_or_spin": [
+        [
+          "Pace",
+          123886
+        ],
+        [
+          "Spin",
+          77113
+        ]
+      ],
+      "pace_or_spin__distinct": 2,
+      "over_or_around": [
+        [
+          "Around",
+          45922
+        ],
+        [
+          "Over",
+          154670
+        ],
+        [
+          null,
+          407
+        ]
+      ],
+      "over_or_around__distinct": 3,
+      "on_or_off": [
+        [
+          "Off-side",
+          104875
+        ],
+        [
+          "On-side",
+          96124
+        ]
+      ],
+      "on_or_off__distinct": 2,
+      "batting_type": [
+        [
+          "LHB",
+          69993
+        ],
+        [
+          "RHB",
+          131006
+        ]
+      ],
+      "batting_type__distinct": 2,
+      "ranges": {
+        "innings_ball_num_min": 1,
+        "innings_ball_num_max": 136,
+        "over_ball_num_min": 1,
+        "over_ball_num_max": 13,
+        "overid_min": 1,
+        "overid_max": 20
+      },
+      "wicket_without_dismissed_player_id": 1,
+      "dismissed_player_id_without_wicket": 12,
+      "wicket_rows_by_dismissal": [
+        [
+          "2",
+          "Caught",
+          7557
+        ],
+        [
+          "1",
+          "Bowled",
+          1775
+        ],
+        [
+          "3",
+          "LBW",
+          709
+        ],
+        [
+          "4",
+          "RunOut",
+          600
+        ],
+        [
+          "5",
+          "Stump",
+          214
+        ],
+        [
+          "6",
+          "Hit Wicket",
+          17
+        ],
+        [
+          "9",
+          "Retire Out",
+          6
+        ],
+        [
+          "10",
+          "Obstracting the field",
+          2
+        ],
+        [
+          "10",
+          "Obstructing the field",
+          1
+        ]
+      ],
+      "dismissed_is_striker_or_non_striker": [
+        [
+          "striker",
+          10606
+        ],
+        [
+          "non_striker",
+          274
+        ]
+      ]
+    },
+    "counter_behaviour": {
+      "innings_groups": 1724,
+      "innings_ball_num_is_1_to_row_count_without_gaps_or_repeats": 1724,
+      "innings_starting_not_at_1": 0,
+      "innings_with_repeated_ball_num": 0,
+      "innings_with_gaps": 0,
+      "rows_per_over_distribution": [
+        [
+          1,
+          93
+        ],
+        [
+          2,
+          88
+        ],
+        [
+          3,
+          103
+        ],
+        [
+          4,
+          129
+        ],
+        [
+          5,
+          146
+        ],
+        [
+          6,
+          25081
+        ],
+        [
+          7,
+          5346
+        ],
+        [
+          8,
+          1085
+        ],
+        [
+          9,
+          222
+        ],
+        [
+          10,
+          42
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "over_ball_num_by_extras_type": [
+        [
+          "None",
+          13,
+          1,
+          189167
+        ],
+        [
+          "wide",
+          12,
+          1,
+          7714
+        ],
+        [
+          "legbyes",
+          9,
+          1,
+          2748
+        ],
+        [
+          "Overstep",
+          9,
+          1,
+          576
+        ],
+        [
+          "byes",
+          9,
+          1,
+          529
+        ],
+        [
+          "other",
+          9,
+          1,
+          264
+        ],
+        [
+          "Penalty",
+          4,
+          4,
+          1
+        ]
+      ],
+      "overs_where_over_ball_num_is_1_to_rows": [
+        32350,
+        32350
+      ],
+      "max_overid_by_innings": [
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "innings_row_counts_by_innings_number": [
+        [
+          1,
+          867,
+          105727
+        ],
+        [
+          2,
+          845,
+          95234
+        ],
+        [
+          3,
+          6,
+          25
+        ],
+        [
+          4,
+          6,
+          13
+        ]
+      ]
+    },
+    "extras_crosstab_rows": 29
+  },
+  "bbb_u": {
+    "profile": {
+      "extras_type": [
+        [
+          "None",
+          189167
+        ],
+        [
+          "Overstep",
+          576
+        ],
+        [
+          "Penalty",
+          1
+        ],
+        [
+          "byes",
+          529
+        ],
+        [
+          "legbyes",
+          2748
+        ],
+        [
+          "other",
+          264
+        ],
+        [
+          "wide",
+          7714
+        ]
+      ],
+      "extras_type__distinct": 7,
+      "extras1_runs": [
+        [
+          "0",
+          189167
+        ],
+        [
+          "1",
+          10672
+        ],
+        [
+          "2",
+          458
+        ],
+        [
+          "3",
+          47
+        ],
+        [
+          "4",
+          381
+        ],
+        [
+          "5",
+          274
+        ]
+      ],
+      "extras1_runs__distinct": 6,
+      "extras_2_runs": [
+        [
+          "0",
+          200963
+        ],
+        [
+          "1",
+          20
+        ],
+        [
+          "4",
+          16
+        ]
+      ],
+      "extras_2_runs__distinct": 3,
+      "runs": [
+        [
+          "0",
+          79387
+        ],
+        [
+          "1",
+          72267
+        ],
+        [
+          "2",
+          12547
+        ],
+        [
+          "3",
+          656
+        ],
+        [
+          "4",
+          23303
+        ],
+        [
+          "5",
+          25
+        ],
+        [
+          "6",
+          12814
+        ]
+      ],
+      "runs__distinct": 7,
+      "is_wicket": [
+        [
+          "false",
+          190118
+        ],
+        [
+          "true",
+          10881
+        ]
+      ],
+      "is_wicket__distinct": 2,
+      "is_four": [
+        [
+          "false",
+          177716
+        ],
+        [
+          "true",
+          23283
+        ]
+      ],
+      "is_four__distinct": 2,
+      "is_six": [
+        [
+          "false",
+          188188
+        ],
+        [
+          "true",
+          12811
+        ]
+      ],
+      "is_six__distinct": 2,
+      "dismissal_type_id": [
+        [
+          "1",
+          1775
+        ],
+        [
+          "2",
+          7557
+        ],
+        [
+          "3",
+          709
+        ],
+        [
+          "4",
+          600
+        ],
+        [
+          "5",
+          214
+        ],
+        [
+          "6",
+          17
+        ],
+        [
+          "9",
+          6
+        ],
+        [
+          "10",
+          3
+        ],
+        [
+          null,
+          190118
+        ]
+      ],
+      "dismissal_type_id__distinct": 9,
+      "dismissal_type": [
+        [
+          "Bowled",
+          1775
+        ],
+        [
+          "Caught",
+          7557
+        ],
+        [
+          "Hit Wicket",
+          17
+        ],
+        [
+          "LBW",
+          709
+        ],
+        [
+          "Obstracting the field",
+          2
+        ],
+        [
+          "Obstructing the field",
+          1
+        ],
+        [
+          "Retire Out",
+          6
+        ],
+        [
+          "RunOut",
+          600
+        ],
+        [
+          "Stump",
+          214
+        ],
+        [
+          null,
+          190118
+        ]
+      ],
+      "dismissal_type__distinct": 10,
+      "overid": [
+        [
+          "1",
+          10818
+        ],
+        [
+          "2",
+          10788
+        ],
+        [
+          "3",
+          10645
+        ],
+        [
+          "4",
+          10638
+        ],
+        [
+          "5",
+          10615
+        ],
+        [
+          "6",
+          10542
+        ],
+        [
+          "7",
+          10441
+        ],
+        [
+          "8",
+          10476
+        ],
+        [
+          "9",
+          10415
+        ],
+        [
+          "10",
+          10396
+        ],
+        [
+          "11",
+          10319
+        ],
+        [
+          "12",
+          10254
+        ],
+        [
+          "13",
+          10195
+        ],
+        [
+          "14",
+          10088
+        ],
+        [
+          "15",
+          9915
+        ],
+        [
+          "16",
+          9824
+        ],
+        [
+          "17",
+          9566
+        ],
+        [
+          "18",
+          9160
+        ],
+        [
+          "19",
+          8594
+        ],
+        [
+          "20",
+          7310
+        ]
+      ],
+      "overid__distinct": 20,
+      "innings": [
+        [
+          "1",
+          105727
+        ],
+        [
+          "2",
+          95234
+        ],
+        [
+          "3",
+          25
+        ],
+        [
+          "4",
+          13
+        ]
+      ],
+      "innings__distinct": 4,
+      "over_ball_num": [
+        [
+          "1",
+          32350
+        ],
+        [
+          "2",
+          32257
+        ],
+        [
+          "3",
+          32169
+        ],
+        [
+          "4",
+          32066
+        ],
+        [
+          "5",
+          31937
+        ],
+        [
+          "6",
+          31791
+        ],
+        [
+          "7",
+          6710
+        ],
+        [
+          "8",
+          1364
+        ],
+        [
+          "9",
+          279
+        ],
+        [
+          "10",
+          57
+        ],
+        [
+          "11",
+          15
+        ],
+        [
+          "12",
+          2
+        ],
+        [
+          "13",
+          2
+        ]
+      ],
+      "over_ball_num__distinct": 13,
+      "pace_or_spin": [
+        [
+          "Pace",
+          123886
+        ],
+        [
+          "Spin",
+          77113
+        ]
+      ],
+      "pace_or_spin__distinct": 2,
+      "over_or_around": [
+        [
+          "Around",
+          45922
+        ],
+        [
+          "Over",
+          154670
+        ],
+        [
+          null,
+          407
+        ]
+      ],
+      "over_or_around__distinct": 3,
+      "on_or_off": [
+        [
+          "Off-side",
+          104875
+        ],
+        [
+          "On-side",
+          96124
+        ]
+      ],
+      "on_or_off__distinct": 2,
+      "batting_type": [
+        [
+          "LHB",
+          69993
+        ],
+        [
+          "RHB",
+          131006
+        ]
+      ],
+      "batting_type__distinct": 2,
+      "ranges": {
+        "innings_ball_num_min": 1,
+        "innings_ball_num_max": 136,
+        "over_ball_num_min": 1,
+        "over_ball_num_max": 13,
+        "overid_min": 1,
+        "overid_max": 20
+      },
+      "wicket_without_dismissed_player_id": 1,
+      "dismissed_player_id_without_wicket": 12,
+      "wicket_rows_by_dismissal": [
+        [
+          "2",
+          "Caught",
+          7557
+        ],
+        [
+          "1",
+          "Bowled",
+          1775
+        ],
+        [
+          "3",
+          "LBW",
+          709
+        ],
+        [
+          "4",
+          "RunOut",
+          600
+        ],
+        [
+          "5",
+          "Stump",
+          214
+        ],
+        [
+          "6",
+          "Hit Wicket",
+          17
+        ],
+        [
+          "9",
+          "Retire Out",
+          6
+        ],
+        [
+          "10",
+          "Obstracting the field",
+          2
+        ],
+        [
+          "10",
+          "Obstructing the field",
+          1
+        ]
+      ],
+      "dismissed_is_striker_or_non_striker": [
+        [
+          "striker",
+          10606
+        ],
+        [
+          "non_striker",
+          274
+        ]
+      ]
+    },
+    "counter_behaviour": {
+      "innings_groups": 1724,
+      "innings_ball_num_is_1_to_row_count_without_gaps_or_repeats": 1724,
+      "innings_starting_not_at_1": 0,
+      "innings_with_repeated_ball_num": 0,
+      "innings_with_gaps": 0,
+      "rows_per_over_distribution": [
+        [
+          1,
+          93
+        ],
+        [
+          2,
+          88
+        ],
+        [
+          3,
+          103
+        ],
+        [
+          4,
+          129
+        ],
+        [
+          5,
+          146
+        ],
+        [
+          6,
+          25081
+        ],
+        [
+          7,
+          5346
+        ],
+        [
+          8,
+          1085
+        ],
+        [
+          9,
+          222
+        ],
+        [
+          10,
+          42
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "over_ball_num_by_extras_type": [
+        [
+          "None",
+          13,
+          1,
+          189167
+        ],
+        [
+          "wide",
+          12,
+          1,
+          7714
+        ],
+        [
+          "legbyes",
+          9,
+          1,
+          2748
+        ],
+        [
+          "Overstep",
+          9,
+          1,
+          576
+        ],
+        [
+          "byes",
+          9,
+          1,
+          529
+        ],
+        [
+          "other",
+          9,
+          1,
+          264
+        ],
+        [
+          "Penalty",
+          4,
+          4,
+          1
+        ]
+      ],
+      "overs_where_over_ball_num_is_1_to_rows": [
+        32350,
+        32350
+      ],
+      "max_overid_by_innings": [
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "innings_row_counts_by_innings_number": [
+        [
+          1,
+          867,
+          105727
+        ],
+        [
+          2,
+          845,
+          95234
+        ],
+        [
+          3,
+          6,
+          25
+        ],
+        [
+          4,
+          6,
+          13
+        ]
+      ]
+    },
+    "extras_crosstab_rows": 42
+  },
+  "original_extras1_codes_by_extras_type": [
+    [
+      "None",
+      "6",
+      1
+    ],
+    [
+      "Overstep",
+      "1",
+      1
+    ],
+    [
+      "Penalty",
+      "7",
+      1
+    ],
+    [
+      "byes",
+      "4",
+      1
+    ],
+    [
+      "legbyes",
+      "3",
+      1
+    ],
+    [
+      "other",
+      "5",
+      1
+    ],
+    [
+      "wide",
+      "2",
+      1
+    ]
+  ],
+  "updated_extras1_values_by_extras_type": [
+    [
+      "None",
+      "0,1",
+      2
+    ],
+    [
+      "Overstep",
+      "1",
+      1
+    ],
+    [
+      "Penalty",
+      "5",
+      1
+    ],
+    [
+      "byes",
+      "1,2,3,4,5",
+      5
+    ],
+    [
+      "legbyes",
+      "0,1,2,3,4,5",
+      6
+    ],
+    [
+      "other",
+      "1",
+      1
+    ],
+    [
+      "wide",
+      "1,2,3,4,5",
+      5
+    ]
+  ],
+  "compare_original_vs_updated": {
+    "a_rows": 200999,
+    "b_rows": 200999,
+    "a_duplicate_key_groups": 0,
+    "b_duplicate_key_groups": 0,
+    "joined_rows": 200999,
+    "only_in_a": 0,
+    "only_in_b": 0,
+    "rows_with_any_differing_value": 199980,
+    "differing_rows_per_column": {
+      "striker_name": 24,
+      "non_striker_name": 33,
+      "extras1_runs": 199980
+    },
+    "name_difference_samples": [
+      [
+        [
+          "AHT Donald",
+          "Aneurin Donald",
+          24
+        ]
+      ],
+      [
+        [
+          "AHT Donald",
+          "Aneurin Donald",
+          33
+        ]
+      ]
+    ],
+    "name_difference_columns": [
+      "striker_name",
+      "non_striker_name"
+    ],
+    "verdict": "SAME_ROWS_SAME_KEYS_VALUES_DIFFER"
+  }
+}

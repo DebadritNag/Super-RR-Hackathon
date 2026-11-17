@@ -1,0 +1,15 @@
+config,branch,floor,mult,k_for,k_hand,floor_hit,agrees
+shrink_none,floor_hit,0.01,1.0,0.0,0.0,False,True
+shrink_none,non_finite,0.01,1.0,0.0,0.0,False,True
+shrink_eb,floor_hit,0.01,1.0,100.0,100.0,True,True
+shrink_eb,non_finite,0.01,1.0,100.0,100.0,True,True
+shrink_tau0.5,floor_hit,0.01,0.5,100.0,100.0,True,True
+shrink_tau0.5,non_finite,0.01,0.5,100.0,100.0,True,True
+shrink_tau2,floor_hit,0.01,2.0,50.0,50.0,True,True
+shrink_tau2,non_finite,0.01,2.0,100.0,100.0,True,True
+shrink_tau4,floor_hit,0.01,4.0,25.0,25.0,True,True
+shrink_tau4,non_finite,0.01,4.0,100.0,100.0,True,True
+shrink_floor0.001,floor_hit,0.001,1.0,1000.0,1000.0,True,True
+shrink_floor0.001,non_finite,0.001,1.0,1000.0,1000.0,True,True
+shrink_target0,floor_hit,0.01,1.0,100.0,100.0,True,True
+shrink_target0,non_finite,0.01,1.0,100.0,100.0,True,True

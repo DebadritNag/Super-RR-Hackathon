@@ -1,0 +1,161 @@
+{
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "official_ranking": false,
+  "primary_definition": "any|q0.75",
+  "primary_label": "PROVISIONAL (rule winner of one of nine; not validated, not shown superior)",
+  "alternatives": [
+    "chase|q0.9",
+    "any|q0.9",
+    "chase|q0.75"
+  ],
+  "n_boot": 1000,
+  "seed": 20260512,
+  "code_version": "0061c9d62abd2c9925476a13d855df2ab54f0bd9442569213b7c80f6f00488cd",
+  "config_hashes": {
+    "investigation_config": "dfb6b2324524a2b0c2de21551ef905f872812951dd60ba9a661b06d65ee753b5",
+    "frozen_choices": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+    "format_weights": "c50a068e5709020e23fd513ea89788a9b168050d22434ac01cc2b4104801dc71",
+    "eligibility_rules": "17c84f9cad0a5b743d1fbad49b7943d5526839972ed9d3e2e7aa779f41057de0"
+  },
+  "phase4_reproduction": {
+    "definition": "any|q0.75",
+    "shrinkage": "shrink_tau4",
+    "tolerance": 1e-09,
+    "max_abs_diff": 0.0,
+    "players_compared": 1345,
+    "reproduces": true
+  },
+  "phase4_snr_reproduction": {
+    "cells": {
+      "IPL|batter": {
+        "phase4_snr": -0.7176853159,
+        "phase5_snr": -0.7176853159,
+        "abs_diff": 0.0
+      },
+      "T20I|batter": {
+        "phase4_snr": -0.6507427481,
+        "phase5_snr": -0.6507427481,
+        "abs_diff": 0.0
+      },
+      "IPL|bowler": {
+        "phase4_snr": -0.7437008003,
+        "phase5_snr": -0.7437008003,
+        "abs_diff": 0.0
+      },
+      "T20I|bowler": {
+        "phase4_snr": -0.7063956475,
+        "phase5_snr": -0.7063956475,
+        "abs_diff": 0.0
+      }
+    },
+    "max_abs_diff": 0.0,
+    "reproduces": true
+  },
+  "spotchecks": {
+    "split_half": {
+      "stream": "IPL batter runs, any|q0.75, PRE_TEST, odd/even, min 6 balls per half",
+      "independent_players": 144,
+      "independent_r": 0.243384658,
+      "independent_sb": 0.3914873108,
+      "module_players": 144,
+      "module_r": 0.243384658,
+      "module_sb": 0.3914873108,
+      "abs_diff_r": 0.0,
+      "players_equal": true
+    },
+    "snr": {
+      "stream": "T20I bowler charged runs, any|q0.75, TRAIN, Phase 4 basis",
+      "independent_snr": -0.7063956475,
+      "module_snr": -0.7063956475,
+      "abs_diff": 0.0,
+      "independent_tau2": -0.990255113,
+      "module_tau2": -0.990255113
+    },
+    "split_half_agrees": true,
+    "snr_agrees": true
+  },
+  "bowler_signal_meta": {
+    "thresholds_train_only": {
+      "bowler_defence_margin": {
+        "chase_surplus|IPL": 4.4,
+        "inn1_par_dev|IPL": 12.3125,
+        "chase_surplus|T20I": 5.347826087,
+        "inn1_par_dev|T20I": 10.3739837398
+      },
+      "bowler_death_close_gap": {
+        "abs_gap_q0.25|IPL": 2.9880068532,
+        "abs_gap_q0.25|T20I": 2.6060606061
+      },
+      "bowler_death_wickets_in_hand": {
+        "wickets_remaining|IPL": 6.0,
+        "wickets_remaining|T20I": 6.0
+      }
+    },
+    "not_buildable": [],
+    "note": "SENSITIVITY_ONLY: does not replace the primary definition and never feeds the API"
+  },
+  "headline": [
+    "On the Phase 4 noise basis the between-player variance is not positive in 4 of 4 cells (SNR -0.74 to -0.65), which reproduces the Phase 4 finding. That estimator divides a per-ball residual variance by a Kish count of equally sized MATCHES, so its noise term is larger than the sampling variance of a player mean by roughly the number of pressure balls per match. With the noise estimated as independent balls the estimate is positive in 4 of 4 cells and with match-cluster noise in 4 of 4. Those two bases bracket the truth (independent balls understate noise when balls inside a match are dependent, the cluster estimator is biased low with few matches per player), so the data cannot pin the size of tau2.",
+    "",
+    "A model-free check agrees that some between-player signal exists: odd/even split-half reliability on the full pre-test window is estimable in 4 of 4 cells, with Spearman-Brown values from 0.25 to 0.42 (intervals in section 3). These are modest, and the intervals of several cells reach or cross zero. The statement 'signal-to-noise is at or below zero' is therefore mainly a property of the Phase 4 noise estimator, not proof that players do not differ under pressure. It is also not proof that the ranking is reliable. This is an open issue for review: the Phase 4 estimator is NOT changed here (methodology is not locked)."
+  ],
+  "unresolved_issues": [
+    "Noise model of the shrinkage estimator: the Phase 4 `n_eff` is a Kish count of equally sized matches but is divided into a per-ball variance. This drives the negative Phase 4 SNR and the strong shrinkage (floor hits, `shrink_tau4`). Choosing a different noise model changes every shrunk score and needs a decision before the methodology is locked.",
+    "The size of the between-player variance remains unidentified (brackets in section 2). Until it is identified, ranking reliability claims are not supportable.",
+    "Bowler pressure uses batter-state signals. Section 7 shows how three bowler-specific candidates behave; no candidate is adopted. Adopting one is a methodology decision.",
+    "Every eligibility threshold is still the unvalidated TRAIN-median working pool (20 / 16 / 49 / 29 balls).",
+    "Sample sizes are small in several cells (see player counts); intervals are wide and some cells are NOT_ESTIMABLE.",
+    "Date verification, strict capped/uncapped classification and the methodology-validation gate are unresolved (section 11). A later TEST evaluation is not a pristine hold-out because Phase 4 aggregate TEST results were shown."
+  ],
+  "gates": {
+    "available": true,
+    "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+    "failing": [
+      "data_weight_gate_passed",
+      "methodology_validated",
+      "date_verification"
+    ],
+    "gate_results": [
+      {
+        "gate_id": "data_weight_gate_passed",
+        "passed": false,
+        "applicable": true,
+        "detail": "4 of 4 cells THRESHOLD_NOT_VALIDATED"
+      },
+      {
+        "gate_id": "methodology_validated",
+        "passed": false,
+        "applicable": true,
+        "detail": "methodology not validated"
+      },
+      {
+        "gate_id": "strict_classification_available",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: request uses no strict status filter"
+      },
+      {
+        "gate_id": "min_eligible_pool",
+        "passed": true,
+        "applicable": false,
+        "detail": "not applicable: evaluated per request with rows"
+      },
+      {
+        "gate_id": "date_verification",
+        "passed": false,
+        "applicable": true,
+        "detail": "0 of 42 late T20I matches are official-verified; classes {'DATE_CONSISTENT_ACROSS_SOURCES': 36, 'DATE_SINGLE_SOURCE': 6, 'DATE_CONFLICT': 0, 'DATE_UNVERIFIED': 0}; none verified against an authoritative record unless supplied"
+      }
+    ]
+  },
+  "preservation": {
+    "official_data_unchanged": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_changed": [],
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events": 0,
+    "test_opened": false,
+    "all_preserved": true
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "p6_split_half_columns": [
+    "definition",
+    "format",
+    "role",
+    "stream",
+    "is_primary_stream",
+    "window",
+    "mode",
+    "min_balls_per_half",
+    "matches",
+    "label",
+    "players",
+    "status",
+    "r_pearson",
+    "r_spearman",
+    "sb_pearson",
+    "sb_spearman",
+    "split_sd_sb",
+    "repeats"
+  ],
+  "spot1_rows": [
+    {
+      "mode": "odd_even",
+      "window": "PRE_TEST",
+      "players": 103,
+      "r_pearson": 0.29324478196625486,
+      "sb_pearson": 0.45350236251547715,
+      "sb_recomputed_2r_over_1_plus_r": 0.45350236251547715
+    },
+    {
+      "mode": "early_late",
+      "window": "PRE_TEST",
+      "players": 98,
+      "r_pearson": 0.15397709932247994,
+      "sb_pearson": 0.26686335354987994
+    },
+    {
+      "mode": "random",
+      "window": "PRE_TEST",
+      "players": 98,
+      "r_pearson": 0.22527210862701408,
+      "sb_pearson": 0.3677095186300194
+    },
+    {
+      "mode": "odd_even",
+      "window": "TRAIN",
+      "players": 81,
+      "r_pearson": 0.267643250413365,
+      "sb_pearson": 0.4222690419029003,
+      "sb_recomputed_2r_over_1_plus_r": 0.4222690419029003
+    },
+    {
+      "mode": "early_late",
+      "window": "TRAIN",
+      "players": 80,
+      "r_pearson": 0.10582659838378408,
+      "sb_pearson": 0.1913981785904851
+    },
+    {
+      "mode": "random",
+      "window": "TRAIN",
+      "players": 78,
+      "r_pearson": 0.20600106034829868,
+      "sb_pearson": 0.34162666538419895
+    }
+  ],
+  "spot2_columns": [
+    "analysis_label",
+    "window_start",
+    "fit_on",
+    "definition",
+    "format",
+    "role",
+    "stream",
+    "is_primary_stream",
+    "matches",
+    "pressure_observations",
+    "players_with_pressure_balls",
+    "median_player_balls",
+    "share_rows_in_b0_fit_window",
+    "sigma2_within",
+    "between_moment",
+    "k",
+    "floor_hit",
+    "tau2_used",
+    "frozen_threshold_balls",
+    "scaled_threshold_balls",
+    "threshold_label",
+    "eligible_players",
+    "status",
+    "marginal_n_eff",
+    "marginal_data_weight",
+    "median_data_weight",
+    "gate",
+    "passes_gate_informational",
+    "shrinkage_config",
+    "seed",
+    "n_boot"
+  ],
+  "spot2_rows": [
+    {
+      "analysis_label": "RECENT_FORM_SEPARATE_ANALYSIS",
+      "window_start": "2024-01-01",
+      "fit_on": "WINDOW_IN_SAMPLE",
+      "definition": "any|q0.75",
+      "format": "IPL",
+      "role": "batter",
+      "stream": "runs",
+      "is_primary_stream": true,
+      "matches": 131,
+      "pressure_observations": 8036,
+      "players_with_pressure_balls": 192,
+      "median_player_balls": 22.5,
+      "share_rows_in_b0_fit_window": 0.5506470881035341,
+      "sigma2_within": 3.193530589851428,
+      "between_moment": -1.1246639793498003,
+      "k": 25.000000000000004,
+      "floor_hit": true,
+      "tau2_used": 0.1277412235940571,
+      "frozen_threshold_balls": 20.0,
+      "scaled_threshold_balls": 14.0,
+      "threshold_label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+      "eligible_players": 120,
+      "status": "ESTIMATED",
+      "marginal_n_eff": 1.0,
+      "marginal_data_weight": 0.0384615384615384,
+      "median_data_weight": 0.1245128305839328,
+      "gate": 0.5,
+      "passes_gate_informational": false,
+      "shrinkage_config": "shrink_tau4",
+      "seed": 20260512,
+      "n_boot": 1000
+    },
+    {
+      "analysis_label": "RECENT_FORM_SEPARATE_ANALYSIS",
+      "window_start": "2024-01-01",
+      "fit_on": "WINDOW_IN_SAMPLE",
+      "definition": "any|q0.75",
+      "format": "IPL",
+      "role": "batter",
+      "stream": "dismissal",
+      "is_primary_stream": false,
+      "matches": 131,
+      "pressure_observations": 8036,
+      "players_with_pressure_balls": 192,
+      "median_player_balls": 22.5,
+      "share_rows_in_b0_fit_window": 0.5506470881035341,
+      "sigma2_within": 0.05689581439181,
+      "between_moment": -0.0042102721025033,
+      "k": 25.0,
+      "floor_hit": true,
+      "tau2_used": 0.0022758325756724,
+      "frozen_threshold_balls": NaN,
+      "scaled_threshold_balls": NaN,
+      "threshold_label": NaN,
+      "eligible_players": 0,
+      "status": "NO_FROZEN_THRESHOLD",
+      "marginal_n_eff": NaN,
+      "marginal_data_weight": NaN,
+      "median_data_weight": NaN,
+      "gate": NaN,
+      "passes_gate_informational": NaN,
+      "shrinkage_config": "shrink_tau4",
+      "seed": 20260512,
+      "n_boot": 1000
+    }
+  ],
+  "spot3_ipl_by_year": [
+    [
+      2024,
+      71
+    ],
+    [
+      2025,
+      74
+    ]
+  ],
+  "spot3_total": 145,
+  "spot4": {
+    "t20i_from_2024_with_deliveries": 298,
+    "of_which_test_period": 70,
+    "difference": 228
+  },
+  "period_counts": [
+    [
+      "TEST",
+      144
+    ],
+    [
+      "TRAIN",
+      512
+    ],
+    [
+      "VALIDATION",
+      211
+    ]
+  ]
+}

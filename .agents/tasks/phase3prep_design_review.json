@@ -1,0 +1,11 @@
+{"verdict": "CHANGES_REQUESTED", "findings": [
+{"id": 1, "severity": "MEDIUM", "title": "counts_as_ball_faced and legal_inc of row k define opportunity units but are missing from the availability matrix; selection on outcome unstated"},
+{"id": 2, "severity": "MEDIUM", "title": "Chase target from unexplained incomplete innings 1 (19 innings, no revised field) is knowable pre-innings-2 but not flagged; only post-match result text used"},
+{"id": 3, "severity": "MEDIUM", "title": "exp_remaining defined on exact (Brem, Wrem) cells that are too sparse; fallback chain and cell level unspecified"},
+{"id": 4, "severity": "MEDIUM", "title": "Arbitrary constants (B_k<12, 0.05 tolerance, 5% zero-inflation, knee rule, Wrem low) absent from section 8 config table with basis and sensitivity"},
+{"id": 5, "severity": "MEDIUM", "title": "Split-year T20I count stated as 6 in section 2 and design notes F; data and open decision 17 give 18"},
+{"id": 6, "severity": "MEDIUM", "title": "shrink_to_parent k undefined when between-cell variance <= 0 ('floored at 0' wrong direction); n vs n_eff unstated"},
+{"id": 7, "severity": "NIT", "title": "Appendix A M5 cites obsolete 4-point quantile grid"},
+{"id": 8, "severity": "NIT", "title": "NULL and non-positive handling in rank_pct and req_to_exp unspecified"},
+{"id": 9, "severity": "NIT", "title": "Cause of 402 early-ending chases stated as fact but not verifiable from data"}
+], "reviewDoc": "d:/Data/.agents/tasks/phase3prep_design_review.md"}

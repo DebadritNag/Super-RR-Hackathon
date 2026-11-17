@@ -1,0 +1,324 @@
+{
+  "status": "EXPLORATORY_NOT_VALIDATED",
+  "official_ranking": false,
+  "not_for_publication": true,
+  "generated_at_utc": "2026-11-15T09:22:15Z",
+  "official_unchanged": true,
+  "diff": {},
+  "step_exit_codes": {
+    "build_pre_delivery_state": 0,
+    "spot_check_pre_delivery_state": 0,
+    "run_pressure_distributions": 0,
+    "run_baseline_exploration": 0,
+    "run_pressure_eligibility": 0,
+    "run_pressure_format_sensitivity": 0,
+    "apply_dq_restrictions": 0
+  },
+  "deliverables": {
+    "pressure_framework_v1.md": {
+      "exists": true,
+      "bytes": 93300,
+      "ok": true
+    },
+    "pressure_feature_dictionary.json": {
+      "exists": true,
+      "bytes": 86782,
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "pressure_distribution_report.md": {
+      "exists": true,
+      "bytes": 52925,
+      "ok": true
+    },
+    "pressure_threshold_experiment.json": {
+      "exists": true,
+      "bytes": 2704570,
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "pressure_eligibility_report.md": {
+      "exists": true,
+      "bytes": 17225,
+      "ok": true
+    },
+    "baseline_methodology_v1.md": {
+      "exists": true,
+      "bytes": 19086,
+      "ok": true
+    },
+    "phase3_data_quality_application_report.md": {
+      "exists": true,
+      "bytes": 12620,
+      "ok": true
+    },
+    "pressure_format_weight_sensitivity.json": {
+      "exists": true,
+      "bytes": 135929,
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    },
+    "pressure_format_weight_sensitivity.md": {
+      "exists": true,
+      "bytes": 8243,
+      "ok": true
+    },
+    "phase3_data_quality_application.json": {
+      "exists": true,
+      "bytes": 32490,
+      "status": "EXPLORATORY_NOT_VALIDATED",
+      "official_ranking": false,
+      "ok": true
+    }
+  },
+  "seed_configs": {
+    "pressure_rules": "config/pressure_rules_v1.json",
+    "pressure_eligibility": "config/pressure_eligibility_rules_v1.json"
+  },
+  "approval_gate": "Stop: full pressure scoring, official rankings and ML training need explicit user approval.",
+  "before": {
+    "csv_sha256": {
+      "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+      "batting_stats2026.csv": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+      "bowling_stats2026.csv": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+      "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "fielding_stats2026.csv": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+      "ipl squad.csv": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+      "matches 2026.csv": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+      "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+    },
+    "tables": {
+      "ball_by_ball_comparison_detail": {
+        "rows": 57,
+        "content_hash": "6424049670836342807"
+      },
+      "ball_by_ball_comparison": {
+        "rows": 33,
+        "content_hash": "6556012316708249722"
+      },
+      "match_reconciliation": {
+        "rows": 883,
+        "content_hash": "8191618280319093247"
+      },
+      "deliveries": {
+        "rows": 200999,
+        "content_hash": "2472089235370398535"
+      },
+      "innings": {
+        "rows": 1724,
+        "content_hash": "2486840171759231281"
+      },
+      "match_squads": {
+        "rows": 28381,
+        "content_hash": "11232610400671811020"
+      },
+      "matches": {
+        "rows": 883,
+        "content_hash": "13176953439193494225"
+      },
+      "player_competition_mapping": {
+        "rows": 6413,
+        "content_hash": "595047445318026641"
+      },
+      "players": {
+        "rows": 1217,
+        "content_hash": "5617674674654928061"
+      },
+      "venues": {
+        "rows": 98,
+        "content_hash": "14876321384663441804"
+      },
+      "competition_teams": {
+        "rows": 353,
+        "content_hash": "15187849804718752551"
+      },
+      "teams": {
+        "rows": 38,
+        "content_hash": "13847215763956492045"
+      },
+      "competitions": {
+        "rows": 141,
+        "content_hash": "4698846567658472722"
+      },
+      "raw_ball_by_ball_updated": {
+        "rows": 200999,
+        "content_hash": "16279601034874580097"
+      },
+      "raw_ball_by_ball": {
+        "rows": 200999,
+        "content_hash": "14284978838386518736"
+      }
+    },
+    "db_file_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "cricsheet": {
+      "2026_male_json": {
+        "files": 1621,
+        "bytes": 267865691,
+        "sha256": "9605d27a0fcc0619476e58a3d9a9565b11f197c2007dedc6b3929232e39dd530"
+      },
+      "bbl_male_json": {
+        "files": 664,
+        "bytes": 54772655,
+        "sha256": "695bdd9b272d2a480791c5b4307283c42e63489c0a3d836b100456af95405f32"
+      },
+      "cpl_male_json": {
+        "files": 447,
+        "bytes": 37167606,
+        "sha256": "214c3a41faebce9ec69ae5451649437f5dd0ef4bb533fae608e090897eb21631"
+      },
+      "india_male_json": {
+        "files": 1039,
+        "bytes": 264034861,
+        "sha256": "718484e89142833a2c029119f599482bc953b718488330bd01c6d1ee0b0b7a6f"
+      },
+      "ipl_male_json": {
+        "files": 1245,
+        "bytes": 105718906,
+        "sha256": "03631a85a3463332f2b49167a23ac5c56b6e79048a32beb05043e0b5568df845"
+      },
+      "it20s_male_json": {
+        "files": 242,
+        "bytes": 19023902,
+        "sha256": "e2a02352a49dfc45e4ea6025af786d74849bbd5d7f41847b8a0326a3ba12dbce"
+      },
+      "mlc_male_json": {
+        "files": 111,
+        "bytes": 9253438,
+        "sha256": "aa046883ac8536fbce2190c77f6a16fb530ea5d401f81a2c50cc3725d61dbf3e"
+      },
+      "t20s_male_json": {
+        "files": 3651,
+        "bytes": 296564757,
+        "sha256": "8f92a901816c0276e62a7f0cdeb2060e6de1dfc83c6b8d34a2c465806154822d"
+      }
+    }
+  },
+  "after": {
+    "csv_sha256": {
+      "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+      "batting_stats2026.csv": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+      "bowling_stats2026.csv": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+      "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "fielding_stats2026.csv": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+      "ipl squad.csv": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+      "matches 2026.csv": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+      "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+    },
+    "tables": {
+      "ball_by_ball_comparison_detail": {
+        "rows": 57,
+        "content_hash": "6424049670836342807"
+      },
+      "ball_by_ball_comparison": {
+        "rows": 33,
+        "content_hash": "6556012316708249722"
+      },
+      "match_reconciliation": {
+        "rows": 883,
+        "content_hash": "8191618280319093247"
+      },
+      "deliveries": {
+        "rows": 200999,
+        "content_hash": "2472089235370398535"
+      },
+      "innings": {
+        "rows": 1724,
+        "content_hash": "2486840171759231281"
+      },
+      "match_squads": {
+        "rows": 28381,
+        "content_hash": "11232610400671811020"
+      },
+      "matches": {
+        "rows": 883,
+        "content_hash": "13176953439193494225"
+      },
+      "player_competition_mapping": {
+        "rows": 6413,
+        "content_hash": "595047445318026641"
+      },
+      "players": {
+        "rows": 1217,
+        "content_hash": "5617674674654928061"
+      },
+      "venues": {
+        "rows": 98,
+        "content_hash": "14876321384663441804"
+      },
+      "competition_teams": {
+        "rows": 353,
+        "content_hash": "15187849804718752551"
+      },
+      "teams": {
+        "rows": 38,
+        "content_hash": "13847215763956492045"
+      },
+      "competitions": {
+        "rows": 141,
+        "content_hash": "4698846567658472722"
+      },
+      "raw_ball_by_ball_updated": {
+        "rows": 200999,
+        "content_hash": "16279601034874580097"
+      },
+      "raw_ball_by_ball": {
+        "rows": 200999,
+        "content_hash": "14284978838386518736"
+      }
+    },
+    "db_file_sha256": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "cricsheet": {
+      "2026_male_json": {
+        "files": 1621,
+        "bytes": 267865691,
+        "sha256": "9605d27a0fcc0619476e58a3d9a9565b11f197c2007dedc6b3929232e39dd530"
+      },
+      "bbl_male_json": {
+        "files": 664,
+        "bytes": 54772655,
+        "sha256": "695bdd9b272d2a480791c5b4307283c42e63489c0a3d836b100456af95405f32"
+      },
+      "cpl_male_json": {
+        "files": 447,
+        "bytes": 37167606,
+        "sha256": "214c3a41faebce9ec69ae5451649437f5dd0ef4bb533fae608e090897eb21631"
+      },
+      "india_male_json": {
+        "files": 1039,
+        "bytes": 264034861,
+        "sha256": "718484e89142833a2c029119f599482bc953b718488330bd01c6d1ee0b0b7a6f"
+      },
+      "ipl_male_json": {
+        "files": 1245,
+        "bytes": 105718906,
+        "sha256": "03631a85a3463332f2b49167a23ac5c56b6e79048a32beb05043e0b5568df845"
+      },
+      "it20s_male_json": {
+        "files": 242,
+        "bytes": 19023902,
+        "sha256": "e2a02352a49dfc45e4ea6025af786d74849bbd5d7f41847b8a0326a3ba12dbce"
+      },
+      "mlc_male_json": {
+        "files": 111,
+        "bytes": 9253438,
+        "sha256": "aa046883ac8536fbce2190c77f6a16fb530ea5d401f81a2c50cc3725d61dbf3e"
+      },
+      "t20s_male_json": {
+        "files": 3651,
+        "bytes": 296564757,
+        "sha256": "8f92a901816c0276e62a7f0cdeb2060e6de1dfc83c6b8d34a2c465806154822d"
+      }
+    }
+  }
+}

@@ -1,0 +1,1828 @@
+{
+  "run": {
+    "run_id": 1,
+    "status": "RUNNING",
+    "mode": "LOAD",
+    "schema_version": null,
+    "data_version": null,
+    "reason": null
+  },
+  "summary": {
+    "PASS": 115,
+    "INFO": 5,
+    "OPEN": 17
+  },
+  "table_row_counts": {
+    "competitions": 141,
+    "teams": 38,
+    "competition_teams": 353,
+    "venues": 98,
+    "players": 1217,
+    "player_competition_mapping": 6413,
+    "matches": 883,
+    "match_squads": 28381,
+    "innings": 1724,
+    "deliveries": 200999,
+    "match_reconciliation": 883,
+    "raw_ball_by_ball": 200999,
+    "raw_ball_by_ball_updated": 200999,
+    "ball_by_ball_comparison": 33,
+    "ball_by_ball_comparison_detail": 57
+  },
+  "lineage": [
+    {
+      "file_name": "competitions.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "row_count": 141,
+      "target_table": "competitions"
+    },
+    {
+      "file_name": "teams.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "row_count": 353,
+      "target_table": "competition_teams,teams"
+    },
+    {
+      "file_name": "matches.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "row_count": 883,
+      "target_table": "matches,venues,match_reconciliation"
+    },
+    {
+      "file_name": "playing_eleven.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "row_count": 28381,
+      "target_table": "match_squads"
+    },
+    {
+      "file_name": "competition_team_player_mapping.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "row_count": 6413,
+      "target_table": "player_competition_mapping"
+    },
+    {
+      "file_name": "updated_ball_by_ball.csv",
+      "role": "PRIMARY",
+      "load_status": "LOADED",
+      "sha256": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e",
+      "row_count": 200999,
+      "target_table": "raw_ball_by_ball_updated,deliveries,innings"
+    },
+    {
+      "file_name": "ball_by_ball.csv",
+      "role": "COMPARISON_RAW",
+      "load_status": "LOADED",
+      "sha256": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+      "row_count": 200999,
+      "target_table": "raw_ball_by_ball,ball_by_ball_comparison,ball_by_ball_comparison_detail"
+    },
+    {
+      "file_name": "matches 2026.csv",
+      "role": "SKIPPED_BY_DECISION",
+      "load_status": "SKIPPED_BY_DECISION",
+      "sha256": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+      "row_count": 39,
+      "target_table": null
+    },
+    {
+      "file_name": "batting_stats2026.csv",
+      "role": "SKIPPED_BY_DECISION",
+      "load_status": "SKIPPED_BY_DECISION",
+      "sha256": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+      "row_count": 15,
+      "target_table": null
+    },
+    {
+      "file_name": "bowling_stats2026.csv",
+      "role": "SKIPPED_BY_DECISION",
+      "load_status": "SKIPPED_BY_DECISION",
+      "sha256": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+      "row_count": 15,
+      "target_table": null
+    },
+    {
+      "file_name": "fielding_stats2026.csv",
+      "role": "SKIPPED_BY_DECISION",
+      "load_status": "SKIPPED_BY_DECISION",
+      "sha256": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+      "row_count": 15,
+      "target_table": null
+    },
+    {
+      "file_name": "ipl squad.csv",
+      "role": "PENDING_PHASE",
+      "load_status": "PENDING_PHASE",
+      "sha256": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+      "row_count": 257,
+      "target_table": null
+    }
+  ],
+  "results": [
+    {
+      "check_name": "rowcount_competitions_vs_competitions.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "141",
+      "observed": "141",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_competition_teams_vs_teams.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "353",
+      "observed": "353",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_matches_vs_matches.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "883",
+      "observed": "883",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_match_reconciliation_vs_matches.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "883",
+      "observed": "883",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_match_squads_vs_playing_eleven.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "28381",
+      "observed": "28381",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_player_competition_mapping_vs_competition_team_player_mapping.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "6413",
+      "observed": "6413",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_raw_ball_by_ball_updated_vs_updated_ball_by_ball.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_deliveries_vs_updated_ball_by_ball.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_raw_ball_by_ball_vs_ball_by_ball.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "rowcount_teams_vs_distinct_team_ids_in_teams.csv",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "38",
+      "observed": "38",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_competition_teams",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "353",
+      "observed": "353",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_competitions",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "141",
+      "observed": "141",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_deliveries",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_match_reconciliation",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "883",
+      "observed": "883",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_match_squads",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "28381",
+      "observed": "28381",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_matches",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "883",
+      "observed": "883",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_player_competition_mapping",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "6413",
+      "observed": "6413",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_raw_ball_by_ball",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_raw_ball_by_ball_updated",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "spec_rowcount_teams",
+      "category": "ROW_COUNT",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "38",
+      "observed": "38",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "pk_unique_competitions",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "comp_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_teams",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "team_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_competition_teams",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "comp_id",
+          "team_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_venues",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "venue_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_players",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "player_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_player_competition_mapping",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "comp_id",
+          "team_id",
+          "player_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_matches",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "match_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_match_squads",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "match_id",
+          "team_id",
+          "player_id",
+          "squad_row_no"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_innings",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "match_id",
+          "innings_number"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_deliveries",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "match_id",
+          "innings_number",
+          "innings_ball_num"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_match_reconciliation",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "match_id"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_raw_ball_by_ball",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "source_row_no"
+        ]
+      }
+    },
+    {
+      "check_name": "pk_unique_raw_ball_by_ball_updated",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "key": [
+          "source_row_no"
+        ]
+      }
+    },
+    {
+      "check_name": "fk_orphans_competition_teams.comp_id->competitions",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_competition_teams.team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_player_competition_mapping.comp_id+team_id->competition_teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_player_competition_mapping.player_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.comp_id->competitions",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.venue_id->venues",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.home_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.away_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.toss_win_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.win_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.home_team_captain_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_matches.away_team_captain_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_match_squads.match_id->matches",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_match_squads.team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_match_squads.player_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_innings.match_id->matches",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_innings.batting_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_innings.bowling_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.match_id+innings_number->innings",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.batting_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.bowling_team_id->teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.striker_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.non_striker_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.bowler_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_deliveries.dismissed_player_id->players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "fk_orphans_match_reconciliation.match_id->matches",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": {
+        "enforced": true
+      }
+    },
+    {
+      "check_name": "provenance_run_id_competitions",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_competitions",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_teams",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_competition_teams",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_competition_teams",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_venues",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_venues",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_players",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_player_competition_mapping",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_player_competition_mapping",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_matches",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_matches",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_match_squads",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_match_squads",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_innings",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_innings",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_deliveries",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_deliveries",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_match_reconciliation",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_match_reconciliation",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_raw_ball_by_ball",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_raw_ball_by_ball",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_run_id_raw_ball_by_ball_updated",
+      "category": "FK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_file_raw_ball_by_ball_updated",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_row_no_competition_teams",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_row_no_matches",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_row_no_match_squads",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "provenance_source_row_no_deliveries",
+      "category": "PK",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "reconcile_matches_equal_with_plus_without",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "883",
+      "observed": "883",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "reconcile_matches_without_deliveries",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "INFO",
+      "expected": null,
+      "observed": "16 of 883 matches have no deliveries; 867 have",
+      "affected_rows": 16,
+      "details": [
+        {
+          "match_id": 31281,
+          "match_date": "2024-05-13",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 31284,
+          "match_date": "2024-05-16",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 31288,
+          "match_date": "2024-05-19",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 32610,
+          "match_date": "2024-05-22",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 32612,
+          "match_date": "2024-05-28",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 32622,
+          "match_date": "2024-05-20",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 36210,
+          "match_date": "2025-09-14",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 36564,
+          "match_date": "2024-09-15",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 38797,
+          "match_date": "2024-12-14",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 40761,
+          "match_date": "2025-05-17",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 41502,
+          "match_date": "2025-06-12",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 41503,
+          "match_date": "2025-06-14",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 42030,
+          "match_date": "2025-12-17",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 46008,
+          "match_date": "2025-09-19",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 48513,
+          "match_date": "2026-01-10",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        },
+        {
+          "match_id": 50189,
+          "match_date": "2026-04-29",
+          "result": "Match Abandoned",
+          "result_status": "ABANDONED",
+          "win_team_id": null,
+          "explained": true
+        }
+      ]
+    },
+    {
+      "check_name": "reconcile_no_delivery_matches_explained",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "all explained (ABANDONED/NO_RESULT, no winner)",
+      "observed": "16 explained, 0 unexplained",
+      "affected_rows": 0,
+      "details": {
+        "unexplained_match_ids": []
+      }
+    },
+    {
+      "check_name": "reconcile_has_deliveries_flag_consistent",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "result_status_unknown",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": 0,
+      "details": null
+    },
+    {
+      "check_name": "result_status_distribution",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "INFO",
+      "expected": null,
+      "observed": "{\"ABANDONED\": 19, \"COMPLETED\": 833, \"NO_RESULT\": 21, \"TIED\": 1, \"TIED_DECIDED_BY_TIEBREAK\": 9}",
+      "affected_rows": null,
+      "details": {
+        "ABANDONED": 19,
+        "COMPLETED": 833,
+        "NO_RESULT": 21,
+        "TIED": 1,
+        "TIED_DECIDED_BY_TIEBREAK": 9
+      }
+    },
+    {
+      "check_name": "competition_type_distribution",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "INFO",
+      "expected": null,
+      "observed": "{\"IPL\": {\"competitions\": 5, \"matches\": 371}, \"OTHER_T20\": {\"competitions\": 2, \"matches\": 30}, \"T20I\": {\"competitions\": 134, \"matches\": 482}}",
+      "affected_rows": null,
+      "details": {
+        "IPL": {
+          "competitions": 5,
+          "matches": 371
+        },
+        "OTHER_T20": {
+          "competitions": 2,
+          "matches": 30
+        },
+        "T20I": {
+          "competitions": 134,
+          "matches": 482
+        }
+      }
+    },
+    {
+      "check_name": "ipl_competitions_not_format_T20",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "INFO",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": 0,
+      "details": null
+    },
+    {
+      "check_name": "innings_teams_are_match_home_away_pair",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "innings_single_batting_and_bowling_team",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "innings_1_exists_for_every_match_with_deliveries",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "innings_ball_num_is_1_to_n",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "innings_legal_balls_and_total_recomputed_from_raw",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "innings_numbers_within_1_to_4",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "comparison_row_counts_equal",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "200999",
+      "observed": "200999",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "comparison_key_sets_equal",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0",
+      "observed": "0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "comparison_columns_that_differ",
+      "category": "RECONCILIATION",
+      "severity": "INFO",
+      "status": "INFO",
+      "expected": null,
+      "observed": "{\"extras1_runs\": 199980, \"non_striker_name\": 33, \"striker_name\": 24}",
+      "affected_rows": 200037,
+      "details": {
+        "extras1_runs": 199980,
+        "non_striker_name": 33,
+        "striker_name": 24
+      }
+    },
+    {
+      "check_name": "source_unchanged_ball_by_ball.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+      "observed": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_batting_stats2026.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+      "observed": "20a987b705837c8753cdf02d962ae22f5414feab587d6a19e4a586f88716911d",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_bowling_stats2026.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+      "observed": "0d6548125f5c22af79e1ca589468f33819425ad3d08c169b9d4a87960a44c596",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_competition_team_player_mapping.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "observed": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_competitions.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "observed": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_fielding_stats2026.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+      "observed": "6673067eec412d391afa709a47b89d1e2c0698eac646de874e465d2381a5366b",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_ipl squad.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+      "observed": "e0b8a7c2944211278f128971f1eafc3d317c9f67d4a097e57df2497b5faf0636",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_matches 2026.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+      "observed": "c5b7854c1996c70c1c9c248ba1dc8478e88ec0f542fd7bb8bcb7fb24e03dedb3",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_matches.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "observed": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_playing_eleven.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "observed": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_teams.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "observed": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "source_unchanged_updated_ball_by_ball.csv",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e",
+      "observed": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "weights_sum_to_one",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "1.0",
+      "observed": "1.0",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "weighting_config_stored",
+      "category": "CONSISTENCY",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": ">= 1",
+      "observed": "1",
+      "affected_rows": null,
+      "details": null
+    },
+    {
+      "check_name": "open_playing_eleven_repeated_keys",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "75 rows in 35 (match,team,player) groups across 3 matches; all kept",
+      "affected_rows": 75,
+      "details": {
+        "rows": 75,
+        "groups": 35,
+        "matches": 3
+      }
+    },
+    {
+      "check_name": "open_matches_without_playing_eleven_rows",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "3",
+      "affected_rows": 3,
+      "details": {
+        "match_ids": [
+          36210,
+          41503,
+          48513
+        ]
+      }
+    },
+    {
+      "check_name": "open_playing_eleven_rows_without_mapping_row",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "5",
+      "affected_rows": 5,
+      "details": null
+    },
+    {
+      "check_name": "open_delivery_striker_not_in_match_squad",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "83 delivery rows, 6 distinct (match, striker) pairs",
+      "affected_rows": 83,
+      "details": {
+        "rows": 83,
+        "distinct_pairs": 6,
+        "rows_in_matches_without_any_squad_rows": 0
+      }
+    },
+    {
+      "check_name": "open_delivery_bowler_not_in_match_squad",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "30 delivery rows, 3 distinct (match, bowler) pairs",
+      "affected_rows": 30,
+      "details": {
+        "rows": 30,
+        "distinct_pairs": 3,
+        "rows_in_matches_without_any_squad_rows": 0
+      }
+    },
+    {
+      "check_name": "open_dismissed_player_without_wicket_flag",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "12",
+      "affected_rows": 12,
+      "details": null
+    },
+    {
+      "check_name": "open_wicket_without_dismissed_player",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "1",
+      "affected_rows": 1,
+      "details": {
+        "dismissal_types": {
+          "Retire Out": 1
+        }
+      }
+    },
+    {
+      "check_name": "open_extras_type_other_label_unverified",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "264 rows; extras_type kept verbatim",
+      "affected_rows": 264,
+      "details": null
+    },
+    {
+      "check_name": "open_extras_type_Penalty_label_unverified",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "1 rows; extras_type kept verbatim",
+      "affected_rows": 1,
+      "details": null
+    },
+    {
+      "check_name": "open_extras_secondary_split_unverified",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "36 rows with extras_2_runs > 0; split between extras1/extras_2 unverified",
+      "affected_rows": 36,
+      "details": null
+    },
+    {
+      "check_name": "open_innings_3_4_role_unverified",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "12 innings in 6 matches (38 delivery rows); not classified as Super Overs",
+      "affected_rows": 12,
+      "details": {
+        "innings": 12,
+        "matches": 6,
+        "delivery_rows": 38
+      }
+    },
+    {
+      "check_name": "open_man_of_the_match_zero_sentinel",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "119 matches with man_of_the_match = 0 (not a player id; no FK)",
+      "affected_rows": 119,
+      "details": null
+    },
+    {
+      "check_name": "open_delivery_time_utc_suffix_vs_ist_column_name",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "200999 rows carry a 'UTC' suffix in column delivery_ist_time; no timezone conversion applied",
+      "affected_rows": 200999,
+      "details": null
+    },
+    {
+      "check_name": "open_delivery_time_midnight_rows",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "42 rows with a 00:00:00 time part (likely date-only)",
+      "affected_rows": 42,
+      "details": null
+    },
+    {
+      "check_name": "open_duplicate_player_names_with_different_ids",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "7 names map to more than one player_id; not merged",
+      "affected_rows": 7,
+      "details": {
+        "Abdul Samad": [
+          6922,
+          7446
+        ],
+        "Bashir Ahmad": [
+          29833,
+          39479
+        ],
+        "Basil Hameed": [
+          8638,
+          39444
+        ],
+        "Haider Ali": [
+          7338,
+          28756
+        ],
+        "Mohammad Ali": [
+          3083,
+          20229
+        ],
+        "Muhammad Farooq": [
+          27373,
+          28978
+        ],
+        "Rashid Khan": [
+          4722,
+          20172
+        ]
+      }
+    },
+    {
+      "check_name": "open_players_without_any_name",
+      "category": "OPEN_ISSUE",
+      "severity": "INFO",
+      "status": "PASS",
+      "expected": "0 (issue preserved, not fixed)",
+      "observed": "0",
+      "affected_rows": 0,
+      "details": null
+    },
+    {
+      "check_name": "open_cricsheet_innings_total_disagreements",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "carried from Phase 1, not recomputed (Cricsheet is not loaded in Phase 2)",
+      "observed": "10 innings (matches 14130, 14164, 32618, 37349, 37352, 50504) disagree with Cricsheet totals",
+      "affected_rows": null,
+      "details": {
+        "source": "data/audit/cricsheet_overlap_report.json (Phase 1)"
+      }
+    },
+    {
+      "check_name": "open_matches_not_linkable_to_cricsheet",
+      "category": "OPEN_ISSUE",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "expected": "carried from Phase 1, not recomputed (Cricsheet is not loaded in Phase 2)",
+      "observed": "108 matches with deliveries could not be linked to Cricsheet (79 T20I, 29 T20)",
+      "affected_rows": null,
+      "details": {
+        "source": "data/audit/cricsheet_overlap_report.json (Phase 1)"
+      }
+    }
+  ]
+}

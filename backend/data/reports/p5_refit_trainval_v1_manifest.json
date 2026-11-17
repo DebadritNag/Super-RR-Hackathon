@@ -1,0 +1,81 @@
+{
+  "refit_id": "p5_refit_trainval_v1",
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "model_label": "EXPERIMENTAL_REFIT_TRAIN_VALIDATION",
+  "publication_status": "INTERNAL_EXPERIMENTAL_ONLY",
+  "official_ranking": false,
+  "validated": false,
+  "lock_hash": "ea50abd44c4152eb1d5597d700f81acdd2d6a40b0a1828964d2e02f133c89595",
+  "lock_label": "EXPERIMENTAL_LOCK",
+  "definition": "any|q0.75",
+  "definition_status": "PROVISIONAL_NOT_VALIDATED",
+  "shrinkage_config": "shrink_tau4",
+  "fit_window": "TRAIN+VALIDATION",
+  "seed": 20260512,
+  "n_boot": 200,
+  "rows": 167913,
+  "matches": 723,
+  "date_min": "2022-01-22",
+  "date_max": "2025-12-19",
+  "rows_by_period_orig": {
+    "TRAIN": 120248,
+    "VALIDATION": 47665
+  },
+  "cells": {
+    "IPL|batter": {
+      "players": 267,
+      "eligible": 134,
+      "matches": 262,
+      "shrinkage_k": 25.0,
+      "floor_hit": false
+    },
+    "IPL|bowler": {
+      "players": 184,
+      "eligible": 80,
+      "matches": 263,
+      "shrinkage_k": 25.0,
+      "floor_hit": false
+    },
+    "T20I|batter": {
+      "players": 538,
+      "eligible": 240,
+      "matches": 337,
+      "shrinkage_k": 25.0,
+      "floor_hit": false
+    },
+    "T20I|bowler": {
+      "players": 355,
+      "eligible": 141,
+      "matches": 338,
+      "shrinkage_k": 25.0,
+      "floor_hit": false
+    }
+  },
+  "output_hashes": {
+    "calibration": "afbbc425f7f0a3a10ff4c34e09b3351a8ec8fa2a5dd041c5f7ac699c669721c1",
+    "comparison": "6a82d87eae9220b4a773c9bc5bce33f201e0a6499f245a2d26e748818d302d3c",
+    "scores": "7111143d86a3971b23fdf7bf948f250028d9dab456ddb1b9b7ae04d8e3c6f3c0",
+    "thresholds": "7cababdafe0c1714cecd9aac98ea9a10c8133e02c21b078496bf5b71c2c07fd4"
+  },
+  "preservation": {
+    "phase4_tables_hashed": 24,
+    "phase4_tables_byte_identical": true,
+    "phase4_report_files_hashed": 56,
+    "phase4_report_files_byte_identical": true,
+    "phase4_lock_log_sha256_before": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase4_lock_log_sha256_after": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_events_before": 0,
+    "phase5_lock_log_events_after": 0,
+    "test_opened": false,
+    "rows_with_period_orig_test": 0,
+    "periods_in_refit_frame": [
+      "TRAIN"
+    ],
+    "period_orig_in_refit_frame": [
+      "TRAIN",
+      "VALIDATION"
+    ],
+    "all_preserved": true
+  },
+  "note": "Experimental refit. VALIDATION was used for fitting, so no out-of-sample check of this refit exists. Nothing here is validated or publishable."
+}

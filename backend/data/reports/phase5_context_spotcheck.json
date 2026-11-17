@@ -1,0 +1,71 @@
+{
+  "all_agree": true,
+  "checks": {
+    "IPL|batter|death|chase": {
+      "player_id": 4708,
+      "name": "Rinku Singh",
+      "engine_response": {
+        "n": 103,
+        "matches": 8,
+        "raw_mean": 2.5242718447,
+        "expected_mean": 1.5449984021,
+        "residual_sum": 100.8651645786
+      },
+      "independent_state_table": {
+        "n": 103,
+        "actual_sum": 260.0,
+        "matches": 8,
+        "innings2_without_chase_flag": 0
+      },
+      "stored_context_rows": {
+        "n": 103.0,
+        "residual_sum": 100.8651645786,
+        "expected_sum": 159.1348354214,
+        "matches": 8
+      },
+      "study_second_path": {
+        "n": 103,
+        "residual_sum": 100.8651645786,
+        "expected_sum": 159.1348354214
+      },
+      "n_agrees": true,
+      "matches_agree": true,
+      "actual_sum_agrees": true,
+      "residual_agrees": true,
+      "expected_agrees": true
+    },
+    "T20I|bowler|middle|chase": {
+      "player_id": 5979,
+      "name": "Abrar Ahmed",
+      "engine_response": {
+        "n": 51,
+        "matches": 6,
+        "raw_mean": 0.6666666667,
+        "expected_mean": 1.2476043009,
+        "residual_sum": -29.6278193447
+      },
+      "independent_state_table": {
+        "n": 51,
+        "actual_sum": 34.0,
+        "matches": 6,
+        "innings2_without_chase_flag": 0
+      },
+      "stored_context_rows": {
+        "n": 51.0,
+        "residual_sum": -29.6278193447,
+        "expected_sum": 63.6278193447,
+        "matches": 6
+      },
+      "study_second_path": {
+        "n": 51,
+        "residual_sum": -29.6278193447,
+        "expected_sum": 63.6278193447
+      },
+      "n_agrees": true,
+      "matches_agree": true,
+      "actual_sum_agrees": true,
+      "residual_agrees": true,
+      "expected_agrees": true
+    }
+  }
+}
