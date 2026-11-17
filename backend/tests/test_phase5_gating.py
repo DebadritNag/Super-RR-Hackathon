@@ -321,6 +321,12 @@ def test_unavailable_store_is_reported_before_gates(tmp_path):
 
 
 RETENTION_ADMIN = "/api/v1/internal/retention"  # Phase 7 chunk 3 admin routes
+AI_INTERNAL = (  # Phase 7 chunk 5 internal experimental-model routes (own models, tested separately)
+    "/api/v1/internal/model-status",
+    "/api/v1/internal/experimental-predictions",
+    # Phase 8 chunk 6 experimental AI route (tested in test_phase8_api.py)
+    "/api/v1/internal/experimental-ai/{role}",
+)
 PUBLIC_DESCRIPTIVE_PATHS = {
     "/api/v1/players",
     "/api/v1/players/{player_id}",
@@ -332,6 +338,7 @@ PUBLIC_DESCRIPTIVE_PATHS = {
     "/api/v1/descriptive/radar",
     "/api/v1/descriptive/overview",
     "/api/v1/descriptive/methodology/summary",
+    "/api/v1/rr/analysis",
 }
 
 
@@ -372,6 +379,7 @@ def test_every_rows_returning_route_carries_the_publication_fields():
         if isinstance(r, APIRoute)
         and "/internal/" in r.path
         and not r.path.startswith(RETENTION_ADMIN)
+        and r.path not in AI_INTERNAL
     ]
     public = [
         r.path

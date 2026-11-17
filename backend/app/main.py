@@ -15,7 +15,15 @@ from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.errors import install_error_handlers
-from app.api.v1 import routes, routes_descriptive, routes_phase5, routes_retention
+from app.api.v1 import (
+    routes,
+    routes_descriptive,
+    routes_internal_ai,
+    routes_phase5,
+    routes_retention,
+    routes_rr,
+    routes_submission,
+)
 from app.phase5.gating import GateInput
 from app.phase7.descriptive import load_config as load_descriptive_config
 from app.repositories.phase4_repo import Phase4Repository
@@ -23,6 +31,7 @@ from app.repositories.phase5_repo import Phase5Repository
 from app.services.descriptive_service import DescriptiveService
 from app.services.phase4_service import PRESETS_FILE, Phase4Service
 from app.services.phase5_service import Phase5Service
+from app.services.submission_service import SubmissionService
 
 
 def create_app(
@@ -34,6 +43,8 @@ def create_app(
     source_manifest: Path | str | None = None,
     classification_config: Path | str | None = None,
     descriptive_reports: Path | str | None = None,
+    submission_reports: Path | str | None = None,
+    submission_db: Path | str | None = None,
 ) -> FastAPI:
     """``gate_inputs`` is a function argument only (never an environment variable or request
     field); tests use it to supply synthetic all-pass or single-failure gate fixtures."""
@@ -54,6 +65,9 @@ def create_app(
     app.state.admin_token = admin_token
     app.state.retention = routes_retention.RetentionContext()
     app.state.descriptive = DescriptiveService(descriptive_reports)
+    app.state.submission = SubmissionService(
+        submission_reports, submission_db, descriptive_reports or submission_reports
+    )
     install_error_handlers(app)
     app.add_middleware(
         CORSMiddleware,
@@ -64,9 +78,13 @@ def create_app(
     v1 = APIRouter(prefix="/api/v1")
     v1.include_router(routes_phase5.internal)
     v1.include_router(routes_retention.internal)
+    v1.include_router(routes_internal_ai.internal)
+    v1.include_router(routes_submission.internal)
     v1.include_router(routes_phase5.public)
     v1.include_router(routes.public)
     v1.include_router(routes_descriptive.public)
+    v1.include_router(routes_submission.public)
+    v1.include_router(routes_rr.public)
     v1.include_router(routes.internal)
     v1.include_router(routes.admin)
 

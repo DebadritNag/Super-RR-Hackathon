@@ -1,0 +1,74 @@
+{
+  "algorithm": "stratified empirical-Bayes baseline B0 (cells comp|role|phase|wickets-bin to comp, fitted on TRAIN) plus method-of-moments shrinkage of player pressure residuals",
+  "baseline_version": "p4_baseline_b0_train_frozen_v1",
+  "code_sha256": {
+    "app/phase4/baseline.py": "da687cd6ae4aa8462dae0d0a74ac580c08bc8b658082c26c4f05214ad47c7313",
+    "app/phase4/engine.py": "b8bc4b7ca1cb6782436cd5b811697c15eb4507525481cc57ba62ee85550cb33d",
+    "app/phase4/scoring.py": "2833e9f43b2fe545c54e8b60dfdae4886cf4588d4852fbc1b9c7ee77ef2a36e8",
+    "app/phase4/shrink.py": "67b79fd703fc78ea1bb4e46e3ba9bc4336a81dce9a4fd66faaadee462fcd9467",
+    "app/phase7/ai_pipeline.py": "6b166bf6fd5e9a4294678dcd96e14c995de5889e139ace7b2aad671c52319942"
+  },
+  "deterministic_digest": "ff0423be413d3512b3085a6ec7a7ec93915ac6a9fed6148a792e1042d5cba3d1",
+  "eligibility_sha256": "68440e7cdadf0c6d3eea86f1987af4eb3a4f7f47228497f3357321080bf84d0b",
+  "entry_point": "scripts/phase7_ai_pipeline.py -> app.phase7.ai_pipeline.run_pipeline",
+  "frozen_choices_sha256": "86f5ce9d588dba715c18e4f3f60b5e8a328c03c2f24c73db73614b2e4d101e42",
+  "is_deep_learning": false,
+  "is_machine_learning": false,
+  "lock_after": {
+    "phase4_events": [
+      "FREEZE",
+      "OPEN",
+      "CLOSE"
+    ],
+    "phase4_lock_log_sha256": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "phase5_open_events": 0
+  },
+  "lock_before": {
+    "phase4_events": [
+      "FREEZE",
+      "OPEN",
+      "CLOSE"
+    ],
+    "phase4_lock_log_sha256": "cae1e06c3babffbb94594ea2ce08fe5416c98ea7da6628d21094d22c8d2eb75c",
+    "phase5_lock_log_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "phase5_open_events": 0
+  },
+  "lock_unchanged": true,
+  "methodology_gate_status": "INTERNAL_EXPERIMENTAL_ONLY",
+  "model_id": "p7_stat_baseline_shrinkage_v1",
+  "model_label": "statistical baseline/shrinkage model (not machine learning or deep learning)",
+  "model_version": "p7_stat_baseline_shrinkage_v1|p4_baseline_b0_train_frozen_v1|any|q0.75|shrink_tau4|code:96594020e2df",
+  "outputs": {
+    "experimental_ai_top10_batters_phase7_aborted.csv": "5427369eba353bb8d07f9bd4db7cbc15c29242c258a45f405c8514b7cc62befd",
+    "experimental_ai_top10_bowlers_phase7_aborted.csv": "91ac8a3f02e5e2506f367bb8238fcae1ca0e20c1f05384b388aee1a70ae5bd26",
+    "phase7_ai_pipeline_metrics.json": "65077a9f744a066525afd1331a92ff6d4f1e80d4d443c5db10c1f2a68279c084"
+  },
+  "periods": {
+    "TRAIN": {
+      "deliveries": 120248,
+      "matches": 512,
+      "players": 763
+    },
+    "VALIDATION": {
+      "deliveries": 47665,
+      "matches": 211,
+      "players": 535
+    }
+  },
+  "player_id_mapping": "state striker_id/bowler_id -> p4_player_classification.player_name",
+  "pressure_definition": "any|q0.75",
+  "pressure_definition_status": "PROVISIONAL (not validated)",
+  "publication_status": "EXPERIMENTAL_NOT_VALIDATED_INTERNAL_ONLY",
+  "run_timestamp_utc": "2026-11-17T10:29:56Z",
+  "seed": 20260512,
+  "shrinkage_config": "shrink_tau4",
+  "split_config_sha256": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+  "state_store": "exploratory.duckdb",
+  "state_store_sha256": "7b396e42a2acb281fd5ffd64051064d7ac48e82bdfad23dd229bd20b9ca6277d",
+  "target": "per-delivery runs (batter) / runs charged (bowler) residual under pressure",
+  "test_opened": false,
+  "trained_artefact_exists": false,
+  "training_data_version": "457ea51f939f6928cdba617aa638df71e64a8a301ed0e5372c7de2e073919f0c",
+  "training_period": "TRAIN (fit); VALIDATION (evaluation); TEST not loaded"
+}
