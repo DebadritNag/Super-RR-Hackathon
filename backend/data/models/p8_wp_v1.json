@@ -1,0 +1,159 @@
+{
+  "algorithm": "HistGradientBoostingClassifier",
+  "class_model": {
+    "log_loss": 1.5069684506854482,
+    "log_loss_const": 1.5327588452324887,
+    "log_loss_gain": 0.016826126710838607,
+    "n_train": 110334,
+    "n_validation": 41557,
+    "params": "{\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_depth\": 5}",
+    "wicket_brier": 0.053481328853690266,
+    "wicket_brier_const": 0.05373735073432223
+  },
+  "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "data_hash_exploratory_db": "7b396e42a2acb281fd5ffd64051064d7ac48e82bdfad23dd229bd20b9ca6277d",
+  "features": {
+    "CLS": [
+      "innings_number",
+      "team_runs_before",
+      "team_wickets_before",
+      "wickets_remaining",
+      "legal_balls_bowled_before",
+      "innings_limit_balls",
+      "legal_balls_remaining",
+      "crr",
+      "innings_phase_code",
+      "runs_required",
+      "rrr",
+      "gap",
+      "resource_ratio",
+      "projected_total",
+      "competition_code",
+      "bat_team_prior",
+      "bowl_team_prior"
+    ],
+    "W1": [
+      "team_runs_before",
+      "wickets_remaining",
+      "legal_balls_remaining",
+      "crr",
+      "projected_total",
+      "par_prior",
+      "par_deviation_prior",
+      "innings_limit_balls",
+      "competition_code",
+      "bat_team_prior",
+      "bowl_team_prior"
+    ],
+    "W2": [
+      "runs_required",
+      "legal_balls_remaining",
+      "wickets_remaining",
+      "rrr",
+      "crr",
+      "gap",
+      "resource_ratio",
+      "innings_limit_balls",
+      "competition_code",
+      "bat_team_prior",
+      "bowl_team_prior"
+    ]
+  },
+  "gates": {
+    "W1": {
+      "brier_gain_ok": true,
+      "passed": true,
+      "slope_ok": true
+    },
+    "W2": {
+      "brier_gain_ok": true,
+      "passed": true,
+      "slope_ok": true
+    }
+  },
+  "labels": {
+    "excluded_matches": 31,
+    "labelled_matches": 644
+  },
+  "metrics": {
+    "W1": {
+      "brier": 0.21500190789605983,
+      "brier_const": 0.25098082452532006,
+      "brier_gain_vs_const": 0.14335324898747603,
+      "brier_gain_vs_logit": 0.03459494530887497,
+      "brier_logit": 0.22270642447055372,
+      "intercept": -0.13797903537457631,
+      "log_loss": 0.6200627058360164,
+      "log_loss_const": 0.6951105592109343,
+      "log_loss_logit": 0.6369466141301824,
+      "model": "W1",
+      "n_validation": 22086,
+      "params": "{\"l2_regularization\": 0.0, \"learning_rate\": 0.05, \"max_depth\": 3}",
+      "slope": 0.885546363738377,
+      "train_oof_brier": 0.23487652882389015,
+      "train_oof_brier_gain_vs_const": 0.05852935045475627,
+      "train_oof_slope": 0.5740939408703697
+    },
+    "W2": {
+      "brier": 0.1166772823762611,
+      "brier_const": 0.2505765418969162,
+      "brier_gain_vs_const": 0.5343647035233627,
+      "brier_gain_vs_logit": 0.04644800843280972,
+      "brier_logit": 0.12236069287055718,
+      "intercept": -0.02458918486642273,
+      "log_loss": 0.3628787259718753,
+      "log_loss_const": 0.6943059495884929,
+      "log_loss_logit": 0.37891603598900264,
+      "model": "W2",
+      "n_validation": 20040,
+      "params": "{\"l2_regularization\": 0.0, \"learning_rate\": 0.05, \"max_depth\": 3}",
+      "slope": 1.1336585670860795,
+      "train_oof_brier": 0.14713799860308718,
+      "train_oof_brier_gain_vs_const": 0.40774544131425505,
+      "train_oof_slope": 0.8333051448306762
+    }
+  },
+  "partition": {
+    "matches_per_period": {
+      "TRAIN": 487,
+      "VALIDATION": 188
+    },
+    "ok": true
+  },
+  "seed": 20260512,
+  "targets": {
+    "CLS": "next legal ball class (0,1,2,3,4,6,wicket)",
+    "W1": "batting side wins",
+    "W2": "chasing side wins"
+  },
+  "test": "never loaded",
+  "timestamp": "2026-11-17T14:00:20.069444+00:00",
+  "train_matches": 487,
+  "trained_on": "TRAIN",
+  "training": {
+    "W1": {
+      "params": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.05,
+        "max_depth": 3
+      },
+      "train_deliveries": 58056,
+      "train_matches": 466,
+      "validation_deliveries": 22086
+    },
+    "W2": {
+      "params": {
+        "l2_regularization": 0.0,
+        "learning_rate": 0.05,
+        "max_depth": 3
+      },
+      "train_deliveries": 53524,
+      "train_matches": 462,
+      "validation_deliveries": 20040
+    }
+  },
+  "training_period": "matches up to 2024-12-31 (config/phase4_split_v1.json)",
+  "validation_matches": 188,
+  "validation_period": "calendar 2025",
+  "version": "p8_wp_v1"
+}
