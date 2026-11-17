@@ -1,0 +1,7 @@
+{
+  "criteria_path": "config/phase8_selection_criteria_v1.json",
+  "git_blob_sha": "cfb5d3cb42c5880dab9610950053ee6a1884f1c1",
+  "note": "written before any comparison result; ordering is enforced by p8_run_log",
+  "sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "version": "phase8_selection_criteria_v1"
+}

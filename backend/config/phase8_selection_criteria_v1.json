@@ -1,0 +1,160 @@
+{
+  "approach_selection": {
+    "inputs": [
+      "split_half_sb_lower_bound",
+      "out_of_time_lower_bound",
+      "inclusion_probability_concentration",
+      "explainability_checklist"
+    ],
+    "no_positive_lower_bound": "list is EXPLORATORY and the highest point estimate is submitted with that stated",
+    "rule": "highest split-half lower bound; within 0.05 choose by out-of-time lower bound, then inclusion concentration, then explainability, then id order A, B, C"
+  },
+  "combination": {
+    "inputs": [
+      "cross_format_correlation_lower_bound",
+      "players_with_both_formats"
+    ],
+    "rule": "combine when the cross-format lower 95% bound is at least 0.3 and at least 30 players have both formats; otherwise show per-format results and flag the combination as unsupported; no fixed format weights"
+  },
+  "declared_before_any_result": true,
+  "eligibility": {
+    "min_balls_bowled": 72,
+    "min_balls_faced": 60,
+    "min_effective_n": 60,
+    "min_high_intensity_units": 8,
+    "min_matches": 8,
+    "min_matches_2025_window": 4,
+    "min_players_out_of_time": 30,
+    "min_players_split_half": 30,
+    "sensitivity_multipliers": [
+      0.5,
+      2.0
+    ]
+  },
+  "evidence_classes": {
+    "INCONSISTENT": "share of positive units below 0.5, or dispersion above the cohort 75th percentile with a positive mean",
+    "INSUFFICIENT": "below an eligibility floor",
+    "STRONG_LIMITED": "above the cohort 80th percentile with an interval including 0, or matches between 1x and 2x the floor",
+    "STRONG_SUBSTANTIAL": "interval lower bound above 0, matches at least 2x the floor, positive share at least 0.5",
+    "UNCLASSIFIED_LOW": "any other eligible player",
+    "order": [
+      "INSUFFICIENT",
+      "INCONSISTENT",
+      "STRONG_SUBSTANTIAL",
+      "STRONG_LIMITED",
+      "UNCLASSIFIED_LOW"
+    ]
+  },
+  "forbidden_inputs": [
+    "player identity",
+    "player rank",
+    "score level",
+    "Top-10 membership",
+    "nationality",
+    "capped status",
+    "TEST outcomes",
+    "Cricsheet"
+  ],
+  "intensity": {
+    "bootstrap_draws": 500,
+    "candidates": {
+      "P0": "binary any-signal-above-TRAIN-q0.75 reference (Phase 6 idea re-implemented)",
+      "P1": "leverage: expected absolute win-probability swing of the next ball (chunk 2)",
+      "P2": "decision closeness 1 - 2|WP - 0.5| (chunk 2)",
+      "P3": "chase difficulty from the required-rate gap, resource ratio (innings 2 only)",
+      "P4": "resource scarcity: wickets lost share x innings progress (both innings)",
+      "P5": "defending difficulty from the batting side's gap and wickets (innings 2 only)",
+      "P6": "first principal component of the standardised passing candidates"
+    },
+    "high_intensity_cut": 0.5,
+    "innings1_rule": "P3 and P5 are innings-2 only; innings 1 uses the best-passing both-innings candidate (P4, then P6); otherwise innings-1 deliveries are excluded",
+    "pass_rule": "tests a, b, e hold pooled on TRAIN, the same signs hold on VALIDATION and the candidate passes in at least 2 of 3 phases",
+    "primary_choice": "most passed tests among a-e, then widest innings coverage, then id",
+    "scale": "empirical CDF of the raw value fitted on TRAIN, mapped to [0, 1]",
+    "validity_tests": {
+      "a": "runs per ball lower in decile 10 than decile 1 beyond the bootstrap half-width",
+      "b": "wicket probability higher in decile 10 than decile 1",
+      "c": "variance of runs per ball higher in decile 10 than decile 1",
+      "d": "mean absolute win-probability change larger (mechanical for P1 and P2)",
+      "e": "Spearman trend across deciles at least 0.7 for tests a and b",
+      "g": "cells with fewer than 2000 deliveries are NOT_ESTIMABLE"
+    }
+  },
+  "models": {
+    "features": "pre-delivery state only; no player identifier, no outcome column",
+    "grid": {
+      "l2_regularization": [
+        0,
+        1
+      ],
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "max_depth": [
+        3,
+        5
+      ],
+      "max_iter": 200,
+      "min_samples_leaf": 200
+    },
+    "learners": "HistGradientBoosting regressor/classifier, LogisticRegression, Isotonic",
+    "refit": "none on TRAIN + VALIDATION",
+    "seed": 20260512,
+    "selection": "one pass on VALIDATION: log loss for classifiers, RMSE for regressors"
+  },
+  "ranking": {
+    "bootstrap": {
+      "draws": 1000,
+      "seed": 20260512,
+      "unit": "match"
+    },
+    "order": "descending estimate of the chosen approach; unshrunk when the floor binds",
+    "outputs": [
+      "Top-10 inclusion probability",
+      "95% rank interval",
+      "95% estimate interval"
+    ]
+  },
+  "reliability": {
+    "bootstrap": {
+      "draws": 1000,
+      "method": "match-cluster",
+      "seed": 20260512
+    },
+    "icc": "one-way random-effects ICC(1) of unit means, units with at least 2 matches",
+    "phase6_data_weight_gate": 0.5,
+    "phase6_gate_note": "reported unchanged and never used as a label input",
+    "split_half": "match parity (odd/even by date) and time (early/late) on unshrunk precision-weighted unit means; Spearman-Brown 2r/(1+r); Fisher-z pooling"
+  },
+  "reml": {
+    "floor_ordering": "unshrunk precision-weighted mean; status forced to EXPLORATORY",
+    "tau2_floor": "none imposed; tau2 below 1e-8 sigma2 is flagged FLOOR",
+    "tie_rule": "absolute difference below 1e-12"
+  },
+  "scope": "IPL and T20I, PRE_TEST window (TRAIN + VALIDATION); TEST is never loaded; batters and bowlers are analysed separately and never compared with each other",
+  "sources": "official IPL and T20I data only; matches 2026.csv and *_stats2026.csv unused",
+  "splits": {
+    "config": "config/phase4_split_v1.json",
+    "fit_population": "TRAIN only; VALIDATION is scored out of sample",
+    "fold_rule": "match_id % 5, deterministic; no match is in two partitions or folds",
+    "test": "never opened; the Phase 4 TEST aggregates are previously accessed and non-pristine"
+  },
+  "status": "EXPERIMENTAL_NOT_VALIDATED",
+  "status_thresholds": {
+    "EXPLORATORY": "an ordered list exists but PROVISIONAL is not met",
+    "INSUFFICIENT_EVIDENCE": "fewer than ten eligible players or the approach cannot be computed",
+    "PROVISIONAL": {
+      "out_of_time_lower_bound_gt": 0.0,
+      "split_half_lower_bound_gt": 0.0,
+      "split_half_min": 0.5
+    },
+    "VALIDATED": {
+      "out_of_time_lower_bound_gt": 0.3,
+      "split_half_lower_bound_min": 0.5,
+      "split_half_min": 0.7
+    },
+    "floor_rule": "a between-player variance at the floor forces EXPLORATORY with the unshrunk ordering"
+  },
+  "version": "phase8_selection_criteria_v1"
+}
