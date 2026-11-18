@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Info, Loader2 } from 'lucide-react';
+import { Info, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ApiState } from '@/hooks/useApi';
 
@@ -48,37 +48,55 @@ export const StatusPill: React.FC<{ status?: string | null }> = ({ status }) => 
   </span>
 );
 
-/** Prominent banner. The label and text come from the API response, never from this file. */
+/** Plain-language meaning of each status label, shown on one line. */
+const STATUS_SUMMARY: Record<string, string> = {
+  VALIDATED: 'Validated ranking.',
+  PROVISIONAL: 'Provisional ranking: supported, but not yet validated.',
+  EXPLORATORY: 'Best-supported ordering of the data, not a statistically validated ranking.',
+  INSUFFICIENT_EVIDENCE: 'Not enough evidence to rank these players.',
+};
+
+/**
+ * Compact status line. The label, explanation and caveats come from the API response;
+ * the explanation and caveats sit behind a "Details" toggle to keep pages clean.
+ */
 export const StatusBanner: React.FC<{ status: string; text?: string | null; caveats?: string[] }> = ({
   status,
   text,
   caveats,
 }) => {
   const validated = status === 'VALIDATED';
+  const hasDetails = Boolean(text) || (caveats?.length ?? 0) > 0;
+  const summary = STATUS_SUMMARY[status] ?? '';
   return (
     <div
       role="note"
       className={cn(
-        'mb-5 rounded-lg border-l-4 p-4',
-        validated ? 'border-[#246B4B] bg-[#e8f2ec]' : 'border-[#D97736] bg-[#FDF3EB]',
+        'mb-4 rounded-md border px-3 py-2 text-sm text-[#202522]',
+        validated ? 'border-[#cfe3d7] bg-[#f3f8f5]' : 'border-[#f0d9c6] bg-[#fdf8f3]',
       )}
     >
-      <div className="flex items-start gap-3">
-        <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-[#8a4410]" aria-hidden="true" />
-        <div className="min-w-0 text-sm text-[#202522]">
-          <div className="mb-1">
-            <StatusPill status={status} />
-          </div>
-          {text && <p className="font-medium">{text}</p>}
-          {caveats && caveats.length > 0 && (
-            <ul className="mt-2 list-disc pl-5 text-[#3a403c] space-y-0.5">
-              {caveats.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <StatusPill status={status} />
+        {summary && <span className="text-[#3a403c]">{summary}</span>}
       </div>
+      {hasDetails && (
+        <details className="mt-1 group">
+          <summary className="cursor-pointer select-none text-xs font-medium text-[#246B4B] hover:underline focus-visible:outline-2 focus-visible:outline-[#246B4B] rounded">
+            Details
+          </summary>
+          <div className="mt-2 space-y-1 text-xs text-[#3a403c]">
+            {text && <p>{text}</p>}
+            {caveats && caveats.length > 0 && (
+              <ul className="list-disc pl-5 space-y-0.5">
+                {caveats.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </details>
+      )}
     </div>
   );
 };

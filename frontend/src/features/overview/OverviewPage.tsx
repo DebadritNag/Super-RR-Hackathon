@@ -26,7 +26,14 @@ export const OverviewPage: React.FC = () => {
                     <StatusPill status={l.list_status} />
                     <span className="text-xs text-[#4b524d]">model validation: {l.model_validation_status}</span>
                   </div>
-                  <p className="text-sm mb-2">{l.banner}</p>
+                  {l.banner && (
+                    <details className="mb-2">
+                      <summary className="cursor-pointer select-none text-xs font-medium text-[#246B4B] hover:underline">
+                        Why this status
+                      </summary>
+                      <p className="mt-1 text-xs text-[#3a403c]">{l.banner}</p>
+                    </details>
+                  )}
                   <dl className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
                     <dt className="text-[#4b524d]">Approach</dt>
                     <dd>{l.approach}</dd>
