@@ -1,0 +1,869 @@
+{
+ "data_checks": {
+  "baseline_cell_key_columns": [
+   "competition_type",
+   "role_ctx",
+   "innings_phase",
+   "wbin"
+  ],
+  "baseline_cell_keys_use_outcome_columns": false,
+  "baseline_player_term": "none (leave-player-out expectation on TRAIN rows)",
+  "chase_rows": 79620,
+  "distinct_players": 890,
+  "feature_count_baseline_cell_keys": 4,
+  "feature_count_pressure_signals": 2,
+  "innings1_par": "strictly prior matches only (insufficient prior => not flagged)",
+  "missing_counts_key_columns": {
+   "bowler_id": 0,
+   "chase_flag": 0,
+   "competition_type": 0,
+   "den_bowler_charged_runs": 0,
+   "innings_phase": 34,
+   "legal_balls_bowled_before": 0,
+   "match_date": 0,
+   "match_id": 0,
+   "out_batter_runs": 0,
+   "out_is_wicket": 0,
+   "striker_id": 0,
+   "team_runs_before": 0,
+   "wickets_remaining": 0
+  },
+  "outcome_columns_in_frame_used_only_as_targets": [
+   "post_innings_legal_balls",
+   "post_innings_wickets",
+   "out_batter_runs",
+   "out_is_four",
+   "out_is_six",
+   "out_is_wicket",
+   "out_dismissal_type",
+   "out_dismissed_player_id",
+   "out_runs_row",
+   "den_legal_inc",
+   "den_counts_as_ball_faced",
+   "den_bowler_counts_row",
+   "den_bowler_charged_runs",
+   "den_bowler_credited_wicket",
+   "den_wicket_without_dismissed"
+  ],
+  "per_period": {
+   "TRAIN": {
+    "deliveries": 120248,
+    "matches": 512,
+    "players": 763
+   },
+   "VALIDATION": {
+    "deliveries": 47665,
+    "matches": 211,
+    "players": 535
+   }
+  },
+  "periods_in_frame": [
+   "TRAIN",
+   "VALIDATION"
+  ],
+  "player_ids_without_name_in_classification": 0,
+  "player_ids_without_name_sample": [],
+  "pressure_signal_columns": [
+   "rrr",
+   "neg_par_dev_prior"
+  ],
+  "rows_in_frame_after_prepare": 167913,
+  "rows_striker_equals_bowler": 0,
+  "rows_total": 167913,
+  "rrr_missing_in_chase_rows": 0,
+  "test_match_ids_in_frame": 0,
+  "test_matches_listed_in_p4_match_period": 144,
+  "thresholds_fitted_on": "TRAIN rows only"
+ },
+ "definition": "any|q0.75",
+ "delivery_level_validation": {
+  "batter:dismissal": {
+   "binary_target": true,
+   "periods": {
+    "TRAIN": {
+     "basis": "TRAIN leave-player-out expectation (in-sample)",
+     "benchmark_constant_format_mean_mae": 0.10182114466900123,
+     "benchmark_constant_format_mean_rmse": 0.22563371276141475,
+     "bias": -0.00011206429510956133,
+     "brier_score": 0.05070239319783544,
+     "calibration_slope": 1.0839465961475767,
+     "mae": 0.10153538102037786,
+     "mean_observed": 0.053810971484244616,
+     "mean_predicted": 0.05392303577935418,
+     "residual_quantiles_1_25_50_75_99": [
+      -0.08575541046972388,
+      -0.05259924470569217,
+      -0.04777229851829282,
+      -0.04523016420125431,
+      0.954751883764606
+     ],
+     "residual_sd": 0.22517290697536474,
+     "residual_skew": 3.9340498693892343,
+     "rmse": 0.22517191920360638,
+     "rows": 110851
+    },
+    "VALIDATION": {
+     "basis": "frozen TRAIN tables (out-of-period)",
+     "benchmark_constant_format_mean_mae": 0.10340027373363568,
+     "benchmark_constant_format_mean_rmse": 0.22853208203405942,
+     "bias": 0.0015221917598129083,
+     "brier_score": 0.05195085483305706,
+     "calibration_slope": 1.3114961819301463,
+     "mae": 0.10265401834529075,
+     "mean_observed": 0.05529468136080498,
+     "mean_predicted": 0.053772489600992075,
+     "residual_quantiles_1_25_50_75_99": [
+      -0.08552007361169721,
+      -0.0525893145437925,
+      -0.047665619711706415,
+      -0.04530728802749497,
+      0.9546567008513054
+     ],
+     "residual_sd": 0.22792494898447768,
+     "residual_skew": 3.8722757312091356,
+     "rmse": 0.22792730164036307,
+     "rows": 41740
+    }
+   },
+   "validation_by_format": [
+    {
+     "format": "IPL",
+     "observed": 0.050549046070793205,
+     "predicted": 0.05100971789209455,
+     "rows": 16301.0
+    },
+    {
+     "format": "T20I",
+     "observed": 0.05833562640040882,
+     "predicted": 0.05554283991455544,
+     "rows": 25439.0
+    }
+   ],
+   "validation_by_predicted_decile": [
+    {
+     "decile": 0,
+     "observed": 0.0392908481073311,
+     "predicted": 0.040874283111307565,
+     "rows": 4174.0
+    },
+    {
+     "decile": 1,
+     "observed": 0.044561571633924296,
+     "predicted": 0.044664463242965906,
+     "rows": 4174.0
+    },
+    {
+     "decile": 2,
+     "observed": 0.04599904168663153,
+     "predicted": 0.04533244577292341,
+     "rows": 4174.0
+    },
+    {
+     "decile": 3,
+     "observed": 0.0462386200287494,
+     "predicted": 0.046618000326918735,
+     "rows": 4174.0
+    },
+    {
+     "decile": 4,
+     "observed": 0.04767609008145664,
+     "predicted": 0.04766169587852196,
+     "rows": 4174.0
+    },
+    {
+     "decile": 5,
+     "observed": 0.043603258265452804,
+     "predicted": 0.04928690720518619,
+     "rows": 4174.0
+    },
+    {
+     "decile": 6,
+     "observed": 0.04695735505510302,
+     "predicted": 0.050518728759651084,
+     "rows": 4174.0
+    },
+    {
+     "decile": 7,
+     "observed": 0.06037374221370388,
+     "predicted": 0.05522663720727892,
+     "rows": 4174.0
+    },
+    {
+     "decile": 8,
+     "observed": 0.08528988979396263,
+     "predicted": 0.075863851915124,
+     "rows": 4174.0
+    },
+    {
+     "decile": 9,
+     "observed": 0.09295639674173455,
+     "predicted": 0.08167788259004298,
+     "rows": 4174.0
+    }
+   ]
+  },
+  "batter:runs": {
+   "binary_target": false,
+   "periods": {
+    "TRAIN": {
+     "basis": "TRAIN leave-player-out expectation (in-sample)",
+     "benchmark_constant_format_mean_mae": 1.295364681729787,
+     "benchmark_constant_format_mean_rmse": 1.7133890958660571,
+     "bias": 0.0006623689168306567,
+     "calibration_slope": 1.1593921640726241,
+     "mae": 1.2878312580560403,
+     "mean_observed": 1.3656169091844006,
+     "mean_predicted": 1.36495454026757,
+     "residual_quantiles_1_25_50_75_99": [
+      -1.6676308295602036,
+      -1.2725082000026802,
+      -0.376650975159456,
+      -0.17219266148299184,
+      4.740659793804761
+     ],
+     "residual_sd": 1.7080268035876054,
+     "residual_skew": 1.4573338622568341,
+     "rmse": 1.7080192278473405,
+     "rows": 110851
+    },
+    "VALIDATION": {
+     "basis": "frozen TRAIN tables (out-of-period)",
+     "benchmark_constant_format_mean_mae": 1.3208113252532023,
+     "benchmark_constant_format_mean_rmse": 1.7563478252230391,
+     "bias": 0.047041588593712914,
+     "calibration_slope": 1.1522440387512536,
+     "mae": 1.3142610980572005,
+     "mean_observed": 1.40495927168184,
+     "mean_predicted": 1.3579176830881272,
+     "residual_quantiles_1_25_50_75_99": [
+      -1.6683174696502232,
+      -1.2706267661878483,
+      -0.3718066552047985,
+      0.4432794838287466,
+      4.7410361130705825
+     ],
+     "residual_sd": 1.752090757746019,
+     "residual_skew": 1.423355018836449,
+     "rmse": 1.752701169095674,
+     "rows": 41740
+    }
+   },
+   "validation_by_format": [
+    {
+     "format": "IPL",
+     "observed": 1.5313784430403043,
+     "predicted": 1.4174031135348863,
+     "rows": 16301.0
+    },
+    {
+     "format": "T20I",
+     "observed": 1.3239514131844805,
+     "predicted": 1.319800146954135,
+     "rows": 25439.0
+    }
+   ],
+   "validation_by_predicted_decile": [
+    {
+     "decile": 0,
+     "observed": 1.1662673694298036,
+     "predicted": 1.2072992271328358,
+     "rows": 4174.0
+    },
+    {
+     "decile": 1,
+     "observed": 1.2618591279348348,
+     "predicted": 1.2431904219240895,
+     "rows": 4174.0
+    },
+    {
+     "decile": 2,
+     "observed": 1.2352659319597508,
+     "predicted": 1.2631663235381092,
+     "rows": 4174.0
+    },
+    {
+     "decile": 3,
+     "observed": 1.3447532343076185,
+     "predicted": 1.274042847647338,
+     "rows": 4174.0
+    },
+    {
+     "decile": 4,
+     "observed": 1.3663152850982272,
+     "predicted": 1.3153997424520292,
+     "rows": 4174.0
+    },
+    {
+     "decile": 5,
+     "observed": 1.496406324868232,
+     "predicted": 1.3645506315243041,
+     "rows": 4174.0
+    },
+    {
+     "decile": 6,
+     "observed": 1.4760421657882128,
+     "predicted": 1.3719959646517779,
+     "rows": 4174.0
+    },
+    {
+     "decile": 7,
+     "observed": 1.5237182558696694,
+     "predicted": 1.4084984668955893,
+     "rows": 4174.0
+    },
+    {
+     "decile": 8,
+     "observed": 1.4985625299472927,
+     "predicted": 1.5133098053703014,
+     "rows": 4174.0
+    },
+    {
+     "decile": 9,
+     "observed": 1.680402491614758,
+     "predicted": 1.617723399744896,
+     "rows": 4174.0
+    }
+   ]
+  },
+  "bowler:charged": {
+   "binary_target": false,
+   "periods": {
+    "TRAIN": {
+     "basis": "TRAIN leave-player-out expectation (in-sample)",
+     "benchmark_constant_format_mean_mae": 1.263819703760048,
+     "benchmark_constant_format_mean_rmse": 1.689440164492918,
+     "bias": -0.0005638907479688293,
+     "calibration_slope": 1.1704082552061978,
+     "mae": 1.2578429165090566,
+     "mean_observed": 1.363226052841718,
+     "mean_predicted": 1.3637899435896867,
+     "residual_quantiles_1_25_50_75_99": [
+      -1.6422410849892206,
+      -1.2751663219505402,
+      -0.376226902544192,
+      -0.20590971852332007,
+      4.736869497987214
+     ],
+     "residual_sd": 1.6844926764372972,
+     "residual_skew": 1.4940696602232648,
+     "rmse": 1.6844854603995674,
+     "rows": 115212
+    },
+    "VALIDATION": {
+     "basis": "frozen TRAIN tables (out-of-period)",
+     "benchmark_constant_format_mean_mae": 1.2882007513599198,
+     "benchmark_constant_format_mean_rmse": 1.7310602696755568,
+     "bias": 0.045354623180824206,
+     "calibration_slope": 1.1493697038387847,
+     "mae": 1.282527042789877,
+     "mean_observed": 1.4012818148284765,
+     "mean_predicted": 1.3559271916476523,
+     "residual_quantiles_1_25_50_75_99": [
+      -1.6427945781783304,
+      -1.2622470920028646,
+      -0.37497207510318753,
+      0.3572054218216696,
+      4.737752907997136
+     ],
+     "residual_sd": 1.7272125686161584,
+     "residual_skew": 1.459613139888538,
+     "rmse": 1.7277880431961297,
+     "rows": 43376
+    }
+   },
+   "validation_by_format": [
+    {
+     "format": "IPL",
+     "observed": 1.5205979284369116,
+     "predicted": 1.4133312565784788,
+     "rows": 16992.0
+    },
+    {
+     "format": "T20I",
+     "observed": 1.3244390539721043,
+     "predicted": 1.3189574421288301,
+     "rows": 26384.0
+    }
+   ],
+   "validation_by_predicted_decile": [
+    {
+     "decile": 0,
+     "observed": 1.1692023974181651,
+     "predicted": 1.207506768335383,
+     "rows": 4338.0
+    },
+    {
+     "decile": 1,
+     "observed": 1.2717842323651452,
+     "predicted": 1.244823570549351,
+     "rows": 4338.0
+    },
+    {
+     "decile": 2,
+     "observed": 1.2388747982476367,
+     "predicted": 1.2654398741642667,
+     "rows": 4337.0
+    },
+    {
+     "decile": 3,
+     "observed": 1.3575380359612725,
+     "predicted": 1.279514802641583,
+     "rows": 4338.0
+    },
+    {
+     "decile": 4,
+     "observed": 1.3633848282222734,
+     "predicted": 1.3151999968644166,
+     "rows": 4337.0
+    },
+    {
+     "decile": 5,
+     "observed": 1.479253112033195,
+     "predicted": 1.36696675899774,
+     "rows": 4338.0
+    },
+    {
+     "decile": 6,
+     "observed": 1.4759050034586119,
+     "predicted": 1.373337687890168,
+     "rows": 4337.0
+    },
+    {
+     "decile": 7,
+     "observed": 1.5112955278930382,
+     "predicted": 1.4052768953714876,
+     "rows": 4338.0
+    },
+    {
+     "decile": 8,
+     "observed": 1.517408346783491,
+     "predicted": 1.5023234436294681,
+     "rows": 4337.0
+    },
+    {
+     "decile": 9,
+     "observed": 1.628169663439373,
+     "predicted": 1.5988896312267484,
+     "rows": 4338.0
+    }
+   ]
+  },
+  "bowler:wkt": {
+   "binary_target": true,
+   "periods": {
+    "TRAIN": {
+     "basis": "TRAIN leave-player-out expectation (in-sample)",
+     "benchmark_constant_format_mean_mae": 0.09548132697984742,
+     "benchmark_constant_format_mean_rmse": 0.21849636951199833,
+     "bias": 4.950435005383585e-06,
+     "brier_score": 0.04760083820274086,
+     "calibration_slope": 1.0771915063932618,
+     "mae": 0.09521653178627772,
+     "mean_observed": 0.05027254105475124,
+     "mean_predicted": 0.05026759061974585,
+     "residual_quantiles_1_25_50_75_99": [
+      -0.07907413972484967,
+      -0.04980770344041505,
+      -0.04539284475711482,
+      -0.04306698977965427,
+      0.9568975996851905
+     ],
+     "residual_sd": 0.2181771100287633,
+     "residual_skew": 4.100540920942721,
+     "rmse": 0.2181761632322396,
+     "rows": 115212
+    },
+    "VALIDATION": {
+     "basis": "frozen TRAIN tables (out-of-period)",
+     "benchmark_constant_format_mean_mae": 0.09714882383335363,
+     "benchmark_constant_format_mean_rmse": 0.22170353351870845,
+     "bias": 0.0015881162286153817,
+     "brier_score": 0.04896492624198206,
+     "calibration_slope": 1.3049134873884176,
+     "mae": 0.09657646930795484,
+     "mean_observed": 0.05184894872740686,
+     "mean_predicted": 0.050260832498791486,
+     "residual_quantiles_1_25_50_75_99": [
+      -0.07885123279455059,
+      -0.04978779602489019,
+      -0.04542544935619473,
+      -0.04318740420512025,
+      0.9568125957948798
+     ],
+     "residual_sd": 0.22127705019965352,
+     "residual_skew": 4.027774283725112,
+     "rmse": 0.22128019848595143,
+     "rows": 43376
+    }
+   },
+   "validation_by_format": [
+    {
+     "format": "IPL",
+     "observed": 0.047610640301318265,
+     "predicted": 0.047590412274740874,
+     "rows": 16992.0
+    },
+    {
+     "format": "T20I",
+     "observed": 0.0545785324439054,
+     "predicted": 0.051980654377470514,
+     "rows": 26384.0
+    }
+   ],
+   "validation_by_predicted_decile": [
+    {
+     "decile": 0,
+     "observed": 0.03780544029506685,
+     "predicted": 0.03891612607025469,
+     "rows": 4338.0
+    },
+    {
+     "decile": 1,
+     "observed": 0.04495159059474412,
+     "predicted": 0.04268076241881356,
+     "rows": 4338.0
+    },
+    {
+     "decile": 2,
+     "observed": 0.042886788102374916,
+     "predicted": 0.04322679341650749,
+     "rows": 4337.0
+    },
+    {
+     "decile": 3,
+     "observed": 0.04149377593360996,
+     "predicted": 0.04459067320239115,
+     "rows": 4338.0
+    },
+    {
+     "decile": 4,
+     "observed": 0.04519252939820152,
+     "predicted": 0.045347903784745874,
+     "rows": 4337.0
+    },
+    {
+     "decile": 5,
+     "observed": 0.04541263254956201,
+     "predicted": 0.04669768660527775,
+     "rows": 4338.0
+    },
+    {
+     "decile": 6,
+     "observed": 0.04334793636154023,
+     "predicted": 0.04763436574212151,
+     "rows": 4337.0
+    },
+    {
+     "decile": 7,
+     "observed": 0.06339326878745966,
+     "predicted": 0.05226420861050714,
+     "rows": 4338.0
+    },
+    {
+     "decile": 8,
+     "observed": 0.07355314733686881,
+     "predicted": 0.0671470526991566,
+     "rows": 4337.0
+    },
+    {
+     "decile": 9,
+     "observed": 0.08045182111572154,
+     "predicted": 0.07410328558374699,
+     "rows": 4338.0
+    }
+   ]
+  }
+ },
+ "model_label": "statistical baseline/shrinkage model (not machine learning or deep learning)",
+ "model_version": "p7_stat_baseline_shrinkage_v1|p4_baseline_b0_train_frozen_v1|any|q0.75|shrink_tau4|code:96594020e2df",
+ "player_level_validation_train_to_validation": {
+  "batter:IPL": {
+   "by_predicted_quintile": [
+    {
+     "mean_observed": -0.3875469898735858,
+     "mean_predicted": -0.0565015047771275,
+     "players": 19.0,
+     "quintile": 0
+    },
+    {
+     "mean_observed": 0.10489328540786107,
+     "mean_predicted": -0.006232713926375384,
+     "players": 18.0,
+     "quintile": 1
+    },
+    {
+     "mean_observed": -0.015797405857424854,
+     "mean_predicted": 0.01864637253246778,
+     "players": 18.0,
+     "quintile": 2
+    },
+    {
+     "mean_observed": 0.141025353234538,
+     "mean_predicted": 0.04369106138306455,
+     "players": 18.0,
+     "quintile": 3
+    },
+    {
+     "mean_observed": 0.12469703061297424,
+     "mean_predicted": 0.08089084166283034,
+     "players": 19.0,
+     "quintile": 4
+    }
+   ],
+   "calibration_slope_observed_on_predicted": 3.4224850153022213,
+   "data_weight_median_train": 0.16366489490634145,
+   "min_validation_balls": 6,
+   "qualifying_players": 92,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0,
+   "spearman_shrunk_vs_validation": 0.3462694388360587,
+   "status": "OK",
+   "train_players": 244,
+   "weighted_mse_shrunk": 0.1285864468301659,
+   "weighted_mse_train_pooled_mean": 0.13751380275106895,
+   "weighted_mse_unshrunk_train_mean": 0.2022237669853433,
+   "weighted_mse_zero": 0.1383917183342726
+  },
+  "batter:T20I": {
+   "by_predicted_quintile": [
+    {
+     "mean_observed": -0.28246828679236174,
+     "mean_predicted": -0.10564852588607705,
+     "players": 31.0,
+     "quintile": 0
+    },
+    {
+     "mean_observed": -0.20862607457690546,
+     "mean_predicted": -0.06021805828383583,
+     "players": 30.0,
+     "quintile": 1
+    },
+    {
+     "mean_observed": -0.05075022419632724,
+     "mean_predicted": -0.033821627104213416,
+     "players": 31.0,
+     "quintile": 2
+    },
+    {
+     "mean_observed": 0.09818795184591556,
+     "mean_predicted": -0.003117222338611693,
+     "players": 30.0,
+     "quintile": 3
+    },
+    {
+     "mean_observed": 0.09579584969086934,
+     "mean_predicted": 0.05216140714763973,
+     "players": 31.0,
+     "quintile": 4
+    }
+   ],
+   "calibration_slope_observed_on_predicted": 2.9301016947257104,
+   "data_weight_median_train": 0.08791866028708133,
+   "min_validation_balls": 6,
+   "qualifying_players": 153,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0,
+   "spearman_shrunk_vs_validation": 0.4041758843767621,
+   "status": "OK",
+   "train_players": 439,
+   "weighted_mse_shrunk": 0.13400119990205214,
+   "weighted_mse_train_pooled_mean": 0.14353492813979934,
+   "weighted_mse_unshrunk_train_mean": 0.5556662700436118,
+   "weighted_mse_zero": 0.14451769374972284
+  },
+  "bowler:IPL": {
+   "by_predicted_quintile": [
+    {
+     "mean_observed": -0.06669399198404478,
+     "mean_predicted": -0.06241398320033564,
+     "players": 16.0,
+     "quintile": 0
+    },
+    {
+     "mean_observed": -0.05981074734875876,
+     "mean_predicted": -0.01680721283955448,
+     "players": 15.0,
+     "quintile": 1
+    },
+    {
+     "mean_observed": 0.12203579002366587,
+     "mean_predicted": 0.007718156049917938,
+     "players": 16.0,
+     "quintile": 2
+    },
+    {
+     "mean_observed": 0.022542419918798365,
+     "mean_predicted": 0.0302285490639687,
+     "players": 15.0,
+     "quintile": 3
+    },
+    {
+     "mean_observed": 0.10957843451929311,
+     "mean_predicted": 0.08198870772209545,
+     "players": 16.0,
+     "quintile": 4
+    }
+   ],
+   "calibration_slope_observed_on_predicted": 1.8618735391066359,
+   "data_weight_median_train": 0.2170611918875171,
+   "min_validation_balls": 6,
+   "qualifying_players": 78,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0,
+   "spearman_shrunk_vs_validation": 0.22227139948658933,
+   "status": "OK",
+   "train_players": 163,
+   "weighted_mse_shrunk": 0.14192606253424542,
+   "weighted_mse_train_pooled_mean": 0.1465369417425201,
+   "weighted_mse_unshrunk_train_mean": 0.1849911614691273,
+   "weighted_mse_zero": 0.14661416313088438
+  },
+  "bowler:T20I": {
+   "by_predicted_quintile": [
+    {
+     "mean_observed": -0.19146336697255925,
+     "mean_predicted": -0.07864914213917187,
+     "players": 23.0,
+     "quintile": 0
+    },
+    {
+     "mean_observed": -0.052766993913641064,
+     "mean_predicted": -0.046412865344337924,
+     "players": 22.0,
+     "quintile": 1
+    },
+    {
+     "mean_observed": -0.0969441628332178,
+     "mean_predicted": -0.024533420074155005,
+     "players": 23.0,
+     "quintile": 2
+    },
+    {
+     "mean_observed": 0.02908408905696653,
+     "mean_predicted": -0.007106530095238644,
+     "players": 22.0,
+     "quintile": 3
+    },
+    {
+     "mean_observed": -0.02738831311268327,
+     "mean_predicted": 0.01795262121841028,
+     "players": 23.0,
+     "quintile": 4
+    }
+   ],
+   "calibration_slope_observed_on_predicted": 1.9696269528515515,
+   "data_weight_median_train": 0.14594703860925815,
+   "min_validation_balls": 6,
+   "qualifying_players": 113,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0,
+   "spearman_shrunk_vs_validation": 0.18288808303945708,
+   "status": "OK",
+   "train_players": 296,
+   "weighted_mse_shrunk": 0.0992294094156496,
+   "weighted_mse_train_pooled_mean": 0.10382692604763111,
+   "weighted_mse_unshrunk_train_mean": 0.17027119565278537,
+   "weighted_mse_zero": 0.10643750832372761
+  }
+ },
+ "pooled_reliability_phase6": 0.37,
+ "prediction": {
+  "batter": {
+   "eligibility_rule": {
+    "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+    "threshold_balls": 20.0,
+    "wr": 1.3108108108108107
+   },
+   "eligible_without_name": 0,
+   "eligible_working_pool": 132,
+   "max_data_weight": 0.39986200989722115,
+   "note": "10 of 10 rows written; 132 players meet the working-pool input rule",
+   "players_data_weight_at_least_0.5": 0,
+   "players_with_pressure_rows": 267,
+   "rows_written": 10,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0
+  },
+  "bowler": {
+   "eligibility_rule": {
+    "label": "ELIGIBLE_WORKING_POOL_NOT_VALIDATED",
+    "threshold_balls": 49.0,
+    "wr": 1.3079763663220088
+   },
+   "eligible_without_name": 0,
+   "eligible_working_pool": 80,
+   "max_data_weight": 0.5044268169231346,
+   "note": "10 of 10 rows written; 80 players meet the working-pool input rule",
+   "players_data_weight_at_least_0.5": 1,
+   "players_with_pressure_rows": 182,
+   "rows_written": 10,
+   "shrinkage_floor_hit": true,
+   "shrinkage_k": 25.0
+  }
+ },
+ "randomness": "none: the fit and the predictions are deterministic (no bootstrap, no sampling)",
+ "restricted_test": {
+  "independent_out_of_sample_validation_claimed": false,
+  "label": "previously accessed, non-pristine TEST (Phase 4, single opening); stored aggregates",
+  "opened_in_this_run": false,
+  "player_level_primary_streams": [
+   {
+    "format": "IPL",
+    "loss_weighted_mse": {
+     "raw": 0.1129048215,
+     "shrunk": 0.1070229537,
+     "zero": 0.1217018822
+    },
+    "qualifying_players": 69,
+    "role": "batter",
+    "spearman_shrunk_vs_test": 0.3734380709
+   },
+   {
+    "format": "T20I",
+    "loss_weighted_mse": {
+     "raw": 0.1574366833,
+     "shrunk": 0.1689251895,
+     "zero": 0.1774609989
+    },
+    "qualifying_players": 79,
+    "role": "batter",
+    "spearman_shrunk_vs_test": 0.3920155794
+   },
+   {
+    "format": "IPL",
+    "loss_weighted_mse": {
+     "raw": 0.0934366915,
+     "shrunk": 0.0744715941,
+     "zero": 0.0800398724
+    },
+    "qualifying_players": 39,
+    "role": "bowler",
+    "spearman_shrunk_vs_test": 0.2455465587
+   },
+   {
+    "format": "T20I",
+    "loss_weighted_mse": {
+     "raw": 0.167614353,
+     "shrunk": 0.1314812536,
+     "zero": 0.130711707
+    },
+    "qualifying_players": 75,
+    "role": "bowler",
+    "spearman_shrunk_vs_test": 0.2249502134
+   }
+  ],
+  "source_file": "phase4_test_evaluation.json",
+  "source_sha256": "27b3c0846a8b3c50617f16ca429ea5af6f8ed84976bca8860aa345cb7d1b90c5",
+  "test_matches": 144,
+  "test_rows_total": 33086
+ },
+ "seed": 20260512,
+ "shrinkage_config": "shrink_tau4",
+ "thresholds_max_abs_diff_vs_phase4_frozen": 1.3564260825660313e-11,
+ "thresholds_train_only": {
+  "chase|IPL": 12.28125,
+  "chase|T20I": 11.625,
+  "inn1|IPL": 5.951219512195124,
+  "inn1|T20I": 8.474576271186436
+ }
+}

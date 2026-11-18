@@ -97,7 +97,11 @@ def candidates(ret: dict, min_balls: int) -> dict:
     snap = {str(r.player).strip().casefold(): r.team_name for r in squad.itertuples()}
     out = {}
     for key, rule in CANDIDATE_RULES.items():
-        f = "descriptive_batter_profiles.csv" if rule["side"] == "batter" else "descriptive_bowler_profiles.csv"
+        f = (
+            "descriptive_batter_profiles.csv"
+            if rule["side"] == "batter"
+            else "descriptive_bowler_profiles.csv"
+        )
         p = pd.read_csv(REPORTS / f)
         p = p[p["format"] == "IPL"]
         if rule["extra"]:
@@ -108,7 +112,9 @@ def candidates(ret: dict, min_balls: int) -> dict:
         p = p.sort_values("player_name")  # alphabetical: not a ranking
         keep = ["player_id", "player_name", *rule["cols"], "matches_played", "sample_sufficiency"]
         t = p[keep].copy()
-        t["squad_snapshot_team"] = [snap.get(str(n).strip().casefold(), "not matched") for n in p["player_name"]]
+        t["squad_snapshot_team"] = [
+            snap.get(str(n).strip().casefold(), "not matched") for n in p["player_name"]
+        ]
         t["availability"] = [ret["status"].get(int(i), "UNKNOWN") for i in p["player_id"]]
         out[key] = dict(
             title=rule["title"], min_balls=min_balls, n=int(len(t)), rows=records(t),
@@ -123,7 +129,9 @@ def main() -> None:
     args = ap.parse_args()
     con = duckdb.connect(str(DB / "exploratory.duckdb"), read_only=True)
     con.execute(f"attach '{(DB / 'superr.duckdb').as_posix()}' as o (read_only)")
-    rr_id = int(con.execute("select team_id from o.teams where team_name = ?", [TEAM_NAME]).fetchone()[0])
+    rr_id = int(
+        con.execute("select team_id from o.teams where team_name = ?", [TEAM_NAME]).fetchone()[0]
+    )
 
     results = con.execute(
         f"""select c.season::varchar season, count(*) n, sum((m.win_team_id={rr_id})::int) wins,
@@ -148,7 +156,7 @@ def main() -> None:
         pace_or_spin_null=int(con.execute("select count(*) from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' and (d.pace_or_spin is null or d.bowling_type is null)").fetchone()[0]),
         pace_or_spin_values=con.execute("select pace_or_spin v, count(*) n from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' group by 1 order by 1").fetchdf().to_dict("records"),
         bowling_types_by_class=con.execute("select pace_or_spin, count(distinct bowling_type) n_types from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' group by 1").fetchdf().to_dict("records"),
-        type_class_conflicts=int(con.execute("select count(*) from (select bowling_type from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' group by 1 having count(distinct pace_or_spin)>1)").fetchone()[0]),
+        type_class_mismatches=int(con.execute("select count(*) from (select bowling_type from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' group by 1 having count(distinct pace_or_spin)>1)").fetchone()[0]),
         bowlers_with_more_than_one_type=int(con.execute("select count(*) from (select bowler_id from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' group by 1 having count(distinct bowling_type)>1)").fetchone()[0]),
         bowl_speed_zero_or_negative=int(con.execute("select count(*) from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' and bowl_speed<=0").fetchone()[0]),
         bowl_speed_above_200=int(con.execute("select count(*) from o.deliveries d join o.matches m using(match_id) where m.competition_type='IPL' and bowl_speed>200").fetchone()[0]),
@@ -199,4 +207,14 @@ def main() -> None:
         candidate_statement="Descriptive candidate-fit tables, not recommendations. Availability is UNKNOWN unless an authoritative retention row says otherwise.",
     )  # fmt: skip
     OUT.write_text(json.dumps(doc, indent=1, ensure_ascii=False), encoding="utf-8")
-    print("wrote", OUT, "metrics", cmp["metric"].nunique(), 
+    print("wrote", OUT, "metrics", cmp["metric"].nunique(), "rows", len(cmp))
+    from rr_report import render  # noqa: E402
+
+    REPORT.write_text(render(doc), encoding="utf-8")
+    print("wrote", REPORT)
+    for k, v in cand.items():
+        print(k, v["n"])
+
+
+if __name__ == "__main__":
+    main()

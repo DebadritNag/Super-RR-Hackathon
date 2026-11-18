@@ -1,0 +1,8 @@
+# Data files: all CSVs, anywhere in the repo
+*.csv
+
+# Cricsheet JSON match folders (ipl_male_json, t20s_male_json, ...)
+*_json/
+
+# Agent task files
+.agents/

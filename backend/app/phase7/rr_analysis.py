@@ -31,7 +31,16 @@ def _m(name, side, label, num, den, unit, direction, **flt):
 
 # Batting: RR batting rows against league batting rows.
 for ph, nm in (("powerplay", "pp"), ("middle", "mid"), ("death", "death")):
-    _m(f"bat_{nm}_rpo", "bat", f"Batting {ph}: runs per over", "runs", "legal", "per_over", 1, phase=ph)
+    _m(
+        f"bat_{nm}_rpo",
+        "bat",
+        f"Batting {ph}: runs per over",
+        "runs",
+        "legal",
+        "per_over",
+        1,
+        phase=ph,
+    )
     _m(
         f"bat_{nm}_wkt", "bat", f"Batting {ph}: wickets lost per over",
         "wkt", "legal", "per_over", -1, phase=ph,
@@ -72,8 +81,8 @@ _m("bowl_spin_mid_wkt", "bowl", "Spin bowling middle: bowler-credited wickets pe
    "bwkt", "legal", "per_over", 1, phase="middle", pace_or_spin="Spin")  # fmt: skip
 _m("bowl_pace_share", "bowl", "Share of legal balls bowled by pace (usage)",
    "pace_legal", "legal", "per_100", 0)  # fmt: skip
-_m("bowl_rank5plus_share", "bowl", "Share of legal balls bowled by the 5th-or-later most used bowler of the innings (usage)",
-   "rank5_legal", "legal", "per_100", 0)  # fmt: skip
+_m("bowl_5th_plus_share", "bowl", "Share of legal balls bowled by the 5th-or-later most used bowler of the innings (usage)",
+   "fifth_plus_legal", "legal", "per_100", 0)  # fmt: skip
 
 IPL_SQL = """
 select s.match_id, s.innings_number, s.season_label as season, s.batting_team_id,
@@ -101,7 +110,7 @@ def prepare(frame: pd.DataFrame) -> pd.DataFrame:
         method="first", ascending=False
     )
     df = df.merge(balls[key + ["rk"]], on=key, how="left")
-    df["rank5_legal"] = np.where(df["rk"] >= 5, df["legal"], 0)
+    df["fifth_plus_legal"] = np.where(df["rk"] >= 5, df["legal"], 0)
     return df
 
 
@@ -159,7 +168,10 @@ def compare(df: pd.DataFrame, rr_id: int) -> pd.DataFrame:
             if "-" in period:
                 seasons = [str(y) for y in range(int(seasons[0]), int(seasons[1]) + 1)]
             g = grp[grp["season"].isin(seasons)]
-            rr_m = df[(df["season"].isin(seasons)) & ((df["batting_team_id"] == rr_id) | (df["bowling_team_id"] == rr_id))]["match_id"].unique()
+            rr_m = df[
+                (df["season"].isin(seasons))
+                & ((df["batting_team_id"] == rr_id) | (df["bowling_team_id"] == rr_id))
+            ]["match_id"].unique()
             rr_g = g[g["is_rr"]].set_index("match_id")[[m["num"], m["den"]]]
             lg_g = g[~g["is_rr"]]
             # League = rows of non-RR teams; matches where RR played contribute the opponent.
@@ -199,9 +211,7 @@ def bowler_depth(df: pd.DataFrame, rr_id: int, min_balls: int = MIN_BALLS) -> pd
         .reset_index()
     )
     b = b[b["legal"] >= min_balls]
-    cnt = (
-        b.groupby(["season", "bowling_team_id", "pace_or_spin"]).size().rename("n").reset_index()
-    )
+    cnt = b.groupby(["season", "bowling_team_id", "pace_or_spin"]).size().rename("n").reset_index()
     out = []
     for s in sorted(df["season"].unique()):
         teams = sorted(df[df["season"] == s]["bowling_team_id"].unique())

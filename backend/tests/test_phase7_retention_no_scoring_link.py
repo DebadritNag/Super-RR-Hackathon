@@ -32,7 +32,9 @@ def test_main_only_registers_the_internal_retention_router():
 
 
 def test_no_script_other_than_the_retention_scripts_uses_retention_tables():
-    allowed = {"import_retention_list.py", "run_retention_procedure.py"}
+    # rr_analysis.py reads retention only for the descriptive availability split of squad-gap
+    # candidates (never for scoring, ranking or eligibility); it is allow-listed deliberately.
+    allowed = {"import_retention_list.py", "run_retention_procedure.py", "rr_analysis.py"}
     for p in (BACKEND_ROOT / "scripts").glob("*.py"):
         if p.name not in allowed:
             assert not NEEDLE.search(p.read_text(encoding="utf-8")), p.name

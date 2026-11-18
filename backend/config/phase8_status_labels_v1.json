@@ -1,0 +1,11 @@
+{
+  "version": "phase8_status_labels_v1",
+  "labels": {
+    "VALIDATED": "The approach reached split-half reliability of at least 0.70 (interval lower bound at least 0.50) and an out-of-time correlation lower bound above 0.30, as declared before any result.",
+    "PROVISIONAL": "The approach reached split-half reliability of at least 0.50 with an interval lower bound above 0 and an out-of-time correlation lower bound above 0, but not every VALIDATED threshold.",
+    "EXPLORATORY": "An ordered list exists, but the declared PROVISIONAL thresholds were not met. The order is the best available description of the data and is not shown to separate players beyond noise.",
+    "INSUFFICIENT_EVIDENCE": "Fewer than ten players meet the declared eligibility floors or the approach cannot be computed. A player with this label is not ranked; it says nothing about the quality of the player."
+  },
+  "row_rule": "A row never carries a stronger label than its list. VALIDATED rows need a VALIDATED list, the STRONG_SUBSTANTIAL evidence class and a Top-10 inclusion probability of at least 0.5. PROVISIONAL rows need a list of at least PROVISIONAL and an inclusion probability of at least 0.25. Every other ranked row is EXPLORATORY.",
+  "two_statuses": "ranking_status is the status of the submitted order. model_validation_status is the status the approach earned on the declared reliability tests. Neither can be stronger than the declared thresholds allow."
+}
