@@ -6,21 +6,21 @@
       "counts": {
         "errors": 0,
         "failed": 0,
-        "passed": 1442,
+        "passed": 0,
         "skipped": 0,
-        "warnings": 4,
+        "warnings": 0,
         "xfailed": 0,
         "xpassed": 0
       },
-      "line": "1442 passed, 4 warnings in 664.95s (0:11:04)",
-      "seconds": 664.95
+      "line": "",
+      "seconds": null
     },
     "ruff_check_exit": 0,
     "ruff_format_exit": 0
   },
   "criteria_file_sha256_now": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
   "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
-  "generated_utc": "2026-11-18T05:45:11+00:00",
+  "generated_utc": "2026-11-18T06:14:05+00:00",
   "inputs_sha256": {
     "backend/config/data_quality_restrictions_v1.json": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
     "backend/config/phase4_split_v1.json": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
@@ -67,8 +67,8 @@
       "sha256": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b"
     },
     "final_submission_summary.md": {
-      "bytes": 6214,
-      "sha256": "71aa1aa1445365075181a317fa0bfca8e036f22505066bb9d9b8f87e76ebda5c"
+      "bytes": 6179,
+      "sha256": "00f24a5bb3e3d955789b48ed95e350ff3af199cbfb5e0cc76a0c29902a9c2270"
     },
     "methodology_comparison.md": {
       "bytes": 15100,
@@ -108,15 +108,15 @@
     },
     "submission_methodology.md": {
       "bytes": 34586,
-      "sha256": "52bf5e714e4fdc03a8e61da59d210f3045ccc4767a6bda1bafbf11e148aa1e31"
+      "sha256": "75b1bef9422bcdb8deb0f41d924e3691c341b39a2d5baceccf368e01854ff9fa"
     },
     "submission_readiness_audit.md": {
-      "bytes": 5349,
-      "sha256": "7dda380af198fb2ccd625c17ae58ea0f09af5cfa769e719350e0120b8e75b4dc"
+      "bytes": 5323,
+      "sha256": "0f4cd6b20754f2137391dfd63f68e14136c9d13cfcd1967766a68f91f15c5e0d"
     },
     "submission_test_report.md": {
-      "bytes": 7414,
-      "sha256": "44fc8c409d999666116af498568082d6dca21a0d92ba3d19b0d6353c82e6c583"
+      "bytes": 7045,
+      "sha256": "7d03f0dd0af1ed79fceb8cd9b9996ff537dc1ed278f8088952acc07a637f2161"
     }
   },
   "protected_check": {

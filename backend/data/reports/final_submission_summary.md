@@ -1,6 +1,6 @@
 # Final submission summary (Phase 8)
 
-Generated 2026-11-18T05:45:11+00:00. Criteria SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`.
+Generated 2026-11-18T06:14:05+00:00. Criteria SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`.
 
 ## Methodologies implemented
 
@@ -66,7 +66,7 @@ Yes. 9 versioned artefacts exist in `backend/data/models/`. Retraining the batte
 
 ## Tests
 
-`python -m pytest -q`: 1442 passed, 4 warnings in 664.95s (0:11:04) (passed 1442, failed 0, errors 0). `ruff check .` exit 0; `ruff format --check .` exit 0; `npm run build` exit 0; `npm run lint` exit 0. Protected files: {"checked": 234, "ok": true, "unexpected_changes": [], "documented_changes": [{"file": "d:/Data/backend/data/reports/phase7_model_registry.json", "state": "changed", "note": "intentional Phase 8 chunk 6 change: output keys renamed to the preserved *_phase7_aborted.csv names (content hashes of those files verified equal); see phase8_chunk6_verification.md"}]}. Details in `submission_test_report.md`.
+`python -m pytest -q`: not recorded (passed 0, failed 0, errors 0). `ruff check .` exit 0; `ruff format --check .` exit 0; `npm run build` exit 0; `npm run lint` exit 0. Protected files: {"checked": 234, "ok": true, "unexpected_changes": [], "documented_changes": [{"file": "d:/Data/backend/data/reports/phase7_model_registry.json", "state": "changed", "note": "intentional Phase 8 chunk 6 change: output keys renamed to the preserved *_phase7_aborted.csv names (content hashes of those files verified equal); see phase8_chunk6_verification.md"}]}. Details in `submission_test_report.md`.
 
 ## What remains incomplete
 

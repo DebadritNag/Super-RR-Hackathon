@@ -1,6 +1,6 @@
 # Submission readiness audit
 
-Stamp (UTC): 2026-11-18T05:45:11+00:00.
+Stamp (UTC): 2026-11-18T06:14:05+00:00.
 
 ## 1. Verdict
 
@@ -49,7 +49,7 @@ The same files, plus a SHA-256 manifest, are copied to `d:/Data/submission/` by 
 
 ## 4. Verification state
 
-- pytest: 1442 passed, 4 warnings in 664.95s (0:11:04).
+- pytest: no output recorded.
 - ruff check exit 0, ruff format exit 0, npm build exit 0, npm lint exit 0.
 - Protected-file check: {"checked": 234, "ok": true, "unexpected_changes": [], "documented_changes": [{"file": "d:/Data/backend/data/reports/phase7_model_registry.json", "state": "changed", "note": "intentional Phase 8 chunk 6 change: output keys renamed to the preserved *_phase7_aborted.csv names (content hashes of those files verified equal); see phase8_chunk6_verification.md"}]}.
 

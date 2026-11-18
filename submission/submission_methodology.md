@@ -368,4 +368,4 @@ A row never carries a stronger label than its list. The submitted ranking status
 
 **Reproduction.** From `d:/Data/backend` with `PYTHONUTF8=1`: `python scripts/phase8_final_ranking.py all` regenerates the lists and reports from the stored tables (two runs give byte-identical CSV and JSON); `python scripts/run_phase8.py all` regenerates this document, the test report, the audit, the manifest and the bundle. The manifest `phase8_build_manifest.json` records input hashes, output hashes and tool versions.
 
-**Versions.** Methodology `phase8_methodology_v1`; criteria `phase8_selection_criteria_v1` (SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`); generated 2026-11-18T05:45:11+00:00.
+**Versions.** Methodology `phase8_methodology_v1`; criteria `phase8_selection_criteria_v1` (SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`); generated 2026-11-18T06:14:05+00:00.
