@@ -1,0 +1,145 @@
+{
+  "checks": {
+    "npm_build_exit": 0,
+    "npm_lint_exit": 0,
+    "pytest": {
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 1442,
+        "skipped": 0,
+        "warnings": 4,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "line": "1442 passed, 4 warnings in 664.95s (0:11:04)",
+      "seconds": 664.95
+    },
+    "ruff_check_exit": 0,
+    "ruff_format_exit": 0
+  },
+  "criteria_file_sha256_now": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "generated_utc": "2026-11-18T05:45:11+00:00",
+  "inputs_sha256": {
+    "backend/config/data_quality_restrictions_v1.json": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
+    "backend/config/phase4_split_v1.json": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+    "backend/config/phase8_selection_criteria_v1.json": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+    "backend/data/database/exploratory.duckdb": "7b396e42a2acb281fd5ffd64051064d7ac48e82bdfad23dd229bd20b9ca6277d",
+    "backend/data/database/phase8.duckdb": "c77ad8df883131a196bd5faae26003abd9a3a055f375bc797aca61a1117d407d",
+    "backend/data/database/superr.duckdb": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+    "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+    "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+    "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+    "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+    "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+    "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+  },
+  "list_status": {
+    "batter": "EXPLORATORY",
+    "bowler": "EXPLORATORY"
+  },
+  "methodology_version": "phase8_methodology_v1",
+  "models": {
+    "p8_expected_batter_boundary_v1": "348b54de38fec02d44276de579bfca503915fd6caafaaeaa61d06d783fdc4430",
+    "p8_expected_batter_dot_v1": "c3ab76a150caefaa30818124ae5d3389a8ccbee3d1a903c73bbbb58fec26e322",
+    "p8_expected_batter_runs_v1": "7049611ad0721b957e67051608ef8ed5fceff00104d028f697a6f90f1a186b9f",
+    "p8_expected_batter_wicket_v1": "51043e5440a47eca13c44db59421647816fdd16817771e3d041d669deef27afc",
+    "p8_expected_bowler_boundary_v1": "15ee76cc056893c13342cf81b72aa599be5ab34ed9ac4c8ec3dc34234e1dbf78",
+    "p8_expected_bowler_dot_v1": "9deb455d834a32e50d884f8f6bfe383f664df7143b1d85e7fcbca56f1813cdf1",
+    "p8_expected_bowler_runs_v1": "a093dd1833f32002645758494d41c61b92eb254a096f7bbc56a7f3bdb9574311",
+    "p8_expected_bowler_wicket_v1": "5744e64248c7dd8f3269615b1afcc42b21d4fe0b913e5c7d5c6950e2714c8e25",
+    "p8_wp_v1": "93bb086c54683d8b6b429a05f26ac9f6ae19ff5f1f6b4b0029994fa129e7ed70"
+  },
+  "note": "Phase 3 to 6 reports and the aborted-run files are preserved on disk and are not part of the submission bundle.",
+  "outputs": {
+    "ai_pipeline_verification.md": {
+      "bytes": 8528,
+      "sha256": "24a398567b7686b3ff47a28eb06a0ab3cd8d07c2ed615c525563d7246311e190"
+    },
+    "descriptive_batter_profiles.csv": {
+      "bytes": 782600,
+      "sha256": "ac2e78678f2ad6a06481bc0ce1c6705b3911951ac60833b020928d0943fdcd92"
+    },
+    "descriptive_bowler_profiles.csv": {
+      "bytes": 576477,
+      "sha256": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b"
+    },
+    "final_submission_summary.md": {
+      "bytes": 6214,
+      "sha256": "71aa1aa1445365075181a317fa0bfca8e036f22505066bb9d9b8f87e76ebda5c"
+    },
+    "methodology_comparison.md": {
+      "bytes": 15100,
+      "sha256": "7938756ea5b9486c06a95dfcc36112f376707aa40160aaccddf4592ad219c5e1"
+    },
+    "player_selection_explanations.md": {
+      "bytes": 70362,
+      "sha256": "1caade4dc623cba8c0aaf933e458ffb712b7ee147317c1615aae459a87f61724"
+    },
+    "pressure_batters_top10.csv": {
+      "bytes": 18922,
+      "sha256": "95ca197f5b05f5418a4742bdd0e633a03844ad8e2b5124e4c70fc4ea5a343043"
+    },
+    "pressure_batters_top10.json": {
+      "bytes": 66694,
+      "sha256": "0c2430d501cab67e41f28cd1b9985a12ec98358d137e4a7df5b87547f48028cd"
+    },
+    "pressure_bowlers_top10.csv": {
+      "bytes": 19944,
+      "sha256": "0116aab14f42bbb060649a67219b6cb9de038e89f2665d184086b9d12fa9f605"
+    },
+    "pressure_bowlers_top10.json": {
+      "bytes": 69492,
+      "sha256": "2dbc666ba450ffab14088500d2395cae84a88e214bea3094108ae8076742966a"
+    },
+    "pressure_methodology_research.md": {
+      "bytes": 9056,
+      "sha256": "3b05bafc75ca50e8151d3be745e7dccf24f009483389fd33e9376d757f1595bc"
+    },
+    "pressure_top10_status.md": {
+      "bytes": 9432,
+      "sha256": "27c7aea61ca9b12562c3ca5c37ffbbb9a831077951ecaae6de3008b896450a5c"
+    },
+    "submission_executive_summary.md": {
+      "bytes": 2778,
+      "sha256": "c707ec3ed772fcc3f5eb820b2b787b755065b9c6caf30a7df1179965034ff6cf"
+    },
+    "submission_methodology.md": {
+      "bytes": 34586,
+      "sha256": "52bf5e714e4fdc03a8e61da59d210f3045ccc4767a6bda1bafbf11e148aa1e31"
+    },
+    "submission_readiness_audit.md": {
+      "bytes": 5349,
+      "sha256": "7dda380af198fb2ccd625c17ae58ea0f09af5cfa769e719350e0120b8e75b4dc"
+    },
+    "submission_test_report.md": {
+      "bytes": 7414,
+      "sha256": "44fc8c409d999666116af498568082d6dca21a0d92ba3d19b0d6353c82e6c583"
+    }
+  },
+  "protected_check": {
+    "checked": 234,
+    "documented_changes": [
+      {
+        "file": "d:/Data/backend/data/reports/phase7_model_registry.json",
+        "note": "intentional Phase 8 chunk 6 change: output keys renamed to the preserved *_phase7_aborted.csv names (content hashes of those files verified equal); see phase8_chunk6_verification.md",
+        "state": "changed"
+      }
+    ],
+    "ok": true,
+    "unexpected_changes": []
+  },
+  "seed": 20260512,
+  "versions": {
+    "duckdb": "2.0.0",
+    "node": "v22.20.0",
+    "npm": "11.8.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.11.0",
+    "ruff": "ruff 0.17.5",
+    "scikit_learn": "1.6.1"
+  }
+}

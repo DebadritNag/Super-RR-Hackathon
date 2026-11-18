@@ -105,9 +105,7 @@ Scans: `tests/test_phase7_no_mock_in_production.py` (backend `app/`: player-name
 | `backend/app/phase7/ai_pipeline.py:41` | `POOLED_RELIABILITY = 0.37`, the Phase 6 finding quoted in the old banner | retained: documented constant of the aborted Phase 7 module, not a player value; not used by Phase 8 |
 | `backend/app/phase4/scoring.py`, `eligibility.py` | `PLACEHOLDER_MIN_BALLS` eligibility thresholds | retained: declared Phase 3/4 rule parameters, not data |
 | `backend/data/reports/*_phase7_aborted.*` | old statistical-baseline outputs | retained as preserved history, never served as current |
-| `frontend/src/data/mock/players.ts` (1,320 lines), `auctionData.ts`, `historicalNeeds.ts`, `presets.ts`, `shortlists.ts` | invented player records, scores, auction and squad data | **not removed in this chunk.** 17 components and services import them and the front end has no API call yet, so deleting them now breaks the build. Removal and rewiring to `/api/v1/submission/*` is the scope of chunk 7. This is an open finding until then. |
-| `frontend/src/context/AppContext.tsx:128` | `Math.random()` in a toast id | retained: UI identifier only, not a score; flagged for the chunk 7 scan rules |
-| `frontend/src/features/methodology/MethodologyPage.tsx:55`, `overview/OverviewDashboard.tsx:672` | hardcoded player names and uncertainty claims in prose | open finding for chunk 7 (pages are rewritten) |
+| `frontend/src/data/mock/*` (invented players, auction and squad data), JSON backend snapshots, fallback-to-snapshot logic, `Math.random()` toast id, hardcoded player names in two pages | invented player records, scores and prose | **removed in chunk 7.** The frontend now reads only `/api/v1/submission/*` and the token-protected experimental route. A source search finds no `Math.random` and no `data/mock` directory; the no-hardcoded-data scan test passes. |
 | `backend/tests/**` | synthetic fixtures ("Synthetic 1", "Player 01") | retained as test fixtures |
 
 ## 9. Limits of this audit

@@ -1,0 +1,74 @@
+{
+  "algorithm": "SHA-256",
+  "count": 17,
+  "files": {
+    "ai_pipeline_verification.md": {
+      "bytes": 8528,
+      "sha256": "24a398567b7686b3ff47a28eb06a0ab3cd8d07c2ed615c525563d7246311e190"
+    },
+    "descriptive_batter_profiles.csv": {
+      "bytes": 782600,
+      "sha256": "ac2e78678f2ad6a06481bc0ce1c6705b3911951ac60833b020928d0943fdcd92"
+    },
+    "descriptive_bowler_profiles.csv": {
+      "bytes": 576477,
+      "sha256": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b"
+    },
+    "final_submission_summary.md": {
+      "bytes": 6214,
+      "sha256": "71aa1aa1445365075181a317fa0bfca8e036f22505066bb9d9b8f87e76ebda5c"
+    },
+    "methodology_comparison.md": {
+      "bytes": 15100,
+      "sha256": "7938756ea5b9486c06a95dfcc36112f376707aa40160aaccddf4592ad219c5e1"
+    },
+    "phase8_build_manifest.json": {
+      "bytes": 6307,
+      "sha256": "6c7eaa96d9f0fb56d44825bd7975667f47030850b5abbeff0c172f0ee7e0219e"
+    },
+    "player_selection_explanations.md": {
+      "bytes": 70362,
+      "sha256": "1caade4dc623cba8c0aaf933e458ffb712b7ee147317c1615aae459a87f61724"
+    },
+    "pressure_batters_top10.csv": {
+      "bytes": 18922,
+      "sha256": "95ca197f5b05f5418a4742bdd0e633a03844ad8e2b5124e4c70fc4ea5a343043"
+    },
+    "pressure_batters_top10.json": {
+      "bytes": 66694,
+      "sha256": "0c2430d501cab67e41f28cd1b9985a12ec98358d137e4a7df5b87547f48028cd"
+    },
+    "pressure_bowlers_top10.csv": {
+      "bytes": 19944,
+      "sha256": "0116aab14f42bbb060649a67219b6cb9de038e89f2665d184086b9d12fa9f605"
+    },
+    "pressure_bowlers_top10.json": {
+      "bytes": 69492,
+      "sha256": "2dbc666ba450ffab14088500d2395cae84a88e214bea3094108ae8076742966a"
+    },
+    "pressure_methodology_research.md": {
+      "bytes": 9056,
+      "sha256": "3b05bafc75ca50e8151d3be745e7dccf24f009483389fd33e9376d757f1595bc"
+    },
+    "pressure_top10_status.md": {
+      "bytes": 9432,
+      "sha256": "27c7aea61ca9b12562c3ca5c37ffbbb9a831077951ecaae6de3008b896450a5c"
+    },
+    "submission_executive_summary.md": {
+      "bytes": 2778,
+      "sha256": "c707ec3ed772fcc3f5eb820b2b787b755065b9c6caf30a7df1179965034ff6cf"
+    },
+    "submission_methodology.md": {
+      "bytes": 34586,
+      "sha256": "52bf5e714e4fdc03a8e61da59d210f3045ccc4767a6bda1bafbf11e148aa1e31"
+    },
+    "submission_readiness_audit.md": {
+      "bytes": 5349,
+      "sha256": "7dda380af198fb2ccd625c17ae58ea0f09af5cfa769e719350e0120b8e75b4dc"
+    },
+    "submission_test_report.md": {
+      "bytes": 7414,
+      "sha256": "44fc8c409d999666116af498568082d6dca21a0d92ba3d19b0d6353c82e6c583"
+    }
+  }
+}
