@@ -1,6 +1,7 @@
 """Read-only service behind ``/api/v1/submission/*``.
 
-Sources are the generated Phase 8 report files and the Phase 8 analytical store (opened read-only
+Sources are the generated report files and the analytical store of the configured source (Phase 9
+by default; ``SUPERR_SUBMISSION_SOURCE=phase8`` serves the Phase 8 store and the ``_phase8`` file copies) (opened read-only
 with fixed, parameterised queries; no request value is ever placed in SQL text). Nothing is
 computed from request values except sorting, filtering and percentile ranks of stored profiles.
 Every call builds new response objects.
@@ -10,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import threading
 from pathlib import Path
 from typing import Any
@@ -19,7 +21,7 @@ import numpy as np
 import pandas as pd
 
 from app.api.errors import ApiError
-from app.phase8.constants import PHASE8_DB, REPORTS_DIR
+from app.phase8.constants import PHASE8_DB, PHASE9_DB, REPORTS_DIR
 
 ROLE = {"batters": "batter", "bowlers": "bowler"}
 STATUS_ORDER = ["INSUFFICIENT_EVIDENCE", "EXPLORATORY", "PROVISIONAL", "VALIDATED"]
@@ -175,9 +177,16 @@ class SubmissionService:
         reports: Path | str | None = None,
         db: Path | str | None = None,
         descriptive_reports: Path | str | None = None,
+        source: str | None = None,
     ) -> None:
+        src = (source or os.environ.get("SUPERR_SUBMISSION_SOURCE") or "phase9").lower()
+        if src not in ("phase8", "phase9"):
+            raise ValueError(f"unknown submission source '{src}' (phase8 or phase9)")
+        self.source = src
+        self.prefix = "p9_" if src == "phase9" else "p8_"
+        self.suffix = "" if src == "phase9" else "_phase8"
         self.reports = Path(reports) if reports else REPORTS_DIR
-        self.db = Path(db) if db else PHASE8_DB
+        self.db = Path(db) if db else (PHASE9_DB if src == "phase9" else PHASE8_DB)
         self.descriptive_reports = (
             Path(descriptive_reports) if descriptive_reports else self.reports
         )
@@ -193,6 +202,13 @@ class SubmissionService:
             str(exc) if exc else None,
         )
 
+    def _fn(self, name: str) -> str:
+        """Report file name of the active source (Phase 8 outputs are kept as ``*_phase8`` copies)."""
+        if not self.suffix:
+            return name
+        stem, dot, ext = name.rpartition(".")
+        return f"{stem}{self.suffix}{dot}{ext}"
+
     def query(self, sql: str, params: list[Any] | None = None) -> pd.DataFrame:
         """Fixed SQL text only; values are always bound parameters."""
         try:
@@ -200,17 +216,21 @@ class SubmissionService:
         except (duckdb.Error, OSError) as exc:
             raise self._unavailable("the Phase 8 analytical store", exc) from exc
         try:
-            return con.execute(sql, params or []).df()
+            return con.execute(sql.replace("p8_", self.prefix), params or []).df()
         except duckdb.Error as exc:
             raise self._unavailable("a Phase 8 analytical table", exc) from exc
         finally:
             con.close()
 
     def _csv(self, name: str, base: Path | None = None) -> pd.DataFrame:
-        key = f"{base or self.reports}/{name}"
+        p = (base or self.reports) / self._fn(name)
+        try:
+            stamp = p.stat()
+            key = f"{self.source}|{p}|{stamp.st_mtime_ns}|{stamp.st_size}"
+        except OSError:
+            key = f"{self.source}|{p}"
         with self._lock:
             if key not in self._frames:
-                p = (base or self.reports) / name
                 try:
                     self._frames[key] = pd.read_csv(p)
                 except (OSError, ValueError) as exc:
@@ -237,7 +257,10 @@ class SubmissionService:
         d = self.query(
             "SELECT criteria_sha256, MAX(run_seq) AS run_seq FROM p8_top10_status GROUP BY 1"
         )
-        out: dict[str, Any] = {"phase8_store_file": self.db.name}
+        out: dict[str, Any] = {"phase8_store_file": self.db.name, "submission_source": self.source}
+        man = self.reports / self._fn(f"{self.source}_build_manifest.json")
+        if man.exists():
+            out["manifest_sha256"] = _sha(man)
         if len(d):
             out["criteria_sha256"] = str(d.iloc[0]["criteria_sha256"])
             out["run_seq"] = int(d.iloc[0]["run_seq"])
@@ -271,7 +294,7 @@ class SubmissionService:
             "descriptive_batter_profiles.csv",
             "descriptive_bowler_profiles.csv",
         ):
-            p = self.reports / name
+            p = self.reports / self._fn(name)
             if p.exists():
                 files.append({"name": name, "bytes": p.stat().st_size, "sha256": _sha(p)})
         return {
@@ -416,7 +439,7 @@ class SubmissionService:
             "pressure_top10_status.md",
             "player_selection_explanations.md",
         ):
-            p = self.reports / name
+            p = self.reports / self._fn(name)
             docs.append(
                 {"name": name, "available": p.exists(), "sha256": _sha(p) if p.exists() else None}
             )
@@ -476,7 +499,7 @@ class SubmissionService:
         if p6.exists():
             phase6 = json.loads(p6.read_text(encoding="utf-8"))
         ai = None
-        pa = self.reports / "phase8_ai_verification.json"
+        pa = self.reports / self._fn(f"{self.source}_ai_verification.json")
         if pa.exists():
             ai = json.loads(pa.read_text(encoding="utf-8"))
         return {
@@ -647,16 +670,16 @@ class SubmissionService:
     # ------------------------------------------------------------------ experimental AI
     def experimental_ai(self, role: str) -> dict[str, Any]:
         name = f"experimental_ai_top10_{role}.csv"
-        p = self.reports / name
+        p = self.reports / self._fn(name)
         if not p.exists():
             return {
                 "status_label": "EXPERIMENTAL_NOT_VALIDATED", "caveats": list(BASE_CAVEATS),
                 "data_version": {}, "role": role, "state": "INSUFFICIENT_DATA",
-                "model_note": f"{name} not found; run scripts/phase8_ai_verify.py",
+                "model_note": f"{name} not found; run scripts/phase9_ai_verify.py",
                 "rows": [], "artefacts": [],
             }  # fmt: skip
         d = self._csv(name)
-        meta = self.reports / "phase8_ai_verification.json"
+        meta = self.reports / self._fn(f"{self.source}_ai_verification.json")
         arte = []
         if meta.exists():
             arte = json.loads(meta.read_text(encoding="utf-8")).get("inventory", [])

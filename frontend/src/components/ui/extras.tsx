@@ -2,7 +2,7 @@ import React from 'react';
 import type { RoleKind } from '@/types/submission';
 import { Btn, TableWrap, Th, Td } from './ui';
 import { cn } from '@/lib/utils';
-import { fmt } from '@/lib/utils';
+import { fmt, scrub } from '@/lib/utils';
 
 export const RoleToggle: React.FC<{ role: RoleKind; onChange: (r: RoleKind) => void }> = ({ role, onChange }) => (
   <div role="group" aria-label="Role" className="inline-flex rounded border border-[#8d958f] overflow-hidden">
@@ -49,6 +49,7 @@ export const GenericTable: React.FC<{ rows: Record<string, any>[]; columns?: str
   columns,
   max = 60,
 }) => {
+  rows = scrub(rows);
   if (!rows || rows.length === 0) return <p className="text-sm text-[#4b524d]">No rows returned.</p>;
   const cols = columns ?? Object.keys(rows[0]).slice(0, 14);
   return (

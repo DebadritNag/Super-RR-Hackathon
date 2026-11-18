@@ -1,10 +1,4 @@
-﻿export type StatusLabel =
-  | 'VALIDATED'
-  | 'PROVISIONAL'
-  | 'EXPLORATORY'
-  | 'INSUFFICIENT_EVIDENCE'
-  | 'DESCRIPTIVE_ONLY'
-  | 'EXPERIMENTAL_NOT_VALIDATED';
+﻿export type StatusLabel = string;
 
 export type RoleKind = 'batters' | 'bowlers';
 

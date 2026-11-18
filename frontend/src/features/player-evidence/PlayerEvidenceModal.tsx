@@ -3,7 +3,7 @@ import { X } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Btn, Card, Field, StatusBanner, StatusPill, inputCls, Note } from '@/components/ui/ui';
+import { Async, Btn, Card, Field, inputCls, Note } from '@/components/ui/ui';
 import { PressureRadar } from '@/components/charts/PressureRadar';
 import { fmt, pct } from '@/lib/utils';
 import type { RoleKind } from '@/types/submission';
@@ -69,11 +69,10 @@ export const PlayerEvidenceModal: React.FC = () => {
                 <div>
                   <h2 className="text-xl font-bold">{d.player_name}</h2>
                   <div className="flex gap-2 items-center mt-1 text-sm">
-                    <StatusPill status={d.selection_state} />
+                    <span className="rounded bg-[#e9ebe7] px-2 py-0.5 text-xs font-semibold font-mono">{d.selection_state}</span>
                     <span>{d.role}, id {d.player_id}</span>
                   </div>
                 </div>
-                <StatusBanner status={t?.list_status ?? d.status_label} caveats={d.caveats} />
                 {d.ineligibility && (
                   <Card title="Eligibility">
                     <p className="text-sm">{d.ineligibility}</p>
@@ -81,7 +80,7 @@ export const PlayerEvidenceModal: React.FC = () => {
                 )}
                 {t && (
                   <Card title="Submitted-list evidence">
-                    <p className="text-sm mb-3">{t.short_explanation}</p>
+                    {t.short_explanation && <p className="text-sm mb-3">{t.short_explanation}</p>}
                     <dl className="grid grid-cols-[170px_1fr] gap-x-3 gap-y-1 text-sm">
                       <Row k="Rank" v={t.rank} />
                       <Row k="Pressure score" v={`${fmt(t.pressure_score)} (${t.score_unit}), 95% interval ${fmt(t.interval_low)} to ${fmt(t.interval_high)}`} />

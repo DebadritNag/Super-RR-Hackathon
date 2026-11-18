@@ -2,7 +2,7 @@ import React from 'react';
 import type { RoleKind } from '@/types/submission';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Card, IntervalBar, Note, PageHeader, StatusBanner, StatusPill, TableWrap, Th, Td, Btn } from '@/components/ui/ui';
+import { Async, Card, IntervalBar, Note, PageHeader, TableWrap, Th, Td, Btn } from '@/components/ui/ui';
 import { useApp } from '@/context/AppContext';
 import { fmt, pct } from '@/lib/utils';
 
@@ -19,10 +19,9 @@ export const Top10Page: React.FC<{ role: RoleKind }> = ({ role }) => {
           const hi = Math.max(...d.rows.map((r) => r.interval_high));
           return (
             <>
-              <StatusBanner status={d.list_status.list_status} text={d.list_status.banner} caveats={d.caveats} />
               {d.list_status.shortfall && <p className="mb-3 text-sm">Shortfall: {d.list_status.shortfall}</p>}
               <TableWrap>
-                <table className="min-w-[1000px] w-full">
+                <table className="min-w-[960px] w-full">
                   <thead>
                     <tr>
                       <Th>Rank</Th>
@@ -36,7 +35,6 @@ export const Top10Page: React.FC<{ role: RoleKind }> = ({ role }) => {
                       <Th>Top-10 inclusion prob.</Th>
                       <Th>Rank interval</Th>
                       <Th>Evidence class</Th>
-                      <Th>Status</Th>
                     </tr>
                   </thead>
                   <tbody>
@@ -84,9 +82,6 @@ export const Top10Page: React.FC<{ role: RoleKind }> = ({ role }) => {
                           {fmt(r.rank_interval_low, 0)} to {fmt(r.rank_interval_high, 0)}
                         </Td>
                         <Td>{String(r.evidence_class ?? 'unavailable')}</Td>
-                        <Td>
-                          <StatusPill status={r.list_status} />
-                        </Td>
                       </tr>
                     ))}
                   </tbody>
@@ -110,8 +105,6 @@ export const Top10Page: React.FC<{ role: RoleKind }> = ({ role }) => {
                     <dd className="break-words">{d.list_status.rank_basis ?? 'unavailable'}</dd>
                     <dt className="text-[#4b524d]">Eligible</dt>
                     <dd>{d.list_status.n_eligible ?? 'unavailable'}</dd>
-                    <dt className="text-[#4b524d]">Reason for status</dt>
-                    <dd>{d.list_status.reason}</dd>
                   </dl>
                 </Card>
               </div>

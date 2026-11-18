@@ -11,6 +11,7 @@ import type {
   CompareData,
   RoleKind,
 } from '@/types/submission';
+import { scrub } from '@/lib/utils';
 
 const ORIGIN = import.meta.env.VITE_API_ORIGIN || 'http://localhost:8000';
 const BASE = `${ORIGIN}/api/v1`;
@@ -40,7 +41,7 @@ async function get<T>(path: string, headers: Record<string, string> = {}): Promi
     }
     throw new ApiFailure(msg, res.status);
   }
-  return (await res.json()) as T;
+  return scrub((await res.json()) as T);
 }
 
 const qs = (o: Record<string, string | number | undefined | null>) => {

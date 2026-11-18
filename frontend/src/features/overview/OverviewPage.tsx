@@ -1,7 +1,7 @@
 import React from 'react';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Card, PageHeader, StatusBanner, StatusPill, Note } from '@/components/ui/ui';
+import { Async, Card, PageHeader, Note } from '@/components/ui/ui';
 import { GenericTable } from '@/components/ui/extras';
 import { useApp } from '@/context/AppContext';
 import { Btn } from '@/components/ui/ui';
@@ -18,22 +18,9 @@ export const OverviewPage: React.FC = () => {
       <Async state={s}>
         {(d) => (
           <>
-            <StatusBanner status={d.status_label} caveats={d.caveats} />
             <div className="grid gap-4 md:grid-cols-2 mb-4">
               {d.lists.map((l) => (
                 <Card key={l.role} title={`${l.role} list`}>
-                  <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <StatusPill status={l.list_status} />
-                    <span className="text-xs text-[#4b524d]">model validation: {l.model_validation_status}</span>
-                  </div>
-                  {l.banner && (
-                    <details className="mb-2">
-                      <summary className="cursor-pointer select-none text-xs font-medium text-[#246B4B] hover:underline">
-                        Why this status
-                      </summary>
-                      <p className="mt-1 text-xs text-[#3a403c]">{l.banner}</p>
-                    </details>
-                  )}
                   <dl className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
                     <dt className="text-[#4b524d]">Approach</dt>
                     <dd>{l.approach}</dd>
@@ -53,10 +40,10 @@ export const OverviewPage: React.FC = () => {
             <Card title="Approaches compared (split-half reliability, Spearman-Brown corrected)" className="mb-4">
               <GenericTable
                 rows={d.approaches_compared}
-                columns={['role', 'approach', 'sb', 'sb_low', 'sb_high', 'time_sb', 'oot', 'phase6_gate_passed', 'n_eligible', 'indicative_status', 'chosen']}
+                columns={['role', 'approach', 'sb', 'sb_low', 'sb_high', 'time_sb', 'oot', 'phase6_gate_passed', 'n_eligible', 'chosen']}
               />
               <div className="mt-2">
-                <Note>Declared thresholds: 0.5 for PROVISIONAL and 0.7 for VALIDATED. Intervals that include zero mean the reliability is not distinguishable from none.</Note>
+                <Note>Predeclared reliability thresholds: 0.5 (provisional) and 0.7 (validated). Intervals that include zero mean the reliability is not distinguishable from none.</Note>
               </div>
             </Card>
             <Card title="Data provenance" className="mb-4">

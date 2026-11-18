@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { RoleKind } from '@/types/submission';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Field, Note, PageHeader, StatusBanner, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
+import { Async, Field, Note, PageHeader, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
 import { Pager, RoleToggle } from '@/components/ui/extras';
 import { useApp } from '@/context/AppContext';
 import { fmt } from '@/lib/utils';
@@ -35,7 +35,6 @@ export const WhyPage: React.FC = () => {
       <Async state={s}>
         {(d) => (
           <>
-            <StatusBanner status={d.status_label} caveats={d.caveats} />
             <TableWrap>
               <table className="min-w-[760px] w-full">
                 <thead>

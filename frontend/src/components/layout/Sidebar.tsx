@@ -58,7 +58,7 @@ export const Sidebar: React.FC = () => {
         })}
       </ul>
       <div className="p-3 border-t border-[#3a423d] text-xs text-[#c3c9c5]">
-        Rankings are exploratory unless the page says otherwise.
+        Descriptive profiles carry no rank or score.
       </div>
     </nav>
   );

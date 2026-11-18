@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Lock } from 'lucide-react';
 import type { ExperimentalAiData, RoleKind } from '@/types/submission';
 import { ApiFailure, submissionApi } from '@/services/submissionApi';
-import { Btn, Card, ErrorBox, Field, Loading, PageHeader, StatusBanner, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
+import { Btn, Card, ErrorBox, Field, Loading, PageHeader, Notice, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
 import { GenericTable, RoleToggle } from '@/components/ui/extras';
 import { fmt } from '@/lib/utils';
 
@@ -64,7 +64,7 @@ export const AiPredictionsPage: React.FC = () => {
       )}
       {data && (
         <>
-          <StatusBanner status={data.status_label} text={data.model_note} caveats={data.caveats} />
+          <Notice>Experimental model output, not the submitted ranking and not validated. {data.model_note}</Notice>
           {data.state === 'INSUFFICIENT_DATA' ? (
             <p className="text-sm">No rows: insufficient data for this role.</p>
           ) : (
@@ -78,7 +78,6 @@ export const AiPredictionsPage: React.FC = () => {
                     <Th>Actual / expected runs per ball</Th>
                     <Th>Pressure balls</Th>
                     <Th>Pressure matches</Th>
-                    <Th>Status</Th>
                   </tr>
                 </thead>
                 <tbody>
@@ -97,7 +96,6 @@ export const AiPredictionsPage: React.FC = () => {
                       </Td>
                       <Td>{fmt(r.pressure_balls, 0)}</Td>
                       <Td>{fmt(r.pressure_matches, 0)}</Td>
-                      <Td className="text-xs">{r.status_label}</Td>
                     </tr>
                   ))}
                 </tbody>

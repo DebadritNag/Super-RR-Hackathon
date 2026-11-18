@@ -5,11 +5,12 @@ Read-only: GET requests only. Usage: python scripts/check_frontend_api.py
 """
 
 import json
+import os
 import sys
 import urllib.error
 import urllib.request
 
-BASE = "http://127.0.0.1:8000/api/v1"
+BASE = os.environ.get("CHECK_API_BASE", "http://127.0.0.1:8000/api/v1")
 ORIGIN = "http://localhost:5173"
 results = []
 
@@ -51,9 +52,15 @@ for role in ("batters", "bowlers"):
 for role in ("batters", "bowlers"):
     pid = (ids.get(role) or [None])[0]
     if pid:
-        check(f"player {role}", f"/submission/players/{role}/{pid}")
-        check(f"radar {role} IPL", f"/submission/radar/{role}/{pid}?format=IPL")
-        check(f"radar {role} T20I", f"/submission/radar/{role}/{pid}?format=T20I")
+        pl = check(f"player {role}", f"/submission/players/{role}/{pid}")
+        have = {d.get("format") for d in (pl or {}).get("descriptive", [])}
+        for fmt in ("IPL", "T20I"):
+            # a player with no profile in a format is correctly refused with 404
+            check(
+                f"radar {role} {fmt}" + ("" if fmt in have else " (no profile in format -> 404)"),
+                f"/submission/radar/{role}/{pid}?format={fmt}",
+                expect=200 if fmt in have else 404,
+            )
         two = ",".join(str(i) for i in ids[role][:2])
         check(f"compare {role}", f"/submission/compare/{role}?player_ids={two}")
     else:

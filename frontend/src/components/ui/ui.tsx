@@ -28,78 +28,12 @@ export const Card: React.FC<{ title?: string; children: React.ReactNode; classNa
   </section>
 );
 
-const STATUS_STYLE: Record<string, string> = {
-  VALIDATED: 'bg-[#246B4B] text-white',
-  PROVISIONAL: 'bg-[#FDF3EB] text-[#8a4410] border border-[#D97736]',
-  EXPLORATORY: 'bg-[#FDF3EB] text-[#8a4410] border border-[#D97736]',
-  INSUFFICIENT_EVIDENCE: 'bg-[#e9ebe7] text-[#3a403c] border border-[#9aa19c]',
-  DESCRIPTIVE_ONLY: 'bg-[#e9ebe7] text-[#3a403c] border border-[#9aa19c]',
-  EXPERIMENTAL_NOT_VALIDATED: 'bg-[#FDF3EB] text-[#8a4410] border border-[#D97736]',
-};
-
-export const StatusPill: React.FC<{ status?: string | null }> = ({ status }) => (
-  <span
-    className={cn(
-      'inline-block rounded px-2 py-0.5 text-xs font-semibold font-mono whitespace-nowrap',
-      STATUS_STYLE[status ?? ''] ?? 'bg-[#e9ebe7] text-[#3a403c]',
-    )}
-  >
-    {status ?? 'unavailable'}
-  </span>
+/** Plain notice used where text must stay visible (experimental model output). */
+export const Notice: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div role="note" className="mb-4 rounded-md border border-[#d9ddd7] bg-[#f6f7f4] px-3 py-2 text-sm text-[#3a403c]">
+    {children}
+  </div>
 );
-
-/** Plain-language meaning of each status label, shown on one line. */
-const STATUS_SUMMARY: Record<string, string> = {
-  VALIDATED: 'Validated ranking.',
-  PROVISIONAL: 'Provisional ranking: supported, but not yet validated.',
-  EXPLORATORY: 'Best-supported ordering of the data, not a statistically validated ranking.',
-  INSUFFICIENT_EVIDENCE: 'Not enough evidence to rank these players.',
-};
-
-/**
- * Compact status line. The label, explanation and caveats come from the API response;
- * the explanation and caveats sit behind a "Details" toggle to keep pages clean.
- */
-export const StatusBanner: React.FC<{ status: string; text?: string | null; caveats?: string[] }> = ({
-  status,
-  text,
-  caveats,
-}) => {
-  const validated = status === 'VALIDATED';
-  const hasDetails = Boolean(text) || (caveats?.length ?? 0) > 0;
-  const summary = STATUS_SUMMARY[status] ?? '';
-  return (
-    <div
-      role="note"
-      className={cn(
-        'mb-4 rounded-md border px-3 py-2 text-sm text-[#202522]',
-        validated ? 'border-[#cfe3d7] bg-[#f3f8f5]' : 'border-[#f0d9c6] bg-[#fdf8f3]',
-      )}
-    >
-      <div className="flex flex-wrap items-center gap-2">
-        <StatusPill status={status} />
-        {summary && <span className="text-[#3a403c]">{summary}</span>}
-      </div>
-      {hasDetails && (
-        <details className="mt-1 group">
-          <summary className="cursor-pointer select-none text-xs font-medium text-[#246B4B] hover:underline focus-visible:outline-2 focus-visible:outline-[#246B4B] rounded">
-            Details
-          </summary>
-          <div className="mt-2 space-y-1 text-xs text-[#3a403c]">
-            {text && <p>{text}</p>}
-            {caveats && caveats.length > 0 && (
-              <ul className="list-disc pl-5 space-y-0.5">
-                {caveats.map((c) => (
-                  <li key={c}>{c}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </details>
-      )}
-    </div>
-  );
-};
 
 export const Loading: React.FC = () => (
   <div className="flex items-center gap-2 p-6 text-sm text-[#4b524d]" role="status">

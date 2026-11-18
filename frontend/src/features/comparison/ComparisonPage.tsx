@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { RoleKind } from '@/types/submission';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Btn, Card, Field, Note, PageHeader, StatusBanner, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
+import { Async, Btn, Card, Field, Note, PageHeader, TableWrap, Th, Td, inputCls } from '@/components/ui/ui';
 import { RoleToggle } from '@/components/ui/extras';
 import { PressureRadar } from '@/components/charts/PressureRadar';
 import { useApp } from '@/context/AppContext';
@@ -94,9 +94,8 @@ export const ComparisonPage: React.FC = () => {
           {(d) =>
             d && (
               <>
-                <StatusBanner status={d.status_label} caveats={d.caveats} />
                 <Card className="mb-4">
-                  <p className="text-sm font-medium">{d.superiority_note}</p>
+                  {d.superiority_note && <p className="text-sm font-medium">{d.superiority_note}</p>}
                   <p className="text-xs text-[#4b524d] mt-1">Claim status from API: {d.superiority_claim}</p>
                 </Card>
                 <TableWrap>

@@ -2,7 +2,7 @@ import React from 'react';
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { submissionApi } from '@/services/submissionApi';
 import { useApi } from '@/hooks/useApi';
-import { Async, Card, Note, PageHeader, StatusBanner } from '@/components/ui/ui';
+import { Async, Card, Note, PageHeader } from '@/components/ui/ui';
 import { GenericTable } from '@/components/ui/extras';
 
 export const ValidationPage: React.FC = () => {
@@ -13,11 +13,10 @@ export const ValidationPage: React.FC = () => {
       <Async state={s}>
         {(d) => (
           <div className="space-y-4">
-            <StatusBanner status={d.status_label} caveats={d.caveats} />
             <Card title="Split-half reliability (Spearman-Brown corrected)">
               <GenericTable rows={d.reliability} columns={['approach', 'role', 'intensity', 'metric', 'n_players', 'r', 'spearman_brown', 'sb_low', 'sb_high']} />
               <div className="mt-2">
-                <Note>Declared thresholds: 0.5 for PROVISIONAL, 0.7 for VALIDATED. Intervals reaching zero mean reliability is not demonstrated.</Note>
+                <Note>Predeclared reliability thresholds: 0.5 (provisional) and 0.7 (validated). Intervals reaching zero mean reliability is not demonstrated.</Note>
               </div>
             </Card>
             <Card title="Publication gates (old engine, reported unchanged)">
