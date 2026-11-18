@@ -327,4 +327,4 @@ Labels earned in Phase 9: batters EXPLORATORY; bowlers EXPLORATORY. A row never 
 
 **Reproduction.** From `d:/Data/backend` with `PYTHONUTF8=1` and `PYTHONPATH=d:/Data/backend`: `python scripts/run_phase9_pipeline.py` regenerates the p9 tables and lists; `python scripts/phase9_models_check.py`, `python scripts/phase9_ai_verify.py`, `python scripts/run_phase9_docs.py docs` regenerate the checks and this document.
 
-**Versions.** Methodology `phase9_methodology_v1`; criteria `phase8_selection_criteria_v1` (SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`); generated 2026-11-18T08:36:49+00:00.
+**Versions.** Methodology `phase9_methodology_v1`; criteria `phase8_selection_criteria_v1` (SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`); generated 2026-11-18T13:31:34+00:00.

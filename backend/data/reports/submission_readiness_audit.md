@@ -1,6 +1,6 @@
 # Submission readiness audit (Phase 9)
 
-Stamp (UTC): 2026-11-18T08:36:49+00:00.
+Stamp (UTC): 2026-11-18T13:31:34+00:00.
 
 ## 1. Verdict
 
@@ -35,7 +35,7 @@ The same files, plus a SHA-256 manifest and the `phase8/` copies, are in `d:/Dat
 
 ## 3. Verification state
 
-- pytest: no output recorded.
+- pytest: 1483 passed, 4 warnings in 872.52s (0:14:32).
 - ruff check exit 0, ruff format exit 0, npm build exit 0, npm lint exit 0.
 - Protected files: {"checked": 35, "ok": true, "phase8_copies_checked": 18, "phase8_copies_identical_to_pre_phase9": true}.
 
@@ -45,10 +45,10 @@ The same files, plus a SHA-256 manifest and the `phase8/` copies, are in `d:/Dat
 2. **Pressure definition not validated.** P4 is the best available.
 3. **No pristine hold-out.** 2026 is included by owner decision D1; the 2026 model check is not an independent test.
 4. **2026 data rest on an owner attestation**, not an official verification (36 of 42 late-dated T20I matches consistent across sources, 6 single-source, 0 conflicts).
-5. **Not part of this audit state:** API source switch, frontend text removal (decision D2), README and bundle text updates belong to the next Phase 9 chunk and are not yet complete when this file is generated.
+5. **Also done in Phase 9:** API source switch (`SUPERR_SUBMISSION_SOURCE`, Phase 9 by default), frontend status-word removal (decision D2), README update and bundle refresh; details in `.agents/tasks/phase9_chunk2_verification.md`.
 6. **Window floor.** The floor named `min_matches_2025_window` is applied to the 2025-2026 window; a calendar-2025-only variant was not run.
 
 ## 5. Owner actions
 
-1. Restart the backend on port 8000 once the API chunk is done, so it serves the Phase 9 data.
+1. Restart the backend on port 8000 (and reload the dashboard) so it serves the Phase 9 data.
 2. Optionally verify the 42 late-dated T20I matches against an official source.
