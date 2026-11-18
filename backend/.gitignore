@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 data/database/*.duckdb
+# The submission API reads only this store; it is needed for the Render deploy
+!data/database/phase9.duckdb
 data/database/*.wal
 data/staging/
 data/processed/

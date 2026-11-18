@@ -1,0 +1,22 @@
+# Render Blueprint for the SupeRR Selector backend (FastAPI).
+# In Render: New > Blueprint > select this repository.
+services:
+  - type: web
+    name: superr-selector-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/submission/overview
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PYTHONUTF8
+        value: "1"
+      # Your Vercel URL(s), comma-separated, e.g. https://superr-selector.vercel.app
+      - key: SUPERR_CORS_ORIGINS
+        sync: false
+      # Secret for the Experimental AI page; leave unset to keep that page locked.
+      - key: SUPERR_ADMIN_TOKEN
+        generateValue: true

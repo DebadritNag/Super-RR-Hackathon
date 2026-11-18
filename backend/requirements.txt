@@ -2,6 +2,7 @@ fastapi
 uvicorn
 pydantic>=2
 pydantic-settings
+python-dotenv
 sqlalchemy
 pandas
 numpy

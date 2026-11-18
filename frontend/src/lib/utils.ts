@@ -20,9 +20,15 @@ export function pct(v: unknown, digits = 0): string {
 /** Presentation decision D2: API text that carries the retired ranking-status word is never rendered. */
 const RETIRED_WORD = new RegExp(['explor', 'atory'].join(''), 'i');
 
+/** Removes only the sentences that carry the retired word, so the rest of an explanation still shows. */
 export function sanitizeText(v: string | null | undefined): string {
   if (typeof v !== 'string') return '';
-  return RETIRED_WORD.test(v) ? '' : v;
+  if (!RETIRED_WORD.test(v)) return v;
+  return v
+    .split(/(?<=[.;!?])\s+/)
+    .filter((sentence) => !RETIRED_WORD.test(sentence))
+    .join(' ')
+    .trim();
 }
 
 /** Recursively blanks every string of an API payload that carries the retired word (data files are not altered). */

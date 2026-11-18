@@ -9,6 +9,7 @@ routes answer 403 PUBLICATION_GATE_NOT_SATISFIED until every publication gate pa
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 
 from fastapi import APIRouter, FastAPI
@@ -32,6 +33,28 @@ from app.services.descriptive_service import DescriptiveService
 from app.services.phase4_service import PRESETS_FILE, Phase4Service
 from app.services.phase5_service import Phase5Service
 from app.services.submission_service import SubmissionService
+
+
+def _load_dotenv() -> None:
+    """Load ``backend/.env`` for local runs. Variables already set (for example on Render) win,
+    and the file is skipped under pytest so tests never pick up a local admin token."""
+    if "pytest" in sys.modules:
+        return
+    from dotenv import load_dotenv
+
+    load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=False)
+
+
+_load_dotenv()
+
+
+def _cors_origins() -> list[str]:
+    """Local dev origins from config, plus any deployed origins in ``SUPERR_CORS_ORIGINS``
+    (comma-separated, e.g. ``https://my-app.vercel.app``)."""
+    origins = list(load_descriptive_config()["cors_origins"])
+    extra = os.environ.get("SUPERR_CORS_ORIGINS", "")
+    origins += [o.strip().rstrip("/") for o in extra.split(",") if o.strip()]
+    return origins
 
 
 def create_app(
@@ -71,9 +94,9 @@ def create_app(
     install_error_handlers(app)
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=list(load_descriptive_config()["cors_origins"]),
+        allow_origins=_cors_origins(),
         allow_methods=["GET"],
-        allow_headers=["Content-Type"],
+        allow_headers=["Content-Type", "X-Admin-Token"],
     )
     v1 = APIRouter(prefix="/api/v1")
     v1.include_router(routes_phase5.internal)

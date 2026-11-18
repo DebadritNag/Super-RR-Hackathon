@@ -6,21 +6,21 @@
       "counts": {
         "errors": 0,
         "failed": 0,
-        "passed": 0,
+        "passed": 1483,
         "skipped": 0,
-        "warnings": 0,
+        "warnings": 4,
         "xfailed": 0,
         "xpassed": 0
       },
-      "line": "",
-      "seconds": null
+      "line": "1483 passed, 4 warnings in 872.52s (0:14:32)",
+      "seconds": 872.52
     },
     "ruff_check_exit": 0,
     "ruff_format_exit": 0
   },
   "criteria_file_sha256_now": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
   "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
-  "generated_utc": "2026-11-18T08:36:49+00:00",
+  "generated_utc": "2026-11-18T13:31:34+00:00",
   "inputs_sha256": {
     "backend/config/data_quality_restrictions_v1.json": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
     "backend/config/phase4_split_v1.json": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
@@ -74,7 +74,7 @@
     },
     "final_submission_summary.md": {
       "bytes": 1356,
-      "sha256": "3b0d8c4b9f3ff53bcfefc248f9f42956c7f397291dc4397c851789a93139b54e"
+      "sha256": "509e01b592eae12fdfe56201f7a167ee072fbb65783cf7454d3ae0fb46d52a20"
     },
     "methodology_comparison.md": {
       "bytes": 18620,
@@ -126,15 +126,15 @@
     },
     "submission_methodology.md": {
       "bytes": 29159,
-      "sha256": "e6677fb08d7df4ae0b58d8407f222e51bad2a9f009ca0b6692d8520f7517bbdb"
+      "sha256": "db67ac6c2787872c06be05724eb3dbf5913c40bf4535bd7112ab8786b7074c2e"
     },
     "submission_readiness_audit.md": {
-      "bytes": 3505,
-      "sha256": "2558750a02a2dd08014fbaa501ff897457b739cd896e47cfd3c00738185ec1f1"
+      "bytes": 3552,
+      "sha256": "e9dedb13f6eeeabcf53d96dfda204090ab30e0a5ccec96f480d8cd11823f489f"
     },
     "submission_test_report.md": {
-      "bytes": 5636,
-      "sha256": "ccf8ce622d69641d5a5cd6fc36ea9bbaa6aa2d74b0c4475e604b6645bd337ee8"
+      "bytes": 6227,
+      "sha256": "a64981024c36d89cfb4b48aac2d6273acd7f2ed8f14babfb809c7633bd3c13bc"
     }
   },
   "owner_decisions": {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
-import { NAV_ITEMS } from './Sidebar';
+import { NAV_ITEMS } from './navItems';
 
 export const Topbar: React.FC = () => {
   const { activeSection, setIsMobileDrawerOpen } = useApp();
