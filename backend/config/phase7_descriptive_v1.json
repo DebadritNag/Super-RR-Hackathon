@@ -35,5 +35,5 @@
     "label": "DESCRIPTIVE_EXPERIMENTAL_COUNT_ONLY",
     "note": "Counts of deliveries falling into the provisional pressure-context definition. Not a pressure measure."
   },
-  "cors_origins": ["http://localhost:5173", "http://127.0.0.1:5173"]
+  "cors_origins": ["http://localhost:5173", "http://127.0.0.1:5173", "https://super-rr-hackathon.vercel.app"]
 }
