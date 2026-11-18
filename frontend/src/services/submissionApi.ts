@@ -13,7 +13,8 @@ import type {
 } from '@/types/submission';
 import { scrub } from '@/lib/utils';
 
-const ORIGIN = import.meta.env.VITE_API_ORIGIN || 'http://localhost:8000';
+// Trailing slashes are removed so "https://host/" does not produce "https://host//api/v1".
+const ORIGIN = (import.meta.env.VITE_API_ORIGIN || 'http://localhost:8000').trim().replace(/\/+$/, '');
 const BASE = `${ORIGIN}/api/v1`;
 
 export class ApiFailure extends Error {
@@ -67,6 +68,24 @@ export const submissionApi = {
     get<CompareData>(`/submission/compare/${role}${qs({ player_ids: ids.join(','), format })}`),
   radar: (role: RoleKind, id: number, format: string) =>
     get<RadarData>(`/submission/radar/${role}/${id}${qs({ format })}`),
+  /** Every reason row for a role (the API pages at 200; the lists are small). */
+  whyAll: async (role: RoleKind, kind?: string): Promise<WhyData> => {
+    const first = await get<WhyData>(`/submission/why/${role}${qs({ kind, limit: 200, offset: 0 })}`);
+    const rows = [...first.rows];
+    for (let off = 200; off < first.page.total; off += 200) {
+      rows.push(...(await get<WhyData>(`/submission/why/${role}${qs({ kind, limit: 200, offset: off })}`)).rows);
+    }
+    return { ...first, rows };
+  },
+  /** Every profile row matching the filters, so a player's IPL and T20I rows can be grouped. */
+  profilesAll: async (role: RoleKind, o: { format?: string; q?: string } = {}): Promise<ProfilesData> => {
+    const first = await get<ProfilesData>(`/submission/profiles/${role}${qs({ ...o, limit: 200, offset: 0 })}`);
+    const rows = [...first.rows];
+    for (let off = 200; off < first.page.total; off += 200) {
+      rows.push(...(await get<ProfilesData>(`/submission/profiles/${role}${qs({ ...o, limit: 200, offset: off })}`)).rows);
+    }
+    return { ...first, rows };
+  },
   // The token is typed by the user at runtime and is never stored or bundled.
   experimentalAi: (role: RoleKind, token: string) =>
     get<ExperimentalAiData>(`/internal/experimental-ai/${role}`, { 'X-Admin-Token': token }),
