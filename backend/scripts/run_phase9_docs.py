@@ -1296,7 +1296,7 @@ def doc_test_report(f: Facts) -> str:
     a("## Not covered by automated tests")
     a("")
     a(
-        "The frontend has no unit tests; its Phase 9 changes (removal of the status words) belong to the next chunk and are checked there."
+        "The frontend has no unit tests; its Phase 9 changes (removal of the status words, scrubbing of API text) are covered by `tests/test_phase9_chunk2.py` (source scan), the build, the lint and a rendered-page check recorded in `.agents/tasks/phase9_chunk2_verification.md`."
     )
     return "\n".join(L)
 
@@ -1354,7 +1354,7 @@ def doc_audit(f: Facts) -> str:
         "4. **2026 data rest on an owner attestation**, not an official verification (36 of 42 late-dated T20I matches consistent across sources, 6 single-source, 0 conflicts)."
     )
     a(
-        "5. **Not part of this audit state:** API source switch, frontend text removal (decision D2), README and bundle text updates belong to the next Phase 9 chunk and are not yet complete when this file is generated."
+        "5. **Also done in Phase 9:** API source switch (`SUPERR_SUBMISSION_SOURCE`, Phase 9 by default), frontend status-word removal (decision D2), README update and bundle refresh; details in `.agents/tasks/phase9_chunk2_verification.md`."
     )
     a(
         "6. **Window floor.** The floor named `min_matches_2025_window` is applied to the 2025-2026 window; a calendar-2025-only variant was not run."
@@ -1363,7 +1363,7 @@ def doc_audit(f: Facts) -> str:
     a("## 5. Owner actions")
     a("")
     a(
-        "1. Restart the backend on port 8000 once the API chunk is done, so it serves the Phase 9 data."
+        "1. Restart the backend on port 8000 (and reload the dashboard) so it serves the Phase 9 data."
     )
     a("2. Optionally verify the 42 late-dated T20I matches against an official source.")
     return "\n".join(L)

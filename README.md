@@ -10,7 +10,7 @@ The challenge asks for three things:
 
 This repository contains the full pipeline: data ingestion and auditing, a pre-delivery match-state engine, descriptive player profiles, three pressure methodologies compared under criteria fixed in advance, trained expected-outcome and win-probability models, the two Top 10 lists with uncertainty, a FastAPI backend and a React dashboard.
 
-> **Status of the results.** Both Top 10 lists are labelled **EXPLORATORY**: they are the best-supported ordering the data allow, not a statistically validated ranking. The reasons are explained in [Reliability](#9-reliability-how-far-the-results-can-be-trusted). The label was earned under thresholds written down and hashed before any player was ranked.
+> **Status of the results (Phase 9).** The data now cover 22 January 2022 to 1 November 2026, including all 2026 matches by owner decision. The evidence-based label of both Top 10 lists is still **EXPLORATORY** in the data files: the split-half reliability (batters 0.019, bowlers 0.319) is below the 0.5 threshold written down and hashed before any player was ranked. The dashboard no longer shows the label (owner presentation decision D2); the label is not replaced by a higher one. See [Reliability](#9-reliability-how-far-the-results-can-be-trusted) and `backend/data/reports/phase9_owner_decisions.md`.
 
 ---
 
@@ -34,42 +34,43 @@ This repository contains the full pipeline: data ingestion and auditing, a pre-d
 
 ## 1. Results
 
-Window: matches from 22 January 2022 to 19 December 2025 (the 2026 matches are held out, see [section 8](#8-how-the-models-were-trained)). Higher score is better. "Top-10 probability" is the share of 1,000 resamples of whole matches in which the player stays in the Top 10. The "rank interval" is the 95% range of the player's rank across those resamples.
+Window: matches from 22 January 2022 to 1 November 2026, including the 144 matches of 2026 (IPL 74, T20I 70) by owner decision ([section 8](#8-how-the-models-were-trained)). Higher score is better. "Top-10 probability" is the share of 1,000 resamples of whole matches in which the player stays in the Top 10. The "rank interval" is the 95% range of the player's rank across those resamples. The Phase 8 lists (data to 19 December 2025) are kept as `*_phase8` files; the comparison is in `backend/data/reports/phase9_comparison.md`.
 
 ### Top 10 batters under pressure (Approach A: context-adjusted performance)
 
 | Rank | Player | Pressure innings | Pressure balls | Top-10 probability | Rank interval |
 |---|---|---|---|---|---|
-| 1 | Suryakumar Yadav | 72 | 1,247 | 91% | 1 to 17 |
-| 2 | Tim David | 74 | 961 | 83% | 1 to 33 |
-| 3 | Heinrich Klaasen | 48 | 870 | 60% | 2 to 42 |
-| 4 | Romario Shepherd | 53 | 613 | 63% | 1 to 58 |
-| 5 | Andre Russell | 57 | 785 | 52% | 1 to 80 |
-| 6 | Tristan Stubbs | 46 | 763 | 42% | 2 to 86 |
-| 7 | David Miller | 65 | 1,068 | 33% | 2 to 110 |
-| 8 | Rinku Singh | 63 | 966 | 31% | 2 to 108 |
-| 9 | Nicholas Pooran | 70 | 1,130 | 23% | 2 to 123 |
-| 10 | Mark Chapman | 32 | 503 | 41% | 1 to 114 |
+| 1 | Suryakumar Yadav | 79 | 1,369 | 88% | 1 to 22 |
+| 2 | Tim David | 91 | 1,146 | 87% | 1 to 30 |
+| 3 | Heinrich Klaasen | 62 | 1,181 | 51% | 2 to 51 |
+| 4 | David Miller | 75 | 1,210 | 38% | 2 to 96 |
+| 5 | Rinku Singh | 79 | 1,242 | 38% | 2 to 107 |
+| 6 | Andre Russell | 57 | 785 | 51% | 1 to 92 |
+| 7 | Romario Shepherd | 64 | 696 | 54% | 1 to 67 |
+| 8 | Tristan Stubbs | 58 | 956 | 38% | 2 to 84 |
+| 9 | Shreyas Iyer | 61 | 975 | 30% | 2 to 125 |
+| 10 | Shivam Dube | 83 | 1,343 | 16% | 4 to 116 |
 
 ### Top 10 bowlers under pressure (Approach C: Pressure Response Index)
 
 | Rank | Player | Pressure spells | Pressure balls | Top-10 probability | Rank interval |
 |---|---|---|---|---|---|
-| 1 | Matheesha Pathirana | 46 | 930 | 86% | 1 to 26 |
-| 2 | Kuldeep Yadav | 64 | 973 | 56% | 1 to 51 |
-| 3 | Jasprit Bumrah | 51 | 636 | 56% | 1 to 56 |
-| 4 | Varun Chakravarthy | 69 | 999 | 45% | 1 to 64 |
-| 5 | Sunil Narine | 48 | 713 | 57% | 1 to 58 |
-| 6 | Akeal Hosein | 47 | 486 | 54% | 1 to 56 |
-| 7 | Rashid Khan | 88 | 1,340 | 27% | 2 to 75 |
-| 8 | Mohammad Nawaz | 40 | 467 | 49% | 1 to 69 |
-| 9 | Wanindu Hasaranga | 70 | 1,069 | 14% | 3 to 107 |
-| 10 | Abbas Afridi | 19 | 223 | 44% | 1 to 81 |
+| 1 | Sunil Narine | 61 | 849 | 98% | 1 to 10 |
+| 2 | Matheesha Pathirana | 48 | 958 | 86% | 1 to 22 |
+| 3 | Kuldeep Yadav | 78 | 1,173 | 64% | 1 to 41 |
+| 4 | Jasprit Bumrah | 69 | 866 | 70% | 1 to 35 |
+| 5 | Varun Chakravarthy | 85 | 1,224 | 51% | 2 to 47 |
+| 6 | Abrar Ahmed | 34 | 447 | 48% | 1 to 53 |
+| 7 | Rashid Khan | 114 | 1,707 | 17% | 5 to 66 |
+| 8 | Akeal Hosein | 57 | 568 | 35% | 2 to 66 |
+| 9 | Wanindu Hasaranga | 77 | 1,152 | 20% | 4 to 70 |
+| 10 | Mohammad Nawaz | 44 | 540 | 36% | 2 to 73 |
 
 **How to read the lists.**
 
-- The top two or three in each list are fairly stable (Top-10 probability 56% to 91%). Below that the rank intervals are wide, so the exact order of ranks 4 to 10 should not be taken literally.
-- A high rank means the player beat the model's expectation in pressure situations. It does not always mean the player improved on their own normal level: Tim David, Nicholas Pooran and Rashid Khan perform slightly below their own normal-play baseline under pressure. Each player's explanation says which case applies.
+- Only the top two batters (Top-10 probability 88% and 87%) and the top two bowlers (98% and 86%) are fairly stable. Below that the rank intervals are wide, so the exact order of the other places should not be taken literally.
+- Against Phase 8, 8 of 10 batters and 9 of 10 bowlers are the same players. Shreyas Iyer and Shivam Dube entered the batter list; Nicholas Pooran and Mark Chapman left. Abrar Ahmed entered the bowler list; Abbas Afridi left. Sunil Narine moved from 5 to 1.
+- A high rank means the player beat the model's expectation in pressure situations. It does not always mean the player improved on their own normal level. Each player's explanation says which case applies.
 - Full columns (scores, intervals, normal baseline, pressure-versus-baseline difference, IPL and T20I split, flags, versions) are in `backend/data/reports/pressure_batters_top10.csv` and `pressure_bowlers_top10.csv`.
 
 ---
@@ -93,7 +94,7 @@ Key data decisions, all checked during the audit phase:
 - **`runs` is runs off the bat only** (verified against Cricsheet batter runs in 1,488 of 1,504 innings).
 - **Legal ball rule:** a ball is legal unless `extras_type` is `wide`, `Overstep` (no-ball) or `other`. This matches Cricsheet legal-ball counts in 1,497 of 1,504 innings.
 - **Super Overs excluded.** Innings 3 and 4 (six matches) are kept in the database but excluded from regulation calculations.
-- **42 late-dated T20I matches** remain excluded from primary evaluation until their dates are officially verified. Original dates are never altered.
+- **42 late-dated T20I matches** are included from Phase 9 onward by owner attestation (decision D1; not an official verification, 6 of the 42 are single-source). Original dates are never altered; the Phase 8 outputs, which excluded them, are kept as `*_phase8` files.
 - **Not used as sources:** `matches 2026.csv`, `*_stats2026.csv`, `ipl squad.csv` for analysis, and the Cricsheet JSON folders. Cricsheet was used only to *validate* the official data (run semantics, Super Over identification), never as a feature, model input or ranking source.
 - **Missing values are never treated as zero.** All data-quality issues (26 in total) are kept in a register (`backend/config/data_quality_restrictions_v1.json`) and applied only to the metrics they affect. No match is deleted globally.
 
@@ -152,7 +153,11 @@ To rebuild the final results from the data:
 ```powershell
 cd d:\Data\backend
 $env:PYTHONUTF8 = 1
-python scripts\run_phase8.py        # deterministic, fixed seed 20260512
+$env:SUPERR_PHASE = "phase9"
+python scripts\run_phase9_pipeline.py   # Phase 9 (current): deterministic, fixed seed 20260512
+python scripts\run_phase9_docs.py docs  # reports, manifest and submission bundle
+# python scripts\run_phase8.py          # Phase 8 pipeline (kept for reference)
+# API source: SUPERR_SUBMISSION_SOURCE=phase9 (default) or phase8
 python -m pytest -q                 # full test suite
 python scripts\check_frontend_api.py   # checks every endpoint the dashboard uses (backend must be running)
 ```
@@ -177,7 +182,7 @@ The reason: early in the project (Phase 6) the pressure measure was shown to be 
 
 ### How it works
 
-1. **Window and scope.** Matches from 2022-01-22 to 2025-12-19, IPL and T20I kept separate (never pooled), innings 1 and 2 only.
+1. **Window and scope.** Matches from 2022-01-22 to 2026-11-01 (including 2026), IPL and T20I kept separate (never pooled), innings 1 and 2 only.
 2. **Cricket definitions** (verified in the audit):
    - *Ball faced:* any delivery to the striker except a wide or the penalty row.
    - *Legal ball:* excludes wides, no-balls and the unverified `other` extras.
@@ -261,9 +266,9 @@ Three genuinely different approaches were built and compared. Batters and bowler
 
 The selection rules were written to `backend/config/phase8_selection_criteria_v1.json` and its SHA-256 hash (`9258aa6d…`) was logged **before** any comparison result existed. The hash was checked before every comparison step. The rule uses only approach-level evidence: split-half and out-of-time reliability, inclusion stability and an explainability checklist. It never looks at which players an approach promotes.
 
-- **Batters:** Approach A was chosen. A and C were within 0.001 on reliability, so this is not a meaningful performance difference.
-- **Bowlers:** Approach C was chosen, leading on split-half and out-of-time reliability.
-- **Approach B** was the weakest for both roles.
+- **Batters:** Approach A was chosen. No approach had a split-half lower bound above 0, so the rule fell to the highest split-half point estimate (A: 0.019).
+- **Bowlers:** Approach C was chosen by the same path (C: 0.319, ahead of A: 0.120).
+- **Approach B** was the weakest for both roles. The intensity-selection procedure, rerun unchanged on the new data, again picked P4 as the best available definition (it does not pass the validity rule).
 
 Eligibility floors (also declared in advance) are:
 
@@ -271,9 +276,9 @@ Eligibility floors (also declared in advance) are:
 - at least 60 balls faced or 72 bowled;
 - at least 8 high-intensity innings or spells;
 - an effective sample of at least 60;
-- at least 4 matches in 2025.
+- at least 4 matches in the recent window (the criteria file names it `min_matches_2025_window`; in Phase 9 it is applied to 2025 and 2026 together).
 
-225 batters and 221 bowlers qualified. Players below a floor are marked `INSUFFICIENT_EVIDENCE`, which says nothing about their quality, and no list is padded.
+256 batters and 156 bowlers qualified. Players below a floor are marked `INSUFFICIENT_EVIDENCE`, which says nothing about their quality, and no list is padded.
 
 **IPL and T20I.** The default 70:30 weighting from earlier phases was not assumed. The project tested whether players' IPL and T20I results agree enough to justify a single combined score. They do not: the cross-format correlation is close to 0 for every approach. Each player-innings is therefore weighted by its own precision, with no fixed format split, the result is flagged `FORMAT_COMBINATION_UNSUPPORTED`, and IPL and T20I contributions and ranks are shown separately for every listed player.
 
@@ -289,9 +294,11 @@ The split is chronological at match level, so every delivery of a match stays in
 
 | Period | Dates | Use |
 |---|---|---|
-| TRAIN | up to 2024-12-31 (487 matches) | Fit all models, baselines and shrinkage parameters |
-| VALIDATION | calendar 2025 (188 matches) | Check calibration and accuracy, compare approaches |
-| TEST | 2026 onward | **Not used.** It was opened once in an earlier phase, so it is no longer a pristine hold-out. It is not used for tuning and no out-of-sample claim rests on it |
+| TRAIN | up to 2024-12-31 | Fit all models, baselines and shrinkage parameters in Phase 8 |
+| VALIDATION | calendar 2025 | Check calibration and accuracy, compare approaches in Phase 8 |
+| TEST | 2026 | **Released by owner decision D1 (Phase 9).** The 2026 data are an owner attestation that all matches, including the 42 late-dated T20I matches, are genuine; they are not an official third-party verification (cross-source check: 36 consistent, 6 single-source, 0 conflicts). The release is logged in `backend/data/reports/phase9_lock_release_log.json`. **No pristine hold-out remains.** |
+
+**Phase 9 training scheme.** The expected-outcome models and the win-probability models W1 and W2 were refitted on matches up to 2025-12-31 with the same learners and hyperparameters as Phase 8 (no new tuning). Player scoring covers the whole window: matches up to 2025 are scored out of fold (`match_id % 5`), and 2026 balls are scored by the refitted models, so no ball is scored by a model that saw its match. Artefacts are saved as `backend/data/models/p9_*.joblib` and `.json`; the `p8_*` artefacts are untouched. 137 of the 144 matches of 2026 contribute scored deliveries (31,996 of 33,086); the rest are removed by the existing restrictions (unreconstructable DLS targets, innings 3 and 4 and Super Over rows, out-of-scope competition).
 
 ### Expected-outcome models (used by Approaches A and C)
 
@@ -299,26 +306,26 @@ The split is chronological at match level, so every delivery of a match stays in
 - **Targets (eight models):** batter runs, batter dismissal, dot ball and boundary, and the same four from the bowler's side.
 - **Features (pre-delivery only):** innings and chase flag, score and wickets before the ball, balls bowled and remaining, innings length, current and required run rate, runs required, phase, batting order, the batter's and bowler's earlier figures in the innings, competition type, stage, knockout flag, and team-strength and par estimates built from **strictly earlier matches only**.
 - **Features never used:** player identity and any outcome column. The models are player-blind on purpose: they describe what a typical player would do in that situation.
-- **Leakage control:** TRAIN balls are scored out of fold (by match), so no ball is predicted by a model that saw its own match.
-- **Validation results:** the models beat a constant prediction by 1.5% to 3.1%. For example, the batter-runs model has a VALIDATION RMSE of 1.729 against 1.757 for the constant. Ball outcomes are mostly chance given the situation, which limits how much of any residual can be credited to the player.
+- **Leakage control:** balls up to 2025 are scored out of fold (by match) and 2026 balls by the models fitted on earlier matches, so no ball is predicted by a model that saw its own match.
+- **2026 out-of-time check** (data previously held out, released by owner decision; nothing was tuned on it): the models beat a constant prediction by 1.5% to 3.2%. For example, the batter-runs model has an RMSE of 1.794 against 1.825 for the constant. Ball outcomes are mostly chance given the situation, which limits how much of any residual can be credited to the player.
 
 ### Win-probability models (used by Approach B)
 
 - **Algorithm:** `HistGradientBoostingClassifier`.
 - **W1** (first innings): predicts whether the batting side wins, from score, wickets, balls remaining, run rate, projected total and par.
 - **W2** (chase): predicts whether the chasing side wins, from runs required, balls remaining, wickets remaining and required and current run rate.
-- **VALIDATION results:**
+- **2026 out-of-time check** (not used for tuning):
 
 | Model | Brier score | Constant baseline | Logistic baseline | Calibration slope |
 |---|---|---|---|---|
-| W1 (first innings) | 0.215 | 0.251 | 0.223 | 0.886 |
-| W2 (chase) | 0.117 | 0.251 | 0.122 | 1.134 |
+| W1 (first innings) | 0.239 | 0.252 | 0.242 | 0.621 |
+| W2 (chase) | 0.123 | 0.254 | 0.135 | 1.076 |
 
-Both beat a constant and a logistic baseline and passed the declared calibration checks. Within TRAIN, the first-innings model is over-confident (out-of-fold slope 0.57), so first-innings win-probability results are reported with that caveat.
+Both beat a constant and a logistic baseline. W2 passes the declared calibration gate. W1 fails the slope gate (0.621 against a declared range of 0.8 to 1.2), so, by the unchanged Approach B rule, first-innings win-probability credit is withheld (`INNINGS1_WP_NOT_RELIABLE`).
 
 ### Model files and verification
 
-All 9 trained models are saved in `backend/data/models/` as `.joblib` files. Each has a `.json` metadata file with the algorithm, parameters, features, target, training period, row counts, metrics, data hash, seed and timestamp. Retraining from scratch reproduced the stored models exactly (maximum prediction difference 0.0). Details: `backend/data/reports/ai_pipeline_verification.md`.
+All 9 trained models are saved in `backend/data/models/` as `.joblib` files. Each has a `.json` metadata file with the algorithm, parameters, features, target, training period, row counts, metrics, data hash, seed and timestamp. Retraining from scratch reproduced the stored Phase 9 models exactly (10 of 10 identical, maximum prediction difference 0.0). Details: `backend/data/reports/ai_pipeline_verification.md`.
 
 An **experimental AI Top 10**, ranked directly on model outputs, is kept separate from the submitted lists and served only through the token-protected page. Its reliability is low (split-half about 0.2). A working model pipeline shows that training and prediction run; it does not show that players can be ranked reliably.
 
@@ -329,24 +336,24 @@ An **experimental AI Top 10**, ranked directly on model outputs, is kept separat
 The project tested whether each method gives the **same order twice**.
 
 - **Split-half test:** each player's matches are split into two halves (odd and even matches by date, and early against late), each half is scored independently and the two orders are compared. The correlation is corrected to full length (Spearman-Brown) and its interval comes from a bootstrap over matches.
-- **Out-of-time test:** TRAIN-period estimates are correlated with VALIDATION-period estimates.
+- **Out-of-time test:** estimates from 2022 to 2024 are correlated with estimates from 2025 and 2026.
 
 | Role (submitted approach) | Split-half reliability | 95% interval | Out-of-time correlation |
 |---|---|---|---|
-| Batters (A) | 0.057 | −0.22 to 0.36 | 0.199 |
-| Bowlers (C) | 0.267 | −0.08 to 0.39 | 0.199 |
+| Batters (A) | 0.019 | −0.18 to 0.36 | 0.121 (lower bound −0.054) |
+| Bowlers (C) | 0.319 | −0.11 to 0.39 | 0.218 (lower bound 0.059) |
 
-The thresholds declared in advance were **0.5 for PROVISIONAL** and **0.7 for VALIDATED**. Both lists fall well short and both intervals include 0, so both are **EXPLORATORY**.
+The thresholds declared in advance were **0.5 for PROVISIONAL** and **0.7 for VALIDATED**. Both lists fall short of 0.5 and both intervals include 0, so under those thresholds both lists earn the label **EXPLORATORY** in the data files. The label is not shown on the dashboard (decision D2), and no threshold, floor or definition was changed.
 
 The variance between players is also tiny compared with ball-to-ball noise. None of the three approaches passes the 0.5 data-weight check carried over from earlier phases, and that check was not lowered.
 
-**The honest conclusion.** Four seasons of ball-by-ball data do not separate players on pressure performance with statistical confidence. The lists are a transparent, reproducible description of who beat the expectation most in difficult situations from 2022 to 2025, with every player's evidence shown. They are not proof that these players are reliably better under pressure than those just below them.
+**The honest conclusion.** Four seasons of ball-by-ball data do not separate players on pressure performance with statistical confidence. The lists are a transparent, reproducible description of who beat the expectation most in difficult situations from 2022 to 2026, with every player's evidence shown. They are not proof that these players are reliably better under pressure than those just below them.
 
 ### Sensitivity
 
-- **Stable** to the eligibility floors: halving or doubling them keeps the same Top 10.
-- **Moderately stable** to format (IPL-only and T20I-only) and calendar window.
-- **Changes substantially** with the pressure definition, the shrinkage assumption and the components used.
+- **Stable** to the eligibility floors: halving or doubling them keeps 9 or 10 of the same Top 10 players for both roles.
+- **Moderately stable** to format (IPL-only and T20I-only) and calendar window (top-10 overlap 1 to 7 of 10).
+- **Changes substantially** with the pressure definition (batter top-10 overlap 0 to 4 of 10), the ordering assumption and the components used.
 
 The full tables are in `submission_methodology.md`, section 11.
 
@@ -364,6 +371,7 @@ The full tables are in `submission_methodology.md`, section 11.
 | 5 | Classification (capped status kept as Verified / Derived / Unknown), date verification, publication gates, filter-driven ranking engine |
 | 6 | Reliability investigation: the original percentile-cutoff pressure measure could not separate players (between-player variance at the floor in all 48 contexts) |
 | 7 | Submission finalisation and descriptive profiles (recruitment and retention work was later dropped after the organiser's scope clarification) |
+| 9 | 2026 matches added by owner decision (window to 2026-11-01), models refitted, lists regenerated, frontend status labels removed, API served from `p9_*` tables |
 | 8 | Independent methodology: continuous pressure intensity, gradient-boosting expected outcomes, win-probability models, three approaches compared under hashed criteria, final Top 10 lists, dashboard |
 
 Phase 8 deliberately tried a richer method to see whether the Phase 6 finding could be overturned. The models improved technically, but the central finding held. The full account of what was tried and why is in `backend/data/reports/pressure_methodology_research.md`.
@@ -372,13 +380,14 @@ Phase 8 deliberately tried a richer method to see whether the Phase 6 finding co
 
 ## 11. Limitations
 
-- **No approach reached the PROVISIONAL threshold.** Rank orders, especially below the top three, are not shown to separate players beyond noise.
+- **No approach reached the PROVISIONAL threshold**, also after adding 2026. Rank orders, especially below the top three, are not shown to separate players beyond noise.
 - **The pressure definition is the best available, not validated.**
 - **Top 10 membership depends on choices.** It changes with the pressure definition and the shrinkage assumption.
 - **The bowler index rests on consistency.** It reflects how often a bowler beat expectation, not the size of their impact.
 - **Formats are not combined into one skill.** IPL and T20I results are too weakly related.
 - **Expected-outcome models explain little.** Each ball's outcome is largely chance given the situation.
-- **Some matches are left out.** 2026 matches are not used, the 42 late-dated T20I matches are excluded pending verification, and DLS rows that cannot be reconstructed are excluded without imputing values.
+- **No pristine hold-out remains.** The 2026 out-of-time check used data released by owner decision, and the 2026 data are an owner attestation, not an official verification (6 of the 42 late-dated T20I matches are single-source).
+- **Some matches are left out.** 7 of the 144 matches of 2026 contribute no scored deliveries, and DLS rows that cannot be reconstructed are excluded without imputing values.
 - **Capped status is not authoritative.** No official cap-status source was available, so it stays Derived or Unknown, never guessed.
 - **The dashboard has no frontend unit tests.** It was checked through the build, lint and a live API connection check.
 
@@ -386,7 +395,7 @@ Phase 8 deliberately tried a richer method to see whether the Phase 6 finding co
 
 ## 12. Testing and reproducibility
 
-- **Backend tests.** The suite has about 1,440 pytest tests. They cover:
+- **Backend tests.** The suite has about 1,490 pytest tests. They cover:
   - cricket calculations, legal balls and extras;
   - pre-delivery state and leakage;
   - chronological split integrity, attribution rules, shrinkage and reliability estimators;
@@ -394,7 +403,7 @@ Phase 8 deliberately tried a richer method to see whether the Phase 6 finding co
   - API schemas and token protection, the absence of hard-coded data, and preservation of protected files.
 - **Lint.** `ruff check` and `ruff format --check` are clean. The frontend `npm run build` and `npm run lint` pass.
 - **Determinism.** All random steps use seed 20260512, and rerunning the pipeline reproduces the outputs byte for byte.
-- **Provenance.** Every output row carries the methodology version, data-version hashes, criteria hash and generation time. `backend/data/reports/phase8_build_manifest.json` records input hashes and output provenance. The `submission/` folder has a SHA-256 manifest of every submitted file.
+- **Provenance.** Every output row carries the methodology version, data-version hashes, criteria hash and generation time. `backend/data/reports/phase9_build_manifest.json` records input hashes and output provenance. The `submission/` folder has a SHA-256 manifest of every submitted file.
 
 ---
 
@@ -407,7 +416,8 @@ All under `backend/data/reports/` (copies of the submission files are in `submis
 | `submission_methodology.md` | Full methodology report for judges, with technical detail |
 | `submission_executive_summary.md` | One-page plain-English summary |
 | `pressure_batters_top10.csv` / `pressure_bowlers_top10.csv` | The two submitted lists (JSON versions alongside) |
-| `pressure_top10_status.md` | What the EXPLORATORY status means for each list |
+| `pressure_top10_status.md` | The earned label and reliability thresholds for each list |
+| `phase9_owner_decisions.md` / `phase9_comparison.md` | Owner decisions D1 and D2; Phase 8 against Phase 9 comparison |
 | `player_selection_explanations.md` | Evidence for every listed player, plus near-misses and exclusions |
 | `methodology_comparison.md` | Approaches A, B and C compared under the predeclared criteria |
 | `pressure_methodology_research.md` | Research narrative: what was tried, what failed and why |

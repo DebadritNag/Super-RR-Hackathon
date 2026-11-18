@@ -25,7 +25,7 @@ export const ValidationPage: React.FC = () => {
             <Card title="Approach gates">
               <GenericTable rows={d.gates} />
             </Card>
-            <Card title="Win-probability model (validation year)">
+            <Card title="Win-probability model (2026 out-of-time check)">
               <GenericTable rows={d.win_probability} columns={['model', 'n_validation', 'brier', 'brier_const', 'brier_logit', 'log_loss', 'slope', 'intercept', 'n_train', 'train_matches']} />
               <div className="h-64 mt-4" role="img" aria-label="Calibration of predicted against observed win probability">
                 <ResponsiveContainer width="100%" height="100%">
