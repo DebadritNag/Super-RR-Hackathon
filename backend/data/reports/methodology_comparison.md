@@ -1,3 +1,60 @@
+# Methodology comparison (Phase 9 section, then the preserved Phase 8 document)
+
+> **Phase 9 update.** The first part of this file compares the three approaches on the Phase 9 window (2022-01-22 to 2026-11-01). The second part is the Phase 8 comparison, kept unchanged for reference (window to 2025-12-19, 2026 not loaded). Where the two disagree, the Phase 9 section is current.
+
+## Phase 9: three approaches under the unchanged predeclared criteria
+
+Criteria SHA-256 `9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64`. Source tables: `p9_method_comparison`, `p9_method_selection`.
+
+### Batters
+
+| approach | split-half (Spearman-Brown) | 95% interval | out-of-time r | out-of-time lower bound | ICC(1) | variance at floor | mean data weight | eligible players | submitted |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 0.019 | -0.184 to 0.359 | 0.121 | -0.054 | 0.0079 | no | 0.052 | 256 | yes |
+| B | -0.013 | -0.389 to 0.294 | -0.068 | -0.342 | -0.0002 | yes | 0.000 | 148 | no |
+| C | -0.229 | -0.367 to 0.307 | -0.051 | -0.321 | n/a | no | 0.159 | 148 | no |
+
+Selection: Chosen approach A by rule path NO_POSITIVE_LOWER_BOUND_HIGHEST_POINT_ESTIMATE. No approach has a split-half lower bound above 0, so the list is EXPLORATORY. The lower-bound path (with the 0.05 contender margin and out-of-time tie-break) selects A and the point-estimate path selects A: the two paths agree.
+
+### Bowlers
+
+| approach | split-half (Spearman-Brown) | 95% interval | out-of-time r | out-of-time lower bound | ICC(1) | variance at floor | mean data weight | eligible players | submitted |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 0.120 | -0.243 to 0.297 | 0.205 | 0.034 | 0.0113 | no | 0.222 | 243 | no |
+| B | -0.104 | -0.494 to 0.341 | -0.099 | -0.346 | 0.0016 | no | 0.007 | 156 | no |
+| C | 0.319 | -0.107 to 0.386 | 0.218 | 0.059 | n/a | no | 0.333 | 156 | yes |
+
+Selection: Chosen approach C by rule path NO_POSITIVE_LOWER_BOUND_HIGHEST_POINT_ESTIMATE. No approach has a split-half lower bound above 0, so the list is EXPLORATORY. The lower-bound path (with the 0.05 contender margin and out-of-time tie-break) selects C and the point-estimate path selects C: the two paths agree.
+
+### Intensity definitions (predeclared validity tests, rerun unchanged)
+
+| candidate | pass | test_a | test_b | test_c | test_e | test_d | n_tests_passed | phases_passing | innings_coverage | primary_basis |
+|---|---|---|---|---|---|---|---|---|---|---|
+| P0 | no | yes | yes | yes | no | no | 3 | 2 | 1 |  |
+| P1 | no | no | no | no | no | yes | 0 | 0 | 0 |  |
+| P2 | no | no | no | no | no | yes | 0 | 0 | 0 |  |
+| P3 | no | yes | yes | yes | no | yes | 3 | 1 | 1 |  |
+| P4 | no | yes | yes | yes | no | no | 3 | 2 | 2 | BEST_AVAILABLE_NOT_PASSING |
+| P5 | no | no | no | yes | no | no | 1 | 0 | 0 |  |
+| P6 | no | no | yes | yes | no | no | 2 | 1 | 0 |  |
+
+The same procedure as in Phase 8 picks `P4` as the primary definition (no candidate passes the declared rule).
+
+### Effect of the 2026 data on the format combination
+
+| approach | role | players_both_formats | spearman | spearman_low | spearman_high | combination_supported |
+|---|---|---|---|---|---|---|
+| A | batter | 96 | 0.056 | -0.145 | 0.227 | no |
+| A | bowler | 89 | 0.137 | -0.069 | 0.341 | no |
+| B | batter | 56 | -0.057 | -0.328 | 0.191 | no |
+| B | bowler | 60 | -0.243 | -0.486 | 0.034 | no |
+| C | batter | 56 | 0.069 | -0.159 | 0.327 | no |
+| C | bowler | 89 | 0.186 | -0.005 | 0.389 | no |
+
+---
+
+# Phase 8 comparison (preserved, unchanged)
+
 # Methodology comparison: three approaches under predeclared criteria
 
 > **Batters: EXPLORATORY.** EXPLORATORY ranking of batters: this is the best-supported ordering of the available data, not a validated ranking. The order is not shown to separate players beyond noise. Ranking basis: REML_POSTERIOR. Reason: split-half 0.06 below 0.5; split-half lower bound not above 0.
@@ -170,4 +227,3 @@ Reading: the ordering is stable to eligibility floors and moderately stable to f
 ## 9. Conclusion
 
 No approach meets the PROVISIONAL threshold in either role. The selected approaches are the best-supported available (batters A, bowlers C) and both lists are EXPLORATORY. The central Phase 6 finding is confirmed with a richer method: the match-level data do not reliably separate players on pressure performance.
-

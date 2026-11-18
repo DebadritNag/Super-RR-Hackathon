@@ -66,27 +66,27 @@
       "rows_out_of_scope_competition": 6985
     },
     "descriptive_hashes": {
-      "descriptive_batter_profiles.csv": "ac2e78678f2ad6a06481bc0ce1c6705b3911951ac60833b020928d0943fdcd92",
-      "descriptive_bowler_profiles.csv": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b",
-      "phase7_descriptive_player_match.csv": "f4ac18603dbc14cf76ebfa41bbee26c7d40b6b906b2b4c4e1ae964cbb9ef4510"
+      "descriptive_batter_profiles.csv": "fded22fa29b9bb1dca0bc935804282d785186f6db635645811f476c2a8213675",
+      "descriptive_bowler_profiles.csv": "8de69e6ce4466fde72cc99aba53f92d773b40bbbf9926b2a0ce536c8583dec15",
+      "phase7_descriptive_player_match.csv": "0dd8de58cbfeac64950d384dc95eb940a9ef9104218bb66cd34f7ee6b51f3f13"
     },
     "descriptive_scope": {
       "formats": {
         "IPL": {
-          "batter_profiles": 305,
-          "bowler_profiles": 233,
-          "delivery_rows": 70150,
-          "matches": 293
+          "batter_profiles": 341,
+          "bowler_profiles": 260,
+          "delivery_rows": 87673,
+          "matches": 367
         },
         "T20I": {
-          "batter_profiles": 615,
-          "bowler_profiles": 439,
-          "delivery_rows": 90756,
-          "matches": 400
+          "batter_profiles": 665,
+          "bowler_profiles": 479,
+          "delivery_rows": 106315,
+          "matches": 470
         }
       },
-      "players_with_any_profile": 811,
-      "window": "PRE_TEST 2022-2025 (TRAIN + VALIDATION matches); TEST-period matches are never read"
+      "players_with_any_profile": 891,
+      "window": "2022-01-22 to 2026-11-01 (all matches, 2026 included by owner decision D1)"
     },
     "lists_available": false,
     "official": {

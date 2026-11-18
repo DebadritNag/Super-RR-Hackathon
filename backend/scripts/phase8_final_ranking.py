@@ -33,7 +33,14 @@ from app.phase8.approach_a import (
     pressure_units,
     scope_counts,
 )
-from app.phase8.constants import OFFICIAL_DB, PHASE8_DB, REPORTS_DIR
+from app.phase8.constants import (
+    OFFICIAL_DB,
+    REPORTS_DIR,
+    active_db,
+    cache_dir,
+    is_phase9,
+    translate_table,
+)
 from app.phase8.criteria import begin_step, load_criteria
 from app.phase8.data import load_pre_test_deliveries
 from app.phase8.explain import (
@@ -65,7 +72,7 @@ from app.phase8.splits import assert_pre_test
 from app.phase8.status import banner, list_status, load_labels
 from app.phase8.store import write_p8_table
 
-A_CACHE = Path("d:/Data/.agents/tasks/_p8c2_cache")
+A_CACHE = cache_dir("_p8c2_cache")
 ROLES = ("batter", "bowler")
 CANDIDATES = ("P0", "P3", "P5", "P6")
 SELECTED_N = 10
@@ -79,9 +86,9 @@ INTERVAL_METHOD = {
 
 
 def _read(table: str) -> pd.DataFrame:
-    con = duckdb.connect(str(PHASE8_DB), read_only=True)
+    con = duckdb.connect(str(active_db()), read_only=True)
     try:
-        return con.execute(f"SELECT * FROM {table}").df()
+        return con.execute(f"SELECT * FROM {translate_table(table)}").df()
     finally:
         con.close()
 
@@ -306,7 +313,13 @@ def stage_rank() -> None:
     crit = load_criteria()
     labels = load_labels()
     prehash = load_prehash()
-    data_hash = ";".join(f"{Path(k).name}:{v}" for k, v in sorted(prehash.items()) if "duckdb" in k)
+    data_hash = ";".join(
+        f"{Path(k).name}:{v}"
+        for k, v in sorted(prehash.items())
+        if "duckdb" in k and not (is_phase9() and "phase8.duckdb" in k)
+    )
+    if is_phase9():
+        data_hash += f";criteria:{info['sha256']};window:2022-01-22..2026-11-01;version:phase9"
     selection = _read("p8_method_selection").set_index("role")
     cmp_all = _read("p8_method_comparison")
     ests = {

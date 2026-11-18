@@ -26,9 +26,9 @@ import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
 
 from app.phase8.calibration import brier, calibration_slope_intercept, decile_table, log_loss
-from app.phase8.constants import MODELS_DIR, N_FOLDS, SEED
+from app.phase8.constants import MODELS_DIR, N_FOLDS, SEED, active_prefix
 from app.phase8.data import FEATURE_COLS, assert_feature_list_clean
-from app.phase8.splits import assert_fit_on_train
+from app.phase8.splits import assert_fit_on_train, fit_group
 
 CATEGORICAL = ["competition_type", "stage", "innings_phase"]
 GRID = {
@@ -219,34 +219,48 @@ def score_target(
     x: pd.DataFrame,
     spec: TargetSpec,
     fit: Callable[..., Callable[[pd.DataFrame], np.ndarray]] = fit_predict,
+    fixed: tuple[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Select, fit and score one target. Returns expected values, metrics and the TRAIN model.
 
     ``expected`` is aligned with ``df`` (NaN outside the target population). The selection pass uses
-    VALIDATION once; the OOF scoring then reuses the chosen parameters only.
+    VALIDATION once; the OOF scoring then reuses the chosen parameters only. With ``fixed`` =
+    (learner, params) nothing is selected: the Phase 8 choice is applied unchanged and the
+    VALIDATION group (Phase 9: calendar 2026) only reports the out-of-time metrics. Fitting and
+    scoring groups follow ``fit_group`` (Phase 9) or ``period`` (Phase 8).
     """
     y, pop = target_frame(df, spec)
-    is_train = (df["period"] == "TRAIN").to_numpy()
-    is_val = (df["period"] == "VALIDATION").to_numpy()
-    tr = is_train & pop.to_numpy()
-    va = is_val & pop.to_numpy()
+    grp = fit_group(df)
+    is_train = (grp == "TRAIN").to_numpy()
+    is_val = (grp == "VALIDATION").to_numpy()
+    # a delivery whose label is undefined (e.g. a wicket without a dismissed-player id) is never
+    # imputed: it is left out of fitting and of the metrics (Phase 8: one such 2025 delivery).
+    defined = y.notna().to_numpy()
+    tr = is_train & pop.to_numpy() & defined
+    va = is_val & pop.to_numpy() & defined
     yt, yv = y.to_numpy()[tr], y.to_numpy()[va]
     assert_fit_on_train(df.loc[tr, "match_id"], df)
     xt, xv = x[tr], x[va]
     pm = primary_metric(spec.kind)
     rows, best = [], None
-    for params in grid_points():
-        pred = fit("gbm", spec.kind, params, xt, yt)(xv)
-        m = _metrics(spec.kind, yv, pred)
-        rows.append({"params": json.dumps(params, sort_keys=True), **m})
-        if best is None or m[pm] < best[1][pm]:
-            best = (params, m)
+    if fixed is None:
+        for params in grid_points():
+            pred = fit("gbm", spec.kind, params, xt, yt)(xv)
+            m = _metrics(spec.kind, yv, pred)
+            rows.append({"params": json.dumps(params, sort_keys=True), **m})
+            if best is None or m[pm] < best[1][pm]:
+                best = (params, m)
     base = {}
     for name in ("const", "lookup"):
         base[name] = _metrics(spec.kind, yv, fit(name, spec.kind, {}, xt, yt)(xv))
-    gbm_params, gbm_m = best
-    chosen = "gbm" if gbm_m[pm] < base["const"][pm] else min(base, key=lambda k: base[k][pm])
-    params_used = gbm_params if chosen == "gbm" else {}
+    if fixed is None:
+        gbm_params, gbm_m = best
+        chosen = "gbm" if gbm_m[pm] < base["const"][pm] else min(base, key=lambda k: base[k][pm])
+        params_used = gbm_params if chosen == "gbm" else {}
+    else:
+        chosen, params_used = fixed[0], dict(fixed[1])
+        gbm_params = params_used
+        gbm_m = _metrics(spec.kind, yv, fit(chosen, spec.kind, params_used, xt, yt)(xv))
     predictor = fit(chosen, spec.kind, params_used, xt, yt)
     expected = np.full(len(df), np.nan)
     expected[va] = predictor(xv)
@@ -298,7 +312,7 @@ def save_artifact(
     """Write the fitted predictor (``.joblib``) and its metadata (``.json``)."""
     d = Path(models_dir)
     d.mkdir(parents=True, exist_ok=True)
-    stem = d / f"p8_expected_{spec.role}_{spec.name}_v1"
+    stem = d / f"{active_prefix()}expected_{spec.role}_{spec.name}_v1"
     joblib.dump({"predictor": result["predictor"], "codes": codes, "features": list(FEATURE_COLS)},
                 stem.with_suffix(".joblib"))  # fmt: skip
     m = {k: v for k, v in result["metrics"].items() if k not in ("grid", "deciles")}

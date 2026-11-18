@@ -1,74 +1,146 @@
 {
   "algorithm": "SHA-256",
-  "count": 17,
+  "count": 35,
   "files": {
     "ai_pipeline_verification.md": {
+      "bytes": 6069,
+      "sha256": "4eb20a32634061b9c0ddc7bc57a0f6c0d0f200183003ab027b07d9e19700aebc"
+    },
+    "descriptive_batter_profiles.csv": {
+      "bytes": 849910,
+      "sha256": "fded22fa29b9bb1dca0bc935804282d785186f6db635645811f476c2a8213675"
+    },
+    "descriptive_bowler_profiles.csv": {
+      "bytes": 630261,
+      "sha256": "8de69e6ce4466fde72cc99aba53f92d773b40bbbf9926b2a0ce536c8583dec15"
+    },
+    "final_submission_summary.md": {
+      "bytes": 1356,
+      "sha256": "3b0d8c4b9f3ff53bcfefc248f9f42956c7f397291dc4397c851789a93139b54e"
+    },
+    "methodology_comparison.md": {
+      "bytes": 18620,
+      "sha256": "5c5ce54101bb5041b0cf54244daa248fafa5550c943b716fbc6b6790f1cc89a7"
+    },
+    "phase8/ai_pipeline_verification_phase8.md": {
       "bytes": 8528,
       "sha256": "24a398567b7686b3ff47a28eb06a0ab3cd8d07c2ed615c525563d7246311e190"
     },
-    "descriptive_batter_profiles.csv": {
+    "phase8/descriptive_batter_profiles_phase8.csv": {
       "bytes": 782600,
       "sha256": "ac2e78678f2ad6a06481bc0ce1c6705b3911951ac60833b020928d0943fdcd92"
     },
-    "descriptive_bowler_profiles.csv": {
+    "phase8/descriptive_bowler_profiles_phase8.csv": {
       "bytes": 576477,
       "sha256": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b"
     },
-    "final_submission_summary.md": {
-      "bytes": 6179,
-      "sha256": "00f24a5bb3e3d955789b48ed95e350ff3af199cbfb5e0cc76a0c29902a9c2270"
-    },
-    "methodology_comparison.md": {
+    "phase8/methodology_comparison_phase8.md": {
       "bytes": 15100,
       "sha256": "7938756ea5b9486c06a95dfcc36112f376707aa40160aaccddf4592ad219c5e1"
     },
-    "phase8_build_manifest.json": {
-      "bytes": 6258,
-      "sha256": "b28403d2f2e6a16dc5085fd0974a9a53cd6d9668cc222ec4063f56efdf74eb0e"
-    },
-    "player_selection_explanations.md": {
+    "phase8/player_selection_explanations_phase8.md": {
       "bytes": 70362,
       "sha256": "1caade4dc623cba8c0aaf933e458ffb712b7ee147317c1615aae459a87f61724"
     },
-    "pressure_batters_top10.csv": {
+    "phase8/pressure_batters_top10_phase8.csv": {
       "bytes": 18922,
       "sha256": "95ca197f5b05f5418a4742bdd0e633a03844ad8e2b5124e4c70fc4ea5a343043"
     },
-    "pressure_batters_top10.json": {
+    "phase8/pressure_batters_top10_phase8.json": {
       "bytes": 66694,
       "sha256": "0c2430d501cab67e41f28cd1b9985a12ec98358d137e4a7df5b87547f48028cd"
     },
-    "pressure_bowlers_top10.csv": {
+    "phase8/pressure_bowlers_top10_phase8.csv": {
       "bytes": 19944,
       "sha256": "0116aab14f42bbb060649a67219b6cb9de038e89f2665d184086b9d12fa9f605"
     },
-    "pressure_bowlers_top10.json": {
+    "phase8/pressure_bowlers_top10_phase8.json": {
       "bytes": 69492,
       "sha256": "2dbc666ba450ffab14088500d2395cae84a88e214bea3094108ae8076742966a"
     },
-    "pressure_methodology_research.md": {
+    "phase8/pressure_methodology_research_phase8.md": {
       "bytes": 9056,
       "sha256": "3b05bafc75ca50e8151d3be745e7dccf24f009483389fd33e9376d757f1595bc"
     },
-    "pressure_top10_status.md": {
+    "phase8/pressure_top10_status_phase8.md": {
       "bytes": 9432,
       "sha256": "27c7aea61ca9b12562c3ca5c37ffbbb9a831077951ecaae6de3008b896450a5c"
     },
-    "submission_executive_summary.md": {
+    "phase8/submission_executive_summary_phase8.md": {
       "bytes": 2778,
       "sha256": "c707ec3ed772fcc3f5eb820b2b787b755065b9c6caf30a7df1179965034ff6cf"
     },
-    "submission_methodology.md": {
+    "phase8/submission_methodology_phase8.md": {
       "bytes": 34586,
       "sha256": "75b1bef9422bcdb8deb0f41d924e3691c341b39a2d5baceccf368e01854ff9fa"
     },
-    "submission_readiness_audit.md": {
+    "phase8/submission_readiness_audit_phase8.md": {
       "bytes": 5323,
       "sha256": "0f4cd6b20754f2137391dfd63f68e14136c9d13cfcd1967766a68f91f15c5e0d"
     },
-    "submission_test_report.md": {
+    "phase8/submission_test_report_phase8.md": {
       "bytes": 7045,
       "sha256": "7d03f0dd0af1ed79fceb8cd9b9996ff537dc1ed278f8088952acc07a637f2161"
+    },
+    "phase9_build_manifest.json": {
+      "bytes": 7461,
+      "sha256": "336132632431fef3bdd5c971420529018300d10c16c50ab1e622359b8129efbf"
+    },
+    "phase9_comparison.md": {
+      "bytes": 7290,
+      "sha256": "f8f1cb6280473fc45087d4918a731b88993a5f25a588a51b2f1ffeb32d64374f"
+    },
+    "phase9_lock_release_log.json": {
+      "bytes": 969,
+      "sha256": "72a5e274fbb2cbdaff4e440ed6309cc045131715d5e7204e54a610358e218dd3"
+    },
+    "phase9_owner_decisions.md": {
+      "bytes": 2581,
+      "sha256": "1b59a22470333afba0e7dcc7da2c129500aa4fc43d25d922c6ab99cef99423d3"
+    },
+    "player_selection_explanations.md": {
+      "bytes": 72738,
+      "sha256": "dbb7f2e6cfeb1a7ed7d7c403c9b681bf294002b3c6d89567ca908236b15ae852"
+    },
+    "pressure_batters_top10.csv": {
+      "bytes": 20081,
+      "sha256": "dc6bd5a2c32b4dbc273032685a600ed41e62ce790bfb6892ec30fa205cdb50a1"
+    },
+    "pressure_batters_top10.json": {
+      "bytes": 69664,
+      "sha256": "7639ae428f93164be7d11241bb7928d08eccf68ed4fc10a7b5970be4d95c9eb2"
+    },
+    "pressure_bowlers_top10.csv": {
+      "bytes": 21214,
+      "sha256": "69a3bcf51c61c29bbddd56ee781744f4907c199c781b7304bb5c8d7c844be4a1"
+    },
+    "pressure_bowlers_top10.json": {
+      "bytes": 71997,
+      "sha256": "a7a6ac844b405bc8a95ada4d1b312f57176ab7ebbc8e3779eb20a461361493f0"
+    },
+    "pressure_methodology_research.md": {
+      "bytes": 9649,
+      "sha256": "b28421d44854d6dd08a1d43040a76ba082ae52a0e68b30e054eb39fd5e688bf7"
+    },
+    "pressure_top10_status.md": {
+      "bytes": 6050,
+      "sha256": "8e559694210c2473a5b14b6384d817769c8eef822215c9aae97f27eb717b505d"
+    },
+    "submission_executive_summary.md": {
+      "bytes": 2553,
+      "sha256": "027e22d7cbe98a9752ec0f2cedcc3dee3da6bf770afb798af95957948dcb1224"
+    },
+    "submission_methodology.md": {
+      "bytes": 29159,
+      "sha256": "e6677fb08d7df4ae0b58d8407f222e51bad2a9f009ca0b6692d8520f7517bbdb"
+    },
+    "submission_readiness_audit.md": {
+      "bytes": 3505,
+      "sha256": "2558750a02a2dd08014fbaa501ff897457b739cd896e47cfd3c00738185ec1f1"
+    },
+    "submission_test_report.md": {
+      "bytes": 5636,
+      "sha256": "ccf8ce622d69641d5a5cd6fc36ea9bbaa6aa2d74b0c4475e604b6645bd337ee8"
     }
   }
 }

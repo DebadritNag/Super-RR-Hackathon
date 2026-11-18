@@ -18,10 +18,19 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from app.phase8.constants import MODELS_DIR, SEED
+from app.phase8.constants import MODELS_DIR, SEED, active_prefix
 from app.phase8.expected import SPECS, prepare_features, spec_for, target_frame
+from app.phase8.splits import fit_group
 
 ARTEFACT_STEMS = [f"p8_expected_{s.role}_{s.name}_v1" for s in SPECS] + ["p8_wp_v1"]
+
+
+def artefact_stems() -> list[str]:
+    """Artefact stems of the active phase (``p8_`` by default, ``p9_`` with SUPERR_PHASE=phase9)."""
+    pre = active_prefix()
+    return [f"{pre}expected_{s.role}_{s.name}_v1" for s in SPECS] + [f"{pre}wp_v1"]
+
+
 HIGH_CUT = 0.5
 MIN_PRESSURE_BALLS = 40
 MIN_PRESSURE_MATCHES = 8
@@ -53,7 +62,7 @@ def load_artefact(stem: str, models_dir: Path | str = MODELS_DIR) -> dict[str, A
 
 def artefact_inventory(models_dir: Path | str = MODELS_DIR) -> list[dict[str, Any]]:
     rows = []
-    for stem in ARTEFACT_STEMS:
+    for stem in artefact_stems():
         p = Path(models_dir) / f"{stem}.joblib"
         j = Path(models_dir) / f"{stem}.json"
         row: dict[str, Any] = {"artefact": stem, "exists": p.exists() and j.exists()}
@@ -76,7 +85,7 @@ def artefact_inventory(models_dir: Path | str = MODELS_DIR) -> list[dict[str, An
 
 def expected_from_artefact(df: pd.DataFrame, role: str, name: str, models_dir: Any = MODELS_DIR):
     """Prediction made by the stored predictor object (the only source of the expectation)."""
-    a = load_artefact(f"p8_expected_{role}_{name}_v1", models_dir)
+    a = load_artefact(f"{active_prefix()}expected_{role}_{name}_v1", models_dir)
     x = prepare_features(df, a["obj"]["codes"])
     x = x[a["obj"]["features"]]
     return pd.Series(a["obj"]["predictor"](x), index=df.index), a
@@ -107,7 +116,7 @@ def experimental_scores(
     y_runs, pop_r = target_frame(df, runs_spec)
     y_wk, pop_w = target_frame(df, wk_spec)
     col = "striker_id" if role == "batter" else "bowler_id"
-    use = (df["period"] == "VALIDATION") & (w >= HIGH_CUT) & pop_r
+    use = (fit_group(df) == "VALIDATION") & (w >= HIGH_CUT) & pop_r
     res_r = runs_spec.sign * (y_runs - exp_runs)
     res_w = wk_spec.sign * (y_wk - exp_wk)
     out = []
@@ -168,11 +177,11 @@ def retrain_check(df: pd.DataFrame, role: str, name: str, models_dir: Any = MODE
     from app.phase8.expected import fit_predict
 
     spec = spec_for(role, name)
-    a = load_artefact(f"p8_expected_{role}_{name}_v1", models_dir)
+    a = load_artefact(f"{active_prefix()}expected_{role}_{name}_v1", models_dir)
     y, pop = target_frame(df, spec)
     x = prepare_features(df, a["obj"]["codes"])
-    tr = ((df["period"] == "TRAIN") & pop).to_numpy()
-    va = ((df["period"] == "VALIDATION") & pop).to_numpy()
+    tr = ((fit_group(df) == "TRAIN") & pop & y.notna()).to_numpy()
+    va = ((fit_group(df) == "VALIDATION") & pop & y.notna()).to_numpy()
     params = json.loads(a["meta"]["params"]) if isinstance(a["meta"]["params"], str) else {}
     pred = fit_predict(a["meta"]["algorithm"], spec.kind, params, x[tr], y.to_numpy()[tr])
     new = pred(x[va])
@@ -192,7 +201,7 @@ def retrain_check(df: pd.DataFrame, role: str, name: str, models_dir: Any = MODE
         rm_const = float(-np.mean(yv * np.log(pc) + (1 - yv) * np.log(1 - pc)))
         key = "log_loss"
     return {
-        "artefact": f"p8_expected_{role}_{name}_v1",
+        "artefact": f"{active_prefix()}expected_{role}_{name}_v1",
         "metric": key,
         "retrained": rm_new,
         "stored_artefact": rm_old,

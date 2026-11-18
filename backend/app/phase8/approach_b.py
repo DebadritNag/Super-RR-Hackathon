@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 
 from app.phase8.constants import N_FOLDS
+from app.phase8.splits import fit_group
 from app.phase8.winprob import (
     CLIP,
     N_CLASS,
@@ -42,9 +43,10 @@ def model_groups(df: pd.DataFrame) -> list[tuple[str, np.ndarray, int | None]]:
     pos = np.arange(len(df))
     folds = (df["match_id"].astype("int64") % N_FOLDS).to_numpy()
     out: list[tuple[str, np.ndarray, int | None]] = []
-    val = (df["period"] == "VALIDATION").to_numpy()
+    grp = fit_group(df)
+    val = (grp == "VALIDATION").to_numpy()
     out.append(("VALIDATION", pos[val], None))
-    tr = (df["period"] == "TRAIN").to_numpy()
+    tr = (grp == "TRAIN").to_numpy()
     for f in range(N_FOLDS):
         out.append((f"TRAIN_FOLD_{f}", pos[tr & (folds == f)], f))
     return out
@@ -137,8 +139,9 @@ def wpa_residuals(
     """
     ok = credit.notna() & x.notna().all(axis=1)
     folds = (df["match_id"].astype("int64") % N_FOLDS).to_numpy()
-    tr = ((df["period"] == "TRAIN") & ok).to_numpy()
-    va = ((df["period"] == "VALIDATION") & ok).to_numpy()
+    grp = fit_group(df)
+    tr = ((grp == "TRAIN") & ok).to_numpy()
+    va = ((grp == "VALIDATION") & ok).to_numpy()
     xv, yv = x.to_numpy(dtype="float64"), credit.to_numpy(dtype="float64")
     fitted = np.full(len(df), np.nan)
     coefs = []

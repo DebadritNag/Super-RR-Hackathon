@@ -1,0 +1,180 @@
+{
+  "checks": {
+    "npm_build_exit": 0,
+    "npm_lint_exit": 0,
+    "pytest": {
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0,
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "line": "",
+      "seconds": null
+    },
+    "ruff_check_exit": 0,
+    "ruff_format_exit": 0
+  },
+  "criteria_file_sha256_now": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+  "generated_utc": "2026-11-18T08:36:49+00:00",
+  "inputs_sha256": {
+    "backend/config/data_quality_restrictions_v1.json": "5f243fa7e460b3e17596bd3903664ea10a567a6c72ada28adfa20d8650653b3b",
+    "backend/config/phase4_split_v1.json": "da12fcd3969361d33b1893186f72af6e021cf9c93d131e5211ae6864ce7e4894",
+    "backend/config/phase8_selection_criteria_v1.json": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+    "backend/data/database/exploratory.duckdb": "7b396e42a2acb281fd5ffd64051064d7ac48e82bdfad23dd229bd20b9ca6277d",
+    "backend/data/database/phase8.duckdb": "c77ad8df883131a196bd5faae26003abd9a3a055f375bc797aca61a1117d407d",
+    "backend/data/database/superr.duckdb": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "ball_by_ball.csv": "a3926f49d2c684dca2a5d2de535a02c5ee46ea654ca1e79dd31c69e7544e9889",
+    "competition_team_player_mapping.csv": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12",
+    "competitions.csv": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b",
+    "matches.csv": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef",
+    "playing_eleven.csv": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27",
+    "teams.csv": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d",
+    "updated_ball_by_ball.csv": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
+  },
+  "list_status": {
+    "batter": "EXPLORATORY",
+    "bowler": "EXPLORATORY"
+  },
+  "lock_release": {
+    "criteria_sha256": "9258aa6d42ef72da578d2950d161f265c064016d6b04e095f37c4e2e8bf82b64",
+    "date": "2026-11-18",
+    "event": "RELEASE",
+    "reason": "owner decision phase 9",
+    "seq": 1
+  },
+  "methodology_version": "phase9_methodology_v1",
+  "models": {
+    "p9_expected_batter_boundary_v1.joblib": "5d90844355d7097b417f910304c0d096ea9e9a1dba083c99997289bef736c9f5",
+    "p9_expected_batter_dot_v1.joblib": "361c39d0756bd80c34fa7aa78822fbba753f7b9ea2e0df4f06c4f78d205a7bfe",
+    "p9_expected_batter_runs_v1.joblib": "e9f1495d6a65148b4354262afe498fc70ace90eba66dad34ac546a69486d76c6",
+    "p9_expected_batter_wicket_v1.joblib": "975e55c9ade26ca3b822073d803fc4dcbcbc1d7f2347c8e2a4c914b87a83801f",
+    "p9_expected_bowler_boundary_v1.joblib": "90a13fc9cd712190e89d3856d7f1f750a3a96fa05f791cee8d69b3b542b356be",
+    "p9_expected_bowler_dot_v1.joblib": "7fbbd00d5bce887ea22cef4aee06813bb4a705b2f94fc7067eaa646a05879f27",
+    "p9_expected_bowler_runs_v1.joblib": "bdb59bf2ef71ae0c5445b7490c60e13555919bdd836d1d5168262c07a1eb2a77",
+    "p9_expected_bowler_wicket_v1.joblib": "e2a855cec49801c1e69ff27c4434349de50ba08b1221d5271151dd726352b607",
+    "p9_wp_v1.joblib": "653070883f5379b33d36c31f5f4586294e71f9d3bad08dbd7a9c303f99ed0c0b"
+  },
+  "outputs": {
+    "ai_pipeline_verification.md": {
+      "bytes": 6069,
+      "sha256": "4eb20a32634061b9c0ddc7bc57a0f6c0d0f200183003ab027b07d9e19700aebc"
+    },
+    "descriptive_batter_profiles.csv": {
+      "bytes": 849910,
+      "sha256": "fded22fa29b9bb1dca0bc935804282d785186f6db635645811f476c2a8213675"
+    },
+    "descriptive_bowler_profiles.csv": {
+      "bytes": 630261,
+      "sha256": "8de69e6ce4466fde72cc99aba53f92d773b40bbbf9926b2a0ce536c8583dec15"
+    },
+    "final_submission_summary.md": {
+      "bytes": 1356,
+      "sha256": "3b0d8c4b9f3ff53bcfefc248f9f42956c7f397291dc4397c851789a93139b54e"
+    },
+    "methodology_comparison.md": {
+      "bytes": 18620,
+      "sha256": "5c5ce54101bb5041b0cf54244daa248fafa5550c943b716fbc6b6790f1cc89a7"
+    },
+    "phase9_comparison.md": {
+      "bytes": 7290,
+      "sha256": "f8f1cb6280473fc45087d4918a731b88993a5f25a588a51b2f1ffeb32d64374f"
+    },
+    "phase9_lock_release_log.json": {
+      "bytes": 969,
+      "sha256": "72a5e274fbb2cbdaff4e440ed6309cc045131715d5e7204e54a610358e218dd3"
+    },
+    "phase9_owner_decisions.md": {
+      "bytes": 2581,
+      "sha256": "1b59a22470333afba0e7dcc7da2c129500aa4fc43d25d922c6ab99cef99423d3"
+    },
+    "player_selection_explanations.md": {
+      "bytes": 72738,
+      "sha256": "dbb7f2e6cfeb1a7ed7d7c403c9b681bf294002b3c6d89567ca908236b15ae852"
+    },
+    "pressure_batters_top10.csv": {
+      "bytes": 20081,
+      "sha256": "dc6bd5a2c32b4dbc273032685a600ed41e62ce790bfb6892ec30fa205cdb50a1"
+    },
+    "pressure_batters_top10.json": {
+      "bytes": 69664,
+      "sha256": "7639ae428f93164be7d11241bb7928d08eccf68ed4fc10a7b5970be4d95c9eb2"
+    },
+    "pressure_bowlers_top10.csv": {
+      "bytes": 21214,
+      "sha256": "69a3bcf51c61c29bbddd56ee781744f4907c199c781b7304bb5c8d7c844be4a1"
+    },
+    "pressure_bowlers_top10.json": {
+      "bytes": 71997,
+      "sha256": "a7a6ac844b405bc8a95ada4d1b312f57176ab7ebbc8e3779eb20a461361493f0"
+    },
+    "pressure_methodology_research.md": {
+      "bytes": 9649,
+      "sha256": "b28421d44854d6dd08a1d43040a76ba082ae52a0e68b30e054eb39fd5e688bf7"
+    },
+    "pressure_top10_status.md": {
+      "bytes": 6050,
+      "sha256": "8e559694210c2473a5b14b6384d817769c8eef822215c9aae97f27eb717b505d"
+    },
+    "submission_executive_summary.md": {
+      "bytes": 2553,
+      "sha256": "027e22d7cbe98a9752ec0f2cedcc3dee3da6bf770afb798af95957948dcb1224"
+    },
+    "submission_methodology.md": {
+      "bytes": 29159,
+      "sha256": "e6677fb08d7df4ae0b58d8407f222e51bad2a9f009ca0b6692d8520f7517bbdb"
+    },
+    "submission_readiness_audit.md": {
+      "bytes": 3505,
+      "sha256": "2558750a02a2dd08014fbaa501ff897457b739cd896e47cfd3c00738185ec1f1"
+    },
+    "submission_test_report.md": {
+      "bytes": 5636,
+      "sha256": "ccf8ce622d69641d5a5cd6fc36ea9bbaa6aa2d74b0c4475e604b6645bd337ee8"
+    }
+  },
+  "owner_decisions": {
+    "D1": "2026 data attested genuine by the owner; TEST lock released; no pristine hold-out",
+    "D2": "EXPLORATORY removed from frontend pages"
+  },
+  "phase8_copies": [
+    "pressure_batters_top10_phase8.csv",
+    "pressure_batters_top10_phase8.json",
+    "pressure_bowlers_top10_phase8.csv",
+    "pressure_bowlers_top10_phase8.json",
+    "pressure_top10_status_phase8.md",
+    "player_selection_explanations_phase8.md",
+    "methodology_comparison_phase8.md",
+    "pressure_methodology_research_phase8.md",
+    "submission_methodology_phase8.md",
+    "submission_executive_summary_phase8.md",
+    "ai_pipeline_verification_phase8.md",
+    "descriptive_batter_profiles_phase8.csv",
+    "descriptive_bowler_profiles_phase8.csv",
+    "submission_test_report_phase8.md",
+    "submission_readiness_audit_phase8.md"
+  ],
+  "phase9_store_tables": 64,
+  "protected_check": {
+    "checked": 35,
+    "ok": true,
+    "phase8_copies_checked": 18,
+    "phase8_copies_identical_to_pre_phase9": true
+  },
+  "seed": 20260512,
+  "versions": {
+    "duckdb": "2.0.0",
+    "node": "v22.20.0",
+    "npm": "11.8.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.11.0",
+    "ruff": "ruff 0.17.5",
+    "scikit_learn": "1.6.1"
+  },
+  "window": "2022-01-22 to 2026-11-01"
+}

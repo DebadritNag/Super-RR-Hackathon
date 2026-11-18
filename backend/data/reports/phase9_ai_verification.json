@@ -1,0 +1,183 @@
+{
+  "generated_utc": "2026-11-18T07:27:50+00:00",
+  "inventory": [
+    {
+      "artefact": "p9_expected_batter_runs_v1",
+      "exists": true,
+      "bytes": 243317,
+      "sha256": "e9f1495d6a65148b4354262afe498fc70ace90eba66dad34ac546a69486d76c6",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_batter_wicket_v1",
+      "exists": true,
+      "bytes": 241733,
+      "sha256": "975e55c9ade26ca3b822073d803fc4dcbcbc1d7f2347c8e2a4c914b87a83801f",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_batter_dot_v1",
+      "exists": true,
+      "bytes": 241797,
+      "sha256": "361c39d0756bd80c34fa7aa78822fbba753f7b9ea2e0df4f06c4f78d205a7bfe",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_batter_boundary_v1",
+      "exists": true,
+      "bytes": 238341,
+      "sha256": "5d90844355d7097b417f910304c0d096ea9e9a1dba083c99997289bef736c9f5",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_bowler_runs_v1",
+      "exists": true,
+      "bytes": 243493,
+      "sha256": "bdb59bf2ef71ae0c5445b7490c60e13555919bdd836d1d5168262c07a1eb2a77",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_bowler_wicket_v1",
+      "exists": true,
+      "bytes": 241221,
+      "sha256": "e2a855cec49801c1e69ff27c4434349de50ba08b1221d5271151dd726352b607",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_bowler_dot_v1",
+      "exists": true,
+      "bytes": 241909,
+      "sha256": "7fbbd00d5bce887ea22cef4aee06813bb4a705b2f94fc7067eaa646a05879f27",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_expected_bowler_boundary_v1",
+      "exists": true,
+      "bytes": 588885,
+      "sha256": "90a13fc9cd712190e89d3856d7f1f750a3a96fa05f791cee8d69b3b542b356be",
+      "algorithm": "gbm",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_expected_v1"
+    },
+    {
+      "artefact": "p9_wp_v1",
+      "exists": true,
+      "bytes": 4003557,
+      "sha256": "653070883f5379b33d36c31f5f4586294e71f9d3bad08dbd7a9c303f99ed0c0b",
+      "algorithm": "HistGradientBoostingClassifier",
+      "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)",
+      "seed": 20260512,
+      "version": "p9_wp_v1"
+    }
+  ],
+  "retrain_checks": [
+    {
+      "artefact": "p9_expected_batter_runs_v1",
+      "metric": "rmse",
+      "retrained": 1.7935637564154623,
+      "stored_artefact": 1.7935637564154623,
+      "constant_baseline": 1.8246986267464764,
+      "stored_json_metric": 1.7935637564154623,
+      "max_abs_prediction_diff": 0.0,
+      "n_train": 152386,
+      "n_validation": 30610,
+      "seed": 20260512
+    },
+    {
+      "artefact": "p9_expected_bowler_wicket_v1",
+      "metric": "log_loss",
+      "retrained": 0.20373464572617156,
+      "stored_artefact": 0.20373464572617156,
+      "constant_baseline": 0.20678963496958117,
+      "stored_json_metric": 0.20373464572617156,
+      "max_abs_prediction_diff": 0.0,
+      "n_train": 151907,
+      "n_validation": 30527,
+      "seed": 20260512
+    }
+  ],
+  "wp_check": {
+    "model": "W2 (chasing side wins), stored p9 artefact applied to calendar-2026 deliveries",
+    "n_validation": 14853,
+    "brier": 0.12287744001606943,
+    "brier_constant_baseline": 0.25352678323229677,
+    "brier_gain_vs_constant": 0.5153275782169271,
+    "prediction_range": [
+      0.005,
+      0.995
+    ],
+    "features": [
+      "runs_required",
+      "legal_balls_remaining",
+      "wickets_remaining",
+      "rrr",
+      "crr",
+      "gap",
+      "resource_ratio",
+      "innings_limit_balls",
+      "competition_code",
+      "bat_team_prior",
+      "bowl_team_prior"
+    ]
+  },
+  "partition": {
+    "ok": true
+  },
+  "summary": {
+    "batter": {
+      "players_with_pressure_balls": 334,
+      "eligible": 51,
+      "listed": 10,
+      "intervals_excluding_zero_in_top10": 3,
+      "median_interval_half_width_top10": 0.30763021041869254,
+      "split_half_players": 51,
+      "split_half_r": 0.0006646966992483178,
+      "split_half_spearman_brown": 0.001328510342057353
+    },
+    "bowler": {
+      "players_with_pressure_balls": 254,
+      "eligible": 61,
+      "listed": 10,
+      "intervals_excluding_zero_in_top10": 2,
+      "median_interval_half_width_top10": 0.24205007353624303,
+      "split_half_players": 61,
+      "split_half_r": 0.1575574918836035,
+      "split_half_spearman_brown": 0.2722240458695877
+    }
+  },
+  "rows_loaded": 190584,
+  "periods_loaded": [
+    "TEST",
+    "TRAIN",
+    "VALIDATION"
+  ],
+  "scoring_groups": [
+    "TRAIN",
+    "VALIDATION"
+  ],
+  "test_rows_loaded": 31996,
+  "test_released_by_owner_decision": true,
+  "lock_unchanged": true
+}

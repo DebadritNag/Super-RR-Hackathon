@@ -56,6 +56,7 @@ WHERE s.competition_type IN ('IPL', 'T20I')
   AND s.format_out_of_scope = FALSE
   AND p.period <> 'TEST'
 """
+FRAME_SQL_WITH_TEST = FRAME_SQL.replace("  AND p.period <> 'TEST'\n", "")
 
 
 def load_config(path: Path | str = CONFIG_PATH) -> dict[str, Any]:
@@ -71,12 +72,24 @@ def sha256_file(path: Path | str) -> str:
 
 
 # ----------------------------------------------------------------------------- inputs
-def load_frame(store: Path | str = EXPLORATORY_DB, official: Path | str = OFFICIAL_DB):
+def load_frame(
+    store: Path | str = EXPLORATORY_DB,
+    official: Path | str = OFFICIAL_DB,
+    include_test: bool = False,
+):
     """In-scope delivery rows (TEST periods and innings 3-4 filtered in SQL) plus bowler type
-    and batter hand from the official deliveries, joined on the delivery key."""
+    and batter hand from the official deliveries, joined on the delivery key.
+
+    ``include_test`` (Phase 9, owner decision D1) keeps the 2026 matches; it requires the recorded
+    owner release of the TEST period.
+    """
+    if include_test:
+        from app.phase9.lockrelease import assert_test_released
+
+        assert_test_released()
     e = duckdb.connect(str(store), read_only=True)
     try:
-        df = e.execute(FRAME_SQL).df()
+        df = e.execute(FRAME_SQL_WITH_TEST if include_test else FRAME_SQL).df()
     finally:
         e.close()
     o = duckdb.connect(str(official), read_only=True)
@@ -97,7 +110,11 @@ def load_frame(store: Path | str = EXPLORATORY_DB, official: Path | str = OFFICI
     return df
 
 
-def load_reference(store: Path | str = EXPLORATORY_DB, official: Path | str = OFFICIAL_DB):
+def load_reference(
+    store: Path | str = EXPLORATORY_DB,
+    official: Path | str = OFFICIAL_DB,
+    include_test: bool = False,
+):
     """Player names and mapping flags, classification, matches played, context-sample counts."""
     o = duckdb.connect(str(official), read_only=True)
     try:
@@ -112,6 +129,7 @@ def load_reference(store: Path | str = EXPLORATORY_DB, official: Path | str = OF
         ).df()
     finally:
         o.close()
+    ctx_filter = "TRUE" if include_test else "period <> 'TEST'"
     e = duckdb.connect(str(store), read_only=True)
     try:
         cls = e.execute(
@@ -123,12 +141,13 @@ def load_reference(store: Path | str = EXPLORATORY_DB, official: Path | str = OF
         ctx = e.execute(
             "SELECT player_id, comp AS format, role, sum(n) AS context_sample_balls, "
             "count(DISTINCT match_id) AS context_sample_matches "
-            "FROM p5_context_stats WHERE period <> 'TEST' GROUP BY 1, 2, 3"
+            f"FROM p5_context_stats WHERE {ctx_filter} GROUP BY 1, 2, 3"
         ).df()
     finally:
         e.close()
     played = played.merge(periods, on="match_id")
-    played = played[played["period"] != "TEST"]
+    if not include_test:
+        played = played[played["period"] != "TEST"]
     mp = played.groupby(["player_id", "format"]).size().rename("matches_played").reset_index()
     return {"players": players, "classification": cls, "matches_played": mp, "context": ctx}
 

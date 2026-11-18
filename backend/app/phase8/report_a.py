@@ -8,13 +8,13 @@ import duckdb
 import numpy as np
 import pandas as pd
 
-from app.phase8.constants import PHASE8_DB
+from app.phase8.constants import active_db, translate_table
 
 
 def _t(table: str) -> pd.DataFrame:
-    con = duckdb.connect(str(PHASE8_DB), read_only=True)
+    con = duckdb.connect(str(active_db()), read_only=True)
     try:
-        return con.execute(f"SELECT * FROM {table}").df()
+        return con.execute(f"SELECT * FROM {translate_table(table)}").df()
     finally:
         con.close()
 

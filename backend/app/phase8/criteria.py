@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from app.phase8 import store
-from app.phase8.constants import CRITERIA_FILE, CRITERIA_HASH_FILE, PHASE8_DB
+from app.phase8.constants import CRITERIA_FILE, CRITERIA_HASH_FILE
 
 
 class CriteriaError(RuntimeError):
@@ -240,7 +240,7 @@ def load_criteria(path: Path | str = CRITERIA_FILE) -> dict[str, Any]:
 def write_criteria(
     criteria_path: Path | str = CRITERIA_FILE,
     hash_path: Path | str = CRITERIA_HASH_FILE,
-    store_path: Path | str = PHASE8_DB,
+    store_path: Path | str | None = None,
     criteria: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Write criteria, hash file and run-log row ``seq = 1`` (step ``plan``).
@@ -286,7 +286,7 @@ def write_criteria(
 def verify_criteria(
     criteria_path: Path | str = CRITERIA_FILE,
     hash_path: Path | str = CRITERIA_HASH_FILE,
-    store_path: Path | str = PHASE8_DB,
+    store_path: Path | str | None = None,
 ) -> dict[str, Any]:
     """Raise ``CriteriaError`` unless the declared criteria are intact and were logged first."""
     cp, hp = Path(criteria_path), Path(hash_path)
@@ -314,7 +314,7 @@ def begin_step(
     step: str,
     criteria_path: Path | str = CRITERIA_FILE,
     hash_path: Path | str = CRITERIA_HASH_FILE,
-    store_path: Path | str = PHASE8_DB,
+    store_path: Path | str | None = None,
     inputs_hash: str = "",
     note: str = "",
 ) -> dict[str, Any]:

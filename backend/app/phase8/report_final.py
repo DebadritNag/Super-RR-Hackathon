@@ -14,6 +14,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from app.phase8.constants import translate_table
 from app.phase8.report_a import _fmt, _t, md_table
 from app.phase8.status import load_labels
 
@@ -497,9 +498,10 @@ def explanations_md() -> str:
     L.append(
         "Each section explains why a player is in the submitted Top 10, what the numbers are, how "
         "much evidence stands behind them and how firmly the position is supported. Every figure "
-        "is read from `p8_rankings` (the same table as the CSV and JSON files). The pressure situation "
-        "is the P4 resource-scarcity definition, which did not pass the predeclared validity tests, so "
-        "every row is EXPLORATORY.\n"
+        f"is read from `{translate_table('p8_rankings')}` (the same table as the CSV and JSON files). The "
+        "pressure situation is the P4 resource-scarcity definition, which did not pass the predeclared "
+        "validity tests. Each row carries the label of its list (see the banners); no row is "
+        "labelled stronger than its list.\n"
     )
     for role in ROLES:
         s = _row(st, role=role)

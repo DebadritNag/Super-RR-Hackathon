@@ -36,6 +36,10 @@ def tables():
         "bat": pd.read_csv(REP / ds.BATTER_CSV),
         "bowl": pd.read_csv(REP / ds.BOWLER_CSV),
         "pm": pd.read_csv(REP / ds.PER_MATCH_CSV),
+        # Phase 8 copies (pre-2026 window), kept for the reconciliation with p4_player_stats
+        "bat8": pd.read_csv(REP / "descriptive_batter_profiles_phase8.csv"),
+        "bowl8": pd.read_csv(REP / "descriptive_bowler_profiles_phase8.csv"),
+        "pm8": pd.read_csv(REP / "phase7_descriptive_player_match_phase8.csv"),
     }
 
 
@@ -52,11 +56,11 @@ def raw_scope():
     m["match_date"] = pd.to_datetime(m["match_date"])
     d = d.merge(m, on="match_id")
     split = json.loads((ds.BACKEND_ROOT / "config" / "phase4_split_v1.json").read_text("utf-8"))
-    assert split  # the cut-off below is the documented TRAIN+VALIDATION end
+    assert split  # Phase 9: the profiles cover the whole window to 2026-11-01 (owner decision D1)
     return d[
         d.competition_type.isin(["IPL", "T20I"])
         & d.innings.isin([1, 2])
-        & (d.match_date <= "2025-12-31")
+        & (d.match_date <= "2026-11-01")
     ]
 
 
@@ -99,13 +103,15 @@ def test_totals_reconcile_with_phase4_player_stats(tables):
         )
     finally:
         e.close()
-    b = tables["bat"].merge(p4, on=["player_id", "format"], how="left", validate="one_to_one")
+    # Phase 9: p4_player_stats is a pre-2026 table, so it is reconciled with the Phase 8 copy of the
+    # profiles (same definitions, window before 2026). The Phase 9 profiles use the same builder.
+    b = tables["bat8"].merge(p4, on=["player_id", "format"], how="left", validate="one_to_one")
     assert b["bat_balls"].notna().all()
     assert (b["balls_faced"] == b["bat_balls"]).all()
     assert (b["runs"] == b["bat_runs"]).all()
     assert (b["dismissals"] == b["bat_dismissals"]).all()
     assert (b["fours"] == b["bat_fours"]).all() and (b["sixes"] == b["bat_sixes"]).all()
-    w = tables["bowl"].merge(p4, on=["player_id", "format"], how="left", validate="one_to_one")
+    w = tables["bowl8"].merge(p4, on=["player_id", "format"], how="left", validate="one_to_one")
     assert (w["runs_conceded"] == w["bowl_runs"]).all()
     assert (w["wickets"] == w["bowl_wickets"]).all()
     assert (w["dot_balls"] == w["bowl_dots"]).all()
@@ -115,15 +121,19 @@ def test_totals_reconcile_with_phase4_player_stats(tables):
 
 
 @needs
-def test_no_test_period_match_is_present(tables):
+def test_phase8_copy_has_no_test_period_match_and_phase9_window_includes_2026(tables):
+    # Phase 9 (owner decision D1) changed the expectation: the current profiles include the 2026
+    # matches; the Phase 8 copy still contains none of them.
     e = duckdb.connect(str(ds.EXPLORATORY_DB), read_only=True)
     try:
         per = e.execute("SELECT match_id, period, match_date FROM p4_match_period").df()
     finally:
         e.close()
     test_ids = set(per.loc[per["period"] == "TEST", "match_id"])
-    assert test_ids and not (set(tables["pm"]["match_id"]) & test_ids)
-    assert tables["pm"]["match_date"].max() <= "2025-12-31"
+    assert test_ids and not (set(tables["pm8"]["match_id"]) & test_ids)
+    assert tables["pm8"]["match_date"].max() <= "2025-12-31"
+    assert len(set(tables["pm"]["match_id"]) & test_ids) >= 130
+    assert "2026-01-01" <= tables["pm"]["match_date"].max() <= "2026-11-01"
 
 
 @needs

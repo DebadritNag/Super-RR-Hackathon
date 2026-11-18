@@ -46,7 +46,16 @@ from app.phase8.approach_b import (
     leverage_weighted,
     wpa_residuals,
 )
-from app.phase8.constants import OFFICIAL_DB, PHASE8_DB, PREHASH_FILE, REPORTS_DIR, SEED
+from app.phase8.constants import (
+    OFFICIAL_DB,
+    REPORTS_DIR,
+    SEED,
+    active_db,
+    active_prehash,
+    cache_dir,
+    is_phase9,
+    translate_table,
+)
 from app.phase8.criteria import begin_step, load_criteria
 from app.phase8.data import load_pre_test_deliveries
 from app.phase8.intensity import build_intensity, intensity_from_wp
@@ -60,7 +69,7 @@ from app.phase8.intensity_validity import (
     summarise_candidates,
 )
 from app.phase8.lockguard import assert_lock_state_unchanged, check_protected, lock_state
-from app.phase8.splits import assert_pre_test, check_match_partition
+from app.phase8.splits import assert_pre_test, check_match_partition, fit_group
 from app.phase8.stability import point_ranking
 from app.phase8.store import write_p8_table
 from app.phase8.units import ROLE_COL
@@ -79,8 +88,8 @@ from app.phase8.winprob import (
 )
 from app.phase8.wpa import attribute
 
-CACHE = Path("d:/Data/.agents/tasks/_p8c3_cache")
-A_CACHE = Path("d:/Data/.agents/tasks/_p8c2_cache")
+CACHE = cache_dir("_p8c3_cache")
+A_CACHE = cache_dir("_p8c2_cache")
 CANDIDATES_B = ("P0", "P1", "P2", "P3", "P4", "P5", "P6")
 BOOT_DRAWS = 1000
 ID = ["match_id", "innings_number", "innings_ball_num"]
@@ -137,10 +146,16 @@ def stage_winprob() -> None:
     y1, pop1 = wp_labels(df, labels, 1)
     score2 = (df["innings_number"] == 2) & x[["runs_required", "rrr"]].notna().all(axis=1)
     score1 = (df["innings_number"] == 1) & x["legal_balls_remaining"].notna()
+    fixed = {"W1": None, "W2": None}
+    if is_phase9():
+        from app.phase9.fixed import phase8_wp_params
+
+        fixed = {k: phase8_wp_params(k) for k in fixed}  # Phase 8 grid point, no new tuning
     f2 = fit_wp("W2", df, x, y2, pop2 & score2, W2_COLS,
-                ["resource_ratio", "rrr", "wickets_remaining"], score2)  # fmt: skip
+                ["resource_ratio", "rrr", "wickets_remaining"], score2, fixed["W2"])  # fmt: skip
     f1 = fit_wp("W1", df, x, y1, pop1 & score1, W1_COLS,
-                ["projected_total", "wickets_remaining", "legal_balls_remaining"], score1)  # fmt: skip
+                ["projected_total", "wickets_remaining", "legal_balls_remaining"], score1,
+                fixed["W1"])  # fmt: skip
     fits = {"W1": f1, "W2": f2}
     gates = {k: innings_gate(v.metrics) for k, v in fits.items()}
     for k, v in fits.items():
@@ -211,15 +226,26 @@ def stage_winprob() -> None:
     write_p8_table(pd.DataFrame([{"column": k, "max_abs_diff": v} for k, v in chk.items()]),
                    "p8_wp_feature_check")  # fmt: skip
     print("feature recompute max abs diff", chk, flush=True)
-    prehash = json.loads(Path(PREHASH_FILE).read_text(encoding="utf-8-sig"))
+    prehash = json.loads(Path(active_prehash()).read_text(encoding="utf-8-sig"))
     meta = {
-        "trained_on": "TRAIN", "seed": SEED, "criteria_sha256": info["sha256"],
+        "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)" if is_phase9() else "TRAIN",
+        "seed": SEED, "criteria_sha256": info["sha256"],
         "timestamp": datetime.now(UTC).isoformat(),
         "data_hash_exploratory_db": next((v for k, v in prehash.items() if "exploratory.duckdb" in k), None),
-        "train_matches": int(df.loc[df["period"] == "TRAIN", "match_id"].nunique()),
-        "validation_matches": int(df.loc[df["period"] == "VALIDATION", "match_id"].nunique()),
-        "training_period": "matches up to 2024-12-31 (config/phase4_split_v1.json)",
-        "validation_period": "calendar 2025", "test": "never loaded",
+        "train_matches": int(df.loc[fit_group(df) == "TRAIN", "match_id"].nunique()),
+        "validation_matches": int(df.loc[fit_group(df) == "VALIDATION", "match_id"].nunique()),
+        "training_period": (
+            "matches up to 2025-12-31 (TRAIN + VALIDATION of config/phase4_split_v1.json)"
+            if is_phase9()
+            else "matches up to 2024-12-31 (config/phase4_split_v1.json)"
+        ),
+        "validation_period": (
+            "calendar 2026 out-of-time check; data previously held out, released by owner "
+            "decision"
+            if is_phase9()
+            else "calendar 2025"
+        ),
+        "test": "released by owner decision (phase 9)" if is_phase9() else "never loaded",
         "class_model": cm, "gates": gates, "partition": part,
         "labels": {"excluded_matches": int(len(excl)), "labelled_matches": int(lab_scope["label_ok"].sum())},
     }  # fmt: skip
@@ -236,9 +262,9 @@ def stage_winprob() -> None:
 
 
 def _read(table: str) -> pd.DataFrame:
-    con = duckdb.connect(str(PHASE8_DB), read_only=True)
+    con = duckdb.connect(str(active_db()), read_only=True)
     try:
-        return con.execute(f"SELECT * FROM {table}").df()
+        return con.execute(f"SELECT * FROM {translate_table(table)}").df()
     finally:
         con.close()
 

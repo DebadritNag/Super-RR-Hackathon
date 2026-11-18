@@ -15,7 +15,6 @@ from __future__ import annotations
 import json
 import sys
 from datetime import UTC, datetime
-from pathlib import Path
 
 import duckdb
 import joblib
@@ -37,26 +36,35 @@ from app.phase8.approach_a import (
     player_counts,
     run_cell,
 )
-from app.phase8.constants import OFFICIAL_DB, PHASE8_DB, REPORTS_DIR, SEED
+from app.phase8.constants import (
+    OFFICIAL_DB,
+    REPORTS_DIR,
+    SEED,
+    active_db,
+    active_prefix,
+    cache_dir,
+    is_phase9,
+    translate_table,
+)
 from app.phase8.criteria import begin_step, load_criteria
 from app.phase8.data import load_pre_test_deliveries
 from app.phase8.expected import SPECS, category_codes, prepare_features, save_artifact, score_target
 from app.phase8.intensity import build_intensity
 from app.phase8.intensity_validity import run_validity_tests, summarise_candidates
 from app.phase8.lockguard import assert_lock_state_unchanged, check_protected, lock_state
-from app.phase8.splits import assert_pre_test, check_match_partition
+from app.phase8.splits import assert_pre_test, check_match_partition, fit_group
 from app.phase8.stability import point_ranking
 from app.phase8.store import write_p8_table
 
-CACHE = Path("d:/Data/.agents/tasks/_p8c2_cache")
+CACHE = cache_dir("_p8c2_cache")
 CANDIDATES = ("P0", "P3", "P4", "P5", "P6")
 BOOT_DRAWS = 1000
 
 
 def _read(table: str) -> pd.DataFrame:
-    con = duckdb.connect(str(PHASE8_DB), read_only=True)
+    con = duckdb.connect(str(active_db()), read_only=True)
     try:
-        return con.execute(f"SELECT * FROM {table}").df()
+        return con.execute(f"SELECT * FROM {translate_table(table)}").df()
     finally:
         con.close()
 
@@ -91,7 +99,12 @@ def stage_models() -> None:
     x = prepare_features(df, codes)
     results, metric_rows, grid_rows, decile_rows = {}, [], [], []
     for spec in SPECS:
-        r = score_target(df, x, spec)
+        fixed = None
+        if is_phase9():
+            from app.phase9.fixed import phase8_expected_choice
+
+            fixed = phase8_expected_choice(spec.role, spec.name)  # Phase 8 choice, no new tuning
+        r = score_target(df, x, spec, fixed=fixed)
         results[(spec.role, spec.name)] = r
         m = dict(r["metrics"])
         for g in m.pop("grid"):
@@ -100,8 +113,9 @@ def stage_models() -> None:
             decile_rows.append({"role": spec.role, "target": spec.name, **d})
         metric_rows.append(m)
         meta = {
-            "version": "p8_expected_v1", "trained_on": "TRAIN", "seed": SEED,
-            "train_matches": int(df.loc[df["period"] == "TRAIN", "match_id"].nunique()),
+            "version": f"{active_prefix()}expected_v1", "seed": SEED,
+            "trained_on": "TRAIN+VALIDATION (matches to 2025-12-31)" if is_phase9() else "TRAIN",
+            "train_matches": int(df.loc[fit_group(df) == "TRAIN", "match_id"].nunique()),
             "criteria_sha256": info["sha256"], "timestamp": datetime.now(UTC).isoformat(),
         }  # fmt: skip
         save_artifact(r, spec, codes, meta)

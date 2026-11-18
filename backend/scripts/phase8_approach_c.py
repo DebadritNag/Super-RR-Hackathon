@@ -16,7 +16,6 @@ from __future__ import annotations
 import json
 import sys
 from datetime import UTC, datetime
-from pathlib import Path
 
 import duckdb
 import joblib
@@ -54,7 +53,13 @@ from app.phase8.approach_c import (
     rank_of,
     rel_units,
 )
-from app.phase8.constants import OFFICIAL_DB, PHASE8_DB, REPORTS_DIR
+from app.phase8.constants import (
+    OFFICIAL_DB,
+    REPORTS_DIR,
+    active_db,
+    cache_dir,
+    translate_table,
+)
 from app.phase8.criteria import begin_step, load_criteria
 from app.phase8.data import load_pre_test_deliveries
 from app.phase8.intensity import build_intensity, intensity_from_wp
@@ -65,17 +70,17 @@ from app.phase8.splits import assert_pre_test
 from app.phase8.stability import point_ranking
 from app.phase8.store import write_p8_table
 
-A_CACHE = Path("d:/Data/.agents/tasks/_p8c2_cache")
-B_CACHE = Path("d:/Data/.agents/tasks/_p8c3_cache")
+A_CACHE = cache_dir("_p8c2_cache")
+B_CACHE = cache_dir("_p8c3_cache")
 BOOT_DRAWS = 1000
 REL_BOOT = 500
 SCOPES = ("COMBINED", "IPL", "T20I")
 
 
 def _read(table: str) -> pd.DataFrame:
-    con = duckdb.connect(str(PHASE8_DB), read_only=True)
+    con = duckdb.connect(str(active_db()), read_only=True)
     try:
-        return con.execute(f"SELECT * FROM {table}").df()
+        return con.execute(f"SELECT * FROM {translate_table(table)}").df()
     finally:
         con.close()
 

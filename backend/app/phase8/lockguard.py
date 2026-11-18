@@ -13,22 +13,22 @@ from app.phase6.lockguard import (  # noqa: F401  (re-exported)
     assert_no_test_rows,
     lock_state,
 )
-from app.phase8.constants import PREHASH_FILE
+from app.phase8.constants import active_prehash
 
 
 class IntegrityError(RuntimeError):
     """A protected file differs from the recorded pre-run hash."""
 
 
-def load_prehash(path: Path | str = PREHASH_FILE) -> dict[str, str]:
-    p = Path(path)
+def load_prehash(path: Path | str | None = None) -> dict[str, str]:
+    p = Path(path or active_prehash())
     if not p.exists():
         raise IntegrityError(f"prehash file missing: {p}")
     return json.loads(p.read_text(encoding="utf-8-sig"))
 
 
 def check_protected(
-    path: Path | str = PREHASH_FILE, only: tuple[str, ...] = ("duckdb",)
+    path: Path | str | None = None, only: tuple[str, ...] = ("duckdb",)
 ) -> dict[str, Any]:
     """Compare protected files with the recorded hashes; raise ``IntegrityError`` on a change.
 

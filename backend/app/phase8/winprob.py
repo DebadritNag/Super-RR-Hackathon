@@ -32,8 +32,8 @@ from app.phase8.calibration import (
     calibration_report,
     log_loss,
 )
-from app.phase8.constants import MODELS_DIR, N_FOLDS, SEED
-from app.phase8.splits import assert_fit_on_train
+from app.phase8.constants import MODELS_DIR, N_FOLDS, SEED, active_prefix
+from app.phase8.splits import assert_fit_on_train, fit_group
 
 CLIP = (0.005, 0.995)
 WP_SLOPE_RANGE = (0.8, 1.2)
@@ -254,19 +254,24 @@ class WPFit:
 
 def fit_wp(
     name: str, df: pd.DataFrame, x: pd.DataFrame, y: pd.Series, pop: pd.Series, cols: list[str],
-    baseline_cols: list[str], score: pd.Series,
+    baseline_cols: list[str], score: pd.Series, fixed_params: dict[str, Any] | None = None,
 ) -> WPFit:  # fmt: skip
     """Select on VALIDATION once, then score TRAIN out of fold and VALIDATION out of sample.
+
+    With ``fixed_params`` (Phase 9) nothing is selected: the Phase 8 parameters are applied and the
+    VALIDATION group (calendar 2026) only provides the out-of-time metrics. Groups follow
+    ``fit_group`` (Phase 9) or ``period`` (Phase 8).
 
     ``pop`` (labelled rows) is used for fitting and metrics; ``score`` (every row with valid
     features, labelled or not) receives a prediction from a model that never saw its match.
     """
-    train = (df["period"] == "TRAIN").to_numpy() & pop.to_numpy()
-    val = (df["period"] == "VALIDATION").to_numpy() & pop.to_numpy()
+    grp = fit_group(df)
+    train = (grp == "TRAIN").to_numpy() & pop.to_numpy()
+    val = (grp == "VALIDATION").to_numpy() & pop.to_numpy()
     assert_fit_on_train(df.loc[train, "match_id"], df)
     yt, yv = y.to_numpy()[train], y.to_numpy()[val]
     grid, best = [], None
-    for params in grid_points():
+    for params in grid_points() if fixed_params is None else []:
         p = fit_binary("gbm", cols, x[train], yt, params)(x[val])
         pc = np.clip(p, 1e-6, 1 - 1e-6)
         ll = log_loss(yv, pc)
@@ -274,12 +279,12 @@ def fit_wp(
                      "brier": brier(yv, pc)})  # fmt: skip
         if best is None or ll < best[1]:
             best = (params, ll)
-    params = best[0]
+    params = dict(fixed_params) if fixed_params is not None else best[0]
     predictor = fit_binary("gbm", cols, x[train], yt, params)
     pred = np.full(len(df), np.nan)
     sc = score.to_numpy()
-    in_val = (df["period"] == "VALIDATION").to_numpy()
-    in_train = (df["period"] == "TRAIN").to_numpy()
+    in_val = (grp == "VALIDATION").to_numpy()
+    in_train = (grp == "TRAIN").to_numpy()
     pred[in_val & sc] = predictor(x[in_val & sc])
     fold_pred: dict[int, Predictor] = {}
     folds = (df["match_id"].astype("int64") % N_FOLDS).to_numpy()
@@ -363,8 +368,9 @@ def fit_class_oof(
     df: pd.DataFrame, x: pd.DataFrame, y: pd.Series, pop: pd.Series
 ) -> tuple[Predictor, dict[int, Predictor], dict[str, Any]]:
     """Fit the class model on TRAIN (declared fixed parameters, no tuning) with fold predictors."""
-    train = (df["period"] == "TRAIN").to_numpy() & pop.to_numpy()
-    val = (df["period"] == "VALIDATION").to_numpy() & pop.to_numpy()
+    grp = fit_group(df)
+    train = (grp == "TRAIN").to_numpy() & pop.to_numpy()
+    val = (grp == "VALIDATION").to_numpy() & pop.to_numpy()
     assert_fit_on_train(df.loc[train, "match_id"], df)
     full = fit_class_model(x[train], y.to_numpy()[train], CLS_PARAMS)
     folds = (df["match_id"].astype("int64") % N_FOLDS).to_numpy()
@@ -524,7 +530,7 @@ def save_wp_artifact(
 
     d = Path(models_dir)
     d.mkdir(parents=True, exist_ok=True)
-    stem = d / "p8_wp_v1"
+    stem = d / f"{active_prefix()}wp_v1"
     joblib.dump(
         {"w1": fits["W1"].predictor, "w2": fits["W2"].predictor, "cls": cls,
          "w1_cols": W1_COLS, "w2_cols": W2_COLS, "cls_cols": CLS_COLS},
@@ -532,7 +538,7 @@ def save_wp_artifact(
     )  # fmt: skip
     body = {
         **meta, "algorithm": "HistGradientBoostingClassifier",
-        "version": "p8_wp_v1", "targets": {"W2": "chasing side wins", "W1": "batting side wins",
+        "version": f"{active_prefix()}wp_v1", "targets": {"W2": "chasing side wins", "W1": "batting side wins",
                                            "CLS": "next legal ball class (0,1,2,3,4,6,wicket)"},
         "features": {"W1": W1_COLS, "W2": W2_COLS, "CLS": CLS_COLS},
         "metrics": {k: {a: b for a, b in v.metrics.items()} for k, v in fits.items()},

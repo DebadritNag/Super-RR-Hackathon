@@ -124,9 +124,16 @@ def test_reloading_an_artefact_is_unaffected_by_changes_to_an_earlier_copy():
 
 @needs_csv
 @needs_models
+@pytest.mark.parametrize("prefix", ["p8", "p9"])
 @pytest.mark.parametrize("role", ["batters", "bowlers"])
-def test_experimental_csv_is_real_labelled_and_tied_to_the_artefacts(role):
-    d = pd.read_csv(CSV[role])
+def test_experimental_csv_is_real_labelled_and_tied_to_the_artefacts(role, prefix):
+    # Phase 9 changed the expectation: experimental_ai_top10_*.csv is now regenerated from the p9
+    # artefacts (owner decision D1); the Phase 8 file is preserved as *_phase8.csv and is still
+    # checked against the unchanged p8 artefacts.
+    path = CSV[role] if prefix == "p9" else CSV[role].with_name(CSV[role].stem + "_phase8.csv")
+    if not path.exists():
+        pytest.skip("file not generated")
+    d = pd.read_csv(path)
     assert 0 < len(d) <= 10
     assert list(d["model_output_order"]) == list(range(1, len(d) + 1))
     assert set(d["status_label"]) == {"EXPERIMENTAL_NOT_VALIDATED"}
@@ -134,10 +141,10 @@ def test_experimental_csv_is_real_labelled_and_tied_to_the_artefacts(role):
     assert d["mean_runs_residual"].is_monotonic_decreasing
     r = role[:-1]
     assert set(d["model_artefact_runs_sha256"]) == {
-        av.load_artefact(f"p8_expected_{r}_runs_v1")["sha256"]
+        av.load_artefact(f"{prefix}_expected_{r}_runs_v1")["sha256"]
     }
     assert set(d["model_artefact_wicket_sha256"]) == {
-        av.load_artefact(f"p8_expected_{r}_wicket_v1")["sha256"]
+        av.load_artefact(f"{prefix}_expected_{r}_wicket_v1")["sha256"]
     }
     assert (d["pressure_balls"] >= av.MIN_PRESSURE_BALLS).all()
     assert (d["pressure_matches"] >= av.MIN_PRESSURE_MATCHES).all()

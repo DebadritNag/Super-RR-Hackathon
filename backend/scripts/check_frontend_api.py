@@ -15,7 +15,9 @@ results = []
 
 
 def call(path, headers=None):
-    req = urllib.request.Request(BASE + path, headers={"Origin": ORIGIN, "Accept": "application/json", **(headers or {})})
+    req = urllib.request.Request(
+        BASE + path, headers={"Origin": ORIGIN, "Accept": "application/json", **(headers or {})}
+    )
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             body = json.loads(r.read() or b"null")
@@ -55,14 +57,20 @@ for role in ("batters", "bowlers"):
         two = ",".join(str(i) for i in ids[role][:2])
         check(f"compare {role}", f"/submission/compare/{role}?player_ids={two}")
     else:
-        results.append((False, f"player {role}", "-", 0, 200, None, "no player_id found in top10 response"))
+        results.append(
+            (False, f"player {role}", "-", 0, 200, None, "no player_id found in top10 response")
+        )
     check(f"why {role}", f"/submission/why/{role}?limit=50&offset=0")
     check(f"profiles {role}", f"/submission/profiles/{role}?limit=50")
     check(f"profiles {role} search", f"/submission/profiles/{role}?limit=50&q=a")
 check("methodology", "/submission/methodology")
 check("validation", "/submission/validation")
 for role in ("batters", "bowlers"):
-    check(f"experimental-ai {role} (no token -> refused)", f"/internal/experimental-ai/{role}", expect=None)
+    check(
+        f"experimental-ai {role} (no token -> refused)",
+        f"/internal/experimental-ai/{role}",
+        expect=None,
+    )
 
 bad = 0
 for ok, name, path, status, expect, acao, note in results:
@@ -72,6 +80,8 @@ for ok, name, path, status, expect, acao, note in results:
     if not ok:
         bad += 1
     cors = "CORS ok" if acao in (ORIGIN, "*") else f"CORS MISSING ({acao})"
-    print(f"{'PASS' if ok else 'FAIL'}  {status}  (expect {expect})  {cors}  {name}  {path}  {note}")
+    print(
+        f"{'PASS' if ok else 'FAIL'}  {status}  (expect {expect})  {cors}  {name}  {path}  {note}"
+    )
 print(f"\n{len(results) - bad} of {len(results)} checks passed")
 sys.exit(1 if bad else 0)

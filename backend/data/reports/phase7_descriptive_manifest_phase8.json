@@ -1,0 +1,28 @@
+{
+  "descriptive_version": "p7_descriptive_v1",
+  "config_sha256": "3fe663db8e4089b4509e3f533659b09b9a96832cfb73550c183cad4f48d3bfc6",
+  "inputs": {
+    "superr.duckdb": "cb4077eebbd811534f9b1ee434bd92a385849e5b99a0955d48fb2dc5164a391d",
+    "exploratory.duckdb": "7b396e42a2acb281fd5ffd64051064d7ac48e82bdfad23dd229bd20b9ca6277d",
+    "state_version": "pre_delivery_state_v1"
+  },
+  "bootstrap": {
+    "n_boot": 1000,
+    "seed": 20260512,
+    "level": 0.95,
+    "unit": "match",
+    "min_matches": 5,
+    "max_undefined_share": 0.05
+  },
+  "rows": {
+    "batter_profiles": 920,
+    "bowler_profiles": 672,
+    "per_match": 19056,
+    "frame_rows": 160906
+  },
+  "outputs_sha256": {
+    "descriptive_batter_profiles.csv": "ac2e78678f2ad6a06481bc0ce1c6705b3911951ac60833b020928d0943fdcd92",
+    "descriptive_bowler_profiles.csv": "da6b81f9d1e38a30e15fa29e07e5e4469c527a9f04152b2a3472a8c05e8c9f4b",
+    "phase7_descriptive_player_match.csv": "f4ac18603dbc14cf76ebfa41bbee26c7d40b6b906b2b4c4e1ae964cbb9ef4510"
+  }
+}

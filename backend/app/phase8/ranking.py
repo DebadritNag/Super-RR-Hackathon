@@ -17,12 +17,13 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from app.phase8.constants import is_phase9
 from app.phase8.stability import point_ranking
 from app.phase8.status import check_label, row_status
 
 TOP_N = 10
 POOL_N = 10
-METHODOLOGY_VERSION = "phase8_methodology_v1"
+METHODOLOGY_VERSION = "phase9_methodology_v1" if is_phase9() else "phase8_methodology_v1"
 ROLES = ("batter", "bowler")
 APPROACH_NAMES = {
     "A": "Approach A: context-adjusted performance under continuous pressure intensity",

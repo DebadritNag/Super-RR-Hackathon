@@ -2,6 +2,7 @@
 
 Reads the official database and the exploratory store read-only. Writes only files under
 data/reports/. Run: ``python scripts/phase7_build_descriptive.py`` from ``backend``.
+``--phase9`` extends the window to the 2026 matches (owner decision D1, release record required).
 """
 
 from __future__ import annotations
@@ -18,11 +19,17 @@ from app.phase7 import descriptive as ds  # noqa: E402
 
 
 def main() -> None:
+    phase9 = "--phase9" in sys.argv[1:]
     cfg = ds.load_config()
+    if phase9:
+        cfg = {
+            **cfg,
+            "window": "2022-01-22 to 2026-11-01 (all matches, 2026 included by owner decision D1)",
+        }
     official_sha = ds.sha256_file(ds.OFFICIAL_DB)
     store_sha = ds.sha256_file(ds.EXPLORATORY_DB)
-    frame = ds.load_frame()
-    ref = ds.load_reference()
+    frame = ds.load_frame(include_test=phase9)
+    ref = ds.load_reference(include_test=phase9)
     prov = {
         "state_version": str(frame["state_version"].iloc[0]),
         "official_db_sha256": official_sha,

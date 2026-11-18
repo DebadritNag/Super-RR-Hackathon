@@ -27,8 +27,15 @@ from app.phase8.constants import (
     RESTRICTED_MATCH_IDS,
     SCOPE,
     STATE_TABLE,
+    is_phase9,
 )
 from app.phase8.lockguard import assert_no_test_rows
+
+# Phase 9 scoring scheme (see app/phase9): window labels derived from the frozen Phase 4 split
+# boundaries. ``period`` keeps the Phase 8 meaning (TRAIN to 2024-12-31, VALIDATION afterwards, now
+# 2025-01-01 onward) and ``fit_group`` is the model-fit scheme (TRAIN to 2025-12-31, then 2026).
+PHASE9_TRAIN_END = "2024-12-31"
+PHASE9_FIT_END = "2025-12-31"
 
 ID_COLS = [
     "match_id", "innings_number", "innings_ball_num", "match_date", "competition_type",
@@ -150,14 +157,26 @@ def _exclusion_rows(
 def load_pre_test_deliveries(
     exploratory_db: Path | str = EXPLORATORY_DB,
     official_db: Path | str = OFFICIAL_DB,
+    phase9: bool | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Primary-scoring deliveries of TRAIN and VALIDATION plus the exclusion table.
 
     TEST rows are filtered in SQL and re-checked; both databases are opened read-only.
+
+    Phase 9 (``phase9=True`` or ``SUPERR_PHASE=phase9``) additionally loads the 2026 matches, which
+    needs the owner release record (``app.phase9.lockrelease``). The original period stays in
+    ``period_src``; ``period`` becomes TRAIN (to 2024-12-31) or VALIDATION (2025-01-01 onward, the
+    recent window) and ``fit_group`` TRAIN (to 2025-12-31) or VALIDATION (2026). The late-dated
+    T20I exclusion is not applied (owner decision D1).
     """
+    p9 = is_phase9() if phase9 is None else phase9
+    if p9:
+        from app.phase9.lockrelease import assert_test_released
+
+        assert_test_released()
     cols = list(dict.fromkeys(ID_COLS + STATE_FEATURES + FLAG_COLS + LABEL_COLS))
     sel = ", ".join(f"s.{c}" for c in cols)
-    periods = ", ".join(f"'{p}'" for p in PRE_TEST_PERIODS)
+    periods = ", ".join(f"'{p}'" for p in (*PRE_TEST_PERIODS, "TEST") if p9 or p != "TEST")
     con = duckdb.connect(str(exploratory_db), read_only=True)
     try:
         df = con.execute(
@@ -176,8 +195,17 @@ def load_pre_test_deliveries(
         ]
     finally:
         con.close()
-    assert_no_test_rows(df)
     df["match_date"] = pd.to_datetime(df["match_date"])
+    if p9:
+        df["period_src"] = df["period"]
+        df["period"] = np.where(
+            df["match_date"] <= pd.Timestamp(PHASE9_TRAIN_END), "TRAIN", "VALIDATION"
+        )
+        df["fit_group"] = np.where(
+            df["match_date"] <= pd.Timestamp(PHASE9_FIT_END), "TRAIN", "VALIDATION"
+        )
+        late = pd.Series([], dtype="int64")
+    assert_no_test_rows(df)
 
     keep, excl = _exclusion_rows(
         df,

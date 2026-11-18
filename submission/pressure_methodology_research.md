@@ -1,3 +1,9 @@
+# Pressure methodology research: a candid account (with Phase 9 notice)
+
+> **Phase 9 notice.** The account below is the Phase 8 text, kept unchanged. It states that the 2026 period was never loaded and that the window ends in 2025. Phase 9 supersedes those statements: by owner decision D1 (2026-11-18) the 2026 matches are included (window 2022-01-22 to 2026-11-01), the TEST lock is released and no pristine hold-out remains. The methods, thresholds and criteria are unchanged. Current results are in `submission_methodology.md`, `phase9_comparison.md` and `pressure_top10_status.md`.
+
+---
+
 # Pressure methodology research: a candid account
 
 > **Batters: EXPLORATORY.** EXPLORATORY ranking of batters: this is the best-supported ordering of the available data, not a validated ranking. The order is not shown to separate players beyond noise. Ranking basis: REML_POSTERIOR. Reason: split-half 0.06 below 0.5; split-half lower bound not above 0.
